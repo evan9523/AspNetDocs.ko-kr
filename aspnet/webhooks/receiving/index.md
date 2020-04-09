@@ -1,20 +1,20 @@
 ---
 uid: webhooks/receiving/index
-title: ASP.NET 웹 후크-수신 및 처리 | Microsoft Docs
+title: ASP.NET 웹후크 - 수신 및 처리 | 마이크로 소프트 문서
 author: rick-anderson
-description: ASP.NET에서 웹 후크를 받고 처리 하는 방법에 대 한 문서
+description: ASP.NET 웹후크 수신 및 처리에 대한 기사
 ms.author: riande
 ms.date: 10/14/2016
 ms.assetid: b22046f9-c7a1-4d46-a80c-c7d2e35aad3b
-ms.openlocfilehash: 9d8d8c162d76da4fbb6b429985107c01c1adec26
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: 90a55909b48aed5b6808cf9f3e95172a2b07c902
+ms.sourcegitcommit: ce28244209db8615bc9bdd576a2e2c88174d318d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78517295"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80675183"
 ---
-# <a name="aspnet-webhooks---receiving-and-processing"></a>ASP.NET 웹 후크-수신 및 처리
+# <a name="aspnet-webhooks---receiving-and-processing"></a>ASP.NET 웹후크 - 수신 및 처리
 
-* [WebHook 수신기](receivers.md)
-* [웹 후크 처리](handlers.md)
-* [받는 사람 종속성](dependencies.md)
+* [웹후크 수신기](receivers.md)
+* [웹후크 처리](handlers.md)
+* [수신기 종속성](dependencies.md)
