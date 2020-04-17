@@ -1,29 +1,29 @@
 ---
 uid: web-forms/videos/migrating/intro-to-aspnet-for-jsp-developers-building-applications
-title: 'JSP 개발자를 위한 ASP.NET 소개: 응용 프로그램 빌드 | Microsoft Docs'
-author: microsoft
-description: 이 웹캐스트에서는 ASP.NET 2.0에서 웹 응용 프로그램을 빌드하고 Java를 사용 하 여 빌드하는 경우의 유사점과 차이점을 모두 살펴봅니다.
+title: 'JSP 개발자를 위한 ASP.NET 소개: 응용 프로그램 빌드 | 마이크로 소프트 문서'
+author: rick-anderson
+description: 이 웹캐스트에서는 ASP.NET 2.0에서 웹 응용 프로그램을 빌드하고 Java를 사용하여 응용 프로그램을 빌드하는 것의 유사점과 차이점을 살펴봅니다.
 ms.author: riande
 ms.date: 07/25/2006
 ms.assetid: 826b9a37-0bc3-4405-92fb-d8dc87db195e
 msc.legacyurl: /web-forms/videos/migrating/intro-to-aspnet-for-jsp-developers-building-applications
 msc.type: video
-ms.openlocfilehash: a63573b0e15dfbf710f6f4b793257246ad3d307b
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: c1a9b4729c3f8a95bb3f00429958df820ce84ba4
+ms.sourcegitcommit: 022f79dbc1350e0c6ffaa1e7e7c6e850cdabf9af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78518807"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81543407"
 ---
-# <a name="intro-to-aspnet-for-jsp-developers-building-applications"></a><span data-ttu-id="ca798-103">JSP 개발자를 위한 ASP.NET 소개: 응용 프로그램 빌드</span><span class="sxs-lookup"><span data-stu-id="ca798-103">Intro to ASP.NET for JSP Developers: Building Applications</span></span>
+# <a name="intro-to-aspnet-for-jsp-developers-building-applications"></a><span data-ttu-id="d48b3-103">JSP 개발자용 ASP.NET 소개: 애플리케이션 빌드</span><span class="sxs-lookup"><span data-stu-id="d48b3-103">Intro to ASP.NET for JSP Developers: Building Applications</span></span>
 
-<span data-ttu-id="ca798-104">[Microsoft](https://github.com/microsoft) 에서</span><span class="sxs-lookup"><span data-stu-id="ca798-104">by [Microsoft](https://github.com/microsoft)</span></span>
+<span data-ttu-id="d48b3-104">[로 마이크로 소프트](https://github.com/microsoft)</span><span class="sxs-lookup"><span data-stu-id="d48b3-104">by [Microsoft](https://github.com/microsoft)</span></span>
 
-<span data-ttu-id="ca798-105">이 웹캐스트에서는 ASP.NET 2.0에서 웹 응용 프로그램을 빌드하고 Java를 사용 하 여 빌드하는 경우의 유사점과 차이점을 모두 살펴봅니다.</span><span class="sxs-lookup"><span data-stu-id="ca798-105">This webcast looks at both the similarities and differences between building a Web application in ASP.NET 2.0 and building one using Java.</span></span>
+<span data-ttu-id="d48b3-105">이 웹캐스트에서는 ASP.NET 2.0에서 웹 응용 프로그램을 빌드하고 Java를 사용하여 응용 프로그램을 빌드하는 것의 유사점과 차이점을 살펴봅니다.</span><span class="sxs-lookup"><span data-stu-id="d48b3-105">This webcast looks at both the similarities and differences between building a Web application in ASP.NET 2.0 and building one using Java.</span></span>
 
-[<span data-ttu-id="ca798-106">&#9654;비디오 보기 (62 분)</span><span class="sxs-lookup"><span data-stu-id="ca798-106">&#9654; Watch video (62 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/intro-to-aspnet-for-jsp-developers-building-applications)
+[<span data-ttu-id="d48b3-106">&#9654; 비디오 보기 (62분)</span><span class="sxs-lookup"><span data-stu-id="d48b3-106">&#9654; Watch video (62 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/intro-to-aspnet-for-jsp-developers-building-applications)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="ca798-107">[이전](intro-to-aspnet-for-jsp-developers-welcome-to-aspnet-20.md)
-> [다음](intro-to-aspnet-for-coldfusion-developers-adding-aspnet-to-your-repertoire.md)</span><span class="sxs-lookup"><span data-stu-id="ca798-107">[Previous](intro-to-aspnet-for-jsp-developers-welcome-to-aspnet-20.md)
+> <span data-ttu-id="d48b3-107">[이전](intro-to-aspnet-for-jsp-developers-welcome-to-aspnet-20.md)
+> [다음](intro-to-aspnet-for-coldfusion-developers-adding-aspnet-to-your-repertoire.md)</span><span class="sxs-lookup"><span data-stu-id="d48b3-107">[Previous](intro-to-aspnet-for-jsp-developers-welcome-to-aspnet-20.md)
 [Next](intro-to-aspnet-for-coldfusion-developers-adding-aspnet-to-your-repertoire.md)</span></span>

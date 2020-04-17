@@ -1,29 +1,29 @@
 ---
 uid: mvc/videos/mvc-2/how-do-i/mvc2-html-encoding
-title: MVC2-Html 인코딩 | Microsoft Docs
-author: microsoft
-description: 이 비디오에서는 ASP.NET에서 새 HTML 인코딩 바로 가기 구문을 사용 하 여 스크립트 삽입 으로부터 보호 하 고 MvcHtmlString when ...를 사용 하는 방법에 대해 알아봅니다.
+title: MVC2 - Html 인코딩 | 마이크로 소프트 문서
+author: rick-anderson
+description: 이 비디오에서는 스크립트 삽입을 방지하고 MvcHtmlString을 사용하는 ASP.NET 새로운 HTML 인코딩 바로 가기 구문을 사용하는 방법을 배웁니다.
 ms.author: riande
 ms.date: 03/23/2010
 ms.assetid: d8d2d4fc-780a-48bb-82f1-4125cce03b2a
 msc.legacyurl: /mvc/videos/mvc-2/how-do-i/mvc2-html-encoding
 msc.type: video
-ms.openlocfilehash: 6f0e1aa85b5715ce602e94d2d94a5e96b9f93008
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: d1a437986eb7b679c736559f2f454960ebf43f78
+ms.sourcegitcommit: 022f79dbc1350e0c6ffaa1e7e7c6e850cdabf9af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78450425"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81539922"
 ---
-# <a name="mvc2---html-encoding"></a><span data-ttu-id="48bb4-103">MVC2 - HTML 인코딩</span><span class="sxs-lookup"><span data-stu-id="48bb4-103">MVC2 - Html Encoding</span></span>
+# <a name="mvc2---html-encoding"></a><span data-ttu-id="cb1d6-103">MVC2 - HTML 인코딩</span><span class="sxs-lookup"><span data-stu-id="cb1d6-103">MVC2 - Html Encoding</span></span>
 
-<span data-ttu-id="48bb4-104">[Microsoft](https://github.com/microsoft) 에서</span><span class="sxs-lookup"><span data-stu-id="48bb4-104">by [Microsoft](https://github.com/microsoft)</span></span>
+<span data-ttu-id="cb1d6-104">[로 마이크로 소프트](https://github.com/microsoft)</span><span class="sxs-lookup"><span data-stu-id="cb1d6-104">by [Microsoft](https://github.com/microsoft)</span></span>
 
-<span data-ttu-id="48bb4-105">이 비디오에서는 ASP.NET에서 새 HTML 인코딩 바로 가기 구문을 사용 하 여 스크립트 삽입 으로부터 보호 하 고, 문자열에 HTML을 포함 하려는 경우 MvcHtmlString를 사용 하는 방법에 대해 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="48bb4-105">In this video you will learn how to use the new HTML Encoding shortcut syntax in ASP.NET to guard against script injection, and to use the MvcHtmlString when you want to include HTML in your strings.</span></span>
+<span data-ttu-id="cb1d6-105">이 비디오에서는 스크립트 삽입을 방지하기 위해 ASP.NET 새 HTML 인코딩 바로 가기 구문을 사용하고 문자열에 HTML을 포함하려는 경우 MvcHtmlString을 사용하는 방법을 배웁니다.</span><span class="sxs-lookup"><span data-stu-id="cb1d6-105">In this video you will learn how to use the new HTML Encoding shortcut syntax in ASP.NET to guard against script injection, and to use the MvcHtmlString when you want to include HTML in your strings.</span></span>
 
-[<span data-ttu-id="48bb4-106">&#9654;비디오 보기 (2 분)</span><span class="sxs-lookup"><span data-stu-id="48bb4-106">&#9654; Watch video (2 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/mvc2-html-encoding)
+[<span data-ttu-id="cb1d6-106">&#9654; 비디오 보기(2분)</span><span class="sxs-lookup"><span data-stu-id="cb1d6-106">&#9654; Watch video (2 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/mvc2-html-encoding)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="48bb4-107">[이전](how-do-i-use-httpverbs-attributes-in-an-mvc-application.md)
-> [다음](mvc2-stronglytyped-helpers.md)</span><span class="sxs-lookup"><span data-stu-id="48bb4-107">[Previous](how-do-i-use-httpverbs-attributes-in-an-mvc-application.md)
+> <span data-ttu-id="cb1d6-107">[이전](how-do-i-use-httpverbs-attributes-in-an-mvc-application.md)
+> [다음](mvc2-stronglytyped-helpers.md)</span><span class="sxs-lookup"><span data-stu-id="cb1d6-107">[Previous](how-do-i-use-httpverbs-attributes-in-an-mvc-application.md)
 [Next](mvc2-stronglytyped-helpers.md)</span></span>
