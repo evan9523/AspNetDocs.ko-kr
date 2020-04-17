@@ -1,27 +1,27 @@
 ---
 uid: mvc/videos/mvc-2/how-do-i/mvc2-model-validation
-title: MVC2-모델 유효성 검사 | Microsoft Docs
-author: microsoft
-description: 이 비디오에서는 데이터 주석 특성을 사용 하 여 유효성 검사 규칙을 정의 하는 방법과 클라이언트 쪽 (AJAX) 유효성 검사를 사용 하도록 설정 하는 방법에 대해 설명 합니다.
+title: MVC2 - 모델 검증 | 마이크로 소프트 문서
+author: rick-anderson
+description: 이 비디오에서는 데이터 별표 특성을 사용하여 유효성 검사 규칙을 정의하는 방법과 AJAX(클라이언트 쪽( AJAX) 유효성 검사를 사용하도록 설정하는 방법에 대해 알아봅니다.
 ms.author: riande
 ms.date: 03/23/2010
 ms.assetid: fe3676fd-ecec-4756-8c8d-269da9754c31
 msc.legacyurl: /mvc/videos/mvc-2/how-do-i/mvc2-model-validation
 msc.type: video
-ms.openlocfilehash: ec1581f9916ab76fedc6b25ef967b060cdfb194d
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: 23b761e50e819b3497ecd470635973652370cc0e
+ms.sourcegitcommit: 022f79dbc1350e0c6ffaa1e7e7c6e850cdabf9af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78431921"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81539949"
 ---
 # <a name="mvc2---model-validation"></a>MVC2 - 모델 유효성 검사
 
-[Microsoft](https://github.com/microsoft) 에서
+[로 마이크로 소프트](https://github.com/microsoft)
 
-이 비디오에서는 데이터 주석 특성을 사용 하 여 유효성 검사 규칙을 정의 하는 방법과 클라이언트 쪽 (AJAX) 유효성 검사를 사용 하도록 설정 하는 방법에 대해 설명 합니다.
+이 비디오에서는 데이터 별표 특성을 사용하여 유효성 검사 규칙을 정의하는 방법과 AJAX(클라이언트 쪽( AJAX) 유효성 검사를 사용하도록 설정하는 방법에 대해 알아봅니다.
 
-[&#9654;비디오 보기 (4 분)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/mvc2-model-validation)
+[&#9654; 동영상 보기(4분)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/mvc2-model-validation)
 
 > [!div class="step-by-step"]
 > [이전](mvc2-stronglytyped-helpers.md)

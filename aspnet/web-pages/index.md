@@ -1,24 +1,24 @@
 ---
 uid: web-pages/index
-title: ASP.NET 웹 페이지 | Microsoft Docs
+title: ASP.NET 웹 페이지 | 마이크로 소프트 문서
 author: rick-anderson
-description: WebMatrix를 다운로드 하 여 서버 코드를 HTML과 결합 하는 간단한 방법으로 웹 페이지를 신속 하 게 빌드하는 방법을 알아보세요 &.
+description: WebMatrix & 다운로드하여 서버 코드를 HTML과 결합하는 간단한 방법으로 웹 페이지를 신속하게 빌드하는 방법을 알아봅니다.
 ms.author: riande
 ms.date: 05/18/2012
 ms.assetid: 5418ba96-ff49-4a43-9cbb-09dea4949d23
 msc.legacyurl: /web-pages
 msc.type: categoryindex
-ms.openlocfilehash: 56bf82e22b3562893ef842a90d42aa7b6ff5858f
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: d767325a376e5daa0ea4236f67c88e6b97ae71a7
+ms.sourcegitcommit: 022f79dbc1350e0c6ffaa1e7e7c6e850cdabf9af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78520673"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81543524"
 ---
 # <a name="aspnet-web-pages"></a>ASP.NET 웹 페이지
 
 > [!NOTE] 
-> WebMatrix는 ASP.NET 웹 페이지을 위한 통합 개발 환경으로 더 이상 권장 되지 않습니다. [Visual Studio](xref:aspnet/web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio) 또는 [Visual Studio Code](https://code.visualstudio.com/)를 사용 합니다.
+> 웹매트릭스는 더 이상 ASP.NET 웹 페이지의 통합 개발 환경으로 권장되지 않습니다. [비주얼 스튜디오](xref:web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio) 또는 비주얼 [스튜디오 코드를](https://code.visualstudio.com/)사용합니다.
 
 - [지침](overview/index.md)
 
@@ -46,7 +46,7 @@ ms.locfileid: "78520673"
         - [ASP.NET 웹 페이지 사이트에서 읽을 수 있는 URL 만들기](overview/routing/creating-readable-urls-in-aspnet-web-pages-sites.md)
     - [UI, 레이아웃 및 테마](overview/ui-layouts-and-themes/index.md)
 
-        - [양식 사용](overview/ui-layouts-and-themes/4-working-with-forms.md)
+        - [양식 작업](overview/ui-layouts-and-themes/4-working-with-forms.md)
         - [ASP.NET 웹 페이지 사이트에서 사용자 입력 유효성 검사](overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites.md)
         - [일관적인 모양 만들기](overview/ui-layouts-and-themes/3-creating-a-consistent-look.md)
         - [사이트 전체 동작 사용자 지정](overview/ui-layouts-and-themes/18-customizing-site-wide-behavior.md)
@@ -56,7 +56,7 @@ ms.locfileid: "78520673"
         - [도우미 설치](overview/ui-layouts-and-themes/installing-helpers.md)
         - [ASP.NET 웹 페이지와 Twitter 도우미](overview/ui-layouts-and-themes/twitter-helper.md)
         - [ASP.NET 웹 페이지 사이트에 맵 표시](overview/ui-layouts-and-themes/displaying-maps-in-an-aspnet-web-pages-site.md)
-    - [Mobile](overview/mobile/index.md)
+    - [모바일](overview/mobile/index.md)
 
         - [모바일 디바이스를 위한 ASP.NET 웹 페이지 사이트 렌더링](overview/mobile/rendering-aspnet-web-pages-sites-for-mobile-devices.md)
     - [데이터 작업](overview/data/index.md)
@@ -83,8 +83,8 @@ ms.locfileid: "78520673"
         - [ASP.NET API 빠른 참조](overview/api-reference/asp-net-web-pages-api-reference.md)
     - [릴리스](overview/releases/index.md)
 
-        - [ASP.NET Web Pages 3.2의 새로운 기능](overview/releases/whats-new-in-aspnet-web-pages-32.md)
-        - [ASP.NET Web Pages 3.1의 새로운 기능](overview/releases/whats-new-aspnet-web-pages-31.md)
+        - [ASP.NET 웹 페이지 3.2의 새로운 기능](overview/releases/whats-new-in-aspnet-web-pages-32.md)
+        - [ASP.NET 웹 페이지 3.1의 새로운 기능](overview/releases/whats-new-aspnet-web-pages-31.md)
         - [ASP.NET 웹 페이지 2의 주요 기능](overview/releases/top-features-in-web-pages-2.md)
         - [ASP.NET 웹 페이지 2 개발자 미리 보기 추가 정보](overview/releases/aspnet-web-pages-2-developer-preview-readme.md)
         - [여러 버전의 ASP.NET 웹 페이지를 나란히 실행](overview/releases/running-v1-and-v2-sites-side-by-side.md)
@@ -102,7 +102,7 @@ ms.locfileid: "78520673"
         - [WebMatrix에서 데이터 편집 페이지 만들기](videos/introduction/create-an-edit-data-page-in-webmatrix.md)
         - [WebMatrix에서 데이터 삭제 페이지 만들기](videos/introduction/create-a-delete-data-page-in-webmatrix.md)
         - [WebMatrix를 사용하여 인터넷에 웹 사이트 게시](videos/introduction/publish-a-website-to-the-internet-using-webmatrix.md)
-    - [ASP.NET Razor Pages](videos/aspnet-razor-pages/index.md)
+    - [ASP.NET 면도기 페이지](videos/aspnet-razor-pages/index.md)
 
         - [WebMatrix 및 ASP.NET 웹 페이지 시작](videos/aspnet-razor-pages/getting-started-with-webmatrix-and-aspnet-web-pages.md)
         - [ASP.NET 웹 프로그래밍 Razor 구문 소개](videos/aspnet-razor-pages/introduction-to-aspnet-web-programming-using-the-razor-syntax.md)
