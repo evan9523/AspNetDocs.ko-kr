@@ -8,12 +8,12 @@ ms.date: 06/11/2014
 ms.assetid: 43a6cce7-a3ef-42aa-ad06-90d36d49f098
 msc.legacyurl: /web-api/overview/testing-and-debugging/unit-testing-controllers-in-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: cdb1700537021e276669de1a9e0330a62659746c
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: 3b89009a375e766f1c5b439dfe3fffd43b4963b3
+ms.sourcegitcommit: a4c3c7e04e5f53cf8cd334f036d324976b78d154
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78447005"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84172928"
 ---
 # <a name="unit-testing-controllers-in-aspnet-web-api-2"></a>ASP.NET Web API 2의 유닛 테스트 컨트롤러
 
@@ -30,7 +30,7 @@ ms.locfileid: "78447005"
 > [!NOTE]
 > Moq를 사용 했지만 모든 모의 프레임 워크에 동일한 아이디어가 적용 됩니다. Moq 4.5.30 이상 버전은 Visual Studio 2017, Roslyn 및 .NET 4.5 이상 버전을 지원 합니다.
 
-단위 테스트의 일반적인 패턴은 &quot;정렬&quot;입니다.
+단위 테스트의 일반적인 패턴은 &quot; 정렬-동작 어설션입니다 &quot; .
 
 - 정렬: 테스트를 실행 하기 위한 모든 필수 구성 요소를 설정 합니다.
 - Act: 테스트를 수행 합니다.
@@ -53,7 +53,7 @@ ms.locfileid: "78447005"
 
 [!code-csharp[Main](unit-testing-controllers-in-web-api/samples/sample1.cs)]
 
-컨트롤러는 종속성 주입을 사용 하 여 `IProductRepository`를 삽입 합니다. 이렇게 하면 모의 리포지토리를 주입할 수 있으므로 컨트롤러를 더 쉽게 테스트할 수 있습니다. 다음 단위 테스트는 `Get` 메서드가 응답 본문에 `Product`를 기록 하는지 확인 합니다. `repository` 모의 `IProductRepository`이라고 가정 합니다.
+컨트롤러는 종속성 주입을 사용 하 여을 삽입 `IProductRepository` 합니다. 이렇게 하면 모의 리포지토리를 주입할 수 있으므로 컨트롤러를 더 쉽게 테스트할 수 있습니다. 다음 단위 테스트는 `Get` 메서드가 응답 본문에를 기록 하는지 확인 합니다 `Product` . `repository`가 모의 라고 가정 `IProductRepository` 합니다.
 
 [!code-csharp[Main](unit-testing-controllers-in-web-api/samples/sample2.cs)]
 
@@ -61,13 +61,13 @@ ms.locfileid: "78447005"
 
 ## <a name="testing-link-generation"></a>테스트 링크 생성
 
-`Post` 메서드는 **Urlhelper 링크** 를 호출 하 여 응답에 링크를 만듭니다. 이렇게 하려면 단위 테스트에서 약간의 설정이 필요 합니다.
+`Post`메서드는 **urlhelper 링크** 를 호출 하 여 응답에 링크를 만듭니다. 이렇게 하려면 단위 테스트에서 약간의 설정이 필요 합니다.
 
 [!code-csharp[Main](unit-testing-controllers-in-web-api/samples/sample3.cs)]
 
 **Urlhelper** 클래스는 요청 URL 및 경로 데이터를 요구 하므로 테스트에서 이러한 값을 설정 해야 합니다. 또 다른 옵션은 모의 또는 스텁 **Urlhelper**입니다. 이 방법을 사용 하면 [ApiController](https://msdn.microsoft.com/library/system.web.http.apicontroller.url.aspx) 의 기본값을 고정 값을 반환 하는 모의 또는 스텁 버전으로 바꿀 수 있습니다.
 
-[Moq](https://github.com/Moq) 프레임 워크를 사용 하 여 테스트를 다시 작성해 보겠습니다. 테스트 프로젝트에 `Moq` NuGet 패키지를 설치 합니다.
+[Moq](https://github.com/Moq) 프레임 워크를 사용 하 여 테스트를 다시 작성해 보겠습니다. `Moq`테스트 프로젝트에 NuGet 패키지를 설치 합니다.
 
 [!code-csharp[Main](unit-testing-controllers-in-web-api/samples/sample4.cs)]
 
@@ -85,7 +85,7 @@ Web API 2에서 컨트롤러 동작은 ASP.NET MVC의 **Actionresult** 와 유�
 
 ### <a name="action-returns-200-ok-with-a-response-body"></a>작업은 응답 본문으로 200 (OK)를 반환 합니다.
 
-`Get` 메서드는 제품이 있는 경우 `Ok(product)`를 호출 합니다. 단위 테스트에서 반환 형식이 **Oknegotiatedcontentresult** 이 고 반환 된 제품에 올바른 ID가 있는지 확인 합니다.
+`Get`제품이 발견 되 면 메서드는를 호출 합니다 `Ok(product)` . 단위 테스트에서 반환 형식이 **Oknegotiatedcontentresult** 이 고 반환 된 제품에 올바른 ID가 있는지 확인 합니다.
 
 [!code-csharp[Main](unit-testing-controllers-in-web-api/samples/sample6.cs)]
 
@@ -93,30 +93,30 @@ Web API 2에서 컨트롤러 동작은 ASP.NET MVC의 **Actionresult** 와 유�
 
 ### <a name="action-returns-404-not-found"></a>작업에서 404 (찾을 수 없음)을 반환 합니다.
 
-`Get` 메서드는 제품이 없는 경우 `NotFound()`를 호출 합니다. 이 경우 단위 테스트는 반환 형식이 **NotFoundResult**인지만 확인 합니다.
+`Get`제품을 찾을 수 없는 경우 메서드는를 호출 합니다 `NotFound()` . 이 경우 단위 테스트는 반환 형식이 **NotFoundResult**인지만 확인 합니다.
 
 [!code-csharp[Main](unit-testing-controllers-in-web-api/samples/sample7.cs)]
 
 ### <a name="action-returns-200-ok-with-no-response-body"></a>작업은 응답 본문이 없는 200 (OK)를 반환 합니다.
 
-`Delete` 메서드는 `Ok()`를 호출 하 여 빈 HTTP 200 응답을 반환 합니다. 이전 예제와 마찬가지로 단위 테스트는 반환 형식 (이 경우 **Okresult**)을 확인 합니다.
+`Delete`메서드는 `Ok()` 를 호출 하 여 빈 HTTP 200 응답을 반환 합니다. 이전 예제와 마찬가지로 단위 테스트는 반환 형식 (이 경우 **Okresult**)을 확인 합니다.
 
 [!code-csharp[Main](unit-testing-controllers-in-web-api/samples/sample8.cs)]
 
 ### <a name="action-returns-201-created-with-a-location-header"></a>작업은 Location 헤더를 사용 하 여 201 (Created)을 반환 합니다.
 
-`Post` 메서드는 `CreatedAtRoute`를 호출 하 여 Location 헤더에 URI가 있는 HTTP 201 응답을 반환 합니다. 단위 테스트에서 작업이 올바른 라우팅 값을 설정 하는지 확인 합니다.
+`Post`메서드는 `CreatedAtRoute` 를 호출 하 여 Location 헤더에 URI가 있는 HTTP 201 응답을 반환 합니다. 단위 테스트에서 작업이 올바른 라우팅 값을 설정 하는지 확인 합니다.
 
 [!code-csharp[Main](unit-testing-controllers-in-web-api/samples/sample9.cs)]
 
 ### <a name="action-returns-another-2xx-with-a-response-body"></a>작업은 응답 본문이 있는 다른 2xx를 반환 합니다.
 
-`Put` 메서드는 `Content`를 호출 하 여 응답 본문이 포함 된 HTTP 202 (수락) 응답을 반환 합니다. 이 경우 200 (OK)을 반환 하는 것과 유사 하지만 단위 테스트 에서도 상태 코드를 확인 해야 합니다.
+`Put`메서드는 `Content` 를 호출 하 여 응답 본문이 포함 된 HTTP 202 (수락 됨) 응답을 반환 합니다. 이 경우 200 (OK)을 반환 하는 것과 유사 하지만 단위 테스트 에서도 상태 코드를 확인 해야 합니다.
 
 [!code-csharp[Main](unit-testing-controllers-in-web-api/samples/sample10.cs)]
 
 ## <a name="additional-resources"></a>추가 리소스
 
 - [유닛 테스트 ASP.NET Web API 2 Entity Framework 모의](mocking-entity-framework-when-unit-testing-aspnet-web-api-2.md)
-- [ASP.NET Web API 서비스에 대 한 테스트 작성](https://blogs.msdn.com/b/youssefm/archive/2013/01/28/writing-tests-for-an-asp-net-webapi-service.aspx) (Youssef Moussaoui의 블로그 게시물).
-- [경로 디버거를 사용 하 여 ASP.NET Web API 디버깅](https://blogs.msdn.com/b/webdev/archive/2013/04/04/debugging-asp-net-web-api-with-route-debugger.aspx)
+- [ASP.NET Web API 서비스에 대 한 테스트 작성](https://docs.microsoft.com/en-gb/archive/blogs/youssefm/writing-tests-for-an-asp-net-web-api-service) (Youssef Moussaoui의 블로그 게시물).
+- [경로 디버거를 사용하여 ASP.NET Web API 디버깅](https://blogs.msdn.com/b/webdev/archive/2013/04/04/debugging-asp-net-web-api-with-route-debugger.aspx)

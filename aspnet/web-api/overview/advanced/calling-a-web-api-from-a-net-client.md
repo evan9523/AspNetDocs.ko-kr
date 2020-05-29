@@ -1,6 +1,6 @@
 ---
 uid: web-api/overview/advanced/calling-a-web-api-from-a-net-client
-title: .NET 클라이언트에서 Web API 호출 (C#)-ASP.NET 4.x
+title: '.NET 클라이언트에서 Web API 호출 (c #)-ASP.NET 4.x'
 author: MikeWasson
 description: 이 자습서에서는 .NET 4.x 응용 프로그램에서 web API를 호출 하는 방법을 보여 줍니다.
 ms.author: riande
@@ -8,14 +8,14 @@ ms.date: 11/24/2017
 ms.custom: seoapril2019
 msc.legacyurl: /web-api/overview/advanced/calling-a-web-api-from-a-net-client
 msc.type: authoredcontent
-ms.openlocfilehash: ab3ba71839123e848dffaa59871f9dac8c1a88d0
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: 484d927eeb0ba49f5f00d476f4658ebc081d0a4a
+ms.sourcegitcommit: a4c3c7e04e5f53cf8cd334f036d324976b78d154
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78504959"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84172941"
 ---
-# <a name="call-a-web-api-from-a-net-client-c"></a>.NET 클라이언트에서 Web API 호출 (C#)
+# <a name="call-a-web-api-from-a-net-client-c"></a>.NET 클라이언트에서 Web API 호출 (c #)
 
 만든 사람 [Mike Wasson](https://github.com/MikeWasson) And [Rick Anderson](https://twitter.com/RickAndMSFT)
 
@@ -27,7 +27,7 @@ ms.locfileid: "78504959"
 
 | 작업 | HTTP 메서드 | 상대 URI |
 | --- | --- | --- |
-| ID로 제품 가져오기 | GET | /api/products/*id* |
+| ID별 제품 가져오기 | GET | /api/products/*id* |
 | 새 제품 만들기 | POST | /api/제품 |
 | 제품 업데이트 | PUT | /api/products/*id* |
 | 제품 삭제 | Delete | /api/products/*id* |
@@ -36,6 +36,11 @@ ASP.NET Web API를 사용 하 여이 API를 구현 하는 방법을 알아보려
 )를 참조 하세요.
 
 간단히 하기 위해이 자습서의 클라이언트 응용 프로그램은 Windows 콘솔 응용 프로그램입니다. **Httpclient** 는 Windows Phone 및 Windows 스토어 앱 에서도 지원 됩니다. 자세한 내용은 [이식 가능한 라이브러리를 사용 하 여 여러 플랫폼에 대 한 WEB API 클라이언트 코드 작성](https://blogs.msdn.com/b/webdev/archive/2013/07/19/writing-web-api-client-code-for-multiple-platforms-using-portable-libraries.aspx) 을 참조 하세요.
+
+**참고:** 기본 Url과 상대 Uri를 하드 코드 된 값으로 전달 하는 경우 API를 활용 하는 규칙에 주의 해야 합니다 `HttpClient` . `HttpClient.BaseAddress`속성은 후행 슬래시 ()로 주소를 설정 해야 합니다 `/` . 예를 들어 하드 코드 된 리소스 Uri를 메서드에 전달할 때 `HttpClient.GetAsync` 선행 슬래시를 포함 하지 않습니다. `Product`ID로을 가져오려면 다음을 수행 합니다.
+
+1. 설정`client.BaseAddress = new Uri("https://localhost:5001/");`
+1. 을 요청 `Product` 합니다. 예: `client.GetAsync<Product>("api/products/4");`.
 
 <a id="CreateConsoleApp"></a>
 ## <a name="create-the-console-application"></a>콘솔 응용 프로그램 만들기
@@ -46,7 +51,7 @@ Visual Studio에서 **Httpclientsample** 이라는 새 Windows 콘솔 앱을 만
 
 위의 코드는 전체 클라이언트 앱입니다.
 
-`RunAsync` 실행 되 고 작업이 완료 될 때까지 차단 됩니다. 대부분의 **Httpclient** 메서드는 네트워크 i/o를 수행 하기 때문에 비동기입니다. 모든 비동기 작업은 `RunAsync`내에서 수행 됩니다. 일반적으로 앱은 주 스레드를 차단 하지 않지만이 앱은 모든 상호 작용을 허용 하지 않습니다.
+`RunAsync`는 완료 될 때까지 실행 되 고 차단 됩니다. 대부분의 **Httpclient** 메서드는 네트워크 i/o를 수행 하기 때문에 비동기입니다. 모든 비동기 작업은 내에서 수행 됩니다 `RunAsync` . 일반적으로 앱은 주 스레드를 차단 하지 않지만이 앱은 모든 상호 작용을 허용 하지 않습니다.
 
 [!code-csharp[Main](calling-a-web-api-from-a-net-client/sample/client/Program.cs?name=snippet_run)]
 
@@ -61,7 +66,7 @@ NuGet 패키지 관리자를 사용 하 여 Web API 클라이언트 라이브러
 
 이전 명령은 다음 NuGet 패키지를 프로젝트에 추가 합니다.
 
-* Microsoft.AspNet.WebApi.Client
+* WebApi. 클라이언트
 * Newtonsoft.Json
 
 Netwonsoft (Json.NET 라고도 함)는 .NET 용으로 널리 사용 되는 고성능 JSON 프레임 워크입니다.
@@ -73,7 +78,7 @@ Netwonsoft (Json.NET 라고도 함)는 .NET 용으로 널리 사용 되는 고�
 
 [!code-csharp[Main](calling-a-web-api-from-a-net-client/sample/client/Program.cs?name=snippet_prod)]
 
-이 클래스는 web API에서 사용 하는 데이터 모델과 일치 합니다. 앱은 **Httpclient** 를 사용 하 여 HTTP 응답에서 `Product` 인스턴스를 읽을 수 있습니다. 앱은 deserialization 코드를 작성할 필요가 없습니다.
+이 클래스는 web API에서 사용 하는 데이터 모델과 일치 합니다. 앱은 **Httpclient** 를 사용 하 여 `Product` HTTP 응답에서 인스턴스를 읽을 수 있습니다. 앱은 deserialization 코드를 작성할 필요가 없습니다.
 
 <a id="InitClient"></a>
 ## <a name="create-and-initialize-httpclient"></a>HttpClient 만들기 및 초기화
@@ -93,7 +98,7 @@ Netwonsoft (Json.NET 라고도 함)는 .NET 용으로 널리 사용 되는 고�
 
 [!code-csharp[Main](calling-a-web-api-from-a-net-client/sample/client/Program.cs?name=snippet5)]
 
-위의 코드는:
+위의 코드는
 
 * HTTP 요청에 대 한 기본 URI를 설정 합니다. 서버 앱에서 사용 되는 포트로 포트 번호를 변경 합니다. 서버 앱에 대 한 포트를 사용 하지 않으면 앱이 작동 하지 않습니다.
 * Accept 헤더를 "application/json"으로 설정 합니다. 이 헤더를 설정 하면 서버에서 JSON 형식으로 데이터를 전송 합니다.
@@ -107,7 +112,7 @@ Netwonsoft (Json.NET 라고도 함)는 .NET 용으로 널리 사용 되는 고�
 
 **Getasync** 메서드는 HTTP GET 요청을 보냅니다. 메서드가 완료 되 면 HTTP 응답을 포함 하는 **HttpResponseMessage** 를 반환 합니다. 응답의 상태 코드가 성공 코드 이면 응답 본문은 제품의 JSON 표현을 포함 합니다. **Readasasync** 를 호출 하 여 JSON 페이로드를 `Product` 인스턴스로 deserialize 합니다. 응답 본문은 임의로 클 수 있으므로 **Readasasync** 메서드는 비동기입니다.
 
-HTTP 응답에 오류 코드가 포함 되어 있으면 **Httpclient** 는 예외를 throw 하지 않습니다. 대신 **.issuccessstatuscode** 속성은 상태가 오류 코드 이면 **false** 입니다. HTTP 오류 코드를 예외로 처리 하는 것을 선호 하는 경우 응답 개체에서 [HttpResponseMessage](https://msdn.microsoft.com/library/system.net.http.httpresponsemessage.ensuresuccessstatuscode(v=vs.110).aspx) 를 호출 합니다. 상태 코드가 200 299&ndash;`EnsureSuccessStatusCode` 범위를 벗어나면 예외가 throw 됩니다. 요청 시간이 초과 되는 경우와 같이 **Httpclient** 는 다른 이유로 인해 예외를 throw 할 수 있습니다 &mdash;.
+HTTP 응답에 오류 코드가 포함 되어 있으면 **Httpclient** 는 예외를 throw 하지 않습니다. 대신 **.issuccessstatuscode** 속성은 상태가 오류 코드 이면 **false** 입니다. HTTP 오류 코드를 예외로 처리 하는 것을 선호 하는 경우 응답 개체에서 [HttpResponseMessage](https://msdn.microsoft.com/library/system.net.http.httpresponsemessage.ensuresuccessstatuscode(v=vs.110).aspx) 를 호출 합니다. `EnsureSuccessStatusCode`상태 코드가 200 299 범위를 벗어나면 예외가 throw 됩니다 &ndash; . 요청 시간이 초과 되는 경우 **Httpclient** 는 다른 이유로 예외를 throw 할 수 있습니다 &mdash; .
 
 <a id="MediaTypeFormatters"></a>
 ### <a name="media-type-formatters-to-deserialize"></a>Deserialize 할 미디어 형식 포맷터
@@ -129,7 +134,7 @@ resp.Content.ReadAsAsync<IEnumerable<Product>>(formatters);
 
 ## <a name="sending-a-post-request-to-create-a-resource"></a>리소스를 만들기 위한 POST 요청 보내기
 
-다음 코드는 `Product` 인스턴스를 포함 하는 POST 요청을 JSON 형식으로 보냅니다.
+다음 코드는 `Product` 인스턴스를 JSON 형식으로 포함 하는 POST 요청을 보냅니다.
 
 [!code-csharp[Main](calling-a-web-api-from-a-net-client/sample/client/Program.cs?name=snippet_CreateProductAsync)]
 
@@ -165,11 +170,11 @@ GET과 마찬가지로 DELETE 요청에는 요청 본문이 없습니다. DELETE
 
 클라이언트 앱을 테스트 하려면:
 
-1. 서버 앱을 [다운로드](https://github.com/dotnet/AspNetDocs/tree/master/aspnet/web-api/overview/advanced/calling-a-web-api-from-a-net-client/sample/server) 하 고 실행 합니다. [지침을 다운로드하세요](/aspnet/core/#how-to-download-a-sample). 서버 앱이 작동 하는지 확인 합니다. 예를 들어 `http://localhost:64195/api/products`는 제품 목록을 반환 해야 합니다.
+1. 서버 앱을 [다운로드](https://github.com/dotnet/AspNetDocs/tree/master/aspnet/web-api/overview/advanced/calling-a-web-api-from-a-net-client/sample/server) 하 고 실행 합니다. [지침을 다운로드하세요](/aspnet/core/#how-to-download-a-sample). 서버 앱이 작동 하는지 확인 합니다. 예를 들어는 `http://localhost:64195/api/products` 제품 목록을 반환 합니다.
 2. HTTP 요청에 대 한 기본 URI를 설정 합니다. 서버 앱에서 사용 되는 포트로 포트 번호를 변경 합니다.
     [!code-csharp[Main](calling-a-web-api-from-a-net-client/sample/client/Program.cs?name=snippet5&highlight=2)]
 
-3. 클라이언트 앱을 실행 합니다. 다음 출력이 생성됩니다.
+3. 클라이언트 앱을 실행합니다. 다음 출력이 생성됩니다.
 
    ```console
    Created at http://localhost:64195/api/products/4
