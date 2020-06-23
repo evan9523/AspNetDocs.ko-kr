@@ -8,12 +8,12 @@ ms.date: 02/20/2013
 ms.assetid: a3cef801-a54b-4ebd-93c3-55764e2e14b1
 msc.legacyurl: /visual-studio/overview/2012/windows-azure-authentication
 msc.type: authoredcontent
-ms.openlocfilehash: ce98effe18dd739504fb0d5453bae8a46c3ba102
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: ab75218cbe3817c14a064e9816388aebc7e431f7
+ms.sourcegitcommit: 0cf7d06071a8ff986e6c028ac9daf0c0e7490412
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78449465"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85240560"
 ---
 # <a name="windows-azure-authentication"></a>Microsoft Azure 인증
 
@@ -25,7 +25,7 @@ ms.locfileid: "78449465"
 >
 > 온-프레미스 Active Directory와 Windows Azure Active Directory 테 넌 트 간의 동기화를 설정 하는 방법에 대 한 자세한 내용은 [AD FS 2.0를 사용 하 여 Single Sign-On 구현 및 관리를](https://technet.microsoft.com/library/jj205462.aspx)참조 하세요.
 >
-> Windows Azure Active Directory는 현재 [무료 미리 보기 서비스로](https://azure.microsoft.com/free/?WT.mc_id=A443DD604)제공 됩니다.
+> Windows Azure Active Directory는 현재 [무료 미리 보기 서비스로](https://azure.microsoft.com/free/dotnet/)제공 됩니다.
 
 ## <a name="requirements"></a>요구 사항:
 
@@ -65,7 +65,7 @@ Windows Azure Active Directory 테 넌 트에 대 한 전역 관리자 권한이
 ![](windows-azure-authentication/_static/image6.png)
 
 이 대화 상자에는 Azure Active Directory 개념를 사용 하 여 응용 프로그램을 프로 비전 하는 데 필요한 **도메인**, **응용 프로그램 보안 주체 ID** 및 **회신 URL** 이 표시 됩니다. 응용 프로그램을 프로 비전 하는 데 충분 한 권한이 있는 사용자에 게이 정보를 제공 해야 합니다. Cmdlet을 사용 하 여 서비스 주체를 수동으로 만드는 방법에 대 한 자세한 내용은[Windows Azure Active Directory-ASP.NET 응용 프로그램을 사용 하 여 Single Sign-On를 구현 하는 방법](https://github.com/Azure-Samples/active-directory-dotnet-webapp-openidconnect) 을 참조 하세요.
-응용 프로그램을 성공적으로 프로 비전 한 후에는 계속을 클릭 **하 여 선택한 설정으로 web.config를 업데이트할**수 있습니다. 프로 비전이 발생 하기를 기다리는 동안 응용 프로그램을 계속 개발 하려는 경우 **닫기를 클릭 하 여 프로젝트 파일의 설정을 기억할**수 있습니다. 다음 번에 Windows Azure 인증 사용을 호출 하 고 프로 비전 확인란의 선택을 취소 하면 동일한 설정이 표시 되 고 **계속**을 클릭 한 다음 **web.config에서 이러한 설정 적용**을 클릭 합니다.
+응용 프로그램을 성공적으로 프로 비전 한 후에는 **계속을 클릭 하 여 선택한 설정으로 web.config를 업데이트할**수 있습니다. 프로 비전이 발생 하기를 기다리는 동안 응용 프로그램을 계속 개발 하려는 경우 **닫기를 클릭 하 여 프로젝트 파일의 설정을 기억할**수 있습니다. 다음에 Windows Azure 인증 사용을 호출 하 고 프로 비전 확인란의 선택을 취소 하면 동일한 설정이 표시 되 고 **계속**을 클릭 한 다음 **web.config에서 이러한 설정 적용 **을 클릭 합니다.
 
 1. 응용 프로그램을 Windows Azure 인증에 대해 구성 하 고 Windows Azure Active Directory로 프로 비전 하는 동안 기다립니다.
 2. 응용 프로그램에 대해 Windows Azure 인증을 사용 하도록 설정한 후 **닫기** 를 클릭 합니다.
@@ -85,9 +85,9 @@ Windows Azure Active Directory 테 넌 트에 대 한 전역 관리자 권한이
 
 Windows Azure 인증을 사용 하도록 설정 하면 응용 프로그램이 다음과 같이 변경 됩니다.
 
-- [Csrf](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF))(사이트 간 요청 위조) 클래스 ( *앱\_Start\AntiXsrfConfig.cs* )가 프로젝트에 추가 됩니다.
-- NuGet 패키지 `System.IdentityModel.Tokens.ValidatingIssuerNameRegistry` 프로젝트에 추가 됩니다.
-- 응용 프로그램의 windows Identity Foundation 설정은 Windows Azure Active Directory 테 넌 트의 보안 토큰을 허용 하도록 구성 됩니다. *Web.config* 파일의 변경 내용에 대 한 확장 된 보기를 보려면 아래 이미지를 클릭 하십시오.
+- [Csrf](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF))(사이트 간 요청 위조) 클래스 ( *앱 \_ Start\AntiXsrfConfig.cs* )가 프로젝트에 추가 됩니다.
+- NuGet 패키지는 `System.IdentityModel.Tokens.ValidatingIssuerNameRegistry` 프로젝트에 추가 됩니다.
+- 응용 프로그램의 windows Identity Foundation 설정은 Windows Azure Active Directory 테 넌 트의 보안 토큰을 허용 하도록 구성 됩니다. *Web.config* 파일의 변경 내용에 대 한 확장 된 보기를 보려면 아래 이미지를 클릭 하세요.
 
      ![](windows-azure-authentication/_static/image9.png)
 - Windows Azure Active Directory 테 넌 트의 응용 프로그램에 대 한 서비스 주체가 프로 비전 됩니다.
@@ -141,7 +141,7 @@ Microsoft Azure 인증을 사용 하 여 응용 프로그램을 Azure 웹 사이
 
 #### <a name="browsing-to-an-application-with-windows-azure-authentication-results-in-the-error-acs20016-the-domain-of-the-logged-in-user-livecom-does-not-match-any-allowed-domain-of-this-sts"></a>Windows Azure 인증을 사용 하 여 응용 프로그램을 검색 하면 "ACS20016가 로그인 한 사용자의 도메인 (live.com)이이 STS의 허용 된 도메인과 일치 하지 않습니다." 오류가 발생 합니다.
 
-Microsoft 계정 (예: hotmail.com, live.com, outlook.com)에 이미 로그인 한 상태에서 Windows Azure 인증을 사용 하도록 설정 된 응용 프로그램에 액세스 하려고 하면 Microsoft 계정의 도메인으로 인해 400 오류가 발생할 수 있습니다. Windows Azure Active Directory에서 인식 되지 않습니다. 응용 프로그램에 로그인 하려면 먼저 Microsoft 계정에서 로그 아웃 합니다.
+Microsoft 계정 (예: hotmail.com, live.com, outlook.com)에 이미 로그인 한 상태에서 Windows Azure 인증을 사용 하도록 설정 된 응용 프로그램에 액세스 하려고 하면 Windows Azure Active Directory에서 Microsoft 계정의 도메인이 인식 되지 않기 때문에 400 오류 메시지가 표시 될 수 있습니다. 응용 프로그램에 로그인 하려면 먼저 Microsoft 계정에서 로그 아웃 합니다.
 
 #### <a name="logging-into-an-application-with-windows-azure-authentication-enabled-and-a-x509certificatevalidationmode-other-than-none-results-in-certificate-validation-errors-for-the-accountsaccesscontrolwindowsnet-certificate"></a>Microsoft Azure 인증을 사용 하도록 설정 된 응용 프로그램에 로그인 하 고 없음 이외의 X509CertificateValidationMode는 accounts.accesscontrol.windows.net 인증서에 대 한 인증서 유효성 검사 오류가 발생 합니다.
 

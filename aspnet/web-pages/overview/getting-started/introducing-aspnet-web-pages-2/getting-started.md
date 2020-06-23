@@ -8,16 +8,16 @@ ms.date: 05/28/2015
 ms.assetid: a36d3bdf-ef1b-47a4-b932-3a0cf4cad716
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/getting-started
 msc.type: authoredcontent
-ms.openlocfilehash: bb863f8605e6f8faca3b285607b63a3e88e83012
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: ac2111980e6393388a0530375fb9ef78dbbfaff6
+ms.sourcegitcommit: 0cf7d06071a8ff986e6c028ac9daf0c0e7490412
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78440243"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85240762"
 ---
-# <a name="getting-started"></a>시작하기
+# <a name="getting-started"></a>시작
 
-만든 사람 [Tom FitzMacken](https://github.com/tfitzmac)
+[Tom FitzMacken](https://github.com/tfitzmac)
 
 [!INCLUDE[](~/includes/rp.md)]
 
@@ -62,7 +62,7 @@ ms.locfileid: "78440243"
 - **Css 스타일 시트**입니다. HTML과 동일 합니다.
 - **기본 데이터베이스 아이디어**. 데이터에 스프레드시트를 사용 하 여 데이터를 정렬 하 고 필터링 한 경우이 자습서를 일반적으로이 자습서로 가정 하는 전문 지식 수준입니다.
 
-또한 기본적인 프로그래밍을 배우는 데 관심이 있다고 가정 합니다. ASP.NET 웹 페이지 이라는 C#프로그래밍 언어를 사용 합니다. 프로그래밍에 대 한 배경 지식이 없어도 됩니다. 이전에 웹 페이지에서 JavaScript를 작성 한 적이 있다면 많은 배경을가지고 있습니다.
+또한 기본적인 프로그래밍을 배우는 데 관심이 있다고 가정 합니다. C # 이라는 프로그래밍 언어를 사용 ASP.NET 웹 페이지 합니다. 프로그래밍에 대 한 배경 지식이 없어도 됩니다. 이전에 웹 페이지에서 JavaScript를 작성 한 적이 있다면 많은 배경을가지고 있습니다.
 
 프로그래밍에 대해 잘 알고 있는 경우에는이 자습서 집합을 처음부터 빠르게 이동 하는 동안 새 프로그래머가 빠르게 이동 하는 것을 알 수 있습니다. 처음에는 몇 가지 자습서를 수행 하는 것 처럼 간단 하 게 설명할 수 있으며 더 빠른 클립으로 이동 하는 것도 있습니다.
 
@@ -133,7 +133,7 @@ Microsoft에서 웹 플랫폼 설치 관리자를 사용 하 여 모든 항목�
 
 ASP.NET 웹 사이트의 [웹 페이지 페이지](../../../index.md) 에서 **설치**를 클릭 합니다.
 
-![WebMatrix&quot; &quot;설치 단추를 표시 하는 ASP.NET 웹 사이트](getting-started/_static/image3.png)
+![&quot;WebMatrix 설치 단추를 표시 하는 ASP.NET 웹 사이트 &quot;](getting-started/_static/image3.png)
 
 WebMatrix를 설치 하기 전에 사용 조건 및 개인정보 처리 방침에 동의 하 라는 메시지가 표시 됩니다.
 
@@ -153,13 +153,13 @@ WebMatrix를 설치 하기 전에 사용 조건 및 개인정보 처리 방침�
 
 설치가 완료 되 면 설치 프로세스에서 WebMatrix를 자동으로 시작할 수 있습니다. 그렇지 않으면 Windows의 **시작** 메뉴에서 **Microsoft WebMatrix**를 시작 합니다.
 
-WebMatrix를 처음 시작 하는 경우 Microsoft 계정 Microsoft Azure에 로그인 할 수 있는 기회가 제공 됩니다. 로그인 하면 Azure를 통해 10 개의 무료 웹 앱을 받게 됩니다. 이러한 무료 웹 앱은 앱을 테스트 하는 편리한 방법을 제공 합니다. Azure 계정이 아직 없지만 MSDN 구독이 있는 경우 [msdn subscription 혜택을 활성화할](https://www.windowsazure.com/pricing/member-offers/msdn-benefits-details/?WT.mc_id=A443DD604)수 있습니다. 그렇지 않으면 몇 분만에 무료 평가판 계정을 만들 수 있습니다. 자세한 내용은 [Azure 평가판](https://azure.microsoft.com/free/?WT.mc_id=A443DD604)을 참조하세요.
+WebMatrix를 처음 시작 하는 경우 Microsoft 계정 Microsoft Azure에 로그인 할 수 있는 기회가 제공 됩니다. 로그인 하면 Azure를 통해 10 개의 무료 웹 앱을 받게 됩니다. 이러한 무료 웹 앱은 앱을 테스트 하는 편리한 방법을 제공 합니다. Azure 계정이 아직 없지만 MSDN 구독이 있는 경우 [msdn subscription 혜택을 활성화할](https://www.windowsazure.com/pricing/member-offers/msdn-benefits-details/?WT.mc_id=A443DD604)수 있습니다. 그렇지 않으면 몇 분만에 무료 평가판 계정을 만들 수 있습니다. 자세한 내용은 [Azure 평가판](https://azure.microsoft.com/free/dotnet/)을 참조하세요.
 
 이 자습서를 계속 진행 하기 위해 지금 로그인 할 필요는 없습니다. 지금 로그인 하지 않으면 나중에 로그인 할 수 있는 옵션이 표시 됩니다. 이 자습서 시리즈의 마지막 [항목](publishing.md) 에서는 Azure에 웹 사이트를 배포 하는 방법을 설명 합니다. 따라서이 항목을 완료 하려면 로그인 해야 합니다.
 
 **이제** Microsoft 계정를 사용 하 여 로그인 하거나, 오른쪽 아래 모서리에서 아니요를 선택 합니다.
 
-![로그인](getting-started/_static/image7.png)
+![링크를](getting-started/_static/image7.png)
 
 시작 하려면 빈 웹 사이트를 만들고 페이지를 추가 합니다. 이 집합의 이후 자습서에서는 기본 제공 웹 사이트 템플릿 중 하나를 사용 하 여 재생 합니다.
 
@@ -199,7 +199,7 @@ WebMatrix 및 ASP.NET 웹 페이지에 익숙해질 수 있도록 간단한 페�
 
 리본 메뉴에서 **새로 만들기** 아래에 있는 화살표를 클릭 한 다음 **새 파일**을 클릭 합니다.
 
-![리본에서 새 &quot;&quot; 명령을 사용 하 여 새 파일을 만듭니다.](getting-started/_static/image14.png)
+![&quot;리본에서 새 명령을 사용 하 여 &quot; 새 파일 만들기](getting-started/_static/image14.png)
 
 WebMatrix 파일 형식 목록을 표시 합니다. **CSHTML**를 선택 하 고 **이름** 상자에 "HelloWorld"를 입력 합니다. CSHTML 페이지는 ASP.NET 웹 페이지 페이지입니다.
 
@@ -217,9 +217,9 @@ WebMatrix가 페이지를 만들고 편집기에서 엽니다.
 
 잠시 후에 코드를 추가 하기 위한 것입니다.
 
-페이지의 여러 부분에 요소 이름, 특성 및 텍스트 &mdash; 맨 위에 있는 블록이 모두 다른 색으로 표시 됩니다. 이를 *구문 강조 표시*라고 하며 모든 것을 명확 하 게 유지할 수 있습니다. WebMatrix에서 웹 페이지를 쉽게 사용할 수 있도록 하는 기능 중 하나입니다.
+페이지의 &mdash; 요소 이름, 특성, 텍스트 및 위쪽의 블록은 모두 다른 색으로 되어 있습니다. 이를 *구문 강조 표시*라고 하며 모든 것을 명확 하 게 유지할 수 있습니다. WebMatrix에서 웹 페이지를 쉽게 사용할 수 있도록 하는 기능 중 하나입니다.
 
-다음 예제와 같이 `<head>` 및 `<body>` 요소에 대 한 콘텐츠를 추가 합니다. (원하는 경우 다음 블록을 복사 하 고 기존 전체 페이지를이 코드로 바꿀 수 있습니다.)
+`<head>`다음 예제와 같이 및 요소에 대 한 콘텐츠를 추가 `<body>` 합니다. (원하는 경우 다음 블록을 복사 하 고 기존 전체 페이지를이 코드로 바꿀 수 있습니다.)
 
 [!code-cshtml[Main](getting-started/samples/sample2.cshtml)]
 
@@ -235,13 +235,13 @@ WebMatrix가 페이지를 만들고 편집기에서 엽니다.
 
 WebMatrix는 컴퓨터에서 페이지를 테스트 하는 데 사용할 수 있는 기본 제공 웹 서버 (IIS Express)를 시작 합니다. (WebMatrix에서 IIS Express 하지 않고 웹 서버를 테스트 하기 전에 웹 서버에 페이지를 게시 해야 합니다.) 페이지가 기본 브라우저에 표시 됩니다.
 
-![브라우저에서 실행 중인 Hello World&quot; 페이지 &quot;](getting-started/_static/image19.png)
+![&quot;&quot;브라우저에서 실행 중인 Hello World 페이지](getting-started/_static/image19.png)
 
-WebMatrix에서 페이지를 테스트 하는 경우 브라우저의 URL은 로컬 서버를 참조 하는 이름 `http://localhost:33651/HelloWorld.cshtml.`입니다. 즉, 사용자 컴퓨터에 있는 웹 서버에 의해 페이지가 제공 된다는 *것을 의미* 합니다. 앞서 설명한 것 처럼 WebMatrix에는 페이지를 시작할 때 실행 되는 IIS Express 이라는 웹 서버 프로그램이 포함 되어 있습니다.
+WebMatrix에서 페이지를 테스트 하는 경우 브라우저의 URL은 `http://localhost:33651/HelloWorld.cshtml.` 로컬 서버를 참조 하는 이름입니다 *localhost* . 즉, 사용자 컴퓨터에 있는 웹 서버에서 페이지를 제공 하는 것입니다. 앞서 설명한 것 처럼 WebMatrix에는 페이지를 시작할 때 실행 되는 IIS Express 이라는 웹 서버 프로그램이 포함 되어 있습니다.
 
 *Localhost* (예 *: localhost: 33651*) 다음의 번호는 컴퓨터의 *포트 번호* 를 나타냅니다. 이 특정 웹 사이트에 IIS Express 사용 하는 "채널"의 번호입니다. 포트 번호는 사이트를 만들 때 1024 ~ 65536 범위의 임의로 선택 되며, 사용자가 만드는 모든 사이트 마다 다릅니다. 사용자 고유의 사이트를 테스트 하는 경우 포트 번호는 거의 33561 보다 다른 숫자입니다. 각 웹 사이트에 대해 서로 다른 포트를 사용 하 여 통신 하 고 있는 사이트를 바로 IIS Express 수 있습니다.
 
-나중에 사이트를 공용 웹 서버에 게시할 때 URL에 *localhost* 가 더 이상 표시 되지 않습니다. 이 시점에서 `http://myhostingsite/mywebsite/HelloWorld.cshtml` 또는 페이지와 같은 일반적인 URL을 볼 수 있습니다. 이 자습서 시리즈의 뒷부분에서 사이트를 게시 하는 방법에 대해 자세히 알아봅니다.
+나중에 사이트를 공용 웹 서버에 게시할 때 URL에 *localhost* 가 더 이상 표시 되지 않습니다. 이 시점에서 또는 페이지와 같은 일반적인 URL을 볼 수 있습니다 `http://myhostingsite/mywebsite/HelloWorld.cshtml` . 이 자습서 시리즈의 뒷부분에서 사이트를 게시 하는 방법에 대해 자세히 알아봅니다.
 
 ## <a name="adding-some-server-side-code"></a>서버 쪽 코드 추가
 
@@ -251,17 +251,17 @@ WebMatrix에서 페이지를 테스트 하는 경우 브라우저의 URL은 로�
 
 [!code-cshtml[Main](getting-started/samples/sample3.cshtml)]
 
-약간 약간의 Razor 코드입니다. 현재 날짜와 시간을 가져오고 해당 값을 `currentDateTime`라는 *변수에* 넣는 것이 확실 하지 않을 수 있습니다. 다음 자습서의 Razor 구문에 대 한 자세한 내용을 참조 하세요.
+약간 약간의 Razor 코드입니다. 현재 날짜와 시간을 가져오고 해당 값을 라는 *변수에* 배치 한다는 것을 분명 하 게 알 수 있습니다 `currentDateTime` . 다음 자습서의 Razor 구문에 대 한 자세한 내용을 참조 하세요.
 
-페이지의 본문에서 `<p>Hello World!</p>` 요소 뒤에 다음을 추가 합니다.
+페이지의 본문에서 요소 뒤에 `<p>Hello World!</p>` 다음을 추가 합니다.
 
 [!code-html[Main](getting-started/samples/sample4.html)]
 
-이 코드는 위쪽의 `currentDateTime` 변수에 입력 한 값을 가져와 페이지의 태그에 삽입 합니다. `@` 문자는 페이지에서 ASP.NET 웹 페이지 코드를 표시 합니다.
+이 코드는 `currentDateTime` 위쪽의 변수에 입력 한 값을 가져와 페이지의 태그에 삽입 합니다. `@`문자는 페이지의 ASP.NET 웹 페이지 코드를 표시 합니다.
 
 페이지를 다시 실행 합니다. WebMatrix는 페이지를 실행 하기 전에 변경 내용을 저장 합니다. 이번에는 페이지에 날짜 및 시간이 표시 됩니다.
 
-![동적으로 생성 된 시간 표시를 사용 하 여 브라우저에서 실행 중인 Hello World&quot; 페이지 &quot;](getting-started/_static/image20.png)
+![&quot;&quot;동적으로 생성 된 시간 표시를 사용 하 여 브라우저에서 실행 중인 Hello World 페이지](getting-started/_static/image20.png)
 
 잠시 기다렸다가 브라우저에서 페이지를 새로 고칩니다. 날짜 및 시간 표시가 업데이트 됩니다.
 
@@ -269,7 +269,7 @@ WebMatrix에서 페이지를 테스트 하는 경우 브라우저의 URL은 로�
 
 [!code-html[Main](getting-started/samples/sample5.html)]
 
-맨 위에 있는 `@{ }` 블록은 표시 되지 않습니다. 또한 날짜 및 시간 표시에는의 실제 문자열 (`1/18/2012 2:49:50 PM` 또는 모두 `@currentDateTime`)이 표시 됩니다 *.* 여기서는 페이지를 실행 했을 때 ASP.NET로 `@`표시 된 모든 코드 (이 경우에는 거의 없음)를 처리 했음을 의미 합니다. 코드가 출력을 생성 하 고 해당 출력이 페이지에 삽입 되었습니다.
+위쪽에 있는 `@{ }` 블록은 표시 되지 않습니다. 또한 날짜 및 시간 표시에는의 실제 문자열 (또는 모든 항목)이 표시 됩니다. `1/18/2012 2:49:50 PM` `@currentDateTime` *.cshtml* 여기서는 페이지를 실행 했을 때 ASP.NET로 표시 된 모든 코드 (이 경우에는 거의 없음)를 처리 했음을 의미 `@` 합니다. 코드가 출력을 생성 하 고 해당 출력이 페이지에 삽입 되었습니다.
 
 ## <a name="this-is-what-aspnet-web-pages-are-about"></a>이 ASP.NET 웹 페이지에 대 한 정보입니다.
 

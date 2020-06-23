@@ -8,20 +8,18 @@ ms.date: 06/10/2014
 ms.assetid: 400db427-27af-4f2f-abf0-5486d5e024b5
 msc.legacyurl: /signalr/overview/deployment/tutorial-signalr-self-host
 msc.type: authoredcontent
-ms.openlocfilehash: 41c8c3803923e76ef238a5c5937cbe7f81e6aa82
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: 7470e0d6b68772ccfd979c834b7db81fbba3ca78
+ms.sourcegitcommit: 0cf7d06071a8ff986e6c028ac9daf0c0e7490412
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78450167"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85240615"
 ---
-# <a name="tutorial-signalr-self-host"></a>자습서: SignalR 자체 호스트
+# <a name="tutorial-signalr-self-host"></a>자습서: SignalR 자체 호스팅
 
 [Patrick Fletcher](https://github.com/pfletcher)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
-
-[완료 된 프로젝트 다운로드](https://code.msdn.microsoft.com/SignalR-Self-Host-Sample-6da0f383)
 
 > 이 자습서에서는 자체 호스트 된 SignalR 2 서버를 만드는 방법과 JavaScript 클라이언트를 사용 하 여이 서버에 연결 하는 방법을 보여 줍니다.
 >
@@ -72,10 +70,10 @@ IIS에서를 호스팅하지 않는 이유는 다음과 같습니다.
 
 이 자습서에서는 콘솔 응용 프로그램에서 호스트 되는 서버를 만들지만 Windows 서비스 또는 Azure 작업자 역할과 같은 모든 종류의 프로세스에서 서버를 호스트할 수 있습니다. Windows 서비스에서 SignalR 서버를 호스트 하는 샘플 코드는 [Windows 서비스의 자체 호스팅 SignalR](https://code.msdn.microsoft.com/SignalR-self-hosted-in-6ff7e6c3)을 참조 하세요.
 
-1. 관리자 권한으로 Visual Studio 2013를 엽니다. **파일**, **새 프로젝트**를 차례로 선택 합니다. **템플릿** 창의 **시각적 C#**  노드에서 **창** 을 선택 하 고 **콘솔 응용 프로그램** 템플릿을 선택 합니다. 새 프로젝트의 이름을 "SignalRSelfHost"로 하 고 **확인**을 클릭 합니다.
+1. 관리자 권한으로 Visual Studio 2013를 엽니다. **파일**, **새 프로젝트**를 차례로 선택 합니다. **템플릿** 창의 **Visual c #** 노드 아래에서 **Windows** 를 선택 하 고 **콘솔 응용 프로그램** 템플릿을 선택 합니다. 새 프로젝트의 이름을 "SignalRSelfHost"로 하 고 **확인**을 클릭 합니다.
 
     ![](tutorial-signalr-self-host/_static/image1.png)
-2. **도구** > **nuget** 패키지 관리자 > **패키지 관리자 콘솔**을 선택 하 여 nuget 패키지 관리자 콘솔을 엽니다.
+2. **도구**  >  **nuget**패키지 관리자  >  **패키지 관리자 콘솔**을 선택 하 여 nuget 패키지 관리자 콘솔을 엽니다.
 3. 패키지 관리자 콘솔에서 다음 명령을 입력 합니다.
 
     [!code-powershell[Main](tutorial-signalr-self-host/samples/sample1.ps1)]
@@ -92,13 +90,13 @@ IIS에서를 호스팅하지 않는 이유는 다음과 같습니다.
 
     위의 코드는 세 가지 클래스를 포함 합니다.
 
-    - 기본 실행 경로를 정의 하는 **Main** 메서드를 포함 하는 **프로그램**입니다. 이 메서드에서 **Startup** 유형의 웹 응용 프로그램은 지정 된 URL (`http://localhost:8080`)에서 시작 됩니다. 끝점에 보안을 설정 해야 하는 경우 SSL을 구현할 수 있습니다. 자세한 내용은 [방법: SSL 인증서로 포트 구성](https://msdn.microsoft.com/library/ms733791.aspx) 을 참조 하세요.
-    - **시작**, SignalR 서버에 대 한 구성 (이 자습서에서는 `UseCors`에 대 한 호출)을 포함 하는 클래스는 프로젝트의 모든 허브 개체에 대 한 경로를 만드는 `MapSignalR`에 대 한 호출입니다.
+    - 기본 실행 경로를 정의 하는 **Main** 메서드를 포함 하는 **프로그램**입니다. 이 메서드에서 **Startup** 유형의 웹 응용 프로그램은 지정 된 URL ()에서 시작 됩니다 `http://localhost:8080` . 끝점에 보안을 설정 해야 하는 경우 SSL을 구현할 수 있습니다. 자세한 내용은 [방법: SSL 인증서로 포트 구성](https://msdn.microsoft.com/library/ms733791.aspx) 을 참조 하세요.
+    - **시작**, SignalR 서버에 대 한 구성 (이 자습서에서 사용 하는 유일한 구성) 및에 대 한 호출을 포함 하는 클래스는 `UseCors` `MapSignalR` 프로젝트의 모든 허브 개체에 대 한 경로를 만듭니다.
     - **Myhub**-응용 프로그램이 클라이언트에 제공 하는 SignalR hub 클래스입니다. 이 클래스에는 클라이언트에서 연결 된 다른 모든 클라이언트에 메시지를 브로드캐스트하는를 호출 하는 단일 메서드인 **Send**가 있습니다.
 6. 애플리케이션을 컴파일하고 실행합니다. 서버에서 실행 중인 주소가 콘솔 창에 표시 됩니다.
 
     ![](tutorial-signalr-self-host/_static/image2.png)
-7. `System.Reflection.TargetInvocationException was unhandled`예외로 인해 실행이 실패 하면 관리자 권한으로 Visual Studio를 다시 시작 해야 합니다.
+7. 예외로 인해 실행이 실패 하면 `System.Reflection.TargetInvocationException was unhandled` 관리자 권한으로 Visual Studio를 다시 시작 해야 합니다.
 8. 다음 섹션으로 진행 하기 전에 응용 프로그램을 중지 합니다.
 
 <a id="js"></a>
@@ -118,7 +116,7 @@ IIS에서를 호스팅하지 않는 이유는 다음과 같습니다.
     [!code-powershell[Main](tutorial-signalr-self-host/samples/sample4.ps1)]
 
     이 명령은 클라이언트에 필요한 SignalR 및 JQuery 라이브러리를 설치 합니다.
-4. 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **추가**, **새 항목**을 차례로 선택 합니다. **웹** 노드를 선택 하 고 HTML 페이지를 선택 합니다. 페이지의 이름을 **default.aspx**로 합니다.
+4. 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **추가**, **새 항목**을 차례로 선택 합니다. **웹** 노드를 선택 하 고 HTML 페이지를 선택 합니다. 페이지의 이름을 **Default.html**로 합니다.
 
     ![](tutorial-signalr-self-host/_static/image5.png)
 5. 새 HTML 페이지의 내용을 다음 코드로 바꿉니다. 여기에서 스크립트 참조가 프로젝트의 Scripts 폴더에 있는 스크립트와 일치 하는지 확인 합니다.
@@ -131,6 +129,6 @@ IIS에서를 호스팅하지 않는 이유는 다음과 같습니다.
 6. 솔루션을 마우스 오른쪽 단추로 클릭 하 고 **시작 프로젝트 설정**...을 선택 합니다. **여러 개의 시작 프로젝트** 라디오 단추를 선택 하 고 두 프로젝트의 **작업** 을 **시작**으로 설정 합니다.
 
     ![](tutorial-signalr-self-host/_static/image6.png)
-7. "Default .html"을 마우스 오른쪽 단추로 클릭 하 고 **시작 페이지로 설정**을 선택 합니다.
+7. "Default.html"을 마우스 오른쪽 단추로 클릭 하 고 **시작 페이지로 설정**을 선택 합니다.
 8. 애플리케이션을 실행합니다. 서버와 페이지가 시작 됩니다. 서버를 시작 하기 전에 페이지를 로드 하는 경우 웹 페이지를 다시 로드 하거나 디버거에서 **계속** 을 선택 해야 할 수 있습니다.
 9. 브라우저에서 메시지가 표시 되 면 사용자 이름을 입력 합니다. 페이지의 URL을 다른 브라우저 탭 또는 창에 복사 하 고 다른 사용자 이름을 입력 합니다. 시작 자습서에서와 같이 브라우저 창 간에 메시지를 보낼 수 있습니다.

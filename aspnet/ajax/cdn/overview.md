@@ -8,12 +8,12 @@ ms.date: 10/14/2017
 ms.assetid: 8935bf14-ca6d-4a4e-9dbe-b96ce74cef49
 msc.legacyurl: /ajax/cdn
 msc.type: content
-ms.openlocfilehash: 27b1ca8567e29fa4bca0ae9f32e0c904ad54ba8f
-ms.sourcegitcommit: a4c3c7e04e5f53cf8cd334f036d324976b78d154
+ms.openlocfilehash: b66e812f0324be95effdd8d232baa6a59302b9df
+ms.sourcegitcommit: 0cf7d06071a8ff986e6c028ac9daf0c0e7490412
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84172954"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85240603"
 ---
 # <a name="microsoft-ajax-content-delivery-network"></a>Microsoft Ajax Content Delivery Network
 
@@ -48,7 +48,7 @@ ms.locfileid: "84172954"
  [CDN에 대 한 응답 릴리스](#Respond_Releases_on_the_CDN_13)  
  [CDN의 부트스트랩 릴리스](#Bootstrap_Releases_on_the_CDN_14)  
  [CDN의 부트스트랩 TouchCarousel 릴리스](#BootstrapTouchCarousel_Releases_on_the_CDN_18)  
- [CDN의 해머 릴리스](#Hammerjs_Releases_on_the_CDN_19)  
+ [CDN의Hammer.js 릴리스](#Hammerjs_Releases_on_the_CDN_19)  
  [ASP.NET Web Forms 및 CDN의 Ajax 릴리스](#ASPNET_Web_Forms_and_Ajax_Releases_on_the_CDN_15)  
  [CDN의 ASP.NET MVC 릴리스](#ASPNET_MVC_Releases_on_the_CDN_16)  
  [CDN의 ASP.NET SignalR 릴리스](#ASPNET_SignalR_Releases_on_the_CDN_17)
@@ -627,6 +627,7 @@ jQuery 마이그레이션 버전 1.2.0
 
 [JQuery 유효성 검사](https://jqueryvalidation.org/ "jQuery 유효성 검사 플러그 인") 플러그 인의 다음 릴리스는이 CDN에서 호스팅됩니다. 각 링크를 클릭 하 여 파일의 실제 목록을 확인 합니다.
 
+- [jQuery Validate 1.19.2](jquery-validate/cdnjqueryvalidate1192.md "jQuery 유효성 검사 1.19.2")
 - [jQuery Validate 1.19.1](jquery-validate/cdnjqueryvalidate1191.md "jQuery 유효성 검사 1.19.1")
 - [jQuery Validate 1.19.0](jquery-validate/cdnjqueryvalidate1190.md "jQuery 유효성 검사 1.19.0")
 - [jQuery Validate 1.17.0](jquery-validate/cdnjqueryvalidate1170.md "jQuery 유효성 검사 1.17.0")
@@ -779,7 +780,7 @@ CDN에서 호스트 되는 [Modernizr](http://www.modernizr.com "Modernizr") 의
     - 모든 문화권
 - https://ajax.aspnetcdn.com/ajax/globalize/0.1.1/cultures/globalize.culture.{culture-code}.js
 
-    - "{Culture 코드}"를 원하는 문화권 코드로 바꿉니다. 예를 들어 en-GB = = CDN의 Microsoft 파일 = =이 라이브러리는 Microsoft에서 업로드 했습니다.
+    - "{Culture-코드}"를 원하는 문화권 코드로 바꿉니다. 예를 들어 CDN의 Microsoft 파일 = =이 라이브러리는 Microsoft에서 업로드 했습니다 globalize.culture.en-GB.js.
 
 <a id="Respond_Releases_on_the_CDN_13"></a>
 
@@ -1186,11 +1187,11 @@ CDN에서 호스트 되는 [getbootstrap.com](http://getbootstrap.com "getbootst
 
 <a id="Hammerjs_Releases_on_the_CDN_19"></a>
 
-### <a name="hammerjs-releases-on-the-cdn"></a>CDN의 해머 릴리스
+### <a name="hammerjs-releases-on-the-cdn"></a>CDN의 Hammer.js 릴리스
 
-다음의 망치 버전은 [http://hammerjs.github.io/](http://hammerjs.github.io/ "http://hammerjs.github.io/") CDN에서 호스팅됩니다.
+[http://hammerjs.github.io/](http://hammerjs.github.io/ "http://hammerjs.github.io/")CDN에서 호스트 되는 Hammer.js 릴리스의 릴리스는 다음과 같습니다.
 
-#### <a name="hammerjs-version-204"></a>2.0.4 이상을 버전
+#### <a name="hammerjs-version-204"></a>Hammer.js 버전 2.0.4 이상을
 
 - https://ajax.aspnetcdn.com/ajax/hammer.js/2.0.4/hammer.js
 - https://ajax.aspnetcdn.com/ajax/hammer.js/2.0.4/hammer.min.js

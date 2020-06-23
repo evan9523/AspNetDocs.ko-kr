@@ -8,12 +8,12 @@ ms.date: 01/28/2011
 ms.assetid: 1febce65-cdd4-47da-bdb5-1e6022ccd20a
 msc.legacyurl: /mobile
 msc.type: content
-ms.openlocfilehash: 7f631f5052060b3523a23fb8ee7799cc07a68e1c
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: 769484ee505599eef48ff4a106ddd4f7ec7d99af
+ms.sourcegitcommit: 0cf7d06071a8ff986e6c028ac9daf0c0e7490412
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78471563"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85240735"
 ---
 # <a name="mobile-apps--sites-with-aspnet"></a>ASP.NET를 사용 하 여 & 사이트 Mobile Apps
 
@@ -61,6 +61,6 @@ ASP.NET Web Forms/MVC 응용 프로그램에서 모바일 장치에 최적화 �
 
 Microsoft MIX 회의에서 제공 되는이 대화 내용에서 Scott Hanselman는 ASP.NET MVC를 사용 하 여 모바일 장치 친화적인 웹 사이트를 만들 수 있는 방법을 설명 합니다.
 
-### <a name="develop-iphone-applications-with-aspnet"></a>[ASP.NET를 사용 하 여 iPhone 응용 프로그램 개발](http://labs.componentone.com/iPhone/)
+### <a name="develop-iphone-applications-with-aspnet"></a>[ASP.NET를 사용 하 여 iPhone 응용 프로그램 개발](https://www.componentsource.com/product/componentone-studio-for-iphone)
 
 IPhone 용 ComponentOne Studio는 모바일 Safari에서 렌더링 될 때 iPhone 및 iPod touch 사용자 인터페이스의 모양과 느낌을 모방 하는 ASP.NET 컨트롤 모음입니다.

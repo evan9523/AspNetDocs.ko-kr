@@ -8,12 +8,12 @@ ms.date: 06/11/2014
 ms.assetid: 43a6cce7-a3ef-42aa-ad06-90d36d49f098
 msc.legacyurl: /web-api/overview/testing-and-debugging/unit-testing-controllers-in-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 3b89009a375e766f1c5b439dfe3fffd43b4963b3
-ms.sourcegitcommit: a4c3c7e04e5f53cf8cd334f036d324976b78d154
+ms.openlocfilehash: ee933cfc736a07b91c8f7feea2c4a2c64d200942
+ms.sourcegitcommit: 0cf7d06071a8ff986e6c028ac9daf0c0e7490412
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84172928"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85240650"
 ---
 # <a name="unit-testing-controllers-in-aspnet-web-api-2"></a>ASP.NET Web API 2의 유닛 테스트 컨트롤러
 
@@ -118,5 +118,5 @@ Web API 2에서 컨트롤러 동작은 ASP.NET MVC의 **Actionresult** 와 유�
 ## <a name="additional-resources"></a>추가 리소스
 
 - [유닛 테스트 ASP.NET Web API 2 Entity Framework 모의](mocking-entity-framework-when-unit-testing-aspnet-web-api-2.md)
-- [ASP.NET Web API 서비스에 대 한 테스트 작성](https://docs.microsoft.com/en-gb/archive/blogs/youssefm/writing-tests-for-an-asp-net-web-api-service) (Youssef Moussaoui의 블로그 게시물).
+- [ASP.NET Web API 서비스에 대 한 테스트 작성](https://docs.microsoft.com/archive/blogs/youssefm/writing-tests-for-an-asp-net-web-api-service) (Youssef Moussaoui의 블로그 게시물).
 - [경로 디버거를 사용하여 ASP.NET Web API 디버깅](https://blogs.msdn.com/b/webdev/archive/2013/04/04/debugging-asp-net-web-api-with-route-debugger.aspx)

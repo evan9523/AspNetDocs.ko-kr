@@ -8,12 +8,12 @@ ms.date: 02/15/2013
 ms.assetid: 416438a1-3b2f-4d27-bf53-6b76223c33bf
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/deploying-to-production
 msc.type: authoredcontent
-ms.openlocfilehash: ddc3d15f0436c4c3a24491cf0377111768da67df
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: ec025e757d00cbfbfbcda9408739d2593908bc07
+ms.sourcegitcommit: 0cf7d06071a8ff986e6c028ac9daf0c0e7490412
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78513671"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85240624"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-deploying-to-production"></a>Visual Studio를 사용 하 여 ASP.NET 웹 배포: 프로덕션 환경에 배포
 
@@ -33,7 +33,7 @@ ms.locfileid: "78513671"
 
 ## <a name="get-a-microsoft-azure-account"></a>Microsoft Azure 계정 가져오기
 
-아직 Azure 계정이 없는 경우 몇 분만에 무료 평가판 계정을 만들 수 있습니다. 자세한 내용은 [Azure 평가판](https://azure.microsoft.com/free/?WT.mc_id=A443DD604)을 참조하세요.
+아직 Azure 계정이 없는 경우 몇 분만에 무료 평가판 계정을 만들 수 있습니다. 자세한 내용은 [Azure 평가판](https://azure.microsoft.com/free/dotnet/)을 참조하세요.
 
 ## <a name="create-a-staging-environment"></a>스테이징 환경 만들기
 
@@ -117,7 +117,7 @@ ms.locfileid: "78513671"
 1. Visual Studio의 **솔루션 탐색기** 에서 ContosoUniversity 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 상황에 맞는 메뉴에서 **게시** 를 선택 합니다.
 
     **웹 게시** 마법사가 열립니다.
-2. **프로필** 탭을 클릭합니다.
+2. **프로필** 탭을 클릭 합니다.
 3. **가져오기**를 클릭합니다.
 4. 이전에 다운로드 한 *publishsettings* 파일로 이동한 다음 **열기**를 클릭 합니다.
 
@@ -130,7 +130,7 @@ ms.locfileid: "78513671"
 6. **다음**을 클릭합니다.
 
     ![연결 성공 아이콘 및 연결 탭의 다음 단추](deploying-to-production/_static/image8.png)
-7. **설정** 탭에서 **파일 게시 옵션**을 확장 하 고 **앱\_데이터 폴더에서 파일 제외**를 선택 합니다.
+7. **설정** 탭에서 **파일 게시 옵션**을 확장 하 고 **앱 \_ 데이터 폴더에서 파일 제외**를 선택 합니다.
 
     **파일 게시 옵션**의 기타 옵션에 대 한 자세한 내용은 [IIS에 배포](deploying-to-iis.md) 자습서를 참조 하십시오. 이 단계의 결과와 다음 데이터베이스 구성 단계를 보여 주는 스크린샷은 데이터베이스 구성 단계의 끝에 있습니다.
 8. **데이터베이스** 섹션의 **defaultconnection** 에서 멤버 자격 데이터베이스에 대 한 데이터베이스 배포를 구성 합니다.
@@ -143,7 +143,7 @@ ms.locfileid: "78513671"
       5. **데이터베이스 업데이트 구성** 대화 상자를 닫습니다.
 10. **데이터베이스** 섹션의 **schoolcontext.cs** 에서 **실행 Code First 마이그레이션 (응용 프로그램 시작 시 실행)** 를 선택 합니다.
 
-    Visual Studio는 `DbContext` 클래스에 대 한 **업데이트 데이터베이스** 대신 **Execute Code First 마이그레이션** 를 표시 합니다. `DbContext` 클래스를 사용 하 여 액세스 하는 데이터베이스를 배포 하는 데 마이그레이션 대신 dbDacFx 공급자를 사용 하려는 경우 Visual Studio 및 ASP.NET for MSDN의 웹 배포 FAQ에서 [마이그레이션을 사용 하지 않고 Code First 데이터베이스 배포를 어떻게 할까요?](https://msdn.microsoft.com/library/ee942158.aspx#deploy_code_first_without_migrations) 참조 하세요.
+    Visual Studio에는 클래스에 대 한 **업데이트 데이터베이스** 대신 **Execute Code First 마이그레이션** 이 표시 됩니다 `DbContext` . 클래스를 사용 하 여 액세스 하는 데이터베이스를 배포 하기 위해 마이그레이션 대신 dbDacFx 공급자를 사용 하려는 경우 `DbContext` Visual Studio 및 ASP.NET FOR MSDN의 웹 배포 FAQ에서 [마이그레이션을 사용 하지 않고 Code First 데이터베이스 배포를 어떻게 할까요?](https://msdn.microsoft.com/library/ee942158.aspx#deploy_code_first_without_migrations) 참조 하세요.
 
     **설정** 탭은 이제 다음 예제와 같습니다.
 
@@ -160,22 +160,22 @@ ms.locfileid: "78513671"
 ### <a name="configure-a-publish-profile-transform-for-the-environment-indicator"></a>환경 표시기의 게시 프로필 변환 구성
 
 > [!NOTE]
-> 이 섹션에서는 환경 표시기에 대해 web.config 변환을 설정 하는 방법을 보여 줍니다. 표시기는 `<appSettings>` 요소에 있기 때문에 Azure App Service에 배포할 때 변환을 지정 하는 또 다른 대안이 있습니다. 자세한 내용은 [Azure에서 web.config 설정 지정](web-config-transformations.md#watransforms)을 참조 하세요.
+> 이 섹션에서는 환경 표시기에 대해 Web.config 변환을 설정 하는 방법을 보여 줍니다. 표시기가 요소에 있기 때문 `<appSettings>` 에 Azure App Service 배포 하는 경우 변환을 지정 하는 또 다른 대안이 있습니다. 자세한 내용은 [Azure에서 Web.config 설정 지정](web-config-transformations.md#watransforms)을 참조 하세요.
 
 1. **솔루션 탐색기**에서 **속성**을 확장 한 다음, **프로필 프로필**을 확장 합니다.
 2. *스테이징. pubxml*을 마우스 오른쪽 단추로 클릭 한 다음 **구성 변환 추가**를 클릭 합니다.
 
     ![준비에 대 한 구성 변환 추가](deploying-to-production/_static/image11.png)
 
-    Visual Studio에서 web.config *변환 파일을 만들고* 엽니다.
-3. *Web.config* 변환 파일에서 열기 `configuration` 태그 바로 뒤에 다음 코드를 삽입 합니다.
+    Visual Studio에서 *Web.Staging.config* 변환 파일을 만들고 엽니다.
+3. *Web.Staging.config* 변환 파일에서 다음 코드를 여는 태그 바로 뒤에 삽입 `configuration` 합니다.
 
     [!code-xml[Main](deploying-to-production/samples/sample1.xml)]
 
     준비 게시 프로필을 사용 하는 경우이 변환은 환경 표시기를 "Prod"로 설정 합니다. 배포 된 웹 앱에서 "Contoso 대학" H1 제목 뒤에 "(Dev)" 또는 "(Test)"와 같은 접미사가 표시 되지 않습니다.
-4. *Web.config* 파일을 마우스 오른쪽 단추로 클릭 하 고 **변환 미리 보기** 를 클릭 하 여 코딩 된 변환이 필요한 변경 내용을 생성 하는지 확인 합니다.
+4. *Web.Staging.config* 파일을 마우스 오른쪽 단추로 클릭 하 고 **변환 미리 보기** 를 클릭 하 여 코딩 된 변환이 필요한 변경 내용을 생성 하는지 확인 합니다.
 
-    Web.config **미리 보기** 창에는 *web.config 변환과 web.config* 변환을 모두 적용 한 결과가 표시 *됩니다.*
+    **Web.config 미리 보기** 창에는 *Web.Release.config* 변환과 *Web.Staging.config* 변환을 모두 적용 한 결과가 표시 됩니다.
 
 ### <a name="prevent-public-use-of-the-test-app"></a>테스트 앱의 공개 사용 방지
 
@@ -183,18 +183,18 @@ ms.locfileid: "78513671"
 
 - 스테이징을 테스트 하는 데 사용 하는 IP 주소 에서만 준비 앱에 대 한 액세스를 허용 하는 방화벽 규칙을 설정 합니다.
 - 추측 하기에 불가능 한 난독 처리 된 URL을 사용 합니다.
-- 검색 엔진에서 테스트 앱 및 검색 결과에 대 한 보고서 링크를 탐색 하지 않도록 *로봇 .txt* 파일을 만듭니다.
+- 검색 엔진이 테스트 앱 및 검색 결과에 대 한 보고서 링크를 탐색 하지 않도록 *robots.txt* 파일을 만듭니다.
 
 이러한 메서드 중 첫 번째 메서드는 가장 효과적 이지만이 자습서에서는 Azure App Service 대신 Azure 클라우드 서비스에 배포 해야 하기 때문에 다루지 않습니다. Azure의 Cloud Services 및 IP 제한에 대 한 자세한 내용은 Azure에서 제공 하는 [계산 호스팅 옵션](https://docs.microsoft.com/azure/cloud-services/cloud-services-choose-me) 을 참조 하 고 [특정 IP 주소가 웹 역할에 액세스 하지 못하도록 차단](https://msdn.microsoft.com/library/windowsazure/jj154098.aspx)합니다. 타사 호스팅 공급자에 배포 하는 경우 공급자에 게 문의 하 여 IP 제한을 구현 하는 방법을 알아보세요.
 
-이 자습서에서는 *로봇 .txt* 파일을 만듭니다.
+이 자습서에서는 *robots.txt* 파일을 만듭니다.
 
 1. **솔루션 탐색기**에서 ContosoUniversity 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **새 항목 추가**를 클릭 합니다.
-2. *로봇이*지정 된 새 **텍스트 파일** 을 만들고 다음 텍스트를 입력 합니다.
+2. *robots.txt*이라는 새 **텍스트 파일** 을 만들고 다음 텍스트를 입력 합니다.
 
     [!code-console[Main](deploying-to-production/samples/sample2.cmd)]
 
-    `User-agent` 줄은 파일의 규칙이 모든 검색 엔진 웹 크롤러 (로봇)에 적용 된다는 것을 검색 엔진에 지시 하 고 `Disallow` 줄은 사이트의 어떤 페이지도 크롤링되지 않도록 지정 합니다.
+    `User-agent`이 줄은 파일의 규칙이 모든 검색 엔진 웹 크롤러 (로봇)에 적용 된다는 것을 검색 엔진에 알려 주며, `Disallow` 줄은 사이트의 페이지를 크롤링하지 않도록 지정 합니다.
 
     검색 엔진에서 프로덕션 앱을 카탈로그로 작성 하 여 프로덕션 배포에서이 파일을 제외 해야 합니다. 이렇게 하려면 프로덕션 게시 프로필을 만들 때이 프로필의 설정을 구성 합니다.
 
@@ -208,7 +208,7 @@ ms.locfileid: "78513671"
 
 ## <a name="test-in-the-staging-environment"></a>스테이징 환경에서 테스트
 
-환경 표시기가 없다는 것을 확인할 수 있습니다. H1 제목 뒤에는 "(테스트)" 또는 "(Dev)"가 없습니다. 여기에는 환경 표시기에 대 한 *web.config 변환이 성공* 했음을 보여 줍니다.
+환경 표시기가 없다는 것을 확인할 수 있습니다. H1 제목 뒤에는 "(테스트)" 또는 "(Dev)"가 없습니다. 여기에는 환경 표시기의 *Web.config* 변환이 성공 했음을 보여 줍니다.
 
 ![홈 페이지 준비](deploying-to-production/_static/image12.png)
 
@@ -224,9 +224,9 @@ ELMAH에서 추적 되는 오류를 발생 시키는 잘못 된 URL을 요청 �
 
 만든 응용 프로그램은 이제 프로덕션에 사용 하는 것과 동일한 웹 앱의 클라우드에서 실행 됩니다. 모든 것이 올바르게 작동 하므로 다음 단계는 프로덕션 환경에 배포 하는 것입니다.
 
-## <a name="deploy-to-production"></a>프로덕션에 배포
+## <a name="deploy-to-production"></a>프로덕션 환경에 배포
 
-프로덕션 웹 앱을 만들고 프로덕션에 배포 하는 프로세스는 스테이징의 경우와 동일 합니다. 단, 배포에서 *로봇이* 아닌를 제외 해야 한다는 점이 다릅니다. 이렇게 하려면 게시 프로필 파일을 편집 합니다.
+프로덕션 웹 앱을 만들고 프로덕션에 배포 하는 프로세스는 스테이징의 경우와 동일 하지만 배포에서 *robots.txt* 제외 해야 한다는 점이 다릅니다. 이렇게 하려면 게시 프로필 파일을 편집 합니다.
 
 ### <a name="create-the-production-environment-and-the-production-publish-profile"></a>프로덕션 환경 및 프로덕션 게시 프로필 만들기
 
@@ -240,9 +240,9 @@ ELMAH에서 추적 되는 오류를 발생 시키는 잘못 된 URL을 요청 �
 4. 게시 프로필의 이름을 *Production*로 바꿉니다.
 5. 준비에 사용한 것과 동일한 절차에 따라 환경 표시기의 게시 프로필 변환을 구성 합니다.
 
-### <a name="edit-the-pubxml-file-to-exclude-robotstxt"></a>로봇을 제외 하도록 pubxml 파일을 편집 합니다.
+### <a name="edit-the-pubxml-file-to-exclude-robotstxt"></a>robots.txt를 제외 하도록 pubxml 파일을 편집 합니다.
 
-게시 프로필 파일의 이름은 &lt;profilename&gt; *. pubxml* 이 고,는 파일 *프로필* 폴더에 있습니다. C# *Proprofiles* 폴더는 웹 응용 프로그램 프로젝트의 *Properties* 폴더 아래, VB 웹 응용 프로그램 프로젝트의 *My project* 폴더 아래 또는 웹 앱 프로젝트의 *app\_Data* 폴더 아래에 있습니다. 각 *. pubxml* 파일에는 하나의 게시 프로필에 적용 되는 설정이 포함 되어 있습니다. 웹 게시 마법사에서 입력 하는 값은 이러한 파일에 저장 되며,이를 편집 하 여 Visual Studio UI에서 사용할 수 없는 설정을 만들거나 변경할 수 있습니다.
+게시 프로필 파일의 이름은 &lt; profilename &gt; *.xml* 이 고, *게시 프로필* 폴더에 있습니다. *Proprofiles* 폴더는 c # 웹 응용 프로그램 프로젝트의 *Properties* 폴더 아래, VB 웹 응용 프로그램 프로젝트의 *My project* 폴더 아래 또는 웹 앱 프로젝트의 *응용 프로그램 \_ 데이터* 폴더 아래에 있습니다. 각 *. pubxml* 파일에는 하나의 게시 프로필에 적용 되는 설정이 포함 되어 있습니다. 웹 게시 마법사에서 입력 하는 값은 이러한 파일에 저장 되며,이를 편집 하 여 Visual Studio UI에서 사용할 수 없는 설정을 만들거나 변경할 수 있습니다.
 
 기본적으로 *. pubxml* 파일은 게시 프로필을 만들 때 프로젝트에 포함 되지만 프로젝트에서 제외할 수 있으며 Visual Studio에서 해당 파일을 계속 사용 합니다. Visual Studio는 프로젝트에 포함 되어 있는지 여부에 관계 없이 *pubxml* 파일에 대 한 파일 *프로필* 폴더를 찾습니다.
 
@@ -255,7 +255,7 @@ ELMAH에서 추적 되는 오류를 발생 시키는 잘못 된 URL을 요청 �
 
     ![Pubxml 파일을 엽니다.](deploying-to-production/_static/image13.png)
 3. *Production pubxml* 을 마우스 오른쪽 단추로 클릭 하 고 **열기**를 클릭 합니다.
-4. 닫는 `PropertyGroup` 요소 바로 앞에 다음 줄을 추가 합니다.
+4. 닫는 요소 바로 앞에 다음 줄을 추가 합니다 `PropertyGroup` .
 
     [!code-xml[Main](deploying-to-production/samples/sample3.xml)]
 
@@ -265,18 +265,18 @@ ELMAH에서 추적 되는 오류를 발생 시키는 잘못 된 URL을 요청 �
 
     파일 및 폴더를 제외 하는 방법에 대 한 자세한 내용은 MSDN의 **Visual Studio 및 ASP.NET에 대 한 웹 배포 FAQ** 의 [배포에서 특정 파일 또는 폴더를 제외할 수 있나요?](https://msdn.microsoft.com/library/ee942158.aspx#can_i_exclude_specific_files_or_folders_from_deployment) 를 참조 하세요.
 
-### <a name="deploy-to-production"></a>프로덕션에 배포
+### <a name="deploy-to-production"></a>프로덕션 환경에 배포
 
-1. **웹 게시** 마법사를 열고 **프로덕션** 게시 프로필을 선택 했는지 확인 한 다음 **미리** 보기 탭에서 **미리 보기 시작** 을 클릭 하 여 *로봇이 .txt* 파일이 프로덕션 앱에 복사 되지 않는지 확인 합니다.
+1. **웹 게시** 마법사를 열고 **프로덕션** 게시 프로필을 선택 했는지 확인 한 다음 **미리** 보기 탭에서 **미리 보기 시작** 을 클릭 하 여 *robots.txt* 파일이 프로덕션 앱에 복사 되지 않는지 확인 합니다.
 
     ![프로덕션에 게시할 파일 미리 보기](deploying-to-production/_static/image14.png)
 
-    복사할 파일의 목록을 검토 합니다. *Aspx.cs*, *aspx.designer.cs*, *Master.cs*및 *Master.designer.cs* 파일을 비롯 한 모든 *.cs* 파일이 생략 된 것을 볼 수 있습니다. 이 코드는 모두 *bin* 폴더에서 찾을 수 있는 *ContosoUniversity* 및 *ContosoUniversity* 파일로 컴파일됩니다. 응용 프로그램을 실행 하는 데는 *.dll* 만 필요 하 고, 이전에는 응용 프로그램을 실행 하는 데 필요한 파일만 배포 하도록 지정 했으므로 *.cs* 파일은 대상 환경에 복사 되지 않습니다. *Obj* 폴더와 *ContosoUniversity* 및 *.csproj* 파일은 동일한 이유로 생략 됩니다.
+    복사할 파일의 목록을 검토 합니다. *Aspx.cs*, *aspx.designer.cs*, *Master.cs*및 *Master.designer.cs* 파일을 비롯 한 모든 *.cs* 파일이 생략 된 것을 볼 수 있습니다. 이 코드는 모두 *bin* 폴더에서 찾을 *ContosoUniversity.dll* 및 *ContosoUniversity* 파일로 컴파일 되었습니다. 응용 프로그램을 실행 하는 데는 *.dll* 만 필요 하 고, 이전에는 응용 프로그램을 실행 하는 데 필요한 파일만 배포 하도록 지정 했으므로 *.cs* 파일은 대상 환경에 복사 되지 않습니다. *Obj* 폴더와 *ContosoUniversity* 및 *.csproj* 파일은 동일한 이유로 생략 됩니다.
 
     **게시** 를 클릭 하 여 프로덕션 환경에 배포 합니다.
 2. 스테이징에 사용한 것과 동일한 절차에 따라 프로덕션에서 테스트 합니다.
 
-    URL 및 *로봇이* 아닌 파일의 부재를 제외 하 고 모두 준비와 동일 합니다.
+    URL 및 *robots.txt* 파일의 부재를 제외 하 고는 모두 준비와 동일 합니다.
 
 ## <a name="summary"></a>요약
 
