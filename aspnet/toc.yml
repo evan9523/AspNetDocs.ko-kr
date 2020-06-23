@@ -1,4 +1,4 @@
-- name: ASP.NET 설명서
+- name: ASP.NET Core 설명서
   href: /aspnet/core/
 - name: ASP.NET 개요
   href: overview.md
@@ -74,7 +74,7 @@
           items:
             - name: '사용자 등록, 전자 메일 확인 및 암호 재설정 기능이 있는 보안 ASP.NET Web Forms 앱 만들기(C#)'
               href: web-forms/overview/security/create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset.md
-            - name: 'SMS 2단계 인증을 사용하는 ASP.NET Web Forms 앱 만들기(C#)'
+            - name: SMS 2단계 인증을 사용하는 ASP.NET Web Forms 앱 만들기(C#)
               href: web-forms/overview/security/create-an-aspnet-web-forms-app-with-sms-two-factor-authentication.md
         - name: 성능
           href: web-forms/overview/performance-and-caching/index.md
@@ -314,25 +314,25 @@
             - name: ASP.NET 3.5 - Web Forms 마스터 페이지
               href: web-forms/overview/older-versions-getting-started/master-pages/index.md
               items:
-                - name: '마스터 페이지를 사용하여 사이트 전체 레이아웃 만들기(C#)'
+                - name: 마스터 페이지를 사용하여 사이트 전체 레이아웃 만들기(C#)
                   href: web-forms/overview/older-versions-getting-started/master-pages/creating-a-site-wide-layout-using-master-pages-cs.md
-                - name: '여러 ContentPlaceHolders 및 기본 콘텐츠(C#)'
+                - name: 여러 ContentPlaceHolders 및 기본 콘텐츠(C#)
                   href: web-forms/overview/older-versions-getting-started/master-pages/multiple-contentplaceholders-and-default-content-cs.md
                 - name: '마스터 페이지에서 제목, 메타 태그 및 기타 HTML 헤더 지정(C#)'
                   href: web-forms/overview/older-versions-getting-started/master-pages/specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs.md
-                - name: '마스터 페이지의 URL(C#)'
+                - name: 마스터 페이지의 URL(C#)
                   href: web-forms/overview/older-versions-getting-started/master-pages/urls-in-master-pages-cs.md
-                - name: '콘텐츠 페이지에서 컨트롤 ID 이름 지정(C#)'
+                - name: 콘텐츠 페이지에서 컨트롤 ID 이름 지정(C#)
                   href: web-forms/overview/older-versions-getting-started/master-pages/control-id-naming-in-content-pages-cs.md
-                - name: '콘텐츠 페이지에서 마스터 페이지와 상호 작용(C#)'
+                - name: 콘텐츠 페이지에서 마스터 페이지와 상호 작용(C#)
                   href: web-forms/overview/older-versions-getting-started/master-pages/interacting-with-the-master-page-from-the-content-page-cs.md
-                - name: '마스터 페이지에서 콘텐츠 페이지와 상호 작용(C#)'
+                - name: 마스터 페이지에서 콘텐츠 페이지와 상호 작용(C#)
                   href: web-forms/overview/older-versions-getting-started/master-pages/interacting-with-the-content-page-from-the-master-page-cs.md
-                - name: '마스터 페이지 및 ASP.NET AJAX(C#)'
+                - name: 마스터 페이지 및 ASP.NET AJAX(C#)
                   href: web-forms/overview/older-versions-getting-started/master-pages/master-pages-and-asp-net-ajax-cs.md
-                - name: '마스터 페이지를 프로그래밍 방식으로 지정(C#)'
+                - name: 마스터 페이지를 프로그래밍 방식으로 지정(C#)
                   href: web-forms/overview/older-versions-getting-started/master-pages/specifying-the-master-page-programmatically-cs.md
-                - name: '중첩 마스터 페이지(C#)'
+                - name: 중첩 마스터 페이지(C#)
                   href: web-forms/overview/older-versions-getting-started/master-pages/nested-master-pages-cs.md
                 - name: 마스터 페이지를 사용하여 사이트 전체 레이아웃 만들기(VB)
                   href: web-forms/overview/older-versions-getting-started/master-pages/creating-a-site-wide-layout-using-master-pages-vb.md
@@ -357,37 +357,37 @@
             - name: Visual Studio 2008 이하에서 웹 사이트 프로젝트 배포
               href: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/index.md
               items:
-                - name: 'ASP.NET 호스팅 옵션(C#)'
+                - name: ASP.NET 호스팅 옵션(C#)
                   href: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/asp-net-hosting-options-cs.md
-                - name: '배포할 파일 확인(C#)'
+                - name: 배포할 파일 확인(C#)
                   href: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/determining-what-files-need-to-be-deployed-cs.md
-                - name: 'FTP 클라이언트를 사용하여 사이트 배포(C#)'
+                - name: FTP 클라이언트를 사용하여 사이트 배포(C#)
                   href: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/deploying-your-site-using-an-ftp-client-cs.md
-                - name: 'Visual Studio를 사용하여 사이트 배포(C#)'
+                - name: Visual Studio를 사용하여 사이트 배포(C#)
                   href: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/deploying-your-site-using-visual-studio-cs.md
-                - name: '개발 환경과 프로덕션 환경의 일반적인 구성 차이(C#)'
+                - name: 개발 환경과 프로덕션 환경의 일반적인 구성 차이(C#)
                   href: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/common-configuration-differences-between-development-and-production-cs.md
-                - name: 'IIS와 ASP.NET 개발 서버의 결정적 차이(C#)'
+                - name: IIS와 ASP.NET 개발 서버의 결정적 차이(C#)
                   href: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/core-differences-between-iis-and-the-asp-net-development-server-cs.md
-                - name: '데이터베이스 배포(C#)'
+                - name: 데이터베이스 배포(C#)
                   href: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/deploying-a-database-cs.md
-                - name: '프로덕션 데이터베이스를 사용하도록 프로덕션 웹 애플리케이션 구성(C#)'
+                - name: 프로덕션 데이터베이스를 사용하도록 프로덕션 웹 애플리케이션 구성(C#)
                   href: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/configuring-the-production-web-application-to-use-the-production-database-cs.md
-                - name: '애플리케이션 서비스를 사용하는 웹 사이트 구성(C#)'
+                - name: 애플리케이션 서비스를 사용하는 웹 사이트 구성(C#)
                   href: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/configuring-a-website-that-uses-application-services-cs.md
-                - name: '데이터베이스 개발 및 배포 전략(C#)'
+                - name: 데이터베이스 개발 및 배포 전략(C#)
                   href: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/strategies-for-database-development-and-deployment-cs.md
-                - name: '사용자 지정 오류 페이지 표시(C#)'
+                - name: 사용자 지정 오류 페이지 표시(C#)
                   href: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/displaying-a-custom-error-page-cs.md
-                - name: '처리되지 않은 예외 처리(C#)'
+                - name: 처리되지 않은 예외 처리(C#)
                   href: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/processing-unhandled-exceptions-cs.md
-                - name: 'ASP.NET 상태 모니터링을 사용하여 오류 세부 정보 로깅(C#)'
+                - name: ASP.NET 상태 모니터링을 사용하여 오류 세부 정보 로깅(C#)
                   href: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/logging-error-details-with-asp-net-health-monitoring-cs.md
-                - name: 'ELMAH를 사용하여 오류 세부 정보 로깅(C#)'
+                - name: ELMAH를 사용하여 오류 세부 정보 로깅(C#)
                   href: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/logging-error-details-with-elmah-cs.md
-                - name: '웹 사이트 미리 컴파일(C#)'
+                - name: 웹 사이트 미리 컴파일(C#)
                   href: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/precompiling-your-website-cs.md
-                - name: '프로덕션 웹 사이트의 사용자 및 역할(C#)'
+                - name: 프로덕션 웹 사이트의 사용자 및 역할(C#)
                   href: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/users-and-roles-on-the-production-website-cs.md
                 - name: ASP.NET 호스팅 옵션(VB)
                   href: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/asp-net-hosting-options-vb.md
@@ -427,11 +427,11 @@
             - name: 시작
               href: web-forms/overview/ajax-control-toolkit/getting-started/index.md
               items:
-                - name: 'AJAX 컨트롤 도구 키트 시작(C#)'
+                - name: AJAX 컨트롤 도구 키트 시작(C#)
                   href: web-forms/overview/ajax-control-toolkit/getting-started/get-started-with-the-ajax-control-toolkit-cs.md
-                - name: 'Using AJAX 컨트롤 도구 키트 컨트롤 및 컨트롤 Extender 사용(C#)'
+                - name: Using AJAX 컨트롤 도구 키트 컨트롤 및 컨트롤 Extender 사용(C#)
                   href: web-forms/overview/ajax-control-toolkit/getting-started/using-ajax-control-toolkit-controls-and-control-extenders-cs.md
-                - name: '사용자 지정 AJAX 컨트롤 도구 키트 컨트롤 Extender 만들기(C#)'
+                - name: 사용자 지정 AJAX 컨트롤 도구 키트 컨트롤 Extender 만들기(C#)
                   href: web-forms/overview/ajax-control-toolkit/getting-started/creating-a-custom-ajax-control-toolkit-control-extender-cs.md
                 - name: AJAX 컨트롤 도구 키트 시작(VB)
                   href: web-forms/overview/ajax-control-toolkit/getting-started/get-started-with-the-ajax-control-toolkit-vb.md
@@ -442,9 +442,9 @@
             - name: Accordion
               href: web-forms/overview/ajax-control-toolkit/accordion/index.md
               items:
-                - name: 'Accordion에 데이터 바인딩(C#)'
+                - name: Accordion에 데이터 바인딩(C#)
                   href: web-forms/overview/ajax-control-toolkit/accordion/databinding-to-an-accordion-cs.md
-                - name: '동적으로 Accordion 창 추가(C#)'
+                - name: 동적으로 Accordion 창 추가(C#)
                   href: web-forms/overview/ajax-control-toolkit/accordion/dynamically-adding-an-accordion-pane-cs.md
                 - name: Accordion에 데이터 바인딩(VB)
                   href: web-forms/overview/ajax-control-toolkit/accordion/databinding-to-an-accordion-vb.md
@@ -453,31 +453,31 @@
             - name: 애니메이션
               href: web-forms/overview/ajax-control-toolkit/animation/index.md
               items:
-                - name: '컨트롤에 애니메이션 추가(C#)'
+                - name: 컨트롤에 애니메이션 추가(C#)
                   href: web-forms/overview/ajax-control-toolkit/animation/adding-animation-to-a-control-cs.md
-                - name: '여러 애니메이션을 동시에 실행(C#)'
+                - name: 여러 애니메이션을 동시에 실행(C#)
                   href: web-forms/overview/ajax-control-toolkit/animation/executing-several-animations-at-the-same-time-cs.md
-                - name: '여러 애니메이션을 순차적으로 실행(C#)'
+                - name: 여러 애니메이션을 순차적으로 실행(C#)
                   href: web-forms/overview/ajax-control-toolkit/animation/executing-several-animations-after-each-other-cs.md
-                - name: '조건에 따른 애니메이션(C#)'
+                - name: 조건에 따른 애니메이션(C#)
                   href: web-forms/overview/ajax-control-toolkit/animation/animation-depending-on-a-condition-cs.md
-                - name: '목록에서 애니메이션 하나 선택(C#)'
+                - name: 목록에서 애니메이션 하나 선택(C#)
                   href: web-forms/overview/ajax-control-toolkit/animation/picking-one-animation-out-of-a-list-cs.md
-                - name: '사용자 상호 작용에 대한 응답으로 애니메이션(C#)'
+                - name: 사용자 상호 작용에 대한 응답으로 애니메이션(C#)
                   href: web-forms/overview/ajax-control-toolkit/animation/animating-in-response-to-user-interaction-cs.md
-                - name: '애니메이션 중에 작업 사용 안 함(C#)'
+                - name: 애니메이션 중에 작업 사용 안 함(C#)
                   href: web-forms/overview/ajax-control-toolkit/animation/disabling-actions-during-animation-cs.md
-                - name: '다른 컨트롤에서 애니메이션 트리거(C#)'
+                - name: 다른 컨트롤에서 애니메이션 트리거(C#)
                   href: web-forms/overview/ajax-control-toolkit/animation/triggering-an-animation-in-another-control-cs.md
-                - name: '서버 쪽에서 애니메이션 수정(C#)'
+                - name: 서버 쪽에서 애니메이션 수정(C#)
                   href: web-forms/overview/ajax-control-toolkit/animation/modifying-animations-from-the-server-side-cs.md
-                - name: '클라이언트 쪽 코드를 사용하여 애니메이션 실행(C#)'
+                - name: 클라이언트 쪽 코드를 사용하여 애니메이션 실행(C#)
                   href: web-forms/overview/ajax-control-toolkit/animation/executing-animations-using-client-side-code-cs.md
-                - name: '클라이언트 쪽 코드를 사용하여 애니메이션 변경(C#)'
+                - name: 클라이언트 쪽 코드를 사용하여 애니메이션 변경(C#)
                   href: web-forms/overview/ajax-control-toolkit/animation/changing-an-animation-using-client-side-code-cs.md
-                - name: 'UpdatePanel 컨트롤 애니메이션(C#)'
+                - name: UpdatePanel 컨트롤 애니메이션(C#)
                   href: web-forms/overview/ajax-control-toolkit/animation/animating-an-updatepanel-control-cs.md
-                - name: 'UpdatePanel 애니메이션을 동적으로 제어(C#)'
+                - name: UpdatePanel 애니메이션을 동적으로 제어(C#)
                   href: web-forms/overview/ajax-control-toolkit/animation/dynamically-controlling-updatepanel-animations-cs.md
                 - name: 컨트롤에 애니메이션 추가(VB)
                   href: web-forms/overview/ajax-control-toolkit/animation/adding-animation-to-a-control-vb.md
@@ -508,13 +508,13 @@
             - name: CascadingDropdown
               href: web-forms/overview/ajax-control-toolkit/cascadingdropdown/index.md
               items:
-                - name: 'CascadingDropDown을 사용하여 목록 채우기(C#)'
+                - name: CascadingDropDown을 사용하여 목록 채우기(C#)
                   href: web-forms/overview/ajax-control-toolkit/cascadingdropdown/filling-a-list-using-cascadingdropdown-cs.md
-                - name: '데이터베이스에 CascadingDropDown 사용(C#)'
+                - name: 데이터베이스에 CascadingDropDown 사용(C#)
                   href: web-forms/overview/ajax-control-toolkit/cascadingdropdown/using-cascadingdropdown-with-a-database-cs.md
-                - name: 'CascadingDropDown으로 목록 항목 미리 설정(C#)'
+                - name: CascadingDropDown으로 목록 항목 미리 설정(C#)
                   href: web-forms/overview/ajax-control-toolkit/cascadingdropdown/presetting-list-entries-with-cascadingdropdown-cs.md
-                - name: 'CascadingDropDown으로 자동 포스트백 사용(C#)'
+                - name: CascadingDropDown으로 자동 포스트백 사용(C#)
                   href: web-forms/overview/ajax-control-toolkit/cascadingdropdown/using-auto-postback-with-cascadingdropdown-cs.md
                 - name: CascadingDropDown을 사용하여 목록 채우기(VB)
                   href: web-forms/overview/ajax-control-toolkit/cascadingdropdown/filling-a-list-using-cascadingdropdown-vb.md
@@ -527,37 +527,37 @@
             - name: CollapsiblePanel
               href: web-forms/overview/ajax-control-toolkit/collapsiblepanel/index.md
               items:
-                - name: 'JavaScript에서 패널 축소 및 확장(C#)'
+                - name: JavaScript에서 패널 축소 및 확장(C#)
                   href: web-forms/overview/ajax-control-toolkit/collapsiblepanel/collapsing-and-expanding-a-panel-from-javascript-cs.md
                 - name: JavaScript에서 패널 축소 및 확장(VB)
                   href: web-forms/overview/ajax-control-toolkit/collapsiblepanel/collapsing-and-expanding-a-panel-from-javascript-vb.md
             - name: ColorPicker
               href: web-forms/overview/ajax-control-toolkit/colorpicker/index.md
               items:
-                - name: 'ColorPicker 컨트롤 Extender(C#)'
+                - name: ColorPicker 컨트롤 Extender(C#)
                   href: web-forms/overview/ajax-control-toolkit/colorpicker/using-the-colorpicker-control-extender-cs.md
                 - name: ColorPicker 컨트롤 Extender(VB)
                   href: web-forms/overview/ajax-control-toolkit/colorpicker/using-the-colorpicker-control-extender-vb.md
             - name: ComboBox
               href: web-forms/overview/ajax-control-toolkit/combobox/index.md
               items:
-                - name: 'ComboBox 컨트롤(C#)'
+                - name: ComboBox 컨트롤(C#)
                   href: web-forms/overview/ajax-control-toolkit/combobox/how-do-i-use-the-combobox-control-cs.md
                 - name: ComboBox 컨트롤(VB)
                   href: web-forms/overview/ajax-control-toolkit/combobox/how-do-i-use-the-combobox-control-vb.md
             - name: ConfirmButton
               href: web-forms/overview/ajax-control-toolkit/confirmbutton/index.md
               items:
-                - name: 'Repeater에 ConfirmButton 사용(C#)'
+                - name: Repeater에 ConfirmButton 사용(C#)
                   href: web-forms/overview/ajax-control-toolkit/confirmbutton/using-a-confirmbutton-in-a-repeater-cs.md
                 - name: Repeater에 ConfirmButton 사용(VB)
                   href: web-forms/overview/ajax-control-toolkit/confirmbutton/using-a-confirmbutton-in-a-repeater-vb.md
             - name: DropShadow
               href: web-forms/overview/ajax-control-toolkit/dropshadow/index.md
               items:
-                - name: 'DropShadow의 Z-인덱스 조정(C#)'
+                - name: DropShadow의 Z-인덱스 조정(C#)
                   href: web-forms/overview/ajax-control-toolkit/dropshadow/adjusting-the-z-index-of-a-dropshadow-cs.md
-                - name: '클라이언트 코드에서 DropShadow 속성 조작(C#)'
+                - name: 클라이언트 코드에서 DropShadow 속성 조작(C#)
                   href: web-forms/overview/ajax-control-toolkit/dropshadow/manipulating-dropshadow-properties-from-client-code-cs.md
                 - name: DropShadow의 Z-인덱스 조정(VB)
                   href: web-forms/overview/ajax-control-toolkit/dropshadow/adjusting-the-z-index-of-a-dropshadow-vb.md
@@ -566,11 +566,11 @@
             - name: DynamicPopulate
               href: web-forms/overview/ajax-control-toolkit/dynamicpopulate/index.md
               items:
-                - name: '동적으로 컨트롤 채우기(C#)'
+                - name: 동적으로 컨트롤 채우기(C#)
                   href: web-forms/overview/ajax-control-toolkit/dynamicpopulate/dynamically-populating-a-control-cs.md
-                - name: 'JavaScript 코드를 사용하여 동적으로 컨트롤 채우기(C#)'
+                - name: JavaScript 코드를 사용하여 동적으로 컨트롤 채우기(C#)
                   href: web-forms/overview/ajax-control-toolkit/dynamicpopulate/dynamically-populating-a-control-using-javascript-code-cs.md
-                - name: '사용자 정의 컨트롤 및 JavaScript에 DynamicPopulate 사용(C#)'
+                - name: 사용자 정의 컨트롤 및 JavaScript에 DynamicPopulate 사용(C#)
                   href: web-forms/overview/ajax-control-toolkit/dynamicpopulate/using-dynamicpopulate-with-a-user-control-and-javascript-cs.md
                 - name: 동적으로 컨트롤 채우기(VB)
                   href: web-forms/overview/ajax-control-toolkit/dynamicpopulate/dynamically-populating-a-control-vb.md
@@ -581,34 +581,34 @@
             - name: FilteredTextBox
               href: web-forms/overview/ajax-control-toolkit/filteredtextbox/index.md
               items:
-                - name: '텍스트 상자에 특정 문자만 허용(C#)'
+                - name: 텍스트 상자에 특정 문자만 허용(C#)
                   href: web-forms/overview/ajax-control-toolkit/filteredtextbox/allowing-only-certain-characters-in-a-text-box-cs.md
                 - name: 텍스트 상자에 특정 문자만 허용(VB)
                   href: web-forms/overview/ajax-control-toolkit/filteredtextbox/allowing-only-certain-characters-in-a-text-box-vb.md
             - name: HoverMenu
               href: web-forms/overview/ajax-control-toolkit/hovermenu/index.md
               items:
-                - name: '반복기 컨트롤에 HoverMenu 사용(C#)'
+                - name: 반복기 컨트롤에 HoverMenu 사용(C#)
                   href: web-forms/overview/ajax-control-toolkit/hovermenu/using-hovermenu-with-a-repeater-control-cs.md
                 - name: 반복기 컨트롤에 HoverMenu 사용(VB)
                   href: web-forms/overview/ajax-control-toolkit/hovermenu/using-hovermenu-with-a-repeater-control-vb.md
             - name: HTMLEditor
               href: web-forms/overview/ajax-control-toolkit/htmleditor/index.md
               items:
-                - name: 'HTML 편집기 컨트롤(C#)'
+                - name: HTML 편집기 컨트롤(C#)
                   href: web-forms/overview/ajax-control-toolkit/htmleditor/how-do-i-use-the-html-editor-control-cs.md
                 - name: HTML 편집기 컨트롤(VB)
                   href: web-forms/overview/ajax-control-toolkit/htmleditor/how-do-i-use-the-html-editor-control-vb.md
             - name: ModalPopup
               href: web-forms/overview/ajax-control-toolkit/modalpopup/index.md
               items:
-                - name: '서버 코드에서 모달 팝업 창 시작(C#)'
+                - name: 서버 코드에서 모달 팝업 창 시작(C#)
                   href: web-forms/overview/ajax-control-toolkit/modalpopup/launching-a-modal-popup-window-from-server-code-cs.md
-                - name: '반복기 컨트롤에 ModalPopup사용(C#)'
+                - name: 반복기 컨트롤에 ModalPopup사용(C#)
                   href: web-forms/overview/ajax-control-toolkit/modalpopup/using-modalpopup-with-a-repeater-control-cs.md
-                - name: 'ModalPopup에서 포스트백 처리(C#)'
+                - name: ModalPopup에서 포스트백 처리(C#)
                   href: web-forms/overview/ajax-control-toolkit/modalpopup/handling-postbacks-from-a-modalpopup-cs.md
-                - name: 'ModalPopup 위치 지정(C#)'
+                - name: ModalPopup 위치 지정(C#)
                   href: web-forms/overview/ajax-control-toolkit/modalpopup/positioning-a-modalpopup-cs.md
                 - name: 서버 코드에서 모달 팝업 창 시작(VB)
                   href: web-forms/overview/ajax-control-toolkit/modalpopup/launching-a-modal-popup-window-from-server-code-vb.md
@@ -621,39 +621,39 @@
             - name: MutuallyExclusiveCheckbox
               href: web-forms/overview/ajax-control-toolkit/mutuallyexclusivecheckbox/index.md
               items:
-                - name: '상호 배타적인 확인란 만들기(C#)'
+                - name: 상호 배타적인 확인란 만들기(C#)
                   href: web-forms/overview/ajax-control-toolkit/mutuallyexclusivecheckbox/creating-mutually-exclusive-checkboxes-cs.md
                 - name: 상호 배타적인 확인란 만들기(VB)
                   href: web-forms/overview/ajax-control-toolkit/mutuallyexclusivecheckbox/creating-mutually-exclusive-checkboxes-vb.md
             - name: NoBot
               href: web-forms/overview/ajax-control-toolkit/nobot/index.md
               items:
-                - name: '대체 봇(C#)'
+                - name: 대체 봇(C#)
                   href: web-forms/overview/ajax-control-toolkit/nobot/fighting-bots-cs.md
                 - name: 대체 봇(VB)
                   href: web-forms/overview/ajax-control-toolkit/nobot/fighting-bots-vb.md
             - name: NumericUpDown
               href: web-forms/overview/ajax-control-toolkit/numericupdown/index.md
               items:
-                - name: '웹 서비스 백 엔드를 사용하여 숫자 위로/아래로 컨트롤 만들기(C#)'
+                - name: 웹 서비스 백 엔드를 사용하여 숫자 위로/아래로 컨트롤 만들기(C#)
                   href: web-forms/overview/ajax-control-toolkit/numericupdown/creating-a-numeric-up-down-control-with-a-web-service-backend-cs.md
                 - name: 웹 서비스 백 엔드를 사용하여 숫자 위로/아래로 컨트롤 만들기(VB)
                   href: web-forms/overview/ajax-control-toolkit/numericupdown/creating-a-numeric-up-down-control-with-a-web-service-backend-vb.md
             - name: PasswordStrength
               href: web-forms/overview/ajax-control-toolkit/passwordstrength/index.md
               items:
-                - name: '암호 강도 테스트(C#)'
+                - name: 암호 강도 테스트(C#)
                   href: web-forms/overview/ajax-control-toolkit/passwordstrength/testing-the-strength-of-a-password-cs.md
                 - name: 암호 강도 테스트(VB)
                   href: web-forms/overview/ajax-control-toolkit/passwordstrength/testing-the-strength-of-a-password-vb.md
             - name: Popup
               href: web-forms/overview/ajax-control-toolkit/popup/index.md
               items:
-                - name: '여러 팝업 컨트롤 사용(C#)'
+                - name: 여러 팝업 컨트롤 사용(C#)
                   href: web-forms/overview/ajax-control-toolkit/popup/using-multiple-popup-controls-cs.md
-                - name: 'UpdatePanel을 사용하여 팝업 컨트롤에서 포스트백 처리(C#)'
+                - name: UpdatePanel을 사용하여 팝업 컨트롤에서 포스트백 처리(C#)
                   href: web-forms/overview/ajax-control-toolkit/popup/handling-postbacks-from-a-popup-control-with-an-updatepanel-cs.md
-                - name: 'UpdatePanel을 사용하지 않고 팝업 컨트롤에서 포스트백 처리(C#)'
+                - name: UpdatePanel을 사용하지 않고 팝업 컨트롤에서 포스트백 처리(C#)
                   href: web-forms/overview/ajax-control-toolkit/popup/handling-postbacks-from-a-popup-control-without-an-updatepanel-cs.md
                 - name: 여러 팝업 컨트롤 사용(VB)
                   href: web-forms/overview/ajax-control-toolkit/popup/using-multiple-popup-controls-vb.md
@@ -664,16 +664,16 @@
             - name: 등급
               href: web-forms/overview/ajax-control-toolkit/rating/index.md
               items:
-                - name: '등급 컨트롤 만들기(C#)'
+                - name: 등급 컨트롤 만들기(C#)
                   href: web-forms/overview/ajax-control-toolkit/rating/creating-a-rating-control-cs.md
                 - name: 등급 컨트롤 만들기(VB)
                   href: web-forms/overview/ajax-control-toolkit/rating/creating-a-rating-control-vb.md
             - name: ReorderList
               href: web-forms/overview/ajax-control-toolkit/reorderlist/index.md
               items:
-                - name: 'ReorderList에 포스트백 사용(C#)'
+                - name: ReorderList에 포스트백 사용(C#)
                   href: web-forms/overview/ajax-control-toolkit/reorderlist/using-postbacks-with-reorderlist-cs.md
-                - name: 'ReorderList를 통해 끌어서 놓기(C#)'
+                - name: ReorderList를 통해 끌어서 놓기(C#)
                   href: web-forms/overview/ajax-control-toolkit/reorderlist/drag-and-drop-via-reorderlist-cs.md
                 - name: ReorderList에 포스트백 사용(VB)
                   href: web-forms/overview/ajax-control-toolkit/reorderlist/using-postbacks-with-reorderlist-vb.md
@@ -682,9 +682,9 @@
             - name: 슬라이더
               href: web-forms/overview/ajax-control-toolkit/slider/index.md
               items:
-                - name: '슬라이더 컨트롤 및 포스트백(C#)'
+                - name: 슬라이더 컨트롤 및 포스트백(C#)
                   href: web-forms/overview/ajax-control-toolkit/slider/using-the-slider-control-with-auto-postback-cs.md
-                - name: '슬라이더 컨트롤 데이터 바인딩(C#)'
+                - name: 슬라이더 컨트롤 데이터 바인딩(C#)
                   href: web-forms/overview/ajax-control-toolkit/slider/databinding-the-slider-control-cs.md
                 - name: 슬라이더 컨트롤 및 포스트백(VB)
                   href: web-forms/overview/ajax-control-toolkit/slider/using-the-slider-control-with-auto-postback-vb.md
@@ -693,9 +693,9 @@
             - name: TextBoxWatermark
               href: web-forms/overview/ajax-control-toolkit/textboxwatermark/index.md
               items:
-                - name: 'FormView에서 TextBoxWatermark 사용(C#)'
+                - name: FormView에서 TextBoxWatermark 사용(C#)
                   href: web-forms/overview/ajax-control-toolkit/textboxwatermark/using-textboxwatermark-in-a-formview-cs.md
-                - name: '유효성 검사 컨트롤에 TextBoxWatermark 사용(C#)'
+                - name: 유효성 검사 컨트롤에 TextBoxWatermark 사용(C#)
                   href: web-forms/overview/ajax-control-toolkit/textboxwatermark/using-textboxwatermark-with-validation-controls-cs.md
                 - name: FormView에서 TextBoxWatermark 사용(VB)
                   href: web-forms/overview/ajax-control-toolkit/textboxwatermark/using-textboxwatermark-in-a-formview-vb.md
@@ -707,11 +707,11 @@
             - name: 소개
               href: web-forms/overview/data-access/introduction/index.md
               items:
-                - name: '데이터 액세스 레이어 만들기(C#)'
+                - name: 데이터 액세스 레이어 만들기(C#)
                   href: web-forms/overview/data-access/introduction/creating-a-data-access-layer-cs.md
-                - name: '비즈니스 논리 레이어 만들기(C#)'
+                - name: 비즈니스 논리 레이어 만들기(C#)
                   href: web-forms/overview/data-access/introduction/creating-a-business-logic-layer-cs.md
-                - name: '마스터 페이지 및 사이트 탐색(C#)'
+                - name: 마스터 페이지 및 사이트 탐색(C#)
                   href: web-forms/overview/data-access/introduction/master-pages-and-site-navigation-cs.md
                 - name: 데이터 액세스 레이어 만들기(VB)
                   href: web-forms/overview/data-access/introduction/creating-a-data-access-layer-vb.md
@@ -722,11 +722,11 @@
             - name: 기본 보고
               href: web-forms/overview/data-access/basic-reporting/index.md
               items:
-                - name: 'ObjectDataSource를 사용하여 데이터 표시(C#)'
+                - name: ObjectDataSource를 사용하여 데이터 표시(C#)
                   href: web-forms/overview/data-access/basic-reporting/displaying-data-with-the-objectdatasource-cs.md
-                - name: '선언적 매개 변수(C#)'
+                - name: 선언적 매개 변수(C#)
                   href: web-forms/overview/data-access/basic-reporting/declarative-parameters-cs.md
-                - name: 'ObjectDataSource의 매개 변수 값을 프로그래밍 방식으로 설정(C#)'
+                - name: ObjectDataSource의 매개 변수 값을 프로그래밍 방식으로 설정(C#)
                   href: web-forms/overview/data-access/basic-reporting/programmatically-setting-the-objectdatasource-s-parameter-values-cs.md
                 - name: ObjectDataSource를 사용하여 데이터 표시(VB)
                   href: web-forms/overview/data-access/basic-reporting/displaying-data-with-the-objectdatasource-vb.md
@@ -737,13 +737,13 @@
             - name: 마스터/세부 정보
               href: web-forms/overview/data-access/masterdetail/index.md
               items:
-                - name: 'DropDownList 한 개로 마스터/세부 정보 필터링(C#)'
+                - name: DropDownList 한 개로 마스터/세부 정보 필터링(C#)
                   href: web-forms/overview/data-access/masterdetail/master-detail-filtering-with-a-dropdownlist-cs.md
-                - name: 'DropDownList 두 개로 마스터/세부 정보 필터링(C#)'
+                - name: DropDownList 두 개로 마스터/세부 정보 필터링(C#)
                   href: web-forms/overview/data-access/masterdetail/master-detail-filtering-with-two-dropdownlists-cs.md
-                - name: '두 페이지에 걸쳐 마스터/세부 정보 필터링(C#)'
+                - name: 두 페이지에 걸쳐 마스터/세부 정보 필터링(C#)
                   href: web-forms/overview/data-access/masterdetail/master-detail-filtering-across-two-pages-cs.md
-                - name: '세부 정보 DetailView와 함께 선택 가능한 마스터 GridView를 사용하는 마스터/세부 정보(C#)'
+                - name: 세부 정보 DetailView와 함께 선택 가능한 마스터 GridView를 사용하는 마스터/세부 정보(C#)
                   href: web-forms/overview/data-access/masterdetail/master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs.md
                 - name: DropDownList 한 개로 마스터/세부 정보 필터링(VB)
                   href: web-forms/overview/data-access/masterdetail/master-detail-filtering-with-a-dropdownlist-vb.md
@@ -756,15 +756,15 @@
             - name: 사용자 지정 형식 지정
               href: web-forms/overview/data-access/custom-formatting/index.md
               items:
-                - name: '데이터에 따라 사용자 지정 형식 지정(C#)'
+                - name: 데이터에 따라 사용자 지정 형식 지정(C#)
                   href: web-forms/overview/data-access/custom-formatting/custom-formatting-based-upon-data-cs.md
-                - name: 'GridView 컨트롤에서 TemplateFields 사용(C#)'
+                - name: GridView 컨트롤에서 TemplateFields 사용(C#)
                   href: web-forms/overview/data-access/custom-formatting/using-templatefields-in-the-gridview-control-cs.md
-                - name: 'DetailsView 컨트롤에서 TemplateFields 사용(C#)'
+                - name: DetailsView 컨트롤에서 TemplateFields 사용(C#)
                   href: web-forms/overview/data-access/custom-formatting/using-templatefields-in-the-detailsview-control-cs.md
-                - name: 'FormView의 템플릿(C#)'
+                - name: FormView의 템플릿(C#)
                   href: web-forms/overview/data-access/custom-formatting/using-the-formview-s-templates-cs.md
-                - name: 'GridView의 바닥글에 요약 정보 표시(C#)'
+                - name: GridView의 바닥글에 요약 정보 표시(C#)
                   href: web-forms/overview/data-access/custom-formatting/displaying-summary-information-in-the-gridview-s-footer-cs.md
                 - name: 데이터에 따라 사용자 지정 형식 지정(VB)
                   href: web-forms/overview/data-access/custom-formatting/custom-formatting-based-upon-data-vb.md
@@ -783,17 +783,17 @@
                   href: web-forms/overview/data-access/editing-inserting-and-deleting-data/an-overview-of-inserting-updating-and-deleting-data-cs.md
                 - name: '삽입, 업데이트 및 삭제와 연결된 이벤트 검사(C#)'
                   href: web-forms/overview/data-access/editing-inserting-and-deleting-data/examining-the-events-associated-with-inserting-updating-and-deleting-cs.md
-                - name: 'ASP.NET 페이지에서 BLL 및 DAL 수준의 예외 처리(C#)'
+                - name: ASP.NET 페이지에서 BLL 및 DAL 수준의 예외 처리(C#)
                   href: web-forms/overview/data-access/editing-inserting-and-deleting-data/handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs.md
-                - name: '편집 및 삽입 인터페이스에 유효성 검사 컨트롤 추가(C#)'
+                - name: 편집 및 삽입 인터페이스에 유효성 검사 컨트롤 추가(C#)
                   href: web-forms/overview/data-access/editing-inserting-and-deleting-data/adding-validation-controls-to-the-editing-and-inserting-interfaces-cs.md
-                - name: '데이터 수정 인터페이스 사용자 지정(C#)'
+                - name: 데이터 수정 인터페이스 사용자 지정(C#)
                   href: web-forms/overview/data-access/editing-inserting-and-deleting-data/customizing-the-data-modification-interface-cs.md
-                - name: '낙관적 동시성 구현(C#)'
+                - name: 낙관적 동시성 구현(C#)
                   href: web-forms/overview/data-access/editing-inserting-and-deleting-data/implementing-optimistic-concurrency-cs.md
-                - name: '삭제할 때 클라이언트 쪽 확인 추가(C#)'
+                - name: 삭제할 때 클라이언트 쪽 확인 추가(C#)
                   href: web-forms/overview/data-access/editing-inserting-and-deleting-data/adding-client-side-confirmation-when-deleting-cs.md
-                - name: '사용자에 따라 데이터 수정 기능 제한(C#)'
+                - name: 사용자에 따라 데이터 수정 기능 제한(C#)
                   href: web-forms/overview/data-access/editing-inserting-and-deleting-data/limiting-data-modification-functionality-based-on-the-user-cs.md
                 - name: '데이터 삽입, 업데이트 및 삭제의 개요(VB)'
                   href: web-forms/overview/data-access/editing-inserting-and-deleting-data/an-overview-of-inserting-updating-and-deleting-data-vb.md
@@ -814,13 +814,13 @@
             - name: 페이징 및 정렬
               href: web-forms/overview/data-access/paging-and-sorting/index.md
               items:
-                - name: '페이징 및 정렬 보고서 데이터(C#)'
+                - name: 페이징 및 정렬 보고서 데이터(C#)
                   href: web-forms/overview/data-access/paging-and-sorting/paging-and-sorting-report-data-cs.md
-                - name: '대량의 데이터를 효율적으로 페이징(C#)'
+                - name: 대량의 데이터를 효율적으로 페이징(C#)
                   href: web-forms/overview/data-access/paging-and-sorting/efficiently-paging-through-large-amounts-of-data-cs.md
-                - name: '사용자 지정 페이징 데이터 정렬(C#)'
+                - name: 사용자 지정 페이징 데이터 정렬(C#)
                   href: web-forms/overview/data-access/paging-and-sorting/sorting-custom-paged-data-cs.md
-                - name: '사용자 지정된 정렬 사용자 인터페이스 만들기(C#)'
+                - name: 사용자 지정된 정렬 사용자 인터페이스 만들기(C#)
                   href: web-forms/overview/data-access/paging-and-sorting/creating-a-customized-sorting-user-interface-cs.md
                 - name: 페이징 및 정렬 보고서 데이터(VB)
                   href: web-forms/overview/data-access/paging-and-sorting/paging-and-sorting-report-data-vb.md
@@ -833,20 +833,20 @@
             - name: 사용자 지정 단추 동작
               href: web-forms/overview/data-access/custom-button-actions/index.md
               items:
-                - name: 'GridView에 단추를 추가하고 응답(C#)'
+                - name: GridView에 단추를 추가하고 응답(C#)
                   href: web-forms/overview/data-access/custom-button-actions/adding-and-responding-to-buttons-to-a-gridview-cs.md
                 - name: GridView에 단추를 추가하고 응답(VB)
                   href: web-forms/overview/data-access/custom-button-actions/adding-and-responding-to-buttons-to-a-gridview-vb.md
             - name: DataList 및 반복기를 사용하여 데이터 표시
               href: web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater/index.md
               items:
-                - name: 'DataList 및 반복기 컨트롤을 사용하여 데이터 표시(C#)'
+                - name: DataList 및 반복기 컨트롤을 사용하여 데이터 표시(C#)
                   href: web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater/displaying-data-with-the-datalist-and-repeater-controls-cs.md
-                - name: '데이터를 기반으로 DataList 및 반복기 서식 지정(C#)'
+                - name: 데이터를 기반으로 DataList 및 반복기 서식 지정(C#)
                   href: web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater/formatting-the-datalist-and-repeater-based-upon-data-cs.md
-                - name: 'DataList 컨트롤을 사용하여 행마다 여러 레코드 표시(C#)'
+                - name: DataList 컨트롤을 사용하여 행마다 여러 레코드 표시(C#)
                   href: web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater/showing-multiple-records-per-row-with-the-datalist-control-cs.md
-                - name: '중첩된 데이터 웹 컨트롤(C#)'
+                - name: 중첩된 데이터 웹 컨트롤(C#)
                   href: web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater/nested-data-web-controls-cs.md
                 - name: DataList 및 반복기 컨트롤을 사용하여 데이터 표시(VB)
                   href: web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater/displaying-data-with-the-datalist-and-repeater-controls-vb.md
@@ -859,11 +859,11 @@
             - name: DataList 및 반복기를 사용하는 필터링 시나리오
               href: web-forms/overview/data-access/filtering-scenarios-with-the-datalist-and-repeater/index.md
               items:
-                - name: 'DropDownList 한 개로 마스터/세부 정보 필터링(C#)'
+                - name: DropDownList 한 개로 마스터/세부 정보 필터링(C#)
                   href: web-forms/overview/data-access/filtering-scenarios-with-the-datalist-and-repeater/master-detail-filtering-with-a-dropdownlist-datalist-cs.md
-                - name: '두 페이지에 걸쳐 마스터/세부 정보 필터링(C#)'
+                - name: 두 페이지에 걸쳐 마스터/세부 정보 필터링(C#)
                   href: web-forms/overview/data-access/filtering-scenarios-with-the-datalist-and-repeater/master-detail-filtering-acess-two-pages-datalist-cs.md
-                - name: '세부 정보 DataList와 함께 마스터 레코드의 글머리 기호 목록을 사용하는 마스터/세부 정보(C#)'
+                - name: 세부 정보 DataList와 함께 마스터 레코드의 글머리 기호 목록을 사용하는 마스터/세부 정보(C#)
                   href: web-forms/overview/data-access/filtering-scenarios-with-the-datalist-and-repeater/master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs.md
                 - name: DropDownList 한 개로 마스터/세부 정보 필터링(VB)
                   href: web-forms/overview/data-access/filtering-scenarios-with-the-datalist-and-repeater/master-detail-filtering-with-a-dropdownlist-datalist-vb.md
@@ -874,15 +874,15 @@
             - name: DataList를 통해 데이터 편집 및 삭제
               href: web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/index.md
               items:
-                - name: 'DataList에서 데이터 편집 및 삭제의 개요(C#)'
+                - name: DataList에서 데이터 편집 및 삭제의 개요(C#)
                   href: web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/an-overview-of-editing-and-deleting-data-in-the-datalist-cs.md
-                - name: '일괄 처리 업데이트 수행(C#)'
+                - name: 일괄 처리 업데이트 수행(C#)
                   href: web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/performing-batch-updates-cs.md
-                - name: 'BLL 및 DAL 수준의 예외 처리(C#)'
+                - name: BLL 및 DAL 수준의 예외 처리(C#)
                   href: web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/handling-bll-and-dal-level-exceptions-cs.md
-                - name: 'DataList의 편집 인터페이스에 유효성 검사 컨트롤 추가(C#)'
+                - name: DataList의 편집 인터페이스에 유효성 검사 컨트롤 추가(C#)
                   href: web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/adding-validation-controls-to-the-datalist-s-editing-interface-cs.md
-                - name: 'DataList의 편집 인터페이스 사용자 지정(C#)'
+                - name: DataList의 편집 인터페이스 사용자 지정(C#)
                   href: web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/customizing-the-datalist-s-editing-interface-cs.md
                 - name: DataList에서 데이터 편집 및 삭제의 개요(VB)
                   href: web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/an-overview-of-editing-and-deleting-data-in-the-datalist-vb.md
@@ -897,9 +897,9 @@
             - name: DataList 및 반복기를 사용하여 페이징 및 정렬
               href: web-forms/overview/data-access/paging-and-sorting-with-the-datalist-and-repeater/index.md
               items:
-                - name: 'DataList 또는 반복기 컨트롤에서 보고서 데이터 페이징(C#)'
+                - name: DataList 또는 반복기 컨트롤에서 보고서 데이터 페이징(C#)
                   href: web-forms/overview/data-access/paging-and-sorting-with-the-datalist-and-repeater/paging-report-data-in-a-datalist-or-repeater-control-cs.md
-                - name: 'DataList 또는 반복기 컨트롤에서 데이터 정렬(C#)'
+                - name: DataList 또는 반복기 컨트롤에서 데이터 정렬(C#)
                   href: web-forms/overview/data-access/paging-and-sorting-with-the-datalist-and-repeater/sorting-data-in-a-datalist-or-repeater-control-cs.md
                 - name: DataList 또는 반복기 컨트롤에서 보고서 데이터 페이징(VB)
                   href: web-forms/overview/data-access/paging-and-sorting-with-the-datalist-and-repeater/paging-report-data-in-a-datalist-or-repeater-control-vb.md
@@ -908,20 +908,20 @@
             - name: DataList 및 반복기를 사용하는 사용자 지정 단추 동작
               href: web-forms/overview/data-access/custom-button-actions-with-the-datalist-and-repeater/index.md
               items:
-                - name: 'DataList 및 반복기의 사용자 지정 단추(C#)'
+                - name: DataList 및 반복기의 사용자 지정 단추(C#)
                   href: web-forms/overview/data-access/custom-button-actions-with-the-datalist-and-repeater/custom-buttons-in-the-datalist-and-repeater-cs.md
                 - name: DataList 및 반복기의 사용자 지정 단추(VB)
                   href: web-forms/overview/data-access/custom-button-actions-with-the-datalist-and-repeater/custom-buttons-in-the-datalist-and-repeater-vb.md
             - name: ASP.NET 페이지에서 데이터베이스에 직접 액세스
               href: web-forms/overview/data-access/accessing-the-database-directly-from-an-aspnet-page/index.md
               items:
-                - name: 'SqlDataSource 컨트롤을 사용하여 데이터 쿼리(C#)'
+                - name: SqlDataSource 컨트롤을 사용하여 데이터 쿼리(C#)
                   href: web-forms/overview/data-access/accessing-the-database-directly-from-an-aspnet-page/querying-data-with-the-sqldatasource-control-cs.md
-                - name: 'SqlDataSource와 함께 매개 변수가 있는 쿼리 사용(C#)'
+                - name: SqlDataSource와 함께 매개 변수가 있는 쿼리 사용(C#)
                   href: web-forms/overview/data-access/accessing-the-database-directly-from-an-aspnet-page/using-parameterized-queries-with-the-sqldatasource-cs.md
                 - name: 'SqlDataSource를 사용하여 데이터 삽입, 업데이트 및 삭제(C#)'
                   href: web-forms/overview/data-access/accessing-the-database-directly-from-an-aspnet-page/inserting-updating-and-deleting-data-with-the-sqldatasource-cs.md
-                - name: 'SqlDataSource를 사용하여 낙관적 동시성 구현(C#)'
+                - name: SqlDataSource를 사용하여 낙관적 동시성 구현(C#)
                   href: web-forms/overview/data-access/accessing-the-database-directly-from-an-aspnet-page/implementing-optimistic-concurrency-with-the-sqldatasource-cs.md
                 - name: SqlDataSource 컨트롤을 사용하여 데이터 쿼리(VB)
                   href: web-forms/overview/data-access/accessing-the-database-directly-from-an-aspnet-page/querying-data-with-the-sqldatasource-control-vb.md
@@ -934,11 +934,11 @@
             - name: GridView 향상
               href: web-forms/overview/data-access/enhancing-the-gridview/index.md
               items:
-                - name: '라디오 단추의 GridView 열 추가(C#)'
+                - name: 라디오 단추의 GridView 열 추가(C#)
                   href: web-forms/overview/data-access/enhancing-the-gridview/adding-a-gridview-column-of-radio-buttons-cs.md
-                - name: '확인란의 GridView 열 추가(C#)'
+                - name: 확인란의 GridView 열 추가(C#)
                   href: web-forms/overview/data-access/enhancing-the-gridview/adding-a-gridview-column-of-checkboxes-cs.md
-                - name: 'GridView의 바닥글에서 새 레코드 삽입(C#)'
+                - name: GridView의 바닥글에서 새 레코드 삽입(C#)
                   href: web-forms/overview/data-access/enhancing-the-gridview/inserting-a-new-record-from-the-gridview-s-footer-cs.md
                 - name: 라디오 단추의 GridView 열 추가(VB)
                   href: web-forms/overview/data-access/enhancing-the-gridview/adding-a-gridview-column-of-radio-buttons-vb.md
@@ -949,13 +949,13 @@
             - name: 이진 파일 작업
               href: web-forms/overview/data-access/working-with-binary-files/index.md
               items:
-                - name: '파일 업로드(C#)'
+                - name: 파일 업로드(C#)
                   href: web-forms/overview/data-access/working-with-binary-files/uploading-files-cs.md
-                - name: '데이터 웹 컨트롤에 이진 데이터 표시(C#)'
+                - name: 데이터 웹 컨트롤에 이진 데이터 표시(C#)
                   href: web-forms/overview/data-access/working-with-binary-files/displaying-binary-data-in-the-data-web-controls-cs.md
-                - name: '새 레코드를 추가할 때 파일 업로드 옵션 포함(C#)'
+                - name: 새 레코드를 추가할 때 파일 업로드 옵션 포함(C#)
                   href: web-forms/overview/data-access/working-with-binary-files/including-a-file-upload-option-when-adding-a-new-record-cs.md
-                - name: '기존 이진 데이터 업데이트 및 삭제(C#)'
+                - name: 기존 이진 데이터 업데이트 및 삭제(C#)
                   href: web-forms/overview/data-access/working-with-binary-files/updating-and-deleting-existing-binary-data-cs.md
                 - name: 파일 업로드(VB)
                   href: web-forms/overview/data-access/working-with-binary-files/uploading-files-vb.md
@@ -968,13 +968,13 @@
             - name: 데이터 캐싱
               href: web-forms/overview/data-access/caching-data/index.md
               items:
-                - name: 'ObjectDataSource를 사용하여 데이터 캐싱(C#)'
+                - name: ObjectDataSource를 사용하여 데이터 캐싱(C#)
                   href: web-forms/overview/data-access/caching-data/caching-data-with-the-objectdatasource-cs.md
-                - name: '아키텍처에서 데이터 캐싱(C#)'
+                - name: 아키텍처에서 데이터 캐싱(C#)
                   href: web-forms/overview/data-access/caching-data/caching-data-in-the-architecture-cs.md
-                - name: '애플리케이션 시작 시 데이터 캐싱(C#)'
+                - name: 애플리케이션 시작 시 데이터 캐싱(C#)
                   href: web-forms/overview/data-access/caching-data/caching-data-at-application-startup-cs.md
-                - name: 'SQL 캐시 종속성 사용(C#)'
+                - name: SQL 캐시 종속성 사용(C#)
                   href: web-forms/overview/data-access/caching-data/using-sql-cache-dependencies-cs.md
                 - name: ObjectDataSource를 사용하여 데이터 캐싱(VB)
                   href: web-forms/overview/data-access/caching-data/caching-data-with-the-objectdatasource-vb.md
@@ -987,20 +987,20 @@
             - name: 데이터베이스 중심 사이트 맵
               href: web-forms/overview/data-access/database-driven-site-maps/index.md
               items:
-                - name: '사용자 지정 데이터베이스 중심 사이트 맵 공급자 빌드(C#)'
+                - name: 사용자 지정 데이터베이스 중심 사이트 맵 공급자 빌드(C#)
                   href: web-forms/overview/data-access/database-driven-site-maps/building-a-custom-database-driven-site-map-provider-cs.md
                 - name: 사용자 지정 데이터베이스 중심 사이트 맵 공급자 빌드(VB)
                   href: web-forms/overview/data-access/database-driven-site-maps/building-a-custom-database-driven-site-map-provider-vb.md
             - name: 일괄 처리된 데이터 사용
               href: web-forms/overview/data-access/working-with-batched-data/index.md
               items:
-                - name: '트랜잭션 내에서 래핑된 데이터베이스 수정(C#)'
+                - name: 트랜잭션 내에서 래핑된 데이터베이스 수정(C#)
                   href: web-forms/overview/data-access/working-with-batched-data/wrapping-database-modifications-within-a-transaction-cs.md
-                - name: '일괄 업데이트(C#)'
+                - name: 일괄 업데이트(C#)
                   href: web-forms/overview/data-access/working-with-batched-data/batch-updating-cs.md
-                - name: '일괄 삭제(C#)'
+                - name: 일괄 삭제(C#)
                   href: web-forms/overview/data-access/working-with-batched-data/batch-deleting-cs.md
-                - name: '일괄 삽입(C#)'
+                - name: 일괄 삽입(C#)
                   href: web-forms/overview/data-access/working-with-batched-data/batch-inserting-cs.md
                 - name: 트랜잭션 내에서 래핑된 데이터베이스 수정(VB)
                   href: web-forms/overview/data-access/working-with-batched-data/wrapping-database-modifications-within-a-transaction-vb.md
@@ -1013,23 +1013,23 @@
             - name: 고급 데이터 액세스 시나리오
               href: web-forms/overview/data-access/advanced-data-access-scenarios/index.md
               items:
-                - name: '형식화된 데이터 세트의 TableAdapter에 대한 새로운 저장 프로시저 만들기(C#)'
+                - name: 형식화된 데이터 세트의 TableAdapter에 대한 새로운 저장 프로시저 만들기(C#)
                   href: web-forms/overview/data-access/advanced-data-access-scenarios/creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-cs.md
-                - name: '형식화된 데이터 세트의 TableAdapter에 대한 기존 저장 프로시저 사용(C#)'
+                - name: 형식화된 데이터 세트의 TableAdapter에 대한 기존 저장 프로시저 사용(C#)
                   href: web-forms/overview/data-access/advanced-data-access-scenarios/using-existing-stored-procedures-for-the-typed-dataset-s-tableadapters-cs.md
-                - name: 'JOIN을 사용하도록 TableAdapter 업데이트(C#)'
+                - name: JOIN을 사용하도록 TableAdapter 업데이트(C#)
                   href: web-forms/overview/data-access/advanced-data-access-scenarios/updating-the-tableadapter-to-use-joins-cs.md
-                - name: '추가 DataTable 열 추가(C#)'
+                - name: 추가 DataTable 열 추가(C#)
                   href: web-forms/overview/data-access/advanced-data-access-scenarios/adding-additional-datatable-columns-cs.md
-                - name: '계산 열 작업(C#)'
+                - name: 계산 열 작업(C#)
                   href: web-forms/overview/data-access/advanced-data-access-scenarios/working-with-computed-columns-cs.md
-                - name: '데이터 액세스 레이어의 연결 및 명령 수준 설정 구성(C#)'
+                - name: 데이터 액세스 레이어의 연결 및 명령 수준 설정 구성(C#)
                   href: web-forms/overview/data-access/advanced-data-access-scenarios/configuring-the-data-access-layer-s-connection-and-command-level-settings-cs.md
-                - name: '연결 문자열 및 기타 구성 정보 보호(C#)'
+                - name: 연결 문자열 및 기타 구성 정보 보호(C#)
                   href: web-forms/overview/data-access/advanced-data-access-scenarios/protecting-connection-strings-and-other-configuration-information-cs.md
-                - name: '저장 프로시저 디버그(C#)'
+                - name: 저장 프로시저 디버그(C#)
                   href: web-forms/overview/data-access/advanced-data-access-scenarios/debugging-stored-procedures-cs.md
-                - name: '관리 코드를 사용하여 저장 프로시저 및 사용자 정의 함수 만들기(C#)'
+                - name: 관리 코드를 사용하여 저장 프로시저 및 사용자 정의 함수 만들기(C#)
                   href: web-forms/overview/data-access/advanced-data-access-scenarios/creating-stored-procedures-and-user-defined-functions-with-managed-code-cs.md
                 - name: 형식화된 데이터 세트의 TableAdapter에 대한 새로운 저장 프로시저 만들기(VB)
                   href: web-forms/overview/data-access/advanced-data-access-scenarios/creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb.md
@@ -1055,11 +1055,11 @@
             - name: ASP.NET 3.5 - 보안 소개
               href: web-forms/overview/older-versions-security/introduction/index.md
               items:
-                - name: '보안 기본 사항 및 ASP.NET 지원(C#)'
+                - name: 보안 기본 사항 및 ASP.NET 지원(C#)
                   href: web-forms/overview/older-versions-security/introduction/security-basics-and-asp-net-support-cs.md
-                - name: '폼 인증 개요(C#)'
+                - name: 폼 인증 개요(C#)
                   href: web-forms/overview/older-versions-security/introduction/an-overview-of-forms-authentication-cs.md
-                - name: '폼 인증 구성 및 고급 항목(C#)'
+                - name: 폼 인증 구성 및 고급 항목(C#)
                   href: web-forms/overview/older-versions-security/introduction/forms-authentication-configuration-and-advanced-topics-cs.md
                 - name: 보안 기본 사항 및 ASP.NET 지원(VB)
                   href: web-forms/overview/older-versions-security/introduction/security-basics-and-asp-net-support-vb.md
@@ -1070,15 +1070,15 @@
             - name: ASP.NET 3.5 - 멤버 자격
               href: web-forms/overview/older-versions-security/membership/index.md
               items:
-                - name: 'SQL Server에서 멤버 자격 스키마 만들기(C#)'
+                - name: SQL Server에서 멤버 자격 스키마 만들기(C#)
                   href: web-forms/overview/older-versions-security/membership/creating-the-membership-schema-in-sql-server-cs.md
-                - name: '사용자 계정 만들기(C#)'
+                - name: 사용자 계정 만들기(C#)
                   href: web-forms/overview/older-versions-security/membership/creating-user-accounts-cs.md
-                - name: '멤버 자격 사용자 저장소에 대해 사용자 자격 증명의 유효성 검사(C#)'
+                - name: 멤버 자격 사용자 저장소에 대해 사용자 자격 증명의 유효성 검사(C#)
                   href: web-forms/overview/older-versions-security/membership/validating-user-credentials-against-the-membership-user-store-cs.md
-                - name: '사용자 기반 권한 부여(C#)'
+                - name: 사용자 기반 권한 부여(C#)
                   href: web-forms/overview/older-versions-security/membership/user-based-authorization-cs.md
-                - name: '추가 사용자 정보 저장(C#)'
+                - name: 추가 사용자 정보 저장(C#)
                   href: web-forms/overview/older-versions-security/membership/storing-additional-user-information-cs.md
                 - name: SQL Server에서 멤버 자격 스키마 만들기(VB)
                   href: web-forms/overview/older-versions-security/membership/creating-the-membership-schema-in-sql-server-vb.md
@@ -1093,11 +1093,11 @@
             - name: ASP.NET 3.5 - 역할
               href: web-forms/overview/older-versions-security/roles/index.md
               items:
-                - name: '역할 만들기 및 관리(C#)'
+                - name: 역할 만들기 및 관리(C#)
                   href: web-forms/overview/older-versions-security/roles/creating-and-managing-roles-cs.md
-                - name: '사용자에 역할 할당(C#)'
+                - name: 사용자에 역할 할당(C#)
                   href: web-forms/overview/older-versions-security/roles/assigning-roles-to-users-cs.md
-                - name: '역할 기반 권한 부여(C#)'
+                - name: 역할 기반 권한 부여(C#)
                   href: web-forms/overview/older-versions-security/roles/role-based-authorization-cs.md
                 - name: 역할 만들기 및 관리(VB)
                   href: web-forms/overview/older-versions-security/roles/creating-and-managing-roles-vb.md
@@ -1108,11 +1108,11 @@
             - name: ASP.NET 3.5 - 보안 관리
               href: web-forms/overview/older-versions-security/admin/index.md
               items:
-                - name: '여러 사용자 계정 중 하나를 선택하는 인터페이스 빌드(C#)'
+                - name: 여러 사용자 계정 중 하나를 선택하는 인터페이스 빌드(C#)
                   href: web-forms/overview/older-versions-security/admin/building-an-interface-to-select-one-user-account-from-many-cs.md
-                - name: '암호 복구 및 변경(C#)'
+                - name: 암호 복구 및 변경(C#)
                   href: web-forms/overview/older-versions-security/admin/recovering-and-changing-passwords-cs.md
-                - name: '사용자 계정 잠금 해제 및 승인(C#)'
+                - name: 사용자 계정 잠금 해제 및 승인(C#)
                   href: web-forms/overview/older-versions-security/admin/unlocking-and-approving-user-accounts-cs.md
                 - name: 여러 사용자 계정 중 하나를 선택하는 인터페이스 빌드(VB)
                   href: web-forms/overview/older-versions-security/admin/building-an-interface-to-select-one-user-account-from-many-vb.md
@@ -1867,7 +1867,7 @@
               href: web-forms/videos/aspnet-dynamic-data/how-to-enable-table-specific-routing-in-dynamic-data-applications.md
             - name: ASP.NET Dynamic Data 애플리케이션에서 특성 유효성 검사 사용
               href: web-forms/videos/aspnet-dynamic-data/how-to-use-attribute-validation-in-aspnet-dynamic-data-applications.md
-            - name: 'VB 또는 C#에서 명령적 논리를 사용하여 사용자 지정 필드 유효성 구현'
+            - name: VB 또는 C#에서 명령적 논리를 사용하여 사용자 지정 필드 유효성 구현
               href: web-forms/videos/aspnet-dynamic-data/how-to-implement-custom-field-validation-with-imperative-logic-in-vb-or-c.md
             - name: DynamicData 데이터 그리드에서 열 제거
               href: web-forms/videos/aspnet-dynamic-data/how-to-remove-columns-from-your-dynamicdata-data-grids.md
@@ -2158,7 +2158,7 @@
               href: mvc/overview/security/aspnet-mvc-5-app-with-sms-and-email-two-factor-authentication.md
             - name: ASP.NET MVC 및 웹 페이지에서 XSRF/CSRF 방지
               href: mvc/overview/security/xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages.md
-            - name: '오픈 리디렉션 공격 방지(C#)'
+            - name: 오픈 리디렉션 공격 방지(C#)
               href: mvc/overview/security/preventing-open-redirection-attacks.md
         - name: 배포
           href: mvc/overview/deployment/index.md
@@ -2261,26 +2261,26 @@
             - name: ASP.NET MVC 3 시작
               href: mvc/overview/older-versions/getting-started-with-aspnet-mvc3/index.md
               items:
-                - name: 'ASP.NET MVC 3 시작(C#)'
+                - name: ASP.NET MVC 3 시작(C#)
                   href: mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/index.md
                   items:
-                    - name: 'ASP.NET MVC 3 소개(C#)'
+                    - name: ASP.NET MVC 3 소개(C#)
                       href: mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3.md
-                    - name: '컨트롤러 추가(C#)'
+                    - name: 컨트롤러 추가(C#)
                       href: mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/adding-a-controller.md
-                    - name: '보기 추가(C#)'
+                    - name: 보기 추가(C#)
                       href: mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/adding-a-view.md
-                    - name: '모델 추가(C#)'
+                    - name: 모델 추가(C#)
                       href: mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/adding-a-model.md
-                    - name: '컨트롤러에서 모델의 데이터에 액세스(C#)'
+                    - name: 컨트롤러에서 모델의 데이터에 액세스(C#)
                       href: mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/accessing-your-models-data-from-a-controller.md
-                    - name: '편집 메서드 및 편집 보기 검사(C#)'
+                    - name: 편집 메서드 및 편집 보기 검사(C#)
                       href: mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/examining-the-edit-methods-and-edit-view.md
-                    - name: '영화 모델 및 테이블에 새 필드 추가(C#)'
+                    - name: 영화 모델 및 테이블에 새 필드 추가(C#)
                       href: mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/adding-a-new-field.md
-                    - name: '모델에 유효성 검사 추가(C#)'
+                    - name: 모델에 유효성 검사 추가(C#)
                       href: mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/adding-validation-to-the-model.md
-                    - name: '세부 정보 및 삭제 메서드 개선(C#)'
+                    - name: 세부 정보 및 삭제 메서드 개선(C#)
                       href: mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/improving-the-details-and-delete-methods.md
                 - name: ASP.NET MVC 3 시작(VB.NET)
                   href: mvc/overview/older-versions/getting-started-with-aspnet-mvc3/vb/index.md
@@ -2382,19 +2382,19 @@
             - name: 모델(데이터)
               href: mvc/overview/older-versions-1/models-data/index.md
               items:
-                - name: 'Entity Framework를 사용하여 모델 클래스 만들기(C#)'
+                - name: Entity Framework를 사용하여 모델 클래스 만들기(C#)
                   href: mvc/overview/older-versions-1/models-data/creating-model-classes-with-the-entity-framework-cs.md
-                - name: 'LINQ to SQL을 사용하여 모델 클래스 만들기(C#)'
+                - name: LINQ to SQL을 사용하여 모델 클래스 만들기(C#)
                   href: mvc/overview/older-versions-1/models-data/creating-model-classes-with-linq-to-sql-cs.md
-                - name: '데이터베이스 데이터의 테이블 표시(C#)'
+                - name: 데이터베이스 데이터의 테이블 표시(C#)
                   href: mvc/overview/older-versions-1/models-data/displaying-a-table-of-database-data-cs.md
-                - name: '간단한 유효성 검사 수행(C#)'
+                - name: 간단한 유효성 검사 수행(C#)
                   href: mvc/overview/older-versions-1/models-data/performing-simple-validation-cs.md
-                - name: 'IDataErrorInfo 인터페이스를 사용한 유효성 검사(C#)'
+                - name: IDataErrorInfo 인터페이스를 사용한 유효성 검사(C#)
                   href: mvc/overview/older-versions-1/models-data/validating-with-the-idataerrorinfo-interface-cs.md
-                - name: '서비스 레이어를 사용한 유효성 검사(C#)'
+                - name: 서비스 레이어를 사용한 유효성 검사(C#)
                   href: mvc/overview/older-versions-1/models-data/validating-with-a-service-layer-cs.md
-                - name: '데이터 주석 유효성 검사기를 사용한 유효성 검사(C#)'
+                - name: 데이터 주석 유효성 검사기를 사용한 유효성 검사(C#)
                   href: mvc/overview/older-versions-1/models-data/validation-with-the-data-annotation-validators-cs.md
                 - name: Entity Framework를 사용하여 모델 클래스 만들기(VB)
                   href: mvc/overview/older-versions-1/models-data/creating-model-classes-with-the-entity-framework-vb.md
@@ -2413,15 +2413,15 @@
             - name: ASP.NET MVC 보기
               href: mvc/overview/older-versions-1/views/index.md
               items:
-                - name: 'ASP.NET MVC 보기 개요(C#)'
+                - name: ASP.NET MVC 보기 개요(C#)
                   href: mvc/overview/older-versions-1/views/asp-net-mvc-views-overview-cs.md
-                - name: '사용자 지정 HTML 도우미 만들기(C#)'
+                - name: 사용자 지정 HTML 도우미 만들기(C#)
                   href: mvc/overview/older-versions-1/views/creating-custom-html-helpers-cs.md
-                - name: 'HTML 도우미를 빌드하는 TagBuilder 클래스(C#)'
+                - name: HTML 도우미를 빌드하는 TagBuilder 클래스(C#)
                   href: mvc/overview/older-versions-1/views/using-the-tagbuilder-class-to-build-html-helpers-cs.md
-                - name: '보기 마스터 페이지를 사용하여 페이지 레이아웃 만들기(C#)'
+                - name: 보기 마스터 페이지를 사용하여 페이지 레이아웃 만들기(C#)
                   href: mvc/overview/older-versions-1/views/creating-page-layouts-with-view-master-pages-cs.md
-                - name: '보기 마스터 페이지에 데이터 전달(C#)'
+                - name: 보기 마스터 페이지에 데이터 전달(C#)
                   href: mvc/overview/older-versions-1/views/passing-data-to-view-master-pages-cs.md
                 - name: ASP.NET MVC 보기 개요(VB)
                   href: mvc/overview/older-versions-1/views/asp-net-mvc-views-overview-vb.md
@@ -2436,17 +2436,17 @@
             - name: 컨트롤러 및 라우팅
               href: mvc/overview/older-versions-1/controllers-and-routing/index.md
               items:
-                - name: 'ASP.NET MVC 라우팅 개요(C#)'
+                - name: ASP.NET MVC 라우팅 개요(C#)
                   href: mvc/overview/older-versions-1/controllers-and-routing/asp-net-mvc-routing-overview-cs.md
-                - name: '작업 필터 이해(C#)'
+                - name: 작업 필터 이해(C#)
                   href: mvc/overview/older-versions-1/controllers-and-routing/understanding-action-filters-cs.md
-                - name: '출력 캐싱을 통한 성능 향상(C#)'
+                - name: 출력 캐싱을 통한 성능 향상(C#)
                   href: mvc/overview/older-versions-1/controllers-and-routing/improving-performance-with-output-caching-cs.md
-                - name: '캐시된 페이지에 동적 콘텐츠 추가(C#)'
+                - name: 캐시된 페이지에 동적 콘텐츠 추가(C#)
                   href: mvc/overview/older-versions-1/controllers-and-routing/adding-dynamic-content-to-a-cached-page-cs.md
-                - name: '컨트롤러 만들기(C#)'
+                - name: 컨트롤러 만들기(C#)
                   href: mvc/overview/older-versions-1/controllers-and-routing/creating-a-controller-cs.md
-                - name: '작업 만들기(C#)'
+                - name: 작업 만들기(C#)
                   href: mvc/overview/older-versions-1/controllers-and-routing/creating-an-action-cs.md
                 - name: ASP.NET MVC 라우팅 개요(VB)
                   href: mvc/overview/older-versions-1/controllers-and-routing/asp-net-mvc-routing-overview-vb.md
@@ -2460,13 +2460,13 @@
                   href: mvc/overview/older-versions-1/controllers-and-routing/creating-a-controller-vb.md
                 - name: 작업 만들기(VB)
                   href: mvc/overview/older-versions-1/controllers-and-routing/creating-an-action-vb.md
-                - name: 'ASP.NET MVC 컨트롤러 개요(C#)'
+                - name: ASP.NET MVC 컨트롤러 개요(C#)
                   href: mvc/overview/older-versions-1/controllers-and-routing/aspnet-mvc-controllers-overview-cs.md
-                - name: '사용자 지정 경로 만들기(C#)'
+                - name: 사용자 지정 경로 만들기(C#)
                   href: mvc/overview/older-versions-1/controllers-and-routing/creating-custom-routes-cs.md
-                - name: '경로 제약 조건 만들기(C#)'
+                - name: 경로 제약 조건 만들기(C#)
                   href: mvc/overview/older-versions-1/controllers-and-routing/creating-a-route-constraint-cs.md
-                - name: '사용자 지정 경로 제약 조건 만들기(C#)'
+                - name: 사용자 지정 경로 제약 조건 만들기(C#)
                   href: mvc/overview/older-versions-1/controllers-and-routing/creating-a-custom-route-constraint-cs.md
                 - name: ASP.NET MVC 컨트롤러 개요(VB)
                   href: mvc/overview/older-versions-1/controllers-and-routing/asp-net-mvc-controller-overview-vb.md
@@ -2479,18 +2479,18 @@
             - name: 배포
               href: mvc/overview/older-versions-1/deployment/index.md
               items:
-                - name: '다양한 버전의 IIS에 ASP.NET MVC 사용(C#)'
+                - name: 다양한 버전의 IIS에 ASP.NET MVC 사용(C#)
                   href: mvc/overview/older-versions-1/deployment/using-asp-net-mvc-with-different-versions-of-iis-cs.md
                 - name: 다양한 버전의 IIS에 ASP.NET MVC 사용(VB)
                   href: mvc/overview/older-versions-1/deployment/using-asp-net-mvc-with-different-versions-of-iis-vb.md
             - name: 보안
               href: mvc/overview/older-versions-1/security/index.md
               items:
-                - name: '폼 인증으로 사용자 인증(C#)'
+                - name: 폼 인증으로 사용자 인증(C#)
                   href: mvc/overview/older-versions-1/security/authenticating-users-with-forms-authentication-cs.md
-                - name: 'Windows 인증으로 사용자 인증(C#)'
+                - name: Windows 인증으로 사용자 인증(C#)
                   href: mvc/overview/older-versions-1/security/authenticating-users-with-windows-authentication-cs.md
-                - name: 'JavaScript 삽입 공격 방지(C#)'
+                - name: JavaScript 삽입 공격 방지(C#)
                   href: mvc/overview/older-versions-1/security/preventing-javascript-injection-attacks-cs.md
                 - name: 폼 인증으로 사용자 인증(VB)
                   href: mvc/overview/older-versions-1/security/authenticating-users-with-forms-authentication-vb.md
@@ -2501,7 +2501,7 @@
             - name: 단위 테스트
               href: mvc/overview/older-versions-1/unit-testing/index.md
               items:
-                - name: 'ASP.NET MVC 애플리케이션에 대한 단위 테스트 만들기(C#)'
+                - name: ASP.NET MVC 애플리케이션에 대한 단위 테스트 만들기(C#)
                   href: mvc/overview/older-versions-1/unit-testing/creating-unit-tests-for-asp-net-mvc-applications-cs.md
                 - name: ASP.NET MVC 애플리케이션에 대한 단위 테스트 만들기(VB)
                   href: mvc/overview/older-versions-1/unit-testing/creating-unit-tests-for-asp-net-mvc-applications-vb.md
@@ -2570,7 +2570,7 @@
             - name: 영화 데이터베이스
               href: mvc/overview/older-versions-1/movie-database/index.md
               items:
-                - name: 'ASP.NET MVC를 사용하여 15분 만에 영화 데이터베이스 애플리케이션 만들기(C#)'
+                - name: ASP.NET MVC를 사용하여 15분 만에 영화 데이터베이스 애플리케이션 만들기(C#)
                   href: mvc/overview/older-versions-1/movie-database/create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-cs.md
                 - name: ASP.NET MVC를 사용하여 15분 만에 영화 데이터베이스 애플리케이션 만들기(VB)
                   href: mvc/overview/older-versions-1/movie-database/create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb.md
@@ -2757,7 +2757,7 @@
         - name: 시작
           href: web-api/overview/getting-started-with-aspnet-web-api/index.md
           items:
-            - name: 'Web API 2 시작(C#)'
+            - name: Web API 2 시작(C#)
               href: web-api/overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api.md
             - name: Web API 2의 작업 결과
               href: web-api/overview/getting-started-with-aspnet-web-api/action-results.md
@@ -2807,7 +2807,7 @@
         - name: 모바일 클라이언트
           href: web-api/overview/mobile-clients/index.md
           items:
-            - name: 'Windows Phone 8 애플리케이션에서 Web API 호출(C#)'
+            - name: Windows Phone 8 애플리케이션에서 Web API 호출(C#)
               href: web-api/overview/mobile-clients/calling-web-api-from-a-windows-phone-8-application.md
         - name: OData
           href: web-api/overview/odata-support-in-aspnet-web-api/index.md
@@ -2817,7 +2817,7 @@
               items:
                 - name: OData v4 엔드포인트 만들기
                   href: web-api/overview/odata-support-in-aspnet-web-api/odata-v4/create-an-odata-v4-endpoint.md
-                - name: 'OData v4 클라이언트 앱 만들기(C#)'
+                - name: OData v4 클라이언트 앱 만들기(C#)
                   href: web-api/overview/odata-support-in-aspnet-web-api/odata-v4/create-an-odata-v4-client-app.md
                 - name: OData v4의 엔터티 관계
                   href: web-api/overview/odata-support-in-aspnet-web-api/odata-v4/entity-relations-in-odata-v4.md
@@ -2840,7 +2840,7 @@
                   href: web-api/overview/odata-support-in-aspnet-web-api/odata-v3/working-with-entity-relations.md
                 - name: Web API 2의 OData 작업
                   href: web-api/overview/odata-support-in-aspnet-web-api/odata-v3/odata-actions.md
-                - name: '.NET 클라이언트에서 OData 서비스 호출(C#)'
+                - name: .NET 클라이언트에서 OData 서비스 호출(C#)
                   href: web-api/overview/odata-support-in-aspnet-web-api/odata-v3/calling-an-odata-service-from-a-net-client.md
             - name: Web API 2에서 OData 쿼리 옵션 지원
               href: web-api/overview/odata-support-in-aspnet-web-api/supporting-odata-query-options.md
@@ -2892,7 +2892,7 @@
               href: web-api/overview/security/authentication-and-authorization-in-aspnet-web-api.md
             - name: Web API 2.2에서 개별 계정을 사용하여 Web API 보호
               href: web-api/overview/security/individual-accounts-in-web-api.md
-            - name: 'Web API를 사용하는 외부 인증 서비스(C#)'
+            - name: Web API를 사용하는 외부 인증 서비스(C#)
               href: web-api/overview/security/external-authentication-services.md
             - name: Web API에서 CSRF(교차 사이트 요청 위조) 공격 방지
               href: web-api/overview/security/preventing-cross-site-request-forgery-csrf-attacks.md
@@ -2922,7 +2922,7 @@
               href: web-api/overview/advanced/configuring-aspnet-web-api.md
             - name: Web API 2에서 종속성 주입
               href: web-api/overview/advanced/dependency-injection.md
-            - name: '.NET 클라이언트에서 Web API 호출(C#)'
+            - name: .NET 클라이언트에서 Web API 호출(C#)
               href: web-api/overview/advanced/calling-a-web-api-from-a-net-client.md
             - name: Web API의 HTTP 메시지 처리기
               href: web-api/overview/advanced/http-message-handlers.md
@@ -2965,7 +2965,7 @@
                   href: web-api/overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-6.md
                 - name: 기본 페이지 만들기
                   href: web-api/overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-7.md
-            - name: 'Web API 1 자체 호스트(C#)'
+            - name: Web API 1 자체 호스트(C#)
               href: web-api/overview/older-versions/self-host-a-web-api.md
             - name: ASP.NET Web API를 사용하여 RESTful API 빌드
               href: web-api/overview/older-versions/build-restful-apis-with-aspnet-web-api.md
@@ -3220,11 +3220,11 @@
         - name: API 가이드
           href: signalr/overview/guide-to-the-api/index.md
           items:
-            - name: '허브 API 가이드 - 서버(C#)'
+            - name: 허브 API 가이드 - 서버(C#)
               href: signalr/overview/guide-to-the-api/hubs-api-guide-server.md
             - name: 허브 API 가이드 - JavaScript 클라이언트
               href: signalr/overview/guide-to-the-api/hubs-api-guide-javascript-client.md
-            - name: '허브 API 가이드 - .NET 클라이언트(C#)'
+            - name: 허브 API 가이드 - .NET 클라이언트(C#)
               href: signalr/overview/guide-to-the-api/hubs-api-guide-net-client.md
             - name: SignalR의 연결 수명 이벤트 이해 및 처리
               href: signalr/overview/guide-to-the-api/handling-connection-lifetime-events.md
@@ -3487,7 +3487,7 @@
           items:
             - name: ASP.NET 및 Azure App Service에 암호와 기타 중요한 데이터를 배포하는 방법에 대한 모범 사례
               href: identity/overview/features-api/best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure.md
-            - name: 'ASP.NET Identity를 사용하여 계정 확인 및 암호 복구(C#)'
+            - name: ASP.NET Identity를 사용하여 계정 확인 및 암호 복구(C#)
               href: identity/overview/features-api/account-confirmation-and-password-recovery-with-aspnet-identity.md
             - name: ASP.NET Identity에서 SMS 및 전자 메일을 사용한 2단계 인증
               href: identity/overview/features-api/two-factor-authentication-using-sms-and-email-with-aspnet-identity.md
@@ -3505,7 +3505,7 @@
           items:
             - name: 기존 웹 사이트를 SQL 멤버 자격에서 ASP.NET Identity로 마이그레이션
               href: identity/overview/migrations/migrating-an-existing-website-from-sql-membership-to-aspnet-identity.md
-            - name: '멤버 자격 및 사용자 프로필의 범용 공급자 데이터를 ASP.NET Identity로 마이그레이션(C#)'
+            - name: 멤버 자격 및 사용자 프로필의 범용 공급자 데이터를 ASP.NET Identity로 마이그레이션(C#)
               href: identity/overview/migrations/migrating-universal-provider-data-for-membership-and-user-profiles-to-aspnet-identity.md
 - name: Ajax
   href: ajax/index.md
@@ -3775,9 +3775,9 @@
           href: SameSite/system-web-samesite.md
         - name: SameSite KB 문서
           uid: samesite/kbs-samesite
-        - name: 'C# MVC'
+        - name: C# MVC
           uid: samesite/csMVC
-        - name: 'C# WebForms'
+        - name: C# WebForms
           uid: samesite/CSharpWebForms
         - name: VB WebForms
           uid: samesite/vbWF
