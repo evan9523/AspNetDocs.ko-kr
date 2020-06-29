@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.assetid: d4dfc435-bda6-4621-9762-9ba270f8de4e
 msc.legacyurl: /mvc/overview/getting-started/getting-started-with-ef-using-mvc/migrations-and-deployment-with-the-entity-framework-in-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: 21a3efa865e5b5498dfb0f2adec199800fc70c58
-ms.sourcegitcommit: a4c3c7e04e5f53cf8cd334f036d324976b78d154
+ms.openlocfilehash: 2f3a6d57a7963eb7aafde62e344ae6b970af87e2
+ms.sourcegitcommit: 8d34fb54e790cfba2d64097afc8276da5b22283e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84172975"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85484232"
 ---
 # <a name="tutorial-use-ef-migrations-in-an-aspnet-mvc-app-and-deploy-to-azure"></a>자습서: ASP.NET MVC 앱에서 EF 마이그레이션 사용 및 Azure에 배포
 
@@ -25,13 +25,13 @@ ms.locfileid: "84172975"
 
 배포를 위해 원본 제어와 함께 연속 통합 프로세스를 사용 하는 것이 좋지만,이 자습서에서는 이러한 항목에 대해 다루지 않습니다. 자세한 내용은 [Azure를 사용 하 여 실제 클라우드 앱 빌드](xref:aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/introduction)에 대 한 [소스 제어](xref:aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/source-control) 및 [연속 통합](xref:aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/continuous-integration-and-continuous-delivery) 챕터를 참조 하세요.
 
-이 자습서에서는 다음과 같은 작업을 수행합니다.
+이 자습서에서는 다음을 수행합니다.
 
 > [!div class="checklist"]
 > * Code First 마이그레이션 사용
 > * Azure에서 앱 배포 (선택 사항)
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 - [연결 복원력 및 명령 인터셉션](connection-resiliency-and-command-interception-with-the-entity-framework-in-an-asp-net-mvc-application.md)
 
@@ -41,10 +41,10 @@ ms.locfileid: "84172975"
 
 데이터베이스를 데이터 모델과 동기화된 상태로 유지하는 이 메서드는 애플리케이션을 프로덕션 환경에 배포할 때까지 잘 작동합니다. 응용 프로그램이 프로덕션 환경에서 실행 되는 경우 일반적으로 보관할 데이터를 저장 하 고, 새 열을 추가 하는 등의 변경 작업을 수행할 때마다 모든 항목을 손실 하지 않으려고 합니다. [Code First 마이그레이션](https://msdn.microsoft.com/data/jj591621) 기능은 Code First를 사용 하 여 데이터베이스를 삭제 하 고 다시 만드는 대신 데이터베이스 스키마를 업데이트할 수 있도록 하 여이 문제를 해결 합니다. 이 자습서에서는 응용 프로그램을 배포 하 고 마이그레이션을 사용 하도록 준비 합니다.
 
-1. 이전에 설정한 이니셜라이저를 사용 하지 않도록 설정 하 여 `contexts` 응용 프로그램 web.config 파일에 추가한 요소를 주석으로 처리 하거나 삭제 합니다.
+1. `contexts`응용 프로그램 Web.config 파일에 추가한 요소를 주석으로 처리 하거나 삭제 하 여 이전에 설정한 이니셜라이저를 사용 하지 않도록 설정 합니다.
 
     [!code-xml[Main](migrations-and-deployment-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample1.xml?highlight=2,6)]
-2. 또한 응용 프로그램 *web.config* 파일에서 연결 문자열에 있는 데이터베이스의 이름을 ContosoUniversity2로 변경 합니다.
+2. 또한 응용 프로그램 *Web.config* 파일에서 연결 문자열의 데이터베이스 이름을 ContosoUniversity2로 변경 합니다.
 
     [!code-xml[Main](migrations-and-deployment-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample2.xml?highlight=2)]
 
@@ -129,7 +129,7 @@ ms.locfileid: "84172975"
 
 ### <a name="use-code-first-migrations-to-deploy-the-database"></a>Code First 마이그레이션을 사용 하 여 데이터베이스 배포
 
-데이터베이스를 배포 하려면 Code First 마이그레이션을 사용 합니다. Visual Studio에서 배포에 대 한 설정을 구성 하는 데 사용 하는 게시 프로필을 만들 때 **데이터베이스 업데이트**라는 확인란을 선택 합니다. 이 설정을 사용 하면 Code First가 이니셜라이저 클래스를 사용 하도록 배포 프로세스에서 대상 서버에 응용 프로그램 *web.config* 파일을 자동으로 구성 합니다 `MigrateDatabaseToLatestVersion` .
+데이터베이스를 배포 하려면 Code First 마이그레이션을 사용 합니다. Visual Studio에서 배포에 대 한 설정을 구성 하는 데 사용 하는 게시 프로필을 만들 때 **데이터베이스 업데이트**라는 확인란을 선택 합니다. 이 설정을 사용 하면 Code First 이니셜라이저 클래스를 사용 하도록 배포 프로세스에서 대상 서버의 응용 프로그램 *Web.config* 파일을 자동으로 구성 합니다 `MigrateDatabaseToLatestVersion` .
 
 Visual Studio는 프로젝트를 대상 서버에 복사 하는 동안 배포 프로세스 중에 데이터베이스에서 어떤 작업도 수행 하지 않습니다. 배포 된 응용 프로그램을 실행 하 고 배포 후 처음으로 데이터베이스에 액세스 하는 경우 Code First는 데이터베이스가 데이터 모델과 일치 하는지 확인 합니다. 일치 하지 않는 경우 Code First는 데이터베이스를 자동으로 만들거나 (아직 존재 하지 않는 경우) 데이터베이스 스키마를 최신 버전으로 업데이트 합니다 (데이터베이스가 있지만 모델과 일치 하지 않는 경우). 응용 프로그램이 마이그레이션 방법을 구현 하는 경우이 `Seed` 메서드는 데이터베이스가 만들어지거나 스키마가 업데이트 된 후에 실행 됩니다.
 
@@ -138,7 +138,7 @@ Visual Studio는 프로젝트를 대상 서버에 복사 하는 동안 배포 �
 ### <a name="get-an-azure-account"></a>Azure 계정 가져오기
 
 Azure 계정이 필요 합니다. 아직 없는 경우 Visual Studio 구독이 있는 경우 [구독 혜택을 활성화할](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/
-)수 있습니다. 그렇지 않으면 몇 분만에 무료 평가판 계정을 만들 수 있습니다. 자세한 내용은 [Azure 무료 평가판](https://azure.microsoft.com/free/)을 참조 하세요.
+)수 있습니다. 그렇지 않으면 몇 분만에 무료 평가판 계정을 만들 수 있습니다. 자세한 내용은 [Azure 평가판](https://azure.microsoft.com/free/dotnet/)을 참조하세요.
 
 ### <a name="create-a-web-site-and-a-sql-database-in-azure"></a>Azure에서 웹 사이트 및 SQL 데이터베이스 만들기
 
@@ -196,7 +196,7 @@ Azure SQL database에 데이터베이스를 배포 합니다. SQL database는 SQ
 
     앱이 이제 클라우드에서 실행 되 고 있습니다.
 
-이 시점에서 **Code First 마이그레이션 실행 (앱 시작 시 실행)** 을 선택 하 여 Azure SQL Database에서 *schoolcontext.cs* 데이터베이스를 만들었습니다. 배포 된 웹 *사이트의 web.config 파일이 변경* 되어 코드가 처음으로 데이터베이스에서 데이터를 읽거나 쓸 때 ( **학생** 탭을 선택 했을 때 발생) [MigrateDatabaseToLatestVersion](https://msdn.microsoft.com/library/hh829476(v=vs.103).aspx) 이니셜라이저가 실행 됩니다.
+이 시점에서 **Code First 마이그레이션 실행 (앱 시작 시 실행)** 을 선택 하 여 Azure SQL Database에서 *schoolcontext.cs* 데이터베이스를 만들었습니다. 배포 된 웹 사이트의 *Web.config* 파일이 변경 되어 코드가 처음으로 데이터베이스에서 데이터를 읽거나 쓸 때 ( **학생** 탭을 선택 했을 때 발생) [MigrateDatabaseToLatestVersion](https://msdn.microsoft.com/library/hh829476(v=vs.103).aspx) 이니셜라이저가 실행 됩니다.
 
 ![Web.config 파일 발췌](https://asp.net/media/4367421/mig.png)
 
@@ -204,7 +204,7 @@ Azure SQL database에 데이터베이스를 배포 합니다. SQL database는 SQ
 
 ![Web.config 파일의 연결 문자열](migrations-and-deployment-with-the-entity-framework-in-an-asp-net-mvc-application/_static/image26.png)
 
-*ContosoUniversity\obj\Release\Package\PackageTmp\Web.config*의 사용자 컴퓨터에서 배포 된 버전의 web.config 파일을 찾을 수 있습니다. FTP를 사용 하 여 배포 된 *web.config* 파일 자체에 액세스할 수 있습니다. 지침은 [Visual Studio를 사용 하 여 웹 배포 ASP.NET: 코드 업데이트 배포](xref:web-forms/overview/deployment/visual-studio-web-deployment/deploying-a-code-update)를 참조 하세요. "FTP 도구를 사용 하려면 FTP URL, 사용자 이름 및 암호를 사용 해야 합니다."로 시작 하는 지침을 따르세요.
+*ContosoUniversity\obj\Release\Package\PackageTmp\Web.config*의 사용자 컴퓨터에서 Web.config 파일의 배포 된 버전을 찾을 수 있습니다. FTP를 사용 하 여 배포 된 *Web.config* 파일 자체에 액세스할 수 있습니다. 지침은 [Visual Studio를 사용 하 여 웹 배포 ASP.NET: 코드 업데이트 배포](xref:web-forms/overview/deployment/visual-studio-web-deployment/deploying-a-code-update)를 참조 하세요. "FTP 도구를 사용 하려면 FTP URL, 사용자 이름 및 암호를 사용 해야 합니다."로 시작 하는 지침을 따르세요.
 
 > [!NOTE]
 > 웹 앱은 보안을 구현 하지 않으므로 URL을 검색 하는 모든 사용자가 데이터를 변경할 수 있습니다. 웹 사이트를 보호 하는 방법에 대 한 지침은 [멤버 자격, OAuth 및 SQL database가 포함 된 secure ASP.NET MVC 앱을 Azure에 배포](/aspnet/core/security/authorization/secure-data)를 참조 하세요. Visual Studio에서 Azure 관리 포털 또는 **서버 탐색기** 를 사용 하 여 서비스를 중지 하 여 다른 사용자가 사이트를 사용 하지 못하도록 할 수 있습니다.
@@ -213,7 +213,7 @@ Azure SQL database에 데이터베이스를 배포 합니다. SQL database는 SQ
 
 ## <a name="advanced-migrations-scenarios"></a>고급 마이그레이션 시나리오
 
-이 자습서에 표시 된 것 처럼 마이그레이션을 자동으로 실행 하 여 데이터베이스를 배포 하 고 여러 서버에서 실행 되는 웹 사이트에 배포 하는 경우 여러 서버에서 동시에 마이그레이션을 실행 하려고 할 수 있습니다. 마이그레이션은 원자성 이므로 두 서버가 동일한 마이그레이션을 실행 하려고 하면 하나는 성공 하 고 나머지는 실패 하 게 됩니다 (작업을 두 번 수행할 수 없다고 가정). 이 시나리오에서는 이러한 문제를 방지 하려는 경우 마이그레이션을 수동으로 호출 하 고 한 번만 수행 하도록 사용자 고유의 코드를 설정할 수 있습니다. 자세한 내용은 주문형의 블로그 및 [debug.exe](/ef/ef6/modeling/code-first/migrations/migrate-exe) (명령줄에서 마이그레이션을 실행 하는 경우)에서 [코드에서 마이그레이션을 실행 하 고 스크립팅](http://romiller.com/2012/02/09/running-scripting-migrations-from-code/) 하는 방법을 참조 하세요.
+이 자습서에 표시 된 것 처럼 마이그레이션을 자동으로 실행 하 여 데이터베이스를 배포 하 고 여러 서버에서 실행 되는 웹 사이트에 배포 하는 경우 여러 서버에서 동시에 마이그레이션을 실행 하려고 할 수 있습니다. 마이그레이션은 원자성 이므로 두 서버가 동일한 마이그레이션을 실행 하려고 하면 하나는 성공 하 고 나머지는 실패 하 게 됩니다 (작업을 두 번 수행할 수 없다고 가정). 이 시나리오에서는 이러한 문제를 방지 하려는 경우 마이그레이션을 수동으로 호출 하 고 한 번만 수행 하도록 사용자 고유의 코드를 설정할 수 있습니다. 자세한 내용은 주문형의 블로그 및 [Migrate.exe](/ef/ef6/modeling/code-first/migrations/migrate-exe) 에 대 한 [코드에서 마이그레이션을 실행 하 고 스크립팅](http://romiller.com/2012/02/09/running-scripting-migrations-from-code/) 하는 방법 (명령줄에서 마이그레이션을 실행 하는 경우)을 참조 하세요.
 
 다른 마이그레이션 시나리오에 대 한 자세한 내용은 migration [동영상 가이드 Series](https://blogs.msdn.com/b/adonet/archive/2014/03/12/migrations-screencast-series.aspx)항목을 참조 하세요.
 
@@ -235,7 +235,7 @@ Azure SQL database에 데이터베이스를 배포 합니다. SQL database는 SQ
 
 이니셜라이저에 대 한 자세한 내용은 [Entity Framework Code First의 데이터베이스 이니셜라이저 이해](http://www.codeguru.com/csharp/article.php/c19999/Understanding-Database-Initializers-in-Entity-Framework-Code-First.htm) 및 설명서의 6 장 [프로그래밍 Entity Framework:](http://shop.oreilly.com/product/0636920022220.do) Julie Lerman 및 rowan를 통해 Code First
 
-## <a name="get-the-code"></a>코드 다운로드
+## <a name="get-the-code"></a>코드 가져오기
 
 [완료 된 프로젝트 다운로드](https://webpifeed.blob.core.windows.net/webpifeed/Partners/ASP.NET%20MVC%20Application%20Using%20Entity%20Framework%20Code%20First.zip)
 
@@ -245,7 +245,7 @@ Azure SQL database에 데이터베이스를 배포 합니다. SQL database는 SQ
 
 ## <a name="next-steps"></a>다음 단계
 
-이 자습서에서는 다음과 같은 작업을 수행합니다.
+이 자습서에서는 다음을 수행합니다.
 
 > [!div class="checklist"]
 > * Code First 마이그레이션 사용
