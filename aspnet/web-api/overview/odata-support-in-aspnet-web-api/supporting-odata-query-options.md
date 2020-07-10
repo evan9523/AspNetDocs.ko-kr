@@ -1,188 +1,187 @@
 ---
 uid: web-api/overview/odata-support-in-aspnet-web-api/supporting-odata-query-options
-title: ASP.NET Web API 2-ASP.NET에서에서 OData 쿼리 옵션을 지 원하는 4.x
+title: ASP.NET Web API 2-ASP.NET 4.x의 OData 쿼리 옵션 지원
 author: MikeWasson
-description: 코드 예제를 사용 하 여 개요 ASP.NET에 대 한 ASP.NET Web API 2에서 지 원하는 OData 쿼리 옵션을 표시 4.x 합니다.
+description: 코드 예제를 사용 하는 개요에서는 ASP.NET 4.x의 ASP.NET Web API 2에서 지 원하는 OData 쿼리 옵션을 보여 줍니다.
 ms.author: riande
 ms.date: 02/04/2013
 ms.custom: seoapril2019
 ms.assetid: 50e6e62b-e72e-4a29-8293-4b67377bd21f
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/supporting-odata-query-options
 msc.type: authoredcontent
-ms.openlocfilehash: 428e4942e42436585049c1e84cd7b07a4a79c0d1
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 96820fab7ac89885058962f44ded86cb0184ee97
+ms.sourcegitcommit: ce28244209db8615bc9bdd576a2e2c88174d318d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59411568"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "86188633"
 ---
-# <a name="supporting-odata-query-options-in-aspnet-web-api-2"></a><span data-ttu-id="41789-103">ASP.NET Web API 2에서에서 OData 쿼리 옵션 지원</span><span class="sxs-lookup"><span data-stu-id="41789-103">Supporting OData Query Options in ASP.NET Web API 2</span></span>
+# <a name="supporting-odata-query-options-in-aspnet-web-api-2"></a><span data-ttu-id="fef5d-103">ASP.NET Web API 2에서 OData 쿼리 옵션 지원</span><span class="sxs-lookup"><span data-stu-id="fef5d-103">Supporting OData Query Options in ASP.NET Web API 2</span></span>
 
-<span data-ttu-id="41789-104">[Mike Wasson](https://github.com/MikeWasson)</span><span class="sxs-lookup"><span data-stu-id="41789-104">by [Mike Wasson](https://github.com/MikeWasson)</span></span>
+<span data-ttu-id="fef5d-104">[Mike Wasson](https://github.com/MikeWasson)</span><span class="sxs-lookup"><span data-stu-id="fef5d-104">by [Mike Wasson](https://github.com/MikeWasson)</span></span>
 
-<span data-ttu-id="41789-105">코드 예제를 사용 하 여이 개요에서는 ASP.NET에 대 한 ASP.NET Web API 2에서 지원 되는 OData 쿼리 옵션을 보여 줍니다. 4.x 합니다.</span><span class="sxs-lookup"><span data-stu-id="41789-105">This overview with code examples demonstrates the supporting OData Query Options in ASP.NET Web API 2 for ASP.NET 4.x.</span></span> 
+<span data-ttu-id="fef5d-105">이 개요 코드 예제에서는 ASP.NET 4. x의 ASP.NET Web API 2에서 지 원하는 OData 쿼리 옵션을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-105">This overview with code examples demonstrates the supporting OData Query Options in ASP.NET Web API 2 for ASP.NET 4.x.</span></span> 
 
-<span data-ttu-id="41789-106">OData는 OData 쿼리를 수정 하는 매개 변수를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="41789-106">OData defines parameters that can be used to modify an OData query.</span></span> <span data-ttu-id="41789-107">클라이언트는 요청 URI의 쿼리 문자열에서 이러한 매개 변수를 보냅니다.</span><span class="sxs-lookup"><span data-stu-id="41789-107">The client sends these parameters in the query string of the request URI.</span></span> <span data-ttu-id="41789-108">예를 들어, 클라이언트가 결과 정렬 하려면 $orderby 매개 변수를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="41789-108">For example, to sort the results, a client uses the $orderby parameter:</span></span>
+<span data-ttu-id="fef5d-106">OData는 OData 쿼리를 수정 하는 데 사용할 수 있는 매개 변수를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-106">OData defines parameters that can be used to modify an OData query.</span></span> <span data-ttu-id="fef5d-107">클라이언트는 요청 URI의 쿼리 문자열에서 이러한 매개 변수를 보냅니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-107">The client sends these parameters in the query string of the request URI.</span></span> <span data-ttu-id="fef5d-108">예를 들어 결과를 정렬 하기 위해 클라이언트는 $orderby 매개 변수를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-108">For example, to sort the results, a client uses the $orderby parameter:</span></span>
 
 `http://localhost/Products?$orderby=Name`
 
-<span data-ttu-id="41789-109">이러한 매개 변수를 호출 하는 OData 사양 *쿼리 옵션*합니다.</span><span class="sxs-lookup"><span data-stu-id="41789-109">The OData specification calls these parameters *query options*.</span></span> <span data-ttu-id="41789-110">프로젝트에서 모든 Web API 컨트롤러에 대 한 OData 쿼리 옵션을 설정할 수 있습니다. &#8212; 컨트롤러는 OData 끝점일 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="41789-110">You can enable OData query options for any Web API controller in your project &#8212; the controller does not need to be an OData endpoint.</span></span> <span data-ttu-id="41789-111">이 모든 Web API 응용 프로그램에 필터링 및 정렬을 등 기능을 추가 하는 편리한 방법을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="41789-111">This gives you a convenient way to add features such as filtering and sorting to any Web API application.</span></span>
+<span data-ttu-id="fef5d-109">OData 사양에서는 이러한 매개 변수 *쿼리 옵션*을 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-109">The OData specification calls these parameters *query options*.</span></span> <span data-ttu-id="fef5d-110">컨트롤러가 OData 끝점이 될 필요 없이 프로젝트의 웹 API 컨트롤러에 대해 OData 쿼리 옵션을 사용 하도록 설정할 수 &#8212;.</span><span class="sxs-lookup"><span data-stu-id="fef5d-110">You can enable OData query options for any Web API controller in your project &#8212; the controller does not need to be an OData endpoint.</span></span> <span data-ttu-id="fef5d-111">이렇게 하면 웹 API 응용 프로그램에 대 한 필터링 및 정렬과 같은 기능을 편리 하 게 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-111">This gives you a convenient way to add features such as filtering and sorting to any Web API application.</span></span>
 
-<span data-ttu-id="41789-112">항목을 쿼리 옵션을 사용 하도록 설정 하기 전에 [OData 보안 지침](odata-security-guidance.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="41789-112">Before enabling query options, please read the topic [OData Security Guidance](odata-security-guidance.md).</span></span>
+<span data-ttu-id="fef5d-112">쿼리 옵션을 사용 하도록 설정 하기 전에 [OData 보안 지침](odata-security-guidance.md)항목을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="fef5d-112">Before enabling query options, please read the topic [OData Security Guidance](odata-security-guidance.md).</span></span>
 
-- [<span data-ttu-id="41789-113">OData 쿼리 옵션을 사용 하도록 설정</span><span class="sxs-lookup"><span data-stu-id="41789-113">Enabling OData Query Options</span></span>](#enable)
-- [<span data-ttu-id="41789-114">예제 쿼리</span><span class="sxs-lookup"><span data-stu-id="41789-114">Example Queries</span></span>](#examples)
-- [<span data-ttu-id="41789-115">서버 기반 페이징</span><span class="sxs-lookup"><span data-stu-id="41789-115">Server-Driven Paging</span></span>](#server-paging)
-- [<span data-ttu-id="41789-116">쿼리 옵션을 제한합니다.</span><span class="sxs-lookup"><span data-stu-id="41789-116">Limiting the Query Options</span></span>](#limiting_query_options)
-- [<span data-ttu-id="41789-117">쿼리 옵션을 직접 호출</span><span class="sxs-lookup"><span data-stu-id="41789-117">Invoking Query Options Directly</span></span>](#ODataQueryOptions)
-- [<span data-ttu-id="41789-118">쿼리 유효성 검사</span><span class="sxs-lookup"><span data-stu-id="41789-118">Query Validation</span></span>](#query-validation)
+- [<span data-ttu-id="fef5d-113">OData 쿼리 옵션 사용</span><span class="sxs-lookup"><span data-stu-id="fef5d-113">Enabling OData Query Options</span></span>](#enable)
+- [<span data-ttu-id="fef5d-114">예제 쿼리</span><span class="sxs-lookup"><span data-stu-id="fef5d-114">Example Queries</span></span>](#examples)
+- [<span data-ttu-id="fef5d-115">서버 기반 페이징</span><span class="sxs-lookup"><span data-stu-id="fef5d-115">Server-Driven Paging</span></span>](#server-paging)
+- [<span data-ttu-id="fef5d-116">쿼리 옵션 제한</span><span class="sxs-lookup"><span data-stu-id="fef5d-116">Limiting the Query Options</span></span>](#limiting_query_options)
+- [<span data-ttu-id="fef5d-117">직접 쿼리 옵션 호출</span><span class="sxs-lookup"><span data-stu-id="fef5d-117">Invoking Query Options Directly</span></span>](#ODataQueryOptions)
+- [<span data-ttu-id="fef5d-118">쿼리 유효성 검사</span><span class="sxs-lookup"><span data-stu-id="fef5d-118">Query Validation</span></span>](#query-validation)
 
 <a id="enable"></a>
-## <a name="enabling-odata-query-options"></a><span data-ttu-id="41789-119">OData 쿼리 옵션을 사용 하도록 설정</span><span class="sxs-lookup"><span data-stu-id="41789-119">Enabling OData Query Options</span></span>
+## <a name="enabling-odata-query-options"></a><span data-ttu-id="fef5d-119">OData 쿼리 옵션 사용</span><span class="sxs-lookup"><span data-stu-id="fef5d-119">Enabling OData Query Options</span></span>
 
-<span data-ttu-id="41789-120">웹 API는 OData 쿼리 옵션을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="41789-120">Web API supports the following OData query options:</span></span>
+<span data-ttu-id="fef5d-120">Web API는 다음과 같은 OData 쿼리 옵션을 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-120">Web API supports the following OData query options:</span></span>
 
-| <span data-ttu-id="41789-121">옵션</span><span class="sxs-lookup"><span data-stu-id="41789-121">Option</span></span> | <span data-ttu-id="41789-122">설명</span><span class="sxs-lookup"><span data-stu-id="41789-122">Description</span></span> |
+| <span data-ttu-id="fef5d-121">옵션</span><span class="sxs-lookup"><span data-stu-id="fef5d-121">Option</span></span> | <span data-ttu-id="fef5d-122">설명</span><span class="sxs-lookup"><span data-stu-id="fef5d-122">Description</span></span> |
 | --- | --- |
-| <span data-ttu-id="41789-123">$expand</span><span class="sxs-lookup"><span data-stu-id="41789-123">$expand</span></span> | <span data-ttu-id="41789-124">관련된 엔터티 인라인을 확장합니다.</span><span class="sxs-lookup"><span data-stu-id="41789-124">Expands related entities inline.</span></span> |
-| <span data-ttu-id="41789-125">$filter</span><span class="sxs-lookup"><span data-stu-id="41789-125">$filter</span></span> | <span data-ttu-id="41789-126">부울 조건에 따라 결과 필터링 합니다.</span><span class="sxs-lookup"><span data-stu-id="41789-126">Filters the results, based on a Boolean condition.</span></span> |
-| <span data-ttu-id="41789-127">$inlinecount</span><span class="sxs-lookup"><span data-stu-id="41789-127">$inlinecount</span></span> | <span data-ttu-id="41789-128">응답에 일치 하는 항목의 총 수를 포함 하도록 서버를 알려 줍니다.</span><span class="sxs-lookup"><span data-stu-id="41789-128">Tells the server to include the total count of matching entities in the response.</span></span> <span data-ttu-id="41789-129">(서버 쪽 페이징에 유용 합니다.)</span><span class="sxs-lookup"><span data-stu-id="41789-129">(Useful for server-side paging.)</span></span> |
-| <span data-ttu-id="41789-130">$orderby</span><span class="sxs-lookup"><span data-stu-id="41789-130">$orderby</span></span> | <span data-ttu-id="41789-131">결과 정렬합니다.</span><span class="sxs-lookup"><span data-stu-id="41789-131">Sorts the results.</span></span> |
-| <span data-ttu-id="41789-132">$select</span><span class="sxs-lookup"><span data-stu-id="41789-132">$select</span></span> | <span data-ttu-id="41789-133">응답에 포함할 속성을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="41789-133">Selects which properties to include in the response.</span></span> |
-| <span data-ttu-id="41789-134">$skip</span><span class="sxs-lookup"><span data-stu-id="41789-134">$skip</span></span> | <span data-ttu-id="41789-135">처음 n 개 결과 건너뜁니다.</span><span class="sxs-lookup"><span data-stu-id="41789-135">Skips the first n results.</span></span> |
-| <span data-ttu-id="41789-136">$top</span><span class="sxs-lookup"><span data-stu-id="41789-136">$top</span></span> | <span data-ttu-id="41789-137">첫 번째 n만 결과 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="41789-137">Returns only the first n the results.</span></span> |
+| <span data-ttu-id="fef5d-123">$expand</span><span class="sxs-lookup"><span data-stu-id="fef5d-123">$expand</span></span> | <span data-ttu-id="fef5d-124">관련 엔터티를 인라인으로 확장 합니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-124">Expands related entities inline.</span></span> |
+| <span data-ttu-id="fef5d-125">$filter</span><span class="sxs-lookup"><span data-stu-id="fef5d-125">$filter</span></span> | <span data-ttu-id="fef5d-126">부울 조건에 따라 결과를 필터링 합니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-126">Filters the results, based on a Boolean condition.</span></span> |
+| <span data-ttu-id="fef5d-127">$inlinecount</span><span class="sxs-lookup"><span data-stu-id="fef5d-127">$inlinecount</span></span> | <span data-ttu-id="fef5d-128">응답에 일치 하는 엔터티의 총 개수를 포함 하도록 서버에 지시 합니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-128">Tells the server to include the total count of matching entities in the response.</span></span> <span data-ttu-id="fef5d-129">서버 쪽 페이징에 유용 합니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-129">(Useful for server-side paging.)</span></span> |
+| <span data-ttu-id="fef5d-130">$orderby</span><span class="sxs-lookup"><span data-stu-id="fef5d-130">$orderby</span></span> | <span data-ttu-id="fef5d-131">결과를 정렬 합니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-131">Sorts the results.</span></span> |
+| <span data-ttu-id="fef5d-132">$select</span><span class="sxs-lookup"><span data-stu-id="fef5d-132">$select</span></span> | <span data-ttu-id="fef5d-133">응답에 포함할 속성을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-133">Selects which properties to include in the response.</span></span> |
+| <span data-ttu-id="fef5d-134">$skip</span><span class="sxs-lookup"><span data-stu-id="fef5d-134">$skip</span></span> | <span data-ttu-id="fef5d-135">처음 n 개 결과를 건너뜁니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-135">Skips the first n results.</span></span> |
+| <span data-ttu-id="fef5d-136">$top</span><span class="sxs-lookup"><span data-stu-id="fef5d-136">$top</span></span> | <span data-ttu-id="fef5d-137">결과의 첫 번째 n 개만 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-137">Returns only the first n the results.</span></span> |
 
-<span data-ttu-id="41789-138">OData 쿼리 옵션을 사용 하려면 활성화 해야 합니다을 명시적으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="41789-138">To use OData query options, you must enable them explicitly.</span></span> <span data-ttu-id="41789-139">전체 응용 프로그램에 대 한 전역적으로 있도록 수도 있고 특정 컨트롤러 또는 특정 작업에 대해 사용 하도록 설정 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="41789-139">You can enable them globally for the entire application, or enable them for specific controllers or specific actions.</span></span>
+<span data-ttu-id="fef5d-138">OData 쿼리 옵션을 사용 하려면 명시적으로 사용 하도록 설정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-138">To use OData query options, you must enable them explicitly.</span></span> <span data-ttu-id="fef5d-139">전체 응용 프로그램에 대해 전역적으로 사용 하도록 설정 하거나 특정 컨트롤러 또는 특정 작업에 대해 사용 하도록 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-139">You can enable them globally for the entire application, or enable them for specific controllers or specific actions.</span></span>
 
-<span data-ttu-id="41789-140">OData 쿼리 옵션을 전체적으로 설정 하려면 호출 **EnableQuerySupport** 에 **HttpConfiguration** 시작 시 클래스:</span><span class="sxs-lookup"><span data-stu-id="41789-140">To enable OData query options globally, call **EnableQuerySupport** on the **HttpConfiguration** class at startup:</span></span>
+<span data-ttu-id="fef5d-140">OData 쿼리 옵션을 전역적으로 설정 하려면 시작 시 **Httpconfiguration** 클래스에서 **enablequerysupport** 를 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-140">To enable OData query options globally, call **EnableQuerySupport** on the **HttpConfiguration** class at startup:</span></span>
 
 [!code-csharp[Main](supporting-odata-query-options/samples/sample1.cs)]
 
-<span data-ttu-id="41789-141">**EnableQuerySupport** 메서드를 사용 하면 반환 하는 모든 컨트롤러 작업에 대 한 전역적으로 쿼리 옵션을 **IQueryable** 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="41789-141">The **EnableQuerySupport** method enables query options globally for any controller action that returns an **IQueryable** type.</span></span> <span data-ttu-id="41789-142">전체 응용 프로그램에 대해 사용 하도록 설정 하는 쿼리 옵션을 사용 하지 않으려는 경우 하도록 할 수 있습니다 특정 컨트롤러 작업에 대 한 추가 하 여 합니다 **[Queryable]** 작업 메서드에 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="41789-142">If you don't want query options enabled for the entire application, you can enable them for specific controller actions by adding the **[Queryable]** attribute to the action method.</span></span>
+<span data-ttu-id="fef5d-141">**Enablequerysupport** 메서드는 **IQueryable** 형식을 반환 하는 모든 컨트롤러 작업에 대해 전역적으로 쿼리 옵션을 사용 하도록 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-141">The **EnableQuerySupport** method enables query options globally for any controller action that returns an **IQueryable** type.</span></span> <span data-ttu-id="fef5d-142">전체 응용 프로그램에 대해 쿼리 옵션을 사용 하지 않으려면 [쿼리 가능 **]** 특성을 동작 메서드에 추가 하 여 특정 컨트롤러 작업에 대해 쿼리 옵션을 사용 하도록 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-142">If you don't want query options enabled for the entire application, you can enable them for specific controller actions by adding the **[Queryable]** attribute to the action method.</span></span>
 
 [!code-csharp[Main](supporting-odata-query-options/samples/sample2.cs)]
 
 <a id="examples"></a>
-## <a name="example-queries"></a><span data-ttu-id="41789-143">예제 쿼리</span><span class="sxs-lookup"><span data-stu-id="41789-143">Example Queries</span></span>
+## <a name="example-queries"></a><span data-ttu-id="fef5d-143">예제 쿼리</span><span class="sxs-lookup"><span data-stu-id="fef5d-143">Example Queries</span></span>
 
-<span data-ttu-id="41789-144">이 섹션에서는 OData 쿼리 옵션을 사용 하 여 가능한 쿼리 유형을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="41789-144">This section shows the types of queries that are possible using the OData query options.</span></span> <span data-ttu-id="41789-145">쿼리 옵션에 대 한 특정 내용은 OData 설명서에서 참조 [www.odata.org](http://www.odata.org/)합니다.</span><span class="sxs-lookup"><span data-stu-id="41789-145">For specific details about the query options, refer to the OData documentation at [www.odata.org](http://www.odata.org/).</span></span>
+<span data-ttu-id="fef5d-144">이 섹션에서는 OData 쿼리 옵션을 사용 하 여 가능한 쿼리 유형을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-144">This section shows the types of queries that are possible using the OData query options.</span></span> <span data-ttu-id="fef5d-145">쿼리 옵션에 대 한 자세한 내용은 [www.odata.org](http://www.odata.org/)의 OData 설명서를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="fef5d-145">For specific details about the query options, refer to the OData documentation at [www.odata.org](http://www.odata.org/).</span></span>
 
-<span data-ttu-id="41789-146">$에 대 한 정보에 대 한 확장 및 $select을 참조 하세요 [$expand $select 사용 및 ASP.NET Web API OData의 $value](using-select-expand-and-value.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="41789-146">For information about $expand and $select, see [Using $select, $expand, and $value in ASP.NET Web API OData](using-select-expand-and-value.md).</span></span>
+<span data-ttu-id="fef5d-146">$Expand 및 $select에 대 한 자세한 내용은 [$Value OData에서 $select, $expand 및 ASP.NET Web API 사용](using-select-expand-and-value.md)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="fef5d-146">For information about $expand and $select, see [Using $select, $expand, and $value in ASP.NET Web API OData](using-select-expand-and-value.md).</span></span>
 
-<span data-ttu-id="41789-147">**클라이언트 기반 페이징**</span><span class="sxs-lookup"><span data-stu-id="41789-147">**Client-Driven Paging**</span></span>
+<span data-ttu-id="fef5d-147">**클라이언트 구동 페이징**</span><span class="sxs-lookup"><span data-stu-id="fef5d-147">**Client-Driven Paging**</span></span>
 
-<span data-ttu-id="41789-148">큰 엔터티 집합에 대 한 클라이언트 결과의 수를 제한 해야 할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="41789-148">For large entity sets, the client might want to limit the number of results.</span></span> <span data-ttu-id="41789-149">예를 들어, 클라이언트는 결과의 다음 페이지를 가져오는 "다음" 링크를 사용 하 여 한 번에 10 개 항목을 표시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="41789-149">For example, a client might show 10 entries at a time, with "next" links to get the next page of results.</span></span> <span data-ttu-id="41789-150">이렇게 하려면 클라이언트 $top 및 $skip 옵션을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="41789-150">To do this, the client uses the $top and $skip options.</span></span>
+<span data-ttu-id="fef5d-148">대량 엔터티 집합의 경우 클라이언트에서 결과 수를 제한할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-148">For large entity sets, the client might want to limit the number of results.</span></span> <span data-ttu-id="fef5d-149">예를 들어 클라이언트는 다음 결과 페이지를 가져오기 위해 "다음" 링크를 포함 하 여 한 번에 10 개의 항목을 표시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-149">For example, a client might show 10 entries at a time, with "next" links to get the next page of results.</span></span> <span data-ttu-id="fef5d-150">이를 위해 클라이언트는 $top 및 $skip 옵션을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-150">To do this, the client uses the $top and $skip options.</span></span>
 
 `http://localhost/Products?$top=10&$skip=20`
 
-<span data-ttu-id="41789-151">$Top 옵션 반환할 항목의 최대 수를 제공 하 고 $skip 옵션을 건너뛸 항목 수를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="41789-151">The $top option gives the maximum number of entries to return, and the $skip option gives the number of entries to skip.</span></span> <span data-ttu-id="41789-152">앞의 예제 항목 21-30 인출합니다.</span><span class="sxs-lookup"><span data-stu-id="41789-152">The previous example fetches entries 21 through 30.</span></span>
+<span data-ttu-id="fef5d-151">$Top 옵션은 반환할 항목의 최대 수를 제공 하 고, $skip 옵션은 건너뛸 항목 수를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-151">The $top option gives the maximum number of entries to return, and the $skip option gives the number of entries to skip.</span></span> <span data-ttu-id="fef5d-152">이전 예제에서는 21 ~ 30 개 항목을 인출 합니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-152">The previous example fetches entries 21 through 30.</span></span>
 
-<span data-ttu-id="41789-153">**필터링**</span><span class="sxs-lookup"><span data-stu-id="41789-153">**Filtering**</span></span>
+<span data-ttu-id="fef5d-153">**필터링**</span><span class="sxs-lookup"><span data-stu-id="fef5d-153">**Filtering**</span></span>
 
-<span data-ttu-id="41789-154">$Filter 옵션에는 부울 식을 적용 하 여 결과 필터링 하는 클라이언트 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="41789-154">The $filter option lets a client filter the results by applying a Boolean expression.</span></span> <span data-ttu-id="41789-155">필터 식이 모두 매우 강력 합니다. 논리 및 산술 연산자, 문자열 함수 및 날짜 함수의 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="41789-155">The filter expressions are quite powerful; they include logical and arithmetic operators, string functions, and date functions.</span></span>
+<span data-ttu-id="fef5d-154">$Filter 옵션을 사용 하면 클라이언트에서 부울 식을 적용 하 여 결과를 필터링 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-154">The $filter option lets a client filter the results by applying a Boolean expression.</span></span> <span data-ttu-id="fef5d-155">필터 식은 매우 강력 합니다. 여기에는 논리 및 산술 연산자, 문자열 함수 및 날짜 함수가 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-155">The filter expressions are quite powerful; they include logical and arithmetic operators, string functions, and date functions.</span></span>
 
-| <span data-ttu-id="41789-156">"Toys" 같은 범주를 사용 하 여 모든 제품을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="41789-156">Return all products with category equal to "Toys".</span></span> | <span data-ttu-id="41789-157">`http://localhost/Products?$filter=Category` eq 'Toys'</span><span class="sxs-lookup"><span data-stu-id="41789-157">`http://localhost/Products?$filter=Category` eq 'Toys'</span></span> |
+| <span data-ttu-id="fef5d-156">범주가 "장난감"과 같은 모든 제품을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-156">Return all products with category equal to "Toys".</span></span> | <span data-ttu-id="fef5d-157">`http://localhost/Products?$filter=Category`eq ' 장난감 '</span><span class="sxs-lookup"><span data-stu-id="fef5d-157">`http://localhost/Products?$filter=Category` eq 'Toys'</span></span> |
 | --- | --- |
-| <span data-ttu-id="41789-158">10 보다 낮은 가격으로 모든 제품을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="41789-158">Return all products with price less than 10.</span></span> | <span data-ttu-id="41789-159">`http://localhost/Products?$filter=Price` lt 10</span><span class="sxs-lookup"><span data-stu-id="41789-159">`http://localhost/Products?$filter=Price` lt 10</span></span> |
-| <span data-ttu-id="41789-160">논리 연산자 모든 제품을 반환할 위치 가격 > = 5이 고 가격 < = 15입니다.</span><span class="sxs-lookup"><span data-stu-id="41789-160">Logical operators: Return all products where price >= 5 and price <= 15.</span></span> | <span data-ttu-id="41789-161">`http://localhost/Products?$filter=Price` ge 5와 보다 적거나 같은 가격 15</span><span class="sxs-lookup"><span data-stu-id="41789-161">`http://localhost/Products?$filter=Price` ge 5 and Price le 15</span></span> |
-| <span data-ttu-id="41789-162">문자열 함수: 이름에 "zz"를 사용 하 여 모든 제품을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="41789-162">String functions: Return all products with "zz" in the name.</span></span> | `http://localhost/Products?$filter=substringof('zz',Name)` |
-| <span data-ttu-id="41789-163">날짜 함수: 2005 이후 ReleaseDate 사용 하 여 모든 제품을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="41789-163">Date functions: Return all products with ReleaseDate after 2005.</span></span> | <span data-ttu-id="41789-164">`http://localhost/Products?$filter=year(ReleaseDate)` gt 2005</span><span class="sxs-lookup"><span data-stu-id="41789-164">`http://localhost/Products?$filter=year(ReleaseDate)` gt 2005</span></span> |
+| <span data-ttu-id="fef5d-158">가격이 10 보다 작은 모든 제품을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-158">Return all products with price less than 10.</span></span> | <span data-ttu-id="fef5d-159">`http://localhost/Products?$filter=Price`lt 10</span><span class="sxs-lookup"><span data-stu-id="fef5d-159">`http://localhost/Products?$filter=Price` lt 10</span></span> |
+| <span data-ttu-id="fef5d-160">논리 연산자: price >= 5 및 price <= 15 인 모든 제품을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-160">Logical operators: Return all products where price >= 5 and price <= 15.</span></span> | <span data-ttu-id="fef5d-161">`http://localhost/Products?$filter=Price`ge 5 및 Price le 15</span><span class="sxs-lookup"><span data-stu-id="fef5d-161">`http://localhost/Products?$filter=Price` ge 5 and Price le 15</span></span> |
+| <span data-ttu-id="fef5d-162">문자열 함수: 이름에 "zz"가 있는 모든 제품을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-162">String functions: Return all products with "zz" in the name.</span></span> | `http://localhost/Products?$filter=substringof('zz',Name)` |
+| <span data-ttu-id="fef5d-163">날짜 함수: 2005 이후의 ReleaseDate를 사용 하는 모든 제품을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-163">Date functions: Return all products with ReleaseDate after 2005.</span></span> | <span data-ttu-id="fef5d-164">`http://localhost/Products?$filter=year(ReleaseDate)`gt 2005</span><span class="sxs-lookup"><span data-stu-id="fef5d-164">`http://localhost/Products?$filter=year(ReleaseDate)` gt 2005</span></span> |
 
-<span data-ttu-id="41789-165">**정렬**</span><span class="sxs-lookup"><span data-stu-id="41789-165">**Sorting**</span></span>
+<span data-ttu-id="fef5d-165">**정렬**</span><span class="sxs-lookup"><span data-stu-id="fef5d-165">**Sorting**</span></span>
 
-<span data-ttu-id="41789-166">결과 정렬 하려면 $orderby 필터를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="41789-166">To sort the results, use the $orderby filter.</span></span>
+<span data-ttu-id="fef5d-166">결과를 정렬 하려면 $orderby 필터를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-166">To sort the results, use the $orderby filter.</span></span>
 
-| <span data-ttu-id="41789-167">가격으로 정렬 합니다.</span><span class="sxs-lookup"><span data-stu-id="41789-167">Sort by price.</span></span> | `http://localhost/Products?$orderby=Price` |
+| <span data-ttu-id="fef5d-167">가격을 기준으로 정렬 합니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-167">Sort by price.</span></span> | `http://localhost/Products?$orderby=Price` |
 | --- | --- |
-| <span data-ttu-id="41789-168">내림차순 (가장 낮은 가장 높음) 가격으로 정렬 합니다.</span><span class="sxs-lookup"><span data-stu-id="41789-168">Sort by price in descending order (highest to lowest).</span></span> | `http://localhost/Products?$orderby=Price desc` |
-| <span data-ttu-id="41789-169">범주별으로 정렬 한 다음 가격 범주 내에서 내림차순으로 정렬 합니다.</span><span class="sxs-lookup"><span data-stu-id="41789-169">Sort by category, then sort by price in descending order within categories.</span></span> | `http://localhost/odata/Products?$orderby=Category,Price desc` |
+| <span data-ttu-id="fef5d-168">가격을 기준으로 내림차순으로 정렬 합니다 (최고부터 낮음).</span><span class="sxs-lookup"><span data-stu-id="fef5d-168">Sort by price in descending order (highest to lowest).</span></span> | `http://localhost/Products?$orderby=Price desc` |
+| <span data-ttu-id="fef5d-169">범주별로 정렬 한 다음, 범주 내에서 내림차순으로 정렬 합니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-169">Sort by category, then sort by price in descending order within categories.</span></span> | `http://localhost/odata/Products?$orderby=Category,Price desc` |
 
 <a id="server-paging"></a>
-## <a name="server-driven-paging"></a><span data-ttu-id="41789-170">서버 기반 페이징</span><span class="sxs-lookup"><span data-stu-id="41789-170">Server-Driven Paging</span></span>
+## <a name="server-driven-paging"></a><span data-ttu-id="fef5d-170">서버 기반 페이징</span><span class="sxs-lookup"><span data-stu-id="fef5d-170">Server-Driven Paging</span></span>
 
-<span data-ttu-id="41789-171">보낼 않으려는 데이터베이스 수백만 개의 레코드를 포함 하는 경우 페이로드 하나에 모두 있습니다.</span><span class="sxs-lookup"><span data-stu-id="41789-171">If your database contains millions of records, you don't want to send them all in one payload.</span></span> <span data-ttu-id="41789-172">이 방지 하려면 서버가 단일 응답에 전송 되는 엔트리의 수를 제한할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="41789-172">To prevent this, the server can limit the number of entries that it sends in a single response.</span></span> <span data-ttu-id="41789-173">페이징을 사용 하도록 서버를 설정 합니다 **PageSize** 속성에는 **Queryable** 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="41789-173">To enable server paging, set the **PageSize** property in the **Queryable** attribute.</span></span> <span data-ttu-id="41789-174">값에는 반환할 항목의 최대 수입니다.</span><span class="sxs-lookup"><span data-stu-id="41789-174">The value is the maximum number of entries to return.</span></span>
+<span data-ttu-id="fef5d-171">데이터베이스에 수백만 개의 레코드가 포함 되어 있는 경우 한 페이로드에 모두 전송 하지는 않습니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-171">If your database contains millions of records, you don't want to send them all in one payload.</span></span> <span data-ttu-id="fef5d-172">이를 방지 하기 위해 서버는 단일 응답으로 전송 되는 항목 수를 제한할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-172">To prevent this, the server can limit the number of entries that it sends in a single response.</span></span> <span data-ttu-id="fef5d-173">서버 페이징을 사용 하도록 설정 하려면 **쿼리** 가능한 특성의 **PageSize** 속성을 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-173">To enable server paging, set the **PageSize** property in the **Queryable** attribute.</span></span> <span data-ttu-id="fef5d-174">값은 반환할 최대 항목 수입니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-174">The value is the maximum number of entries to return.</span></span>
 
 [!code-csharp[Main](supporting-odata-query-options/samples/sample3.cs)]
 
-<span data-ttu-id="41789-175">컨트롤러 OData 형식을 반환 하는 경우 응답 본문에는 데이터의 다음 페이지에 대 한 링크를 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="41789-175">If your controller returns OData format, the response body will contain a link to the next page of data:</span></span>
+<span data-ttu-id="fef5d-175">컨트롤러가 OData 형식을 반환 하는 경우 응답 본문에는 다음 데이터 페이지에 대 한 링크가 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-175">If your controller returns OData format, the response body will contain a link to the next page of data:</span></span>
 
 [!code-json[Main](supporting-odata-query-options/samples/sample4.json?highlight=8)]
 
-<span data-ttu-id="41789-176">클라이언트는이 링크를 사용 하 여 다음 페이지를 가져올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="41789-176">The client can use this link to fetch the next page.</span></span> <span data-ttu-id="41789-177">결과 집합에 있는 항목의 총 수에 알아보려면 "allpages" 클라이언트 $inlinecount 쿼리 옵션 값을 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="41789-177">To learn the total number of entries in the result set, the client can set the $inlinecount query option with the value "allpages".</span></span>
+<span data-ttu-id="fef5d-176">클라이언트는이 링크를 사용 하 여 다음 페이지를 가져올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-176">The client can use this link to fetch the next page.</span></span> <span data-ttu-id="fef5d-177">클라이언트는 결과 집합에 있는 총 항목 수를 확인 하기 위해 "allpages" 값을 사용 하 여 $inlinecount 쿼리 옵션을 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-177">To learn the total number of entries in the result set, the client can set the $inlinecount query option with the value "allpages".</span></span>
 
 `http://localhost/Products?$inlinecount=allpages`
 
-<span data-ttu-id="41789-178">값 "allpages" 응답의 총 수를 포함 하도록 서버에 알려 줍니다.</span><span class="sxs-lookup"><span data-stu-id="41789-178">The value "allpages" tells the server to include the total count in the response:</span></span>
+<span data-ttu-id="fef5d-178">"Allpages" 값은 응답의 총 개수를 포함 하도록 서버에 지시 합니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-178">The value "allpages" tells the server to include the total count in the response:</span></span>
 
 [!code-json[Main](supporting-odata-query-options/samples/sample5.json?highlight=3)]
 
 > [!NOTE]
-> <span data-ttu-id="41789-179">다음 페이지 링크 및 인라인 카운트는 모두 OData 포맷을 해야합니다.</span><span class="sxs-lookup"><span data-stu-id="41789-179">Next-page links and inline count both require OData format.</span></span> <span data-ttu-id="41789-180">OData 링크 및 개수를 보유 하는 응답 본문의 특수 필드를 정의 하는 이유 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="41789-180">The reason is that OData defines special fields in the response body to hold the link and count.</span></span>
+> <span data-ttu-id="fef5d-179">다음-페이지 링크 및 인라인 개수에는 모두 OData 형식이 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-179">Next-page links and inline count both require OData format.</span></span> <span data-ttu-id="fef5d-180">그 이유는 OData에서 링크 및 개수를 유지 하기 위해 응답 본문에 특수 필드를 정의 하기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-180">The reason is that OData defines special fields in the response body to hold the link and count.</span></span>
 
-
-<span data-ttu-id="41789-181">OData이 아닌 형식에 대 한 것도 가능에서 쿼리 결과 래핑하여 다음 페이지 링크 및 인라인 카운트를 지원 하기를 **PageResult&lt;T&gt;**  개체입니다.</span><span class="sxs-lookup"><span data-stu-id="41789-181">For non-OData formats, it is still possible to support next-page links and inline count, by wrapping the query results in a **PageResult&lt;T&gt;** object.</span></span> <span data-ttu-id="41789-182">그러나 더 많은 코드가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="41789-182">However, it requires a bit more code.</span></span> <span data-ttu-id="41789-183">예를 들면 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="41789-183">Here is an example:</span></span>
+<span data-ttu-id="fef5d-181">OData 형식이 아닌 경우 \*\*PageResult &lt; T &gt; \*\* 개체에 쿼리 결과를 래핑하여 다음 페이지 링크 및 인라인 개수를 지원할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-181">For non-OData formats, it is still possible to support next-page links and inline count, by wrapping the query results in a **PageResult&lt;T&gt;** object.</span></span> <span data-ttu-id="fef5d-182">그러나 좀 더 많은 코드가 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-182">However, it requires a bit more code.</span></span> <span data-ttu-id="fef5d-183">다음은 예제입니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-183">Here is an example:</span></span>
 
 [!code-csharp[Main](supporting-odata-query-options/samples/sample6.cs)]
 
-<span data-ttu-id="41789-184">JSON 응답 예제는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="41789-184">Here is an example JSON response:</span></span>
+<span data-ttu-id="fef5d-184">다음은 JSON 응답 예제입니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-184">Here is an example JSON response:</span></span>
 
 [!code-json[Main](supporting-odata-query-options/samples/sample7.json)]
 
 <a id="limiting_query_options"></a>
-## <a name="limiting-the-query-options"></a><span data-ttu-id="41789-185">쿼리 옵션을 제한합니다.</span><span class="sxs-lookup"><span data-stu-id="41789-185">Limiting the Query Options</span></span>
+## <a name="limiting-the-query-options"></a><span data-ttu-id="fef5d-185">쿼리 옵션 제한</span><span class="sxs-lookup"><span data-stu-id="fef5d-185">Limiting the Query Options</span></span>
 
-<span data-ttu-id="41789-186">쿼리 옵션을 여러 가지 제어 서버에서 실행 되는 쿼리 클라이언트를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="41789-186">The query options give the client a lot of control over the query that is run on the server.</span></span> <span data-ttu-id="41789-187">경우에 따라 보안 또는 성능 이유로 사용할 수 있는 옵션을 제한 하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="41789-187">In some cases, you might want to limit the available options for security or performance reasons.</span></span> <span data-ttu-id="41789-188">합니다 **[Queryable]** 특성에 일부 기본 제공 속성에서이 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="41789-188">The **[Queryable]** attribute has some built in properties for this.</span></span> <span data-ttu-id="41789-189">다음은 몇 가지 예입니다.</span><span class="sxs-lookup"><span data-stu-id="41789-189">Here are some examples.</span></span>
+<span data-ttu-id="fef5d-186">쿼리 옵션을 통해 클라이언트는 서버에서 실행 되는 쿼리에 대해 많은 제어를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-186">The query options give the client a lot of control over the query that is run on the server.</span></span> <span data-ttu-id="fef5d-187">경우에 따라 보안 또는 성능상의 이유로 사용 가능한 옵션을 제한할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-187">In some cases, you might want to limit the available options for security or performance reasons.</span></span> <span data-ttu-id="fef5d-188">**[쿼리 가능]** 특성에는이에 대 한 몇 가지 기본 제공 속성이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-188">The **[Queryable]** attribute has some built in properties for this.</span></span> <span data-ttu-id="fef5d-189">다음은 몇 가지 예제입니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-189">Here are some examples.</span></span>
 
-<span data-ttu-id="41789-190">$Skip 및 $top, 페이징 및 아무 지원 하기 위해 허용:</span><span class="sxs-lookup"><span data-stu-id="41789-190">Allow only $skip and $top, to support paging and nothing else:</span></span>
+<span data-ttu-id="fef5d-190">$Skip 및 $top만 허용 하 여 페이징을 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-190">Allow only $skip and $top, to support paging and nothing else:</span></span>
 
 [!code-csharp[Main](supporting-odata-query-options/samples/sample8.cs)]
 
-<span data-ttu-id="41789-191">데이터베이스에서 인덱싱되지 않은 속성에 대해 정렬을 방지 하기 위해 특정 속성에 의해서만 정렬할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="41789-191">Allow ordering only by certain properties, to prevent sorting on properties that are not indexed in the database:</span></span>
+<span data-ttu-id="fef5d-191">데이터베이스에서 인덱싱되지 않은 속성의 정렬을 방지 하기 위해 특정 속성 으로만 순서를 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-191">Allow ordering only by certain properties, to prevent sorting on properties that are not indexed in the database:</span></span>
 
 [!code-csharp[Main](supporting-odata-query-options/samples/sample9.cs)]
 
-<span data-ttu-id="41789-192">"Eq" 논리 함수가 되었지만 다른 논리 함수가 없는 허용:</span><span class="sxs-lookup"><span data-stu-id="41789-192">Allow the "eq" logical function but no other logical functions:</span></span>
+<span data-ttu-id="fef5d-192">"Eq" 논리 함수를 허용 하지만 다른 논리 함수는 허용 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-192">Allow the "eq" logical function but no other logical functions:</span></span>
 
 [!code-csharp[Main](supporting-odata-query-options/samples/sample10.cs)]
 
-<span data-ttu-id="41789-193">모든 산술 연산자를 허용 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="41789-193">Do not allow any arithmetic operators:</span></span>
+<span data-ttu-id="fef5d-193">산술 연산자를 허용 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-193">Do not allow any arithmetic operators:</span></span>
 
 [!code-csharp[Main](supporting-odata-query-options/samples/sample11.cs)]
 
-<span data-ttu-id="41789-194">생성 하 여 옵션을 전역적으로 제한할 수 있습니다는 **QueryableAttribute** 인스턴스를 전달 하는 **EnableQuerySupport** 함수:</span><span class="sxs-lookup"><span data-stu-id="41789-194">You can restrict options globally by constructing a **QueryableAttribute** instance and passing it to the **EnableQuerySupport** function:</span></span>
+<span data-ttu-id="fef5d-194">**QueryableAttribute** 인스턴스를 생성 하 여 **enablequerysupport** 함수에 전달 하 여 전역으로 옵션을 제한할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-194">You can restrict options globally by constructing a **QueryableAttribute** instance and passing it to the **EnableQuerySupport** function:</span></span>
 
 [!code-csharp[Main](supporting-odata-query-options/samples/sample12.cs)]
 
 <a id="ODataQueryOptions"></a>
-## <a name="invoking-query-options-directly"></a><span data-ttu-id="41789-195">쿼리 옵션을 직접 호출</span><span class="sxs-lookup"><span data-stu-id="41789-195">Invoking Query Options Directly</span></span>
+## <a name="invoking-query-options-directly"></a><span data-ttu-id="fef5d-195">직접 쿼리 옵션 호출</span><span class="sxs-lookup"><span data-stu-id="fef5d-195">Invoking Query Options Directly</span></span>
 
-<span data-ttu-id="41789-196">사용 하는 대신 합니다 **[Queryable]** 특성을 컨트롤러에 직접 쿼리 옵션을 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="41789-196">Instead of using the **[Queryable]** attribute, you can invoke the query options directly in your controller.</span></span> <span data-ttu-id="41789-197">이렇게 하려면 추가 된 **ODataQueryOptions** 컨트롤러 메서드의 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="41789-197">To do so, add an **ODataQueryOptions** parameter to the controller method.</span></span> <span data-ttu-id="41789-198">필요 하지 않습니다는 경우에 **[Queryable]** 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="41789-198">In this case, you don't need the **[Queryable]** attribute.</span></span>
+<span data-ttu-id="fef5d-196">**[쿼리할** 수 있는] 특성을 사용 하는 대신 컨트롤러에서 직접 쿼리 옵션을 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-196">Instead of using the **[Queryable]** attribute, you can invoke the query options directly in your controller.</span></span> <span data-ttu-id="fef5d-197">이렇게 하려면 **ODataQueryOptions** 매개 변수를 컨트롤러 메서드에 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-197">To do so, add an **ODataQueryOptions** parameter to the controller method.</span></span> <span data-ttu-id="fef5d-198">이 경우 **[쿼리 가능]** 특성이 필요 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-198">In this case, you don't need the **[Queryable]** attribute.</span></span>
 
 [!code-csharp[Main](supporting-odata-query-options/samples/sample13.cs)]
 
-<span data-ttu-id="41789-199">웹 API 채웁니다 합니다 **ODataQueryOptions** URI에서 쿼리 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="41789-199">Web API populates the **ODataQueryOptions** from the URI query string.</span></span> <span data-ttu-id="41789-200">쿼리를 적용 하려면 전달를 **IQueryable** 에 **ApplyTo** 메서드.</span><span class="sxs-lookup"><span data-stu-id="41789-200">To apply the query, pass an **IQueryable** to the **ApplyTo** method.</span></span> <span data-ttu-id="41789-201">메서드가 반환 하는 값 **IQueryable**합니다.</span><span class="sxs-lookup"><span data-stu-id="41789-201">The method returns another **IQueryable**.</span></span>
+<span data-ttu-id="fef5d-199">Web API는 URI 쿼리 문자열에서 **ODataQueryOptions** 를 채웁니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-199">Web API populates the **ODataQueryOptions** from the URI query string.</span></span> <span data-ttu-id="fef5d-200">쿼리를 적용 하려면 **IQueryable** 을 **applyto** 메서드에 전달 합니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-200">To apply the query, pass an **IQueryable** to the **ApplyTo** method.</span></span> <span data-ttu-id="fef5d-201">메서드는 다른 **IQueryable**을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-201">The method returns another **IQueryable**.</span></span>
 
-<span data-ttu-id="41789-202">고급 시나리오에서는 되지 않은 경우는 **IQueryable** 쿼리 공급자를 검사할 수 있습니다는 **ODataQueryOptions** 쿼리 옵션을 다른 형식으로 변환 합니다.</span><span class="sxs-lookup"><span data-stu-id="41789-202">For advanced scenarios, if you do not have an **IQueryable** query provider, you can examine the **ODataQueryOptions** and translate the query options into another form.</span></span> <span data-ttu-id="41789-203">(예를 들어 RaghuRam Nadiminti 블로그 게시물을 참조 [변환 OData 쿼리를 HQL로](https://blogs.msdn.com/b/webdev/archive/2013/02/25/translating-odata-queries-to-hql.aspx)에 포함 됩니다는 [샘플](http://aspnet.codeplex.com/SourceControl/changeset/view/75a56ec99968#Samples/WebApi/NHibernateQueryableSample/Readme.txt).)</span><span class="sxs-lookup"><span data-stu-id="41789-203">(For example, see RaghuRam Nadiminti's blog post [Translating OData queries to HQL](https://blogs.msdn.com/b/webdev/archive/2013/02/25/translating-odata-queries-to-hql.aspx), which also includes a [sample](http://aspnet.codeplex.com/SourceControl/changeset/view/75a56ec99968#Samples/WebApi/NHibernateQueryableSample/Readme.txt).)</span></span>
+<span data-ttu-id="fef5d-202">고급 시나리오의 경우 **IQueryable** 쿼리 공급자가 없으면 **ODataQueryOptions** 을 검토 하 고 쿼리 옵션을 다른 형식으로 변환할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-202">For advanced scenarios, if you do not have an **IQueryable** query provider, you can examine the **ODataQueryOptions** and translate the query options into another form.</span></span> <span data-ttu-id="fef5d-203">(예를 들어 RaghuRam Nadiminti의 블로그 게시물 [OData 쿼리를 HQL로 변환](https://blogs.msdn.com/b/webdev/archive/2013/02/25/translating-odata-queries-to-hql.aspx)( [샘플](http://aspnet.codeplex.com/SourceControl/changeset/view/75a56ec99968#Samples/WebApi/NHibernateQueryableSample/Readme.txt)도 포함)을 참조 하세요.)</span><span class="sxs-lookup"><span data-stu-id="fef5d-203">(For example, see RaghuRam Nadiminti's blog post [Translating OData queries to HQL](https://blogs.msdn.com/b/webdev/archive/2013/02/25/translating-odata-queries-to-hql.aspx), which also includes a [sample](http://aspnet.codeplex.com/SourceControl/changeset/view/75a56ec99968#Samples/WebApi/NHibernateQueryableSample/Readme.txt).)</span></span>
 
 <a id="query-validation"></a>
-## <a name="query-validation"></a><span data-ttu-id="41789-204">쿼리 유효성 검사</span><span class="sxs-lookup"><span data-stu-id="41789-204">Query Validation</span></span>
+## <a name="query-validation"></a><span data-ttu-id="fef5d-204">쿼리 유효성 검사</span><span class="sxs-lookup"><span data-stu-id="fef5d-204">Query Validation</span></span>
 
-<span data-ttu-id="41789-205">합니다 **[Queryable]** 특성의 쿼리 실행 하기 전에 유효성을 검사 합니다.</span><span class="sxs-lookup"><span data-stu-id="41789-205">The **[Queryable]** attribute validates the query before executing it.</span></span> <span data-ttu-id="41789-206">유효성 검사 단계에서 수행 되는 **QueryableAttribute.ValidateQuery** 메서드.</span><span class="sxs-lookup"><span data-stu-id="41789-206">The validation step is performed in the **QueryableAttribute.ValidateQuery** method.</span></span> <span data-ttu-id="41789-207">유효성 검사 프로세스를 사용자 지정할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="41789-207">You can also customize the validation process.</span></span>
+<span data-ttu-id="fef5d-205">[쿼리 가능 **]** 특성은 쿼리를 실행 하기 전에 유효성을 검사 합니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-205">The **[Queryable]** attribute validates the query before executing it.</span></span> <span data-ttu-id="fef5d-206">유효성 검사 단계는 **QueryableAttribute 쿼리** 메서드에서 수행 됩니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-206">The validation step is performed in the **QueryableAttribute.ValidateQuery** method.</span></span> <span data-ttu-id="fef5d-207">유효성 검사 프로세스를 사용자 지정할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-207">You can also customize the validation process.</span></span>
 
-<span data-ttu-id="41789-208">도 참조 하세요 [OData 보안 지침](odata-security-guidance.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="41789-208">Also see [OData Security Guidance](odata-security-guidance.md).</span></span>
+<span data-ttu-id="fef5d-208">또한 [OData 보안 지침](odata-security-guidance.md)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="fef5d-208">Also see [OData Security Guidance](odata-security-guidance.md).</span></span>
 
-<span data-ttu-id="41789-209">즉 클래스 유효성 검사기 중 하나는 재정의에서 정의 하는 먼저 합니다 **Web.Http.OData.Query.Validators** 네임 스페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="41789-209">First, override one of the validator classes that is defined in the **Web.Http.OData.Query.Validators** namespace.</span></span> <span data-ttu-id="41789-210">예를 들어, 다음 유효성 검사기 클래스 $orderby 옵션에 대 한 'desc' 옵션을 사용 하지 않도록 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="41789-210">For example, the following validator class disables the 'desc' option for the $orderby option.</span></span>
+<span data-ttu-id="fef5d-209">먼저, **web.config** 에 정의 된 유효성 검사기 클래스 중 하나를 재정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-209">First, override one of the validator classes that is defined in the **Web.Http.OData.Query.Validators** namespace.</span></span> <span data-ttu-id="fef5d-210">예를 들어 다음 유효성 검사기 클래스는 $orderby 옵션에 대 한 ' desc ' 옵션을 사용 하지 않도록 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-210">For example, the following validator class disables the 'desc' option for the $orderby option.</span></span>
 
 [!code-csharp[Main](supporting-odata-query-options/samples/sample14.cs)]
 
-<span data-ttu-id="41789-211">하위 클래스를 **[Queryable]** 특성을 재정의 하는 **ValidateQuery** 메서드.</span><span class="sxs-lookup"><span data-stu-id="41789-211">Subclass the **[Queryable]** attribute to override the **ValidateQuery** method.</span></span>
+<span data-ttu-id="fef5d-211">**Validatequery** 메서드를 재정의 하는 **[쿼리할** 수 있는] 특성의 서브 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-211">Subclass the **[Queryable]** attribute to override the **ValidateQuery** method.</span></span>
 
 [!code-csharp[Main](supporting-odata-query-options/samples/sample15.cs)]
 
-<span data-ttu-id="41789-212">그런 다음 사용자 지정 특성 하거나 전역으로 설정 하거나-컨트롤러:</span><span class="sxs-lookup"><span data-stu-id="41789-212">Then set your custom attribute either globally or per-controller:</span></span>
+<span data-ttu-id="fef5d-212">그런 다음 사용자 지정 특성을 전역으로 설정 하거나 controller 별로 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-212">Then set your custom attribute either globally or per-controller:</span></span>
 
 [!code-csharp[Main](supporting-odata-query-options/samples/sample16.cs)]
 
-<span data-ttu-id="41789-213">사용 중인 경우 **ODataQueryOptions** 직접 유효성 검사기에 옵션을 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="41789-213">If you are using **ODataQueryOptions** directly, set the validator on the options:</span></span>
+<span data-ttu-id="fef5d-213">**ODataQueryOptions** 를 직접 사용 하는 경우 옵션에서 유효성 검사기를 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="fef5d-213">If you are using **ODataQueryOptions** directly, set the validator on the options:</span></span>
 
 [!code-csharp[Main](supporting-odata-query-options/samples/sample17.cs)]
