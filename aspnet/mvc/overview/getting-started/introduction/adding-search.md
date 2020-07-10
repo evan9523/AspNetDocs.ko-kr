@@ -8,161 +8,159 @@ ms.date: 01/17/2019
 ms.assetid: df001954-18bf-4550-b03d-43911a0ea186
 msc.legacyurl: /mvc/overview/getting-started/introduction/adding-search
 msc.type: authoredcontent
-ms.openlocfilehash: 7b49c1e6425080693229c6c132df3879504c835c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f6d6d32a648fed453be924790a1b55698c9cf209
+ms.sourcegitcommit: 0d583ed9253103f3e50b6d729276e667591cdd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59379536"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86211476"
 ---
 # <a name="search"></a>검색
 
+[!INCLUDE [Tutorial Note](index.md)]
 
-[!INCLUDE [Tutorial Note](sample/code-location.md)]
+## <a name="adding-a-search-method-and-search-view"></a>검색 방법 및 검색 보기 추가
 
-## <a name="adding-a-search-method-and-search-view"></a>검색 방법 및 검색 뷰를 추가합니다.
-
-이 섹션에서는 검색 기능을 추가 합니다 `Index` 작업 메서드를 사용 하면 영화 장르 또는 이름으로 검색 합니다.
+이 섹션에서는 `Index` 장르 또는 이름을 기준으로 영화를 검색할 수 있는 작업 메서드에 검색 기능을 추가 합니다.
 
 ## <a name="prerequisites"></a>전제 조건
 
-이 섹션의 스크린이 샷을 일치 하려면 f5 키를 눌러 응용 프로그램을 실행 하 고 데이터베이스에 다음 영화를 추가 해야 합니다.
+이 섹션의 스크린샷을 일치 시키려면 응용 프로그램을 실행 (F5) 하 고 다음 영화를 데이터베이스에 추가 해야 합니다.
 
-| 제목 | 릴리스 날짜 | 장르 | 가격 |
+| 제목 | 출시 날짜 | Genre | 가격 |
 | ----- | ------------ | ----- | ----- |
 | Ghostbusters | 6/8/1984 | 코미디 | 6.99 |
 | Ghostbusters II | 6/16/1989 | 코미디 | 6.99 |
-| 전시관이 네의 전 세계 | 3/27/1986 | 작업 | 5.99 |
+| Apes의 행성 | 3/27/1986 | 작업 | 5.99 |
 
+## <a name="updating-the-index-form"></a>인덱스 폼 업데이트
 
-## <a name="updating-the-index-form"></a>인덱스 형식 업데이트
-
-업데이트 하 여 시작 합니다 `Index` 동작 메서드를 기존 `MoviesController` 클래스입니다. 코드는 다음과 같습니다.
+먼저 `Index` 작업 메서드를 기존 `MoviesController` 클래스로 업데이트 합니다. 코드는 다음과 같습니다.
 
 [!code-csharp[Main](adding-search/samples/sample1.cs?highlight=1,6-9)]
 
-첫 번째 줄을 `Index` 메서드는 다음 항목을 만듭니다 [LINQ](https://msdn.microsoft.com/library/bb397926.aspx) 영화를 선택 하는 쿼리:
+메서드의 첫 번째 줄에서는 `Index` 다음 [LINQ](https://msdn.microsoft.com/library/bb397926.aspx) 쿼리를 만들어 영화를 선택 합니다.
 
 [!code-csharp[Main](adding-search/samples/sample2.cs)]
 
-쿼리가 시점에서 정의 되었지만 데이터베이스에 대해 아직 실행 되지 않았습니다.
+쿼리가이 시점에 정의 되었지만 아직 데이터베이스에 대해 실행 되지 않았습니다.
 
-경우는 `searchString` 문자열을 포함 하는 매개 변수, 영화 쿼리는 다음 코드를 사용 하 여 검색 문자열의 값에 필터링 하도록 수정 됩니다.
+`searchString`매개 변수에 문자열이 포함 된 경우 다음 코드를 사용 하 여 검색 문자열의 값을 필터링 하도록 동영상 쿼리를 수정 합니다.
 
 [!code-csharp[Main](adding-search/samples/sample3.cs)]
 
-위의 `s => s.Title` 코드는 [람다 식](https://msdn.microsoft.com/library/bb397687.aspx)입니다. 람다 식은 메서드 기반 되는 [LINQ](https://msdn.microsoft.com/library/bb397926.aspx) 와 같은 표준 쿼리 연산자 메서드의 인수로 쿼리는 [여기서](https://msdn.microsoft.com/library/system.linq.enumerable.where.aspx) 메서드 위의 코드에 사용 합니다. LINQ 쿼리는 정의 될 때 또는 같은 메서드를 호출 하 여 수정 될 때 실행 되지 않습니다 `Where` 또는 `OrderBy`합니다. 대신 쿼리 실행이 지연, 즉, 실현된 된 값이 실제로 반복 될 때까지 식의 계산이 지연 되는 또는 [ `ToList` ](https://msdn.microsoft.com/library/bb342261.aspx) 메서드가 호출 됩니다. 에 `Search` 샘플에서 쿼리가 실행 되는 *Index.cshtml* 보기. 지연된 쿼리 실행에 대한 자세한 내용은 [쿼리 실행](https://msdn.microsoft.com/library/bb738633.aspx)을 참조하세요.
+위의 `s => s.Title` 코드는 [람다 식](https://msdn.microsoft.com/library/bb397687.aspx)입니다. 람다 식은 메서드 기반 [LINQ](https://msdn.microsoft.com/library/bb397926.aspx) 쿼리에서 위의 코드에서 사용 된 [Where](https://msdn.microsoft.com/library/system.linq.enumerable.where.aspx) 메서드와 같은 표준 쿼리 연산자 메서드의 인수로 사용 됩니다. LINQ 쿼리는 정의 될 때 또는 또는와 같은 메서드를 호출 하 여 수정 될 때 실행 되지 `Where` 않습니다 `OrderBy` . 대신 쿼리 실행이 지연 됩니다. 즉, 실현 된 값이 실제로 반복 되거나 메서드가 호출 될 때까지 식의 계산이 지연 됩니다 [`ToList`](https://msdn.microsoft.com/library/bb342261.aspx) . `Search`이 샘플에서 쿼리는 *인덱스. cshtml* 뷰에서 실행 됩니다. 지연된 쿼리 실행에 대한 자세한 내용은 [쿼리 실행](https://msdn.microsoft.com/library/bb738633.aspx)을 참조하세요.
 
 > [!NOTE]
-> 합니다 [Contains](https://msdn.microsoft.com/library/bb155125.aspx) 메서드 c# 코드가 아니라 위의 데이터베이스에서 실행 됩니다. 데이터베이스에서 [Contains](https://msdn.microsoft.com/library/bb155125.aspx) 매핑됩니다 [SQL LIKE](https://msdn.microsoft.com/library/ms179859.aspx)는 대/소문자 구분 합니다.
+> [Contains](https://msdn.microsoft.com/library/bb155125.aspx) 메서드는 위의 c # 코드가 아닌 데이터베이스에서 실행 됩니다. 데이터베이스에서 [Contains](https://msdn.microsoft.com/library/bb155125.aspx) 는 대/소문자를 구분 하지 않는 [SQL과](https://msdn.microsoft.com/library/ms179859.aspx)매핑됩니다.
 
-업데이트할 수 있습니다 이제는 `Index` 폼을 사용자에 게 표시 되는 보기입니다.
+이제 `Index` 사용자에 게 폼을 표시 하는 뷰를 업데이트할 수 있습니다.
 
-응용 프로그램을 실행 하 고 이동 */Movies/Index*합니다. 쿼리 문자열(예: `?searchString=ghost`)을 URL에 추가합니다. 필터링된 동영상이 표시됩니다.
+응용 프로그램을 실행 하 고 */Movies/Index*로 이동 합니다. 쿼리 문자열(예: `?searchString=ghost`)을 URL에 추가합니다. 필터링된 영화가 표시됩니다.
 
 ![SearchQryStr](adding-search/_static/image1.png)
 
-시그니처를 변경 하는 경우는 `Index` 명명 된 매개 변수를 포함 하는 방법 `id`, `id` 매개 변수는 일치를 `{id}` 기본값에 대 한 자리 표시자 경로 집합에는 *앱\_시작 RouteConfig.cs* 파일입니다.
+`Index`이라는 매개 변수를 포함 하도록 메서드의 시그니처를 변경 하는 경우 `id` `id` 매개 변수는 `{id}` *App \_ Start\RouteConfig.cs* 파일에 설정 된 기본 경로에 대 한 자리 표시자와 일치 합니다.
 
 [!code-json[Main](adding-search/samples/sample4.json)]
 
-원래 `Index` 메서드는 다음과 같습니다:
+원래 메서드는 다음과 같습니다 `Index` .
 
 [!code-csharp[Main](adding-search/samples/sample5.cs)]
 
-수정 된 `Index` 메서드는 다음과 같습니다.
+수정 된 메서드는 다음과 같습니다 `Index` .
 
 [!code-csharp[Main](adding-search/samples/sample6.cs?highlight=1,3)]
 
-이제 쿼리 문자열 값이 아닌 경로 데이터(URL 세그먼트)로 검색 제목을 전달할 수 있습니다.
+이제 쿼리 문자열 값 대신 경로 데이터(URL 세그먼트)로 검색 제목을 전달할 수 있습니다.
 
 ![](adding-search/_static/image2.png)
 
-그러나 사용자가 영화를 검색하려고 할 때마다 URL을 수정하지는 않습니다. 따라서 이제 영화를 필터링하는 데 도움이 되는 UI를 추가합니다. 시그니처를 변경 하는 경우는 `Index` 경로 바인딩 ID 매개 변수를 전달 하는 방법을 테스트 하는 방법 변경는 하 `Index` 라는 문자열 매개 변수를 사용 하는 메서드 `searchString`:
+그러나 사용자가 영화를 검색하려고 할 때마다 URL을 수정하리라고 기대하지는 않을 것입니다. 따라서 이제 영화를 필터링하는 데 도움이 되는 UI를 추가합니다. 메서드의 서명을 변경 하 여 `Index` 경로 바인딩된 ID 매개 변수를 전달 하는 방법을 테스트 하는 경우 `Index` 메서드가 라는 문자열 매개 변수를 사용 하도록 다시 변경 합니다 `searchString` .
 
 [!code-csharp[Main](adding-search/samples/sample7.cs)]
 
-열기는 *Views\Movies\Index.cshtml* 파일을 열고 바로 뒤 `@Html.ActionLink("Create New", "Create")`, 아래 강조 표시 된 폼 태그를 추가 합니다.
+*Views\Movies\Index.cshtml* 파일을 열고 바로 뒤에 `@Html.ActionLink("Create New", "Create")` 아래에 강조 표시 된 폼 태그를 추가 합니다.
 
 [!code-cshtml[Main](adding-search/samples/sample8.cshtml?highlight=12-15)]
 
-합니다 `Html.BeginForm` 도우미를 만듭니다 `<form>` 태그입니다. 합니다 `Html.BeginForm` 도우미 하면 폼이 사용자가 클릭 하 여 폼을 제출 하는 경우 자신에 게 게시 합니다 **필터** 단추입니다.
+`Html.BeginForm`도우미는 여는 태그를 만듭니다 `<form>` . 도우미를 사용 하면 `Html.BeginForm` 사용자가 **필터** 단추를 클릭 하 여 양식을 전송할 때 폼이 자신에 게 게시 됩니다.
 
-Visual Studio 2013이 표시 하 고 보기 파일을 편집 하는 경우 유용한 개선 합니다. 를 실행 하면 응용 프로그램 뷰 파일을 사용 하 여 open Visual Studio 2013 뷰를 표시 하는 올바른 컨트롤러 작업 메서드를 호출 합니다.
+Visual Studio 2013 보기 파일을 표시 하 고 편집할 때 향상 된 기능이 있습니다. 뷰 파일이 열려 있는 상태에서 응용 프로그램을 실행 하면 Visual Studio 2013 올바른 컨트롤러 작업 메서드를 호출 하 여 뷰를 표시 합니다.
 
 ![](adding-search/_static/image3.png)
 
-인덱스 뷰를 사용 하 여 위의 이미지에서과 같이 Visual Studio에서 열기, 탭 Ctr F5 또는 f5 키를 응용 프로그램을 실행 한 다음 동영상을 검색 해 보세요.
+위의 이미지에 표시 된 것 처럼 Visual Studio에서 인덱스 뷰가 열린 상태에서 Ctr F5 또는 F5 키를 눌러 응용 프로그램을 실행 한 다음 영화 검색을 시도 합니다.
 
 ![](adding-search/_static/image4.png)
 
-방법이 없는 `HttpPost` 오버 로드는 `Index` 메서드. 필요 없는, 메서드는 응용 프로그램의 상태를 변경 하지 않고 때문에 데이터를 필터링 합니다.
+`HttpPost`메서드의 오버 로드가 없습니다 `Index` . 메서드가 응용 프로그램의 상태를 변경 하는 것이 아니라 데이터만 필터링 하기 때문에 필요 하지 않습니다.
 
-다음 `HttpPost Index` 메서드를 추가할 수 있습니다. 작업 호출자는 일치 하는 경우는 `HttpPost Index` 메서드 및 `HttpPost Index` 메서드는 아래 이미지에 표시 된 대로 실행 됩니다.
+다음 `HttpPost Index` 메서드를 추가할 수 있습니다. 이 경우 작업 호출자는 `HttpPost Index` 메서드와 일치 하 고 `HttpPost Index` 메서드는 아래 이미지와 같이 실행 됩니다.
 
 [!code-csharp[Main](adding-search/samples/sample9.cs)]
 
 ![SearchPostGhost](adding-search/_static/image5.png)
 
-그러나 이 `HttpPost` 버전의 `Index` 메서드를 추가하는 경우에도 이를 모두 구현하는 방법은 제한됩니다. 특정 검색을 책갈피로 설정하거나 동일하게 필터링된 영화 목록을 보기 위해 클릭할 수 있는 링크를 친구에게 보내려고 한다고 가정합니다. HTTP POST에 대 한 URL를 요청 하는 GET 요청 (xxxxx/Movies/Index)에 대 한 URL과 동일한-URL 자체의 검색 정보가 없습니다. 오른쪽 이제 검색 문자열 정보를 서버로 전송 됩니다는 양식 필드 값으로. 즉, URL에 친구를 보내거나 책갈피에 해당 검색 정보를 캡처할 수 없습니다.
+그러나 이 `HttpPost` 버전의 `Index` 메서드를 추가하는 경우에도 이를 모두 구현하는 방법은 제한됩니다. 특정 검색을 책갈피로 설정하거나 동일하게 필터링된 영화 목록을 보기 위해 클릭할 수 있는 링크를 친구에게 보내려고 한다고 가정합니다. HTTP POST 요청에 대 한 URL은 GET 요청 (localhost: xxxxx/영화/인덱스)의 URL과 동일 합니다. URL 자체에는 검색 정보가 없습니다. 지금은 검색 문자열 정보가 양식 필드 값으로 서버에 전송 됩니다. 즉, 책갈피에 대 한 검색 정보를 캡처하거나 URL의 친구에 게 보낼 수 없습니다.
 
-솔루션의 오버 로드를 사용 하는 것 `BeginForm` 에 POST 요청을 URL로 검색 정보를 추가 하도록 하 고를 라우팅할 수 해야를 지정 하는 `HttpGet` 버전의는 `Index` 메서드. 매개 변수가 없는 기존 항목 바꾸기 `BeginForm` 다음 태그를 사용 하 여 메서드:
+이 솔루션은 `BeginForm` POST 요청에서 검색 정보를 URL에 추가 하 고이를 메서드 버전으로 라우팅해야 함을 지정 하는의 오버 로드를 사용 하는 것입니다 `HttpGet` `Index` . 매개 변수가 없는 기존 `BeginForm` 메서드를 다음 태그로 바꿉니다.
 
 [!code-cshtml[Main](adding-search/samples/sample10.cshtml)]
 
 ![BeginFormPost_SM](adding-search/_static/image6.png)
 
-이제 검색을 제출할 때 URL 검색 쿼리 문자열을 포함 합니다. `HttpPost Index` 메서드가 있는 경우에도 검색은 `HttpGet Index` 작업 메서드로 이동합니다.
+이제 검색을 제출할 때 URL에 검색 쿼리 문자열이 포함 됩니다. `HttpPost Index` 메서드가 존재하더라도 검색은 `HttpGet Index` 작업 메서드로 이동합니다.
 
 ![IndexWithGetURL](adding-search/_static/image7.png)
 
-## <a name="adding-search-by-genre"></a>장르별 검색 추가
+## <a name="adding-search-by-genre"></a>장르 별 검색 추가
 
-추가한 경우에 `HttpPost` 버전의는 `Index` 메서드를 지금 삭제 합니다.
+`HttpPost`메서드 버전을 추가한 경우 `Index` 지금 삭제 합니다.
 
-다음으로, 사용자가 영화 장르 하 여 검색할 수 있도록 하는 기능을 추가 합니다. `Index` 메서드를 다음 코드로 바꿉니다.
+다음으로, 사용자가 장르로 영화를 검색할 수 있는 기능을 추가 합니다. `Index` 메서드를 다음 코드로 바꿉니다.
 
 [!code-csharp[Main](adding-search/samples/sample11.cs)]
 
-이 버전의 `Index` 메서드는 추가 매개 변수, 즉 `movieGenre`합니다. 코드의 처음 몇 줄 만들기는 `List` 데이터베이스에서 영화 장르를 포함 하는 개체입니다.
+이 버전의 `Index` 메서드는 추가 매개 변수를 사용 `movieGenre` 합니다. 즉, 코드의 처음 몇 줄은 개체를 만들어 `List` 데이터베이스에서 영화 장르를 보관 합니다.
 
 다음 코드는 데이터베이스에서 모든 장르를 검색하는 LINQ 쿼리입니다.
 
 [!code-csharp[Main](adding-search/samples/sample12.cs)]
 
-코드를 사용 하는 `AddRange` 제네릭 메서드의 `List` 목록에는 모든 고유 장르를 추가할 컬렉션입니다. (없이 `Distinct` 한정자를 중복 장르가 추가-코미디 샘플에서 두 번 추가할 수는 예를 들어). 코드에는 장르 목록을 저장 된 `ViewBag.MovieGenre` 개체입니다. 범주 데이터 (이러한는 영화 장르)으로 저장을 [SelectList](https://msdn.microsoft.cus/library/system.web.mvc.selectlist(v=vs.108).aspx) 개체는 `ViewBag`, MVC 응용 프로그램에 대 한 일반적인 방식은 드롭다운 목록 상자에서 범주 데이터에 액세스 한 다음.
+코드는 `AddRange` 제네릭 컬렉션의 메서드를 사용 하 여 `List` 모든 고유 장르를 목록에 추가 합니다. 한정자를 사용 하지 않고 `Distinct` 중복 장르를 추가 합니다. 예를 들어 코미디는 샘플에서 두 번 추가 됩니다. 그런 다음 코드는 장르 목록을 개체에 저장 합니다 `ViewBag.MovieGenre` . 에서 범주 데이터 (예: 영화 장르)를 [selectlist](https://msdn.microsoft.cus/library/system.web.mvc.selectlist(v=vs.108).aspx) 개체로 저장 `ViewBag` 한 다음 드롭다운 목록 상자에서 범주 데이터에 액세스 하는 것은 MVC 응용 프로그램에 대 한 일반적인 방법입니다.
 
-다음 코드를 확인 하는 방법을 보여 줍니다는 `movieGenre` 매개 변수입니다. 비어 있지 않으면 코드를 추가로 지정된 장르에 선택한 영화를 제한 하려면 영화 쿼리를 제한 합니다.
+다음 코드에서는 매개 변수를 확인 하는 방법을 보여 줍니다 `movieGenre` . 비어 있지 않은 경우 코드는 선택한 영화를 지정 된 장르로 제한 하도록 동영상 쿼리를 추가로 제한 합니다.
 
 [!code-csharp[Main](adding-search/samples/sample13.cs)]
 
-영화 목록 반복 될 때까지 쿼리가 데이터베이스에서 실행 되지에서 설명한 대로 (후 보기에서 발생 하는 `Index` 작업 메서드는 반환).
+앞에서 설명한 것 처럼, 작업 메서드가 반환 된 후 보기에서 발생 하는 동영상 목록이 반복 될 때까지 데이터베이스에서 쿼리가 실행 되지 않습니다 `Index` .
 
-## <a name="adding-markup-to-the-index-view-to-support-search-by-genre"></a>장르별 검색을 지원 하도록 인덱스 보기에 태그 추가
+## <a name="adding-markup-to-the-index-view-to-support-search-by-genre"></a>장르 검색을 지원 하기 위해 인덱스 뷰에 태그 추가
 
-추가 `Html.DropDownList` 도우미를 *Views\Movies\Index.cshtml* 파일을 바로 앞의 `TextBox` 도우미입니다. 완료 된 태그는 다음과 같습니다.
+도우미 `Html.DropDownList` 바로 앞에 *Views\Movies\Index.cshtml* 파일에 도우미를 추가 `TextBox` 합니다. 완성 된 태그는 다음과 같습니다.
 
 [!code-cshtml[Main](adding-search/samples/sample14.cshtml?highlight=11)]
 
-다음 코드에서
+다음 코드에서:
 
 [!code-cshtml[Main](adding-search/samples/sample15.cshtml)]
 
-매개 변수 "MovieGenre"에 대 한 키를 제공 합니다 `DropDownList` 찾으려고 도우미를 `IEnumerable<SelectListItem>` 에서 `ViewBag`. `ViewBag` 작업 메서드에서 채워졌습니다.
+"MovieGenre" 매개 변수는 `DropDownList` 도우미가에서을 찾을 수 있는 키를 제공 합니다 `IEnumerable<SelectListItem>` `ViewBag` . `ViewBag`작업 메서드에서가 입력 되었습니다.
 
 [!code-csharp[Main](adding-search/samples/sample16.cs?highlight=10)]
 
-옵션 레이블을 제공 "All" 매개 변수입니다. 브라우저에서 선택한 항목을 검사 하는 경우 해당 "value" 특성이 비어 있음을 표시 됩니다. 컨트롤러만 필터링 때문 `if` 문자열이 아닙니다 `null` 이거나 비어 있으면 빈 값에 대 한 제출 `movieGenre` 모든 장르를 보여 줍니다.
+"All" 매개 변수는 옵션 레이블을 제공 합니다. 브라우저에서 해당 선택을 검사 하면 해당 "value" 특성이 비어 있는 것을 볼 수 있습니다. 컨트롤러는 문자열을 필터링 `if` 하거나 비어 있지 않으므로 `null` 에 대해 빈 값을 제출 하면 `movieGenre` 모든 장르를 표시 합니다.
 
-또한 기본적으로 선택 하는 옵션을 설정할 수 있습니다. 컨트롤러의 코드를 변경 하는 기본 옵션으로 "코미디" 하려는 경우 다음과 같이 합니다.
+옵션이 기본적으로 선택 되도록 설정할 수도 있습니다. 기본 옵션으로 "코미디"을 원하는 경우 컨트롤러의 코드를 다음과 같이 변경 합니다.
 
 [!code-cshtml[Main](adding-search/samples/sample17.cshtml)]
 
-응용 프로그램을 실행 하 고 이동할 */Movies/Index*합니다. 장르별, 동영상 이름별 및 모두 기준으로 검색을 시도해 보세요.
+응용 프로그램을 실행 하 고 */Movies/Index*로 이동 합니다. 장르, 영화 이름 및 두 조건에 따라 검색을 수행 합니다.
 
 ![](adding-search/_static/image8.png)
 
-이 섹션에서는 검색 작업 메서드 및 사용자가 영화 제목과 장르 하 여 검색할 수 있는 보기를 만들었습니다. 다음 섹션에서 살펴보겠습니다 속성을 추가 하는 방법의 `Movie` 모델과 테스트 데이터베이스를 자동으로 만들어집니다 하는 이니셜라이저를 추가 하는 방법입니다.
+이 섹션에서는 사용자가 영화 제목 및 장르로 검색할 수 있는 검색 작업 메서드 및 보기를 만들었습니다. 다음 섹션에서는 모델에 속성을 추가 하는 방법 `Movie` 및 테스트 데이터베이스를 자동으로 만드는 이니셜라이저를 추가 하는 방법을 살펴봅니다.
 
 > [!div class="step-by-step"]
 > [이전](examining-the-edit-methods-and-edit-view.md)
