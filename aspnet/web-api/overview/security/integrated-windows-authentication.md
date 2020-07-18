@@ -8,22 +8,24 @@ ms.date: 12/18/2012
 ms.assetid: 71ee4c78-c500-4d1c-b761-b4e161a291b5
 msc.legacyurl: /web-api/overview/security/integrated-windows-authentication
 msc.type: authoredcontent
-ms.openlocfilehash: e4f31f191f3c0fabff308ea5dadb0f1d9ce7d448
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: c5fe57c4a20e28fa434659a75484e3a4c37195f8
+ms.sourcegitcommit: 000cbcd1de66fe8a766f203ef2d6f009e4435f53
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78504209"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86424781"
 ---
 # <a name="integrated-windows-authentication"></a>Windows 통합 인증
 
 [Mike Wasson](https://github.com/MikeWasson)
 
-Windows 통합 인증을 사용 하면 사용자가 Kerberos 또는 NTLM을 사용 하 여 Windows 자격 증명으로 로그인 할 수 있습니다. 클라이언트는 인증 헤더에 자격 증명을 보냅니다. Windows 인증은 인트라넷 환경에 가장 적합 합니다. 자세한 내용은 [Windows 인증](https://www.iis.net/configreference/system.webserver/security/authentication/windowsauthentication)을 참조하세요.
+Windows 통합 인증을 사용 하면 사용자가 Kerberos 또는 NTLM을 사용 하 여 Windows 자격 증명으로 로그인 할 수 있습니다. 클라이언트는 인증 헤더에 자격 증명을 보냅니다. Windows 인증은 인트라넷 환경에 가장 적합합니다. 자세한 내용은 [Windows 인증](https://www.iis.net/configreference/system.webserver/security/authentication/windowsauthentication)을 참조하세요.
 
 | 장점 | 단점 |
 | --- | --- |
-| -IIS에 기본 제공 됩니다. -요청에서 사용자 자격 증명을 보내지 않습니다. -클라이언트 컴퓨터가 도메인에 속해 있는 경우 (예: 인트라넷 응용 프로그램) 사용자가 자격 증명을 입력할 필요가 없습니다. | -인터넷 응용 프로그램에는 권장 되지 않습니다. -클라이언트에서 Kerberos 또는 NTLM 지원이 필요 합니다. -클라이언트가 Active Directory 도메인에 있어야 합니다. |
+| IIS에 기본 제공 됩니다. | 인터넷 응용 프로그램에는 권장 되지 않습니다. | 
+| 는 요청에서 사용자 자격 증명을 보내지 않습니다. | 클라이언트에서 Kerberos 또는 NTLM 지원이 필요 합니다. |
+| 클라이언트 컴퓨터가 도메인에 속해 있는 경우 (예: 인트라넷 응용 프로그램) 사용자가 자격 증명을 입력할 필요가 없습니다. | 클라이언트는 Active Directory 도메인에 있어야 합니다. |
 
 > [!NOTE]
 > 응용 프로그램이 Azure에서 호스트 되 고 온-프레미스 Active Directory 도메인을 사용 하는 경우 온-프레미스 AD를 Azure Active Directory와 페더레이션 하는 것이 좋습니다. 이렇게 하면 사용자가 온-프레미스 자격 증명을 사용 하 여 로그인 할 수 있지만 인증은 Azure AD에서 수행 됩니다. 자세한 내용은 [Azure 인증](../../../visual-studio/overview/2012/windows-azure-authentication.md)을 참조 하세요.
