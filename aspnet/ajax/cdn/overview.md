@@ -8,12 +8,12 @@ ms.date: 10/14/2017
 ms.assetid: 8935bf14-ca6d-4a4e-9dbe-b96ce74cef49
 msc.legacyurl: /ajax/cdn
 msc.type: content
-ms.openlocfilehash: b66e812f0324be95effdd8d232baa6a59302b9df
-ms.sourcegitcommit: 0cf7d06071a8ff986e6c028ac9daf0c0e7490412
+ms.openlocfilehash: 58e2d62da2181108f34bbf3e1e948977241e1dee
+ms.sourcegitcommit: b3c0e67bb231dbb0db9e8dfccd51cf715481edcc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85240603"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88161359"
 ---
 # <a name="microsoft-ajax-content-delivery-network"></a>Microsoft Ajax Content Delivery Network
 
@@ -163,6 +163,14 @@ CDN은 가장 인기 있는 타사 JavaScript 라이브러리 중 일부를 호�
 ### <a name="jquery-releases-on-the-cdn"></a>CDN의 jQuery 릴리스
 
 다음 jQuery 릴리스는 CDN에서 호스팅됩니다.
+
+#### <a name="jquery-version-351"></a>jQuery 버전 3.5.1
+- https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.js
+- https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.min.js
+- https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.min.map
+- https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.slim.js
+- https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.slim.min.js
+- https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.slim.min.map
 
 #### <a name="jquery-version-350"></a>jQuery 버전 3.5.0
 - https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.0.js
@@ -686,7 +694,7 @@ JQuery Mobile library의 다음 릴리스는이 CDN에서 호스팅됩니다. �
 
 다음 릴리스의 jQuery Cycle 플러그 인이 CDN에서 호스팅됩니다. 각 링크를 클릭 하 여 파일의 실제 목록을 확인 합니다.
 
-- [jQuery 주기 2.99](jquery-cycle/cdnjquerycycle299.md "jQuery Cycle 2.99")
+- [jQuery Cycle 2.99](jquery-cycle/cdnjquerycycle299.md "jQuery Cycle 2.99")
 - [jQuery Cycle 2.94](jquery-cycle/cdnjquerycycle294.md "jQuery Cycle 2.94")
 - [jQuery Cycle 2.88](jquery-cycle/cdnjquerycycle288.md "jQuery Cycle 2.88")
 
@@ -702,7 +710,7 @@ JQuery Mobile library의 다음 릴리스는이 CDN에서 호스팅됩니다. �
 - [jQuery DataTables 1.9.3](jquery-datatables/cdnjquerydatatables193.md "jQuery DataTables 1.9.3")
 - [jQuery DataTables 1.9.2](jquery-datatables/cdnjquerydatatables192.md "jQuery DataTables 1.9.2")
 - [jQuery DataTables 1.9.1](jquery-datatables/cdnjquerydatatables191.md "jQuery DataTables 1.9.1")
-- [jQuery Datatable 1.9.0](jquery-datatables/cdnjquerydatatables190.md "jQuery DataTables 1.9.0")
+- [jQuery DataTables 1.9.0](jquery-datatables/cdnjquerydatatables190.md "jQuery DataTables 1.9.0")
 - [jQuery DataTables 1.8.2](jquery-datatables/cdnjquerydatatables182.md "jQuery DataTables 1.8.2")
 
 <a id="Modernizr_Releases_on_the_CDN_8"></a>
@@ -1204,7 +1212,7 @@ CDN에서 호스트 되는 [getbootstrap.com](http://getbootstrap.com "getbootst
 ASP.NET Ajax 라이브러리의 다음 릴리스는 CDN에서 호스팅됩니다. 각 링크를 클릭 하 여 파일의 실제 목록을 확인 합니다.
 
 - [ASP.NET Web Forms 및 Ajax 버전 4.5.2](cdnajax452.md "ASP.NET Web Forms 및 Ajax 4.5.2")
-- [ASP.NET Web Forms 및 Ajax 버전 4](cdnajax4.md "ASP.NET Web Forms and Ajax 4")
+- [ASP.NET Web Forms 및 Ajax 버전 4](cdnajax4.md "ASP.NET Web Forms 및 Ajax 4")
 - [ASP.NET Ajax 버전 3.5](cdnajax35.md "ASP.NET Ajax 3.5")
 
 <a id="ASPNET_MVC_Releases_on_the_CDN_16"></a>
