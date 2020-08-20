@@ -9,10 +9,10 @@ ms.assetid: 64906a1d-f734-41cf-9615-ee95f8740996
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/advanced-entity-framework-scenarios-for-an-mvc-web-application
 msc.type: authoredcontent
 ms.openlocfilehash: f8f079f6d8ea663c6888456be422a2bae93a4b87
-ms.sourcegitcommit: ce28244209db8615bc9bdd576a2e2c88174d318d
+ms.sourcegitcommit: c9d9210e0d16fbb3829b7688cfb832dc263c79cc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 08/20/2020
 ms.locfileid: "86163581"
 ---
 # <a name="advanced-entity-framework-scenarios-for-an-mvc-web-application-10-of-10"></a>MVC 웹 응용 프로그램에 대 한 고급 Entity Framework 시나리오 (10/10)
@@ -267,7 +267,7 @@ ASP.NET MVC 응용 프로그램에서 Entity Framework 사용에 대 한이 일�
 
 <a id="acknowledgments"></a>
 
-## <a name="acknowledgments"></a>감사의 글
+## <a name="acknowledgments"></a>승인
 
 - Tom Dykstra는이 자습서의 원래 버전을 작성 했으며 Microsoft 웹 플랫폼 및 도구 콘텐츠 팀의 선임 프로그래밍 기록기입니다.
 - Twitter ( [Rick Anderson](https://blogs.msdn.com/b/rickandy/) ) [@RickAndMSFT](http://twitter.com/RickAndMSFT) 는이 자습서를 공동 작성 하 여 대부분의 작업을 EF 5 및 MVC 4로 업데이트 했습니다. Rick는 Azure 및 MVC를 중심으로 하는 Microsoft의 선임 프로그래밍 기록기입니다.
@@ -287,7 +287,7 @@ ASP.NET MVC 응용 프로그램에서 Entity Framework 사용에 대 한이 일�
 
 *' DotNetOpenAuth. Openid connect '가 이미 있는 경우 해당 파일을 만들거나 섀도 복사할 수 없습니다.*
 
-해결책:
+해결 방법:
 
 몇 초 정도 기다렸다가 페이지를 새로 고칩니다.
 
@@ -297,7 +297,7 @@ ASP.NET MVC 응용 프로그램에서 Entity Framework 사용에 대 한이 일�
 
 *' 업데이트-데이터베이스 ' 라는 용어는 cmdlet, 함수, 스크립트 파일 또는 실행할 수 있는 프로그램의 이름으로 인식 되지 않습니다. 이름의 철자를 확인 하거나, 경로가 포함 된 경우 경로가 올바른지 확인 한 후 다시 시도 하십시오.* ( *`Update-Database`* PMC의 명령에서)
 
-해결책:
+해결 방법:
 
 Visual Studio를 끝냅니다. 프로젝트를 다시 열고 다시 시도 하세요.
 
@@ -307,7 +307,7 @@ Visual Studio를 끝냅니다. 프로젝트를 다시 열고 다시 시도 하�
 
 *하나 이상의 엔터티에 대 한 유효성 검사에 실패 했습니다. 자세한 내용은 ' EntityValidationErrors ' 속성을 참조 하세요.* ( *`Update-Database`* PMC의 명령에서)
 
-해결책:
+해결 방법:
 
 이 문제의 한 가지 원인은 메서드가 실행 될 때 유효성 검사 오류입니다 `Seed` . 메서드를 디버깅 하는 방법에 대 한 팁은 [EF (시드 및 디버깅 Entity Framework) db](https://blogs.msdn.com/b/rickandy/archive/2013/02/12/seeding-and-debugging-entity-framework-ef-dbs.aspx) 를 참조 하세요 `Seed` .
 
@@ -317,7 +317,7 @@ Visual Studio를 끝냅니다. 프로젝트를 다시 열고 다시 시도 하�
 
 *HTTP 오류 500.19-내부 서버 오류 페이지에 대 한 관련 구성 데이터가 잘못 되어 요청 된 페이지에 액세스할 수 없습니다.*
 
-해결책:
+해결 방법:
 
 이 오류를 발생 시킬 수 있는 한 가지 방법은 각각 동일한 포트 번호를 사용 하 여 솔루션의 복사본을 여러 개 포함 하는 것입니다. 일반적으로 Visual Studio의 모든 인스턴스를 종료 한 다음 작업 중인 프로젝트를 다시 시작 하 여이 문제를 해결할 수 있습니다. 작동 하지 않는 경우 포트 번호를 변경해 보세요. 프로젝트 파일을 마우스 오른쪽 단추로 클릭 한 다음 속성을 클릭 합니다. **웹** 탭을 선택한 다음 **프로젝트 Url** 텍스트 상자에서 포트 번호를 변경 합니다.
 
@@ -327,7 +327,7 @@ Visual Studio를 끝냅니다. 프로젝트를 다시 열고 다시 시도 하�
 
 *SQL Server에 대 한 연결을 설정 하는 동안 네트워크 관련 또는 인스턴스 관련 오류가 발생 했습니다. 서버를 찾을 수 없거나 액세스할 수 없습니다. 인스턴스 이름이 올바르고 SQL Server가 원격 연결을 허용 하도록 구성 되어 있는지 확인 하십시오. (공급자: SQL 네트워크 인터페이스, 오류: 26-지정 된 서버/인스턴스 찾기 오류)*
 
-해결책:
+해결 방법:
 
 연결 문자열을 확인 하십시오. 데이터베이스를 수동으로 삭제 한 경우 생성 문자열에서 데이터베이스 이름을 변경 합니다.
 

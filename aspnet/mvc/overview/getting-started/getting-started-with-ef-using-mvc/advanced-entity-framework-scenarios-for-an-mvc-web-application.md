@@ -10,10 +10,10 @@ ms.assetid: f35a9b0c-49ef-4cde-b06d-19d1543feb0b
 msc.legacyurl: /mvc/overview/getting-started/getting-started-with-ef-using-mvc/advanced-entity-framework-scenarios-for-an-mvc-web-application
 msc.type: authoredcontent
 ms.openlocfilehash: d7cc83a5b78a60f575f5c3065079679189296a0c
-ms.sourcegitcommit: ce28244209db8615bc9bdd576a2e2c88174d318d
+ms.sourcegitcommit: c9d9210e0d16fbb3829b7688cfb832dc263c79cc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 08/20/2020
 ms.locfileid: "86188737"
 ---
 # <a name="tutorial-learn-about-advanced-ef-scenarios-for-an-mvc-5-web-app"></a>자습서: MVC 5 웹 앱에 대 한 고급 EF 시나리오 알아보기
@@ -230,7 +230,7 @@ Entity Framework 6의 소스 코드는 [GitHub](https://github.com/aspnet/Entity
 
 소스 코드는 열려 있지만 Entity Framework은 Microsoft 제품으로 완전히 지원 됩니다. Microsoft Entity Framework 팀이 어떤 참가자를 수락할지 관리하고 각 릴리스의 품질을 보장하기 위해 모든 코드 변경 내용을 테스트합니다.
 
-## <a name="acknowledgments"></a>감사의 글
+## <a name="acknowledgments"></a>승인
 
 - Tom Dykstra는이 자습서의 원래 버전을 작성 하 고 EF 5 업데이트를 공동 작성 하 고 EF 6 업데이트를 작성 했습니다. Tom은 Microsoft 웹 플랫폼 및 도구 콘텐츠 팀의 선임 프로그래밍 기록기입니다.
 - Twitter ( [Rick Anderson](https://blogs.msdn.com/b/rickandy/) )는 [@RickAndMSFT](http://twitter.com/RickAndMSFT) EF 5 및 MVC 4의 자습서를 업데이트 하 고 ef 6 업데이트를 공동 작성 하는 대부분의 작업을 수행 했습니다. Rick는 Azure 및 MVC를 중심으로 하는 Microsoft의 선임 프로그래밍 기록기입니다.
