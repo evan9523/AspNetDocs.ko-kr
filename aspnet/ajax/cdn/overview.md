@@ -8,12 +8,12 @@ ms.date: 10/14/2017
 ms.assetid: 8935bf14-ca6d-4a4e-9dbe-b96ce74cef49
 msc.legacyurl: /ajax/cdn
 msc.type: content
-ms.openlocfilehash: 58e2d62da2181108f34bbf3e1e948977241e1dee
-ms.sourcegitcommit: b3c0e67bb231dbb0db9e8dfccd51cf715481edcc
+ms.openlocfilehash: 9eebe0e52af2a0fca967a51afb58c7db174d9fdb
+ms.sourcegitcommit: feb88edfb01b32f6fc9488f0f0ddb3c5b34e6ff0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88161359"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88702922"
 ---
 # <a name="microsoft-ajax-content-delivery-network"></a>Microsoft Ajax Content Delivery Network
 
@@ -48,7 +48,7 @@ ms.locfileid: "88161359"
  [CDN에 대 한 응답 릴리스](#Respond_Releases_on_the_CDN_13)  
  [CDN의 부트스트랩 릴리스](#Bootstrap_Releases_on_the_CDN_14)  
  [CDN의 부트스트랩 TouchCarousel 릴리스](#BootstrapTouchCarousel_Releases_on_the_CDN_18)  
- [CDN의Hammer.js 릴리스](#Hammerjs_Releases_on_the_CDN_19)  
+ [ CDN의Hammer.js 릴리스](#Hammerjs_Releases_on_the_CDN_19)  
  [ASP.NET Web Forms 및 CDN의 Ajax 릴리스](#ASPNET_Web_Forms_and_Ajax_Releases_on_the_CDN_15)  
  [CDN의 ASP.NET MVC 릴리스](#ASPNET_MVC_Releases_on_the_CDN_16)  
  [CDN의 ASP.NET SignalR 릴리스](#ASPNET_SignalR_Releases_on_the_CDN_17)
@@ -84,8 +84,8 @@ JavaScript 라이브러리를 제출 하려는 경우 라이브러리는 http://
 
 CDN은 microsoft.com 도메인 이름을 사용 하는 데 사용 되며 aspnetcdn.com 도메인 이름을 사용 하도록 변경 되었습니다. 브라우저에서 microsoft.com 도메인을 참조할 때 각 요청과 함께 네트워크를 통해 해당 도메인의 쿠키를 전송 하기 때문에 성능이 향상 되도록 변경 되었습니다. Microsoft.com가 아닌 도메인 이름으로 이름을 바꾸면 25%까지 늘어날 수 있습니다. 참고 ajax.microsoft.com는 계속 작동 하지만 ajax.aspnetcdn.com 권장 됩니다.
 
-- 이전 형식:https://ajax.microsoft.com/ajax/jQuery/jquery-1.8.0.js
-- 새 형식:https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js
+- 이전 형식: https://ajax.microsoft.com/ajax/jQuery/jquery-1.8.0.js
+- 새 형식: https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js
 
 <a id="Visual_Studio_vsdoc_Support_19"></a>
 
@@ -830,6 +830,21 @@ CDN에서 호스트 되는 [Modernizr](http://www.modernizr.com "Modernizr") 의
 ### <a name="bootstrap-releases-on-the-cdn"></a>CDN의 부트스트랩 릴리스
 
 CDN에서 호스트 되는 [getbootstrap.com](http://getbootstrap.com "getbootstrap.com") 부트스트랩의 릴리스는 다음과 같습니다.
+
+#### <a name="bootstrap-version-452"></a>부트스트랩 버전 4.5.2
+
+- https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.2/bootstrap.js
+- https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.2/bootstrap.min.js
+- https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.2/bootstrap.bundle.js
+- https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.2/css/bootstrap.css
+- https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.2/css/bootstrap.css.map
+- https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.2/css/bootstrap.min.css
+- https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.2/css/bootstrap-grid.css
+- https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.2/css/bootstrap-grid.min.css
+- https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.2/css/bootstrap-grid.css.map
+- https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.2/css/bootstrap-reboot.css
+- https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.2/css/bootstrap-reboot.min.css
+- https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.2/css/bootstrap-reboot.css.map
 
 #### <a name="bootstrap-version-450"></a>부트스트랩 버전 4.5.0
 

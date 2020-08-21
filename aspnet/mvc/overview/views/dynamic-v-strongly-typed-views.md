@@ -8,12 +8,12 @@ ms.date: 01/27/2011
 ms.assetid: 0cbd88da-0da6-4605-b222-2835c6478304
 msc.legacyurl: /mvc/overview/views/dynamic-v-strongly-typed-views
 msc.type: authoredcontent
-ms.openlocfilehash: 3e81c6381b1e280e3b74cb7eb6ea6e6c3224e655
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: 30b84c71c86e455f15a659abf566750f1c6eea90
+ms.sourcegitcommit: feb88edfb01b32f6fc9488f0f0ddb3c5b34e6ff0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78432575"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88702948"
 ---
 # <a name="dynamic-v-strongly-typed-views"></a>Dynamic v. 강력한 형식의 보기
 
@@ -22,7 +22,7 @@ ms.locfileid: "78432575"
 다음 세 가지 방법으로 컨트롤러에서 ASP.NET MVC 3의 뷰로 정보를 전달할 수 있습니다.
 
 1. 강력한 형식의 모델 개체입니다.
-2. 동적 형식 (@model 동적으로 사용)
+2. 동적 형식 ( @model 동적 사용)
 3. ViewBag 사용
 
 동적 및 강력한 형식의 뷰를 비교 하 고 대조 하는 간단한 MVC 3 최상위 블로그 응용 프로그램을 작성 했습니다. 컨트롤러는 간단한 블로그 목록으로 시작 합니다.
@@ -56,5 +56,3 @@ IndexNotStonglyTyped 된 () 메서드를 마우스 오른쪽 단추로 클릭 �
 새 보기 템플릿 내에서 intellisense 지원을 받게 됩니다.
 
 [![7002 [1]](dynamic-v-strongly-typed-views/_static/image8.png)](dynamic-v-strongly-typed-views/_static/image7.png)
-
-C # 프로젝트는 [여기](https://blogs.msdn.com/cfs-file.ashx/__key/CommunityServer-Blogs-Components-WeblogFiles/00-00-01-11-73-SSMS/1817.Mvc3ViewDemo.zip)에서 다운로드할 수 있습니다.
