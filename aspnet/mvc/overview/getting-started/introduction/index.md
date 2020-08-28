@@ -8,18 +8,18 @@ ms.date: 06/10/2013
 ms.assetid: 9afe7454-f1bd-4e81-8ecf-12fe54d080c1
 msc.legacyurl: /mvc/overview/getting-started/introduction
 msc.type: chapter
-ms.openlocfilehash: ca751a5b0eb43b9fa2ad26493b4a627bb964332f
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: 9dc77b4a5b9d9e2e528428c3c4f440ae120756c9
+ms.sourcegitcommit: 4e6d586faadbe4d9ef27122f86335ec9385134af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78470597"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89045312"
 ---
 # <a name="getting-started-with-aspnet-mvc-5"></a>ASP.NET MVC 5 시작
 
 > ASP.NET MVC 5 소개
 
-[!INCLUDE [consider RP](../../../../includes/razor.md)]
+[!INCLUDE [consider RP](~/includes/razor.md)]
 
 다음 자습서 시리즈는 [GitHub](https://github.com/dotnet/AspNetDocs/tree/master/aspnet/mvc/overview/getting-started/introduction/sample/MvcMovie/MvcMovie) 에 있는 ASP.NET MVC: Source에 대해 설명 합니다.
 

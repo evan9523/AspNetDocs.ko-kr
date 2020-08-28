@@ -8,12 +8,12 @@ ms.date: 01/12/2011
 ms.assetid: 5cb3c59b-1e96-464b-b3a8-c55607201872
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/vb/examining-the-edit-methods-and-edit-view
 msc.type: authoredcontent
-ms.openlocfilehash: db9f6bc9edfba7d4ece575aad4c9cdc029abb7f1
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: fc4d59323ab3cc1e4a454676a0ec498f3c5246fd
+ms.sourcegitcommit: 4e6d586faadbe4d9ef27122f86335ec9385134af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "86163212"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89044599"
 ---
 # <a name="examining-the-edit-methods-and-edit-view-vb"></a>편집 메서드 및 편집 보기 검사(VB)
 
@@ -137,7 +137,7 @@ LINQ 쿼리는 정의 될 때 또는 또는와 같은 메서드를 호출 하 �
 
 `SearchIndex`이라는 매개 변수를 포함 하도록 메서드의 서명을 변경 하는 경우 `id` `id` 매개 변수는 `{id}` *global.asax* 파일에 설정 된 기본 경로에 대 한 자리 표시자와 일치 합니다.
 
-[!code-json[Main](examining-the-edit-methods-and-edit-view/samples/sample11.json)]
+[!code-json[Main](examining-the-edit-methods-and-edit-view/samples/sample11.txt)]
 
 수정 된 메서드는 다음과 같습니다 `SearchIndex` .
 

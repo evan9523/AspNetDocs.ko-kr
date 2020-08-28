@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.assetid: f35a9b0c-49ef-4cde-b06d-19d1543feb0b
 msc.legacyurl: /mvc/overview/getting-started/getting-started-with-ef-using-mvc/advanced-entity-framework-scenarios-for-an-mvc-web-application
 msc.type: authoredcontent
-ms.openlocfilehash: d7cc83a5b78a60f575f5c3065079679189296a0c
-ms.sourcegitcommit: c9d9210e0d16fbb3829b7688cfb832dc263c79cc
+ms.openlocfilehash: 2bfa4401c73b56be87502ffbb189abab3c59c226
+ms.sourcegitcommit: 4e6d586faadbe4d9ef27122f86335ec9385134af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "86188737"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89045002"
 ---
 # <a name="tutorial-learn-about-advanced-ef-scenarios-for-an-mvc-5-web-app"></a>자습서: MVC 5 웹 앱에 대 한 고급 EF 시나리오 알아보기
 
@@ -130,7 +130,7 @@ Contoso 대학 관리자가 모든 과정에 대 한 크레딧 수를 변경 하
 
 이제 문에 중단점을 설정 `return` 합니다 (해당 줄에서 커서를 사용 하 여 F9). **F5** 키를 눌러 디버그 모드에서 프로젝트를 실행 하 고 과정 인덱스 페이지를 선택 합니다. 코드가 중단점에 도달 하면 변수를 검사 `sql` 합니다. SQL Server로 전송 된 쿼리가 표시 됩니다. 간단한 `Select` 문입니다.
 
-[!code-json[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample7.json)]
+[!code-json[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample7.sql)]
 
 **텍스트 시각화 도우미**에서 쿼리를 보려면 돋보기를 클릭 합니다.
 

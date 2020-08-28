@@ -8,12 +8,12 @@ ms.date: 06/26/2013
 ms.assetid: 23fc77da-2725-4434-99a0-ff872d96336b
 msc.legacyurl: /web-api/overview/web-api-routing-and-actions/create-a-rest-api-with-attribute-routing
 msc.type: authoredcontent
-ms.openlocfilehash: 6eac36767bf34857d5341188d0653e7fec7cade2
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: f6ff5fa18a44b3e6717ec0141ebe101bcdc0bee4
+ms.sourcegitcommit: 4e6d586faadbe4d9ef27122f86335ec9385134af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "86188848"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89045184"
 ---
 # <a name="create-a-rest-api-with-attribute-routing-in-aspnet-web-api-2"></a>ASP.NET Web API 2에서 특성 라우팅을 사용 하 여 REST API 만들기
 
@@ -238,7 +238,7 @@ Ctrl+Shift+B를 눌러 프로젝트를 빌드합니다. Entity Framework는 리�
 
 여기에는 미묘한 중요 한 세부 정보가 있습니다. 두 번째 경로 템플릿의 \* {pubdate} 매개 변수 시작 부분에 와일드 카드 문자 ()가 있습니다.
 
-[!code-json[Main](create-a-rest-api-with-attribute-routing/samples/sample21.json)]
+[!code-json[Main](create-a-rest-api-with-attribute-routing/samples/sample21.txt)]
 
 이렇게 하면 {pubdate}가 URI의 나머지 부분과 일치 해야 한다는 것을 라우팅 엔진에 알립니다. 기본적으로 템플릿 매개 변수는 단일 URI 세그먼트와 일치 합니다. 이 경우에는 {pubdate}를 여러 개의 URI 세그먼트로 확장 하려고 합니다.
 

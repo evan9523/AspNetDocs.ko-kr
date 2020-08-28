@@ -8,14 +8,14 @@ ms.date: 04/21/2011
 ms.assetid: b3193d33-2d0b-4d98-9712-58bd897c62ec
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-6
 msc.type: authoredcontent
-ms.openlocfilehash: bc031dd5be61cc6707c522f85f6af77a420c8b31
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: 24d3f028a9a720e5b526518624c9c1c2ce2c37d4
+ms.sourcegitcommit: 4e6d586faadbe4d9ef27122f86335ec9385134af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78433535"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89044950"
 ---
-# <a name="part-6-using-data-annotations-for-model-validation"></a>6 부: 모델 유효성 검사에 데이터 주석 사용
+# <a name="part-6-using-data-annotations-for-model-validation"></a>6부: 모델 유효성 검사에 데이터 주석 사용
 
 받은 사람 ( [Jon Galloway](https://github.com/jongalloway) )
 
@@ -40,7 +40,7 @@ ms.locfileid: "78433535"
 - **Bind** – 모델 속성에 매개 변수 또는 폼 값을 바인딩할 때 제외 하거나 포함할 필드를 나열 합니다.
 - **ScaffoldColumn** – 편집기 양식에서 필드를 숨길 수 있습니다.
 
-*참고: 데이터 주석 특성을 사용한 모델 유효성 검사에 대 한 자세한 내용은 MSDN 설명서를 참조* 하십시오[`https://go.microsoft.com/fwlink/?LinkId=159063`](https://go.microsoft.com/fwlink/?LinkId=159063)
+*참고: 데이터 주석 특성을 사용한 모델 유효성 검사에 대 한 자세한 내용은 MSDN 설명서를 참조 하십시오.*[`https://go.microsoft.com/fwlink/?LinkId=159063`](https://go.microsoft.com/fwlink/?LinkId=159063)
 
 앨범 클래스를 열고 맨 위에 다음 *using* 문을 추가 합니다.
 

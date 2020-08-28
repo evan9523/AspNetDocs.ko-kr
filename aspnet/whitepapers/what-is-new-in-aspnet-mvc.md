@@ -8,12 +8,12 @@ ms.date: 04/20/2010
 ms.assetid: 69a8d6f8-4b10-4602-8822-2d6c05fc432b
 msc.legacyurl: /whitepapers/what-is-new-in-aspnet-mvc
 msc.type: content
-ms.openlocfilehash: 1a0a29241d8afecd295b11013b27621b21c9ed52
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: ecc840c33714aa04bebcd9e413cb548eca8cc058
+ms.sourcegitcommit: 4e6d586faadbe4d9ef27122f86335ec9385134af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "86162715"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89045041"
 ---
 # <a name="whats-new-in-aspnet-mvc-2"></a>ASP.NET MVC 2의 새로운 기능
 
@@ -40,7 +40,7 @@ ms.locfileid: "86162715"
 [주요 변경 내용](#_TOC5)  
 [고지 사항](#_TOC6)  
 
-## <a name="introduction"></a><a id="_TOC1"></a>간략하게
+## <a name="introduction"></a><a id="_TOC1"></a>  간략하게
 
 ASP.NET MVC 2는 ASP.NET MVC 1.0을 기반으로 하며 생산성 향상에 중점을 두는 다양 한 향상 된 기능 및 기능을 소개 합니다. 이 릴리스는 ASP.NET MVC 1.0와 호환 되므로 ASP.NET MVC 1.0의 모든 기술 자료, 기술, 코드 및 확장이 계속 적용 됩니다.
 
@@ -50,19 +50,19 @@ ASP.NET MVC에 대 한 자세한 내용은 다음 리소스를 참조 하세요.
 - [ASP.NET MVC 웹 사이트](https://asp.net/mvc/)
 - [ASP.NET MVC 포럼](https://forums.asp.net/1146.aspx)
 
-## <a name="upgrading-an-aspnet-mvc-10-project-to-aspnet-mvc-2"></a><a id="_TOC2"></a>ASP.NET MVC 1.0 프로젝트를 ASP.NET MVC 2로 업그레이드
+## <a name="upgrading-an-aspnet-mvc-10-project-to-aspnet-mvc-2"></a><a id="_TOC2"></a>  ASP.NET MVC 1.0 프로젝트를 ASP.NET MVC 2로 업그레이드
 
 ASP.NET MVC 2는 동일한 서버에 ASP.NET MVC 1.0와 함께 설치할 수 있습니다. 그러면 응용 프로그램 개발자가 ASP.NET MVC 1.0 응용 프로그램을 ASP.NET MVC 2로 업그레이드할 시기를 유연 하 게 선택할 수 있습니다. 업그레이드 하는 방법에 대 한 자세한 내용은 [ASP.NET mvc 1.0 응용 프로그램을 ASP.NET mvc 2로 업그레이드](https://go.microsoft.com/fwlink/?LinkID=185459)문서를 참조 하세요.
 
-## <a name="new-features"></a><a id="_TOC3"></a>새 기능
+## <a name="new-features"></a><a id="_TOC3"></a>  새 기능
 
 이 섹션에서는 MVC 2 릴리스에 도입 된 기능을 설명 합니다.
 
-### <a name="templated-helpers"></a><a id="_TOC3_1"></a>템플릿 기반 도우미
+### <a name="templated-helpers"></a><a id="_TOC3_1"></a>  템플릿 기반 도우미
 
 템플릿 기반 도우미를 사용 하면 편집 및 표시를 위해 HTML 요소를 데이터 형식과 자동으로 연결할 수 있습니다. 예를 들어 DateTime 형식의 데이터가 뷰에 표시 되는 경우에는 날짜 선택 UI 요소가 자동으로 렌더링 될 수 있습니다. 이는 ASP.NET Dynamic Data에서 필드 템플릿이 작동 하는 방법과 비슷합니다. 자세한 내용은 MSDN 웹 사이트에서 [템플릿 기반 도우미를 사용 하 여 데이터 표시](https://go.microsoft.com/fwlink/?LinkId=159062) 를 참조 하세요.
 
-### <a name="areas"></a><a id="_TOC3_2"></a>영역인
+### <a name="areas"></a><a id="_TOC3_2"></a>  영역인
 
 영역을 사용 하면 많은 수의 작은 섹션으로 많은 프로젝트를 구성 하 여 규모가 많은 웹 응용 프로그램의 복잡성을 관리할 수 있습니다. 각 섹션 ("영역")은 일반적으로 규모가 많은 웹 사이트의 개별 섹션을 나타내며 관련 컨트롤러 및 뷰 집합을 그룹화 하는 데 사용 됩니다. 자세한 내용은 연습: MSDN 웹 사이트의 [영역별로 ASP.NET MVC 응용 프로그램 구성](https://go.microsoft.com/fwlink/?LinkId=158978) 을 참조 하세요.
 
@@ -82,15 +82,15 @@ ASP.NET MVC 2의 기본 프로젝트 템플릿에는 Global.asax 파일의 코�
 
 컨텍스트를 호출 하 여 RegisterArea 메서드에 네임 스페이스를 지정 하지 않는 경우 네임 스페이스. Add 메서드, 등록 클래스의 네임 스페이스는 기본적으로 사용 됩니다.
 
-### <a name="support-for-asynchronous-controllers"></a><a id="_TOC3_3"></a>비동기 컨트롤러에 대 한 지원
+### <a name="support-for-asynchronous-controllers"></a><a id="_TOC3_3"></a>  비동기 컨트롤러에 대 한 지원
 
 이제 ASP.NET MVC 2를 사용 하 여 컨트롤러에서 요청을 비동기적으로 처리할 수 있습니다. 이로 인해 차단 작업 (예: 네트워크 요청)을 자주 호출 하 여 차단 되지 않는 요소를 호출 하는 서버를 허용 하 여 성능이 향상 될 수 있습니다. 자세한 내용은 MSDN의 [ASP.NET MVC에서 비동기 컨트롤러 사용](https://msdn.microsoft.com/library/ee728598(v=VS.100).aspx) 항목을 참조 하세요.
 
-### <a name="support-for-defaultvalueattribute-in-action-method-parameters"></a><a id="_TOC3_4"></a>작업 메서드 매개 변수에서 DefaultValueAttribute 지원
+### <a name="support-for-defaultvalueattribute-in-action-method-parameters"></a><a id="_TOC3_4"></a>  작업 메서드 매개 변수에서 DefaultValueAttribute 지원
 
 System.componentmodel 클래스를 사용 하면 인수 매개 변수에 대 한 기본값을 동작 메서드에 제공할 수 있습니다. 예를 들어 다음 기본 경로가 정의 되어 있다고 가정 합니다.
 
-[!code-json[Main](what-is-new-in-aspnet-mvc/samples/sample3.json)]
+[!code-json[Main](what-is-new-in-aspnet-mvc/samples/sample3.txt)]
 
 또한 다음과 같은 컨트롤러 및 작업 메서드가 정의 되어 있다고 가정 합니다.
 
@@ -108,7 +108,7 @@ DefaultValueAttribute 특성이 없으면 페이지 인수가 값이 제공 되�
 
 [!code-vb[Main](what-is-new-in-aspnet-mvc/samples/sample5.vb)]
 
-### <a name="support-for-binding-binary-data-with-model-binders"></a><a id="_TOC3_5"></a>모델 바인더를 사용 하 여 이진 데이터 바인딩 지원
+### <a name="support-for-binding-binary-data-with-model-binders"></a><a id="_TOC3_5"></a>  모델 바인더를 사용 하 여 이진 데이터 바인딩 지원
 
 Base-64로 인코딩된 문자열로 이진 값을 인코딩하는 Html. 숨겨진 도우미의 새 오버 로드가 다음과 같이 두 가지 있습니다.
 
@@ -132,7 +132,7 @@ Base-64로 인코딩된 문자열로 이진 값을 인코딩하는 Html. 숨겨�
 
 작업 메서드에서 게시 된 base-64로 인코딩된 문자열을 바이트 배열로 변환 하기 때문에 TimeStamp 속성이 올바르게 채워집니다.
 
-### <a name="modelmetadata-and-modelmetadataprovider-classes"></a><a id="_TOC3_6"></a>ModelMetadata 및 ModelMetadataProvider 클래스
+### <a name="modelmetadata-and-modelmetadataprovider-classes"></a><a id="_TOC3_6"></a>  ModelMetadata 및 ModelMetadataProvider 클래스
 
 ModelMetadataProvider 클래스는 뷰 내에서 모델에 대 한 메타 데이터를 가져오기 위한 추상화를 제공 합니다. MVC 2에는 System.componentmodel 네임 스페이스의 특성에 의해 노출 되는 메타 데이터를 사용할 수 있도록 하는 기본 공급자가 포함 되어 있습니다. 데이터베이스 또는 XML 파일과 같은 다른 데이터 저장소에서 메타 데이터를 제공 하는 메타 데이터 공급자를 만들 수 있습니다.
 
@@ -140,29 +140,29 @@ ViewDataDictionary 클래스는 ModelMetadataProvider 클래스에 의해 모델
 
 자세한 내용은 [Modelmetadata](https://msdn.microsoft.com/library/system.web.mvc.modelmetadataprovider(VS.100).aspx) 및 [modelmetadataprovider](https://msdn.microsoft.com/library/system.web.mvc.modelmetadataprovider(VS.100).aspx) 클래스에 대 한 설명서를 참조 하세요.
 
-### <a name="support-for-dataannotations-attributes"></a><a id="_TOC3_7"></a>DataAnnotations 특성에 대 한 지원
+### <a name="support-for-dataannotations-attributes"></a><a id="_TOC3_7"></a>  DataAnnotations 특성에 대 한 지원
 
 ASP.NET MVC 2는 입력 유효성 검사를 제공 하기 위해 모델에 바인딩할 때 범위 특성, RequiredAttribute, StringLengthAttribute 및 RegexAttribute 유효성 검사 특성 (System.componentmodel 네임 스페이스에 정의 됨)을 사용할 수 있도록 지원 합니다.
 
 자세한 내용은 MSDN 웹 사이트에서 [방법: Dataannotations을 사용 하 여 모델 데이터 유효성 검사 특성](https://go.microsoft.com/fwlink/?LinkId=159063) 을 참조 하세요. 이러한 특성의 사용을 보여 주는 샘플 프로젝트는에서 다운로드할 수 있습니다 [https://go.microsoft.com/fwlink/?LinkId=157753](https://go.microsoft.com/fwlink/?LinkId=157753) .
 
-### <a name="model-validator-providers"></a><a id="_TOC3_8"></a>모델 유효성 검사기 공급자
+### <a name="model-validator-providers"></a><a id="_TOC3_8"></a>  모델 유효성 검사기 공급자
 
 모델 유효성 검사 공급자 클래스는 모델에 대 한 유효성 검사 논리를 제공 하는 추상화를 나타냅니다. ASP.NET MVC에는 System.componentmodel annotation 네임 스페이스에 포함 된 유효성 검사 특성을 기반으로 하는 기본 공급자가 포함 되어 있습니다. 모델에 대 한 유효성 검사 규칙의 사용자 지정 매핑과 사용자 지정 유효성 검사 규칙을 정의 하는 고유한 유효성 검사 공급자를 만들 수도 있습니다. 자세한 내용은 [ModelValidatorProvider](https://msdn.microsoft.com/library/system.web.mvc.ModelValidatorProvider(VS.100).aspx) 클래스에 대 한 설명서를 참조 하세요.
 
-### <a name="client-side-validation"></a><a id="_TOC3_9"></a>클라이언트 쪽 유효성 검사
+### <a name="client-side-validation"></a><a id="_TOC3_9"></a>  클라이언트 쪽 유효성 검사
 
 모델 유효성 검사기 공급자 클래스는 클라이언트 쪽 유효성 검사 라이브러리에서 사용할 수 있는 JSON 직렬화 된 데이터 형식으로 브라우저에 유효성 검사 메타 데이터를 노출 합니다. ASP.NET MVC 2에는 앞에서 설명한 DataAnnotations 네임 스페이스 유효성 검사 특성을 지 원하는 클라이언트 유효성 검사 라이브러리 및 어댑터가 포함 되어 있습니다. 공급자 클래스를 사용 하 여 JSON 데이터를 처리 하 고 대체 라이브러리로 호출 하는 어댑터를 작성 하 여 다른 클라이언트 유효성 검사 라이브러리를 사용할 수도 있습니다.
 
-### <a name="new-code-snippets-for-visual-studio-2010"></a><a id="_TOC3_10"></a>Visual Studio 2010에 대 한 새 코드 조각
+### <a name="new-code-snippets-for-visual-studio-2010"></a><a id="_TOC3_10"></a>  Visual Studio 2010에 대 한 새 코드 조각
 
 ASP.NET MVC 2에 대 한 일련의 HTML 코드 조각이 Visual Studio 2010와 함께 설치 됩니다. 이러한 코드 조각의 목록을 보려면 도구 메뉴에서 코드 조각 관리자를 선택 합니다. 언어에 대해 HTML을 선택 하 고 위치에서 ASP.NET MVC 2를 선택 합니다. 코드 조각을 사용 하는 방법에 대 한 자세한 내용은 Visual Studio 설명서를 참조 하세요.
 
-### <a name="new-requirehttpsattribute-action-filter"></a><a id="_TOC3_11"></a>새 RequireHttpsAttribute 작업 필터
+### <a name="new-requirehttpsattribute-action-filter"></a><a id="_TOC3_11"></a>  새 RequireHttpsAttribute 작업 필터
 
 ASP.NET MVC 2에는 작업 메서드 및 컨트롤러에 적용할 수 있는 새 RequireHttpsAttribute 클래스가 포함 되어 있습니다. 기본적으로이 필터는 비 SSL (HTTP) 요청을 SSL 사용 (HTTPS)으로 리디렉션합니다.
 
-### <a name="overriding-the-http-method-verb"></a><a id="_TOC3_12"></a>HTTP 메서드 동사 재정의
+### <a name="overriding-the-http-method-verb"></a><a id="_TOC3_12"></a>  HTTP 메서드 동사 재정의
 
 REST 아키텍처 스타일을 사용 하 여 웹 사이트를 빌드할 때 HTTP 동사는 리소스에 대해 수행할 작업을 결정 하는 데 사용 됩니다. REST를 사용 하려면 응용 프로그램이 GET, PUT, POST 및 DELETE를 비롯 한 일반적인 HTTP 동사의 전체 범위를 지원 해야 합니다.
 
@@ -188,7 +188,7 @@ ASP.NET MVC 2에는 작업 메서드에 적용할 수 있는 새로운 특성과
 
 이 재정의는 실제 요청이 POST 요청인 경우에만 사용할 수 있습니다. 다른 HTTP 동사를 사용 하는 요청에 대해서는 재정의 값이 무시 됩니다.
 
-### <a name="new-hiddeninputattribute-class-for-templated-helpers"></a><a id="_TOC3_13"></a>템플릿 도우미에 대 한 새 HiddenInputAttribute 클래스
+### <a name="new-hiddeninputattribute-class-for-templated-helpers"></a><a id="_TOC3_13"></a>  템플릿 도우미에 대 한 새 HiddenInputAttribute 클래스
 
 모델 속성에 새 HiddenInputAttribute 특성을 적용 하 여 편집기 템플릿에 모델을 표시할 때 숨겨진 input 요소를 렌더링할지 여부를 지정할 수 있습니다. 특성은 HiddenInput의 암시적 UIHint 값을 설정 합니다. 특성의 DisplayValue 속성을 사용 하 여 편집기 및 디스플레이 모드에서 값을 표시할지 여부를 지정할 수 있습니다. DisplayValue를 false로 설정 하면 일반적으로 필드를 둘러싸는 HTML 태그 뿐만 아니라 아무것도 표시 되지 않습니다. DisplayValue의 기본값은 true입니다.
 
@@ -211,15 +211,15 @@ ASP.NET MVC 2에는 작업 메서드에 적용할 수 있는 새로운 특성과
 - 표시 템플릿에서는 해당 필드에 대해 아무것도 렌더링 되지 않습니다.
 - 편집기 템플릿에서는 레이블이 렌더링 되지 않으며 값이 숨겨진 input 요소에 렌더링 됩니다.
 
-### <a name="htmlvalidationsummary-helper-method-can-display-model-level-errors"></a><a id="_TOC3_14"></a>ValidationSummary 도우미 메서드는 모델 수준 오류를 표시할 수 있습니다.
+### <a name="htmlvalidationsummary-helper-method-can-display-model-level-errors"></a><a id="_TOC3_14"></a>  ValidationSummary 도우미 메서드는 모델 수준 오류를 표시할 수 있습니다.
 
 모든 유효성 검사 오류를 항상 표시 하는 대신 ValidationSummary 도우미 메서드에 모델 수준 오류만 표시 하는 새로운 옵션이 있습니다. 이렇게 하면 각 필드 옆에 표시 될 유효성 검사 요약 및 필드 관련 오류에 모델 수준 오류가 표시 됩니다.
 
-### <a name="t4-templates-in-visual-studio-generate-code-that-is-specific-to-the-target-version-of-the-net-framework"></a><a id="_TOC3_15"></a>Visual Studio의 T4 템플릿은 .NET Framework 대상 버전과 관련 된 코드를 생성 합니다.
+### <a name="t4-templates-in-visual-studio-generate-code-that-is-specific-to-the-target-version-of-the-net-framework"></a><a id="_TOC3_15"></a>  Visual Studio의 T4 템플릿은 .NET Framework 대상 버전과 관련 된 코드를 생성 합니다.
 
 응용 프로그램에서 사용 하는 .NET Framework 버전을 지정 하는 ASP.NET MVC T4 호스트의 T4 파일에 새 속성을 사용할 수 있습니다. 이렇게 하면 T4 템플릿이 .NET Framework 버전에 해당 하는 코드와 태그를 생성할 수 있습니다. Visual Studio 2008에서 값은 항상 .NET 3.5입니다. Visual Studio 2010에서 값은 .NET 3.5 또는 .NET 4입니다.
 
-## <a name="api-improvements"></a><a id="_TOC4"></a>API 향상
+## <a name="api-improvements"></a><a id="_TOC4"></a>  API 향상
 
 이 섹션에서는 기존 ASP.NET MVC 형식 및 멤버의 변경 내용에 대해 설명 합니다.
 
@@ -233,7 +233,7 @@ ASP.NET MVC 2에는 작업 메서드에 적용할 수 있는 새로운 특성과
 - AuthorizationContext 클래스에서 ActionDescriptor 속성을 추가 했습니다.
 - UrlParameter를 추가 했습니다. 폼 게시에 속성이 없을 때 ID 속성이 포함 된 모델에 바인딩할 때 문제를 해결 하는 데 사용할 수 있는 선택적 토큰입니다. 자세한 내용은 Phil Haack의 블로그에서 [ASP.NET MVC 2 선택적 URL 매개 변수](http://haacked.com/archive/2010/02/12/asp-net-mvc-2-optional-url-parameters.aspx) 항목을 참조 하세요.
 
-## <a name="breaking-changes"></a><a id="_TOC5"></a>주요 변경 내용
+## <a name="breaking-changes"></a><a id="_TOC5"></a>  주요 변경 내용
 
 다음 변경 내용으로 인해 기존 ASP.NET MVC 1.0 응용 프로그램에서 오류가 발생할 수 있습니다.
 
@@ -284,7 +284,7 @@ RequestContext 속성을 제거 하 여 DefaultControllerFactory 클래스를 �
 
 영역 기능을 사용 하는 경우 경로 URL의 일부로 {area}를 사용 하지 않도록 해야 합니다.
 
-## <a name="disclaimer"></a><a id="_TOC6"></a>내용을
+## <a name="disclaimer"></a><a id="_TOC6"></a>  내용을
 
 본 문서는 예비 문서이며, 여기에 설명한 소프트웨어의 최종 상업적 출시 전에 크게 변경될 수 있습니다.
 

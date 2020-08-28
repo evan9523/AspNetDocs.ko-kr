@@ -8,18 +8,18 @@ ms.date: 10/17/2013
 ms.assetid: 4085de68-d243-4378-8a64-86236ea8d2da
 msc.legacyurl: /mvc/overview/getting-started/introduction/adding-a-new-field
 msc.type: authoredcontent
-ms.openlocfilehash: 5974e53e4610dccc7812df261dc97a9b0327de85
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: 7018de3eab9d7cced72c76d0b74a79f7c8154f9d
+ms.sourcegitcommit: 4e6d586faadbe4d9ef27122f86335ec9385134af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78470933"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89045145"
 ---
 # <a name="adding-a-new-field"></a>새 필드 추가
 
 [Rick Anderson](https://twitter.com/RickAndMSFT)
 
-[!INCLUDE [Tutorial Note](index.md)]
+[!INCLUDE [consider RP](~/includes/razor.md)]
 
 이 섹션에서는 변경 내용이 데이터베이스에 적용 되도록 Entity Framework Code First 마이그레이션를 사용 하 여 일부 변경 사항을 모델 클래스로 마이그레이션합니다.
 
@@ -33,13 +33,13 @@ ms.locfileid: "78470933"
 
 애플리케이션을 빌드하여 오류가 없는지 확인합니다.
 
-**도구** 메뉴에서 **NuGet 패키지 관리자**, **패키지 관리자 콘솔**을 차례로 클릭합니다.
+**도구** 메뉴에서 **NuGet 패키지 관리자** , **패키지 관리자 콘솔**을 차례로 클릭 합니다.
 
 ![Pack Man 추가](adding-a-new-field/_static/image2.png)
 
-**패키지 관리자 콘솔** 창의 `PM>` 프롬프트에 다음을 입력 합니다.
+**패키지 관리자 콘솔** 창의 프롬프트에 다음을 `PM>` 입력 합니다.
 
-Enable-Migrations -ContextTypeName MvcMovie.Models.MovieDBContext
+사용-마이그레이션-MovieDBContext
 
 ![](adding-a-new-field/_static/image3.png)
 
@@ -47,11 +47,11 @@ Enable-Migrations -ContextTypeName MvcMovie.Models.MovieDBContext
 
 ![](adding-a-new-field/_static/image4.png)
 
-Visual Studio에서 *Configuration.cs* 파일을 엽니다. *Configuration.cs* 파일의 `Seed` 메서드를 다음 코드로 바꿉니다.
+Visual Studio에서 *Configuration.cs* 파일을 엽니다. `Seed` *Configuration.cs* 파일의 메서드를 다음 코드로 바꿉니다.
 
 [!code-csharp[Main](adding-a-new-field/samples/sample1.cs)]
 
-`Movie` 아래의 빨간색 물결선을 마우스로 가리키고 `Show Potential Fixes` 클릭 한 다음 mvcmovie **사용** 을 클릭 **합니다. 모델;**
+아래의 빨간색 물결선을 마우스로 가리킨 `Movie` `Show Potential Fixes` 다음 클릭 하 고 **mvcmovie를 사용 합니다. 모델을 클릭 합니다.** **using**
 
 ![](adding-a-new-field/_static/image5.png)
 
@@ -61,7 +61,7 @@ Visual Studio에서 *Configuration.cs* 파일을 엽니다. *Configuration.cs* �
 
 > [!NOTE]
 > 
-> Code First 마이그레이션는 마이그레이션 때마다 (즉, 패키지 관리자 콘솔에서 **업데이트 데이터베이스** 를 호출 하는 경우) `Seed` 메서드를 호출 하 고,이 메서드는 이미 삽입 된 행을 업데이트 하거나 아직 존재 하지 않는 경우 삽입 합니다.
+> Code First 마이그레이션 `Seed` 은 모든 마이그레이션 후 메서드를 호출 하 고 (즉, 패키지 관리자 콘솔에서 **업데이트-데이터베이스** 를 호출),이 메서드는 이미 삽입 된 행을 업데이트 하거나 아직 존재 하지 않는 경우 삽입 합니다.
 > 
 > 다음 코드의 [Addorupdate](https://msdn.microsoft.com/library/system.data.entity.migrations.idbsetextensions.addorupdate(v=vs.103).aspx) 메서드는 "upsert" 작업을 수행 합니다.
 > 
@@ -69,7 +69,7 @@ Visual Studio에서 *Configuration.cs* 파일을 엽니다. *Configuration.cs* �
 > 
 > [초기값](https://msdn.microsoft.com/library/hh829453(v=vs.103).aspx) 은 마이그레이션할 때마다 실행 되기 때문에 추가 하려는 행은 데이터베이스를 만드는 첫 번째 마이그레이션 후에 이미 있기 때문에 데이터를 삽입 하기만 하면 됩니다. "[Upsert](http://en.wikipedia.org/wiki/Upsert)" 작업은 이미 있는 행을 삽입 하려고 할 때 발생 하는 오류를 방지 하지만 응용 프로그램을 테스트 하는 동안 수행 된 데이터의 변경 내용을 재정의 합니다. 일부 테이블에서 테스트 데이터를 사용 하는 경우 이러한 상황이 발생 하지 않을 수 있습니다. 테스트 하는 동안 데이터를 변경 하는 경우 데이터베이스 업데이트 후에 변경 내용을 유지 하려는 경우도 있습니다. 조건부 삽입 작업을 수행 하려는 경우: 행이 아직 없는 경우에만 행을 삽입 합니다.   
 > 
-> [Addorupdate](https://msdn.microsoft.com/library/system.data.entity.migrations.idbsetextensions.addorupdate(v=vs.103).aspx) 메서드에 전달 된 첫 번째 매개 변수는 행이 이미 있는지 여부를 확인 하는 데 사용할 속성을 지정 합니다. 제공 하는 테스트 동영상 데이터의 경우 목록에서 각 제목이 고유 하기 때문에 `Title` 속성을이 용도로 사용할 수 있습니다.
+> [Addorupdate](https://msdn.microsoft.com/library/system.data.entity.migrations.idbsetextensions.addorupdate(v=vs.103).aspx) 메서드에 전달 된 첫 번째 매개 변수는 행이 이미 있는지 여부를 확인 하는 데 사용할 속성을 지정 합니다. 제공 하는 테스트 동영상 데이터의 경우 `Title` 목록에서 각 제목이 고유 하므로 속성을이 용도로 사용할 수 있습니다.
 > 
 > [!code-csharp[Main](adding-a-new-field/samples/sample4.cs)]
 > 
@@ -81,27 +81,27 @@ Visual Studio에서 *Configuration.cs* 파일을 엽니다. *Configuration.cs* �
 
 **CTRL + SHIFT + B를 눌러 프로젝트를 빌드합니다.** 이 시점에서 빌드하지 않은 경우 다음 단계가 실패 합니다.
 
-다음 단계는 초기 마이그레이션에 대 한 `DbMigration` 클래스를 만드는 것입니다. 이 마이그레이션은 새 데이터베이스를 만들기 때문에 이전 단계에서 *영화 .mdf* 파일을 삭제 했습니다.
+다음 단계는 초기 마이그레이션의 클래스를 만드는 것입니다 `DbMigration` . 이 마이그레이션은 새 데이터베이스를 만들기 때문에 이전 단계에서 *영화 .mdf* 파일을 삭제 했습니다.
 
-**패키지 관리자 콘솔** 창에서 명령을 `add-migration Initial` 입력 하 여 초기 마이그레이션을 만듭니다. "초기" 이름은 임의로 생성 되며 만들어진 마이그레이션 파일의 이름을 사용 하는 데 사용 됩니다.
+**패키지 관리자 콘솔** 창에서 명령을 입력 `add-migration Initial` 하 여 초기 마이그레이션을 만듭니다. "초기" 이름은 임의로 생성 되며 만들어진 마이그레이션 파일의 이름을 사용 하는 데 사용 됩니다.
 
 ![](adding-a-new-field/_static/image6.png)
 
-Code First 마이그레이션는 *마이그레이션* 폴더에 다른 클래스 파일 ( *{datestamp}\_Initial.cs* )을 만들고이 클래스에는 데이터베이스 스키마를 만드는 코드가 포함 되어 있습니다. 마이그레이션 파일 이름은 순서를 지정 하는 데 도움이 되는 타임 스탬프로 미리 고정 되어 있습니다. *{Datestamp}\_Initial.cs* 파일을 검토 합니다. 여기에는 Movie DB에 대 한 `Movies` 테이블을 만드는 지침이 포함 되어 있습니다. 아래 지침에서 데이터베이스를 업데이트 하는 경우이 *{Datestamp}\_Initial.cs* 파일이 실행 되어 DB 스키마를 만듭니다. 그런 다음 **시드** 메서드를 실행 하 여 DB를 테스트 데이터로 채웁니다.
+Code First 마이그레이션는 *마이그레이션* 폴더 ( *{datestamp} \_ Initial.cs* )에 다른 클래스 파일을 만들고,이 클래스에는 데이터베이스 스키마를 만드는 코드가 포함 되어 있습니다. 마이그레이션 파일 이름은 순서를 지정 하는 데 도움이 되는 타임 스탬프로 미리 고정 되어 있습니다. *{Datestamp} \_ Initial.cs* 파일을 검토 합니다. 여기에는 `Movies` Movie DB에 대 한 테이블을 만드는 지침이 포함 되어 있습니다. 아래 지침에서 데이터베이스를 업데이트 하는 경우이 *{Datestamp} \_ Initial.cs* 파일이 실행 되어 DB 스키마를 만듭니다. 그런 다음 **시드** 메서드를 실행 하 여 DB를 테스트 데이터로 채웁니다.
 
-**패키지 관리자 콘솔**에서 `update-database` 명령을 입력 하 여 데이터베이스를 만들고 `Seed` 메서드를 실행 합니다.
+**패키지 관리자 콘솔**에서 명령을 입력 `update-database` 하 여 데이터베이스를 만들고 메서드를 실행 `Seed` 합니다.
 
 ![](adding-a-new-field/_static/image7.png)
 
-테이블이 이미 존재 하 고 만들 수 없음을 나타내는 오류가 발생 하는 경우 데이터베이스를 삭제 한 후 `update-database`를 실행 하기 전에 응용 프로그램을 실행 했기 때문일 수 있습니다. 이 경우에는 *동영상 .mdf* 파일을 다시 삭제 하 고 `update-database` 명령을 다시 시도 합니다. 그래도 오류가 발생 하면 마이그레이션 폴더와 내용을 삭제 한 후이 페이지 맨 위에 있는 지침부터 시작 합니다. 즉, 영화를 삭제 *합니다.* 그래도 오류가 발생 하면 SQL Server 개체 탐색기를 열고 목록에서 데이터베이스를 제거 합니다.
+테이블이 이미 존재 하 고 만들 수 없음을 나타내는 오류가 발생 하는 경우 데이터베이스를 삭제 하 고 실행 하기 전에 응용 프로그램을 실행 했기 때문일 수 있습니다 `update-database` . 이 경우에는 *동영상 .mdf* 파일을 다시 삭제 하 고 명령을 다시 시도 하십시오 `update-database` . 그래도 오류가 발생 하면 마이그레이션 폴더와 내용을 삭제 한 후이 페이지 맨 위에 있는 지침부터 시작 합니다. 즉, 영화를 삭제 *합니다.* 그래도 오류가 발생 하면 SQL Server 개체 탐색기를 열고 목록에서 데이터베이스를 제거 합니다.
 
 응용 프로그램을 실행 하 고 */영화* URL로 이동 합니다. 초기값 데이터가 표시 됩니다.
 
 ![](adding-a-new-field/_static/image8.png)
 
-## <a name="adding-a-rating-property-to-the-movie-model"></a>동영상 모델에 등급 속성 추가
+## <a name="adding-a-rating-property-to-the-movie-model"></a>영화 모델에 등급 속성 추가
 
-기존 `Movie` 클래스에 새 `Rating` 속성을 추가 하 여 시작 합니다. *Models\Movie.cs* 파일을 열고 다음과 같은 `Rating` 속성을 추가 합니다.
+기존 클래스에 새 속성을 추가 하 여 시작 `Rating` `Movie` 합니다. *Models\Movie.cs* 파일을 열고 `Rating` 다음과 같은 속성을 추가 합니다.
 
 [!code-csharp[Main](adding-a-new-field/samples/sample5.cs)]
 
@@ -111,31 +111,31 @@ Code First 마이그레이션는 *마이그레이션* 폴더에 다른 클래스
 
 응용 프로그램을 빌드합니다 (Ctrl + Shift + B).
 
-`Movie` 클래스에 새 필드를 추가 했으므로이 새 속성이 포함 되도록 바인딩 *목록* 도 업데이트 해야 합니다. `Create` 및 `Edit` 작업 메서드에 대 한 `bind` 특성을 업데이트 하 여 `Rating` 속성을 포함 합니다.
+클래스에 새 필드를 추가 했으므로 `Movie` 이 새 속성이 포함 되도록 바인딩 *목록* 도 업데이트 해야 합니다. 속성을 `bind` `Create` `Edit` 포함 하도록 및 작업 메서드에 대 한 특성을 업데이트 합니다 `Rating` .
 
 [!code-csharp[Main](adding-a-new-field/samples/sample7.cs?highlight=1)]
 
 브라우저 보기에서 새 `Rating` 속성을 표시, 작성 및 편집하기 위해 보기 템플릿도 업데이트해야 합니다.
 
-*\Views\Movies\Index.cshtml* 파일을 열고 **Price** 열 바로 뒤에 `<th>Rating</th>` 열 머리글을 추가 합니다. 그런 다음 템플릿 끝 근처에 `<td>` 열을 추가 하 여 `@item.Rating` 값을 렌더링 합니다. 다음은 업데이트 된 *인덱스입니다. cshtml* 뷰 템플릿은 다음과 같습니다.
+*\Views\Movies\Index.cshtml* 파일을 열고 `<th>Rating</th>` **Price** 열 바로 뒤에 열 머리글을 추가 합니다. 그런 다음 `<td>` 템플릿 끝 근처에 열을 추가 하 여 값을 렌더링 `@item.Rating` 합니다. 다음은 업데이트 된 *인덱스입니다. cshtml* 뷰 템플릿은 다음과 같습니다.
 
 [!code-cshtml[Main](adding-a-new-field/samples/sample8.cshtml?highlight=31-33,52-54)]
 
-그런 다음 *\Views\Movies\Create.cshtml* 파일을 열고 다음 강조 표시 된 태그를 사용 하 여 `Rating` 필드를 추가 합니다. 그러면 새 동영상이 생성 될 때 등급을 지정할 수 있도록 텍스트 상자가 렌더링 됩니다.
+그런 다음 *\Views\Movies\Create.cshtml* 파일을 열고 `Rating` 다음 강조 표시 된 태그를 사용 하 여 필드를 추가 합니다. 그러면 새 동영상이 생성 될 때 등급을 지정할 수 있도록 텍스트 상자가 렌더링 됩니다.
 
 [!code-cshtml[Main](adding-a-new-field/samples/sample9.cshtml?highlight=9-15)]
 
-이제 새 `Rating` 속성을 지원 하도록 응용 프로그램 코드를 업데이트 했습니다.
+이제 새 속성을 지원 하도록 응용 프로그램 코드를 업데이트 했습니다 `Rating` .
 
 응용 프로그램을 실행 하 고 */영화* URL로 이동 합니다. 그러나이 작업을 수행 하면 다음 오류 중 하나가 표시 됩니다.
 
 ![](adding-a-new-field/_static/image9.png)  
   
-' MovieDBContext ' 컨텍스트를 지 원하는 모델이 데이터베이스를 만든 이후 변경 되었습니다. Code First 마이그레이션를 사용 하 여 데이터베이스를 업데이트 하는 것이 좋습니다 (https://go.microsoft.com/fwlink/?LinkId=238269).
+' MovieDBContext ' 컨텍스트를 지 원하는 모델이 데이터베이스를 만든 이후 변경 되었습니다. Code First 마이그레이션를 사용 하 여 데이터베이스를 업데이트 하는 것이 좋습니다 https://go.microsoft.com/fwlink/?LinkId=238269) .
 
 ![](adding-a-new-field/_static/image10.png)
 
-응용 프로그램의 업데이트 된 `Movie` 모델 클래스가 이제 기존 데이터베이스의 `Movie` 테이블의 스키마와 다르기 때문에이 오류가 표시 됩니다. (데이터베이스 테이블에 `Rating` 열이 없습니다.)
+`Movie`응용 프로그램의 업데이트 된 모델 클래스가 이제 기존 데이터베이스 테이블의 스키마와 다르기 때문에이 오류가 표시 됩니다 `Movie` . (데이터베이스 테이블에 `Rating` 열이 없습니다.)
 
 이 오류를 해결할 수 있는 몇 가지 방법이 있습니다.
 
@@ -153,13 +153,13 @@ Code First 마이그레이션는 *마이그레이션* 폴더에 다른 클래스
 
 `add-migration Rating`
 
-`add-migration` 명령은 마이그레이션 프레임 워크에 현재 movie DB 스키마를 사용 하 여 현재 동영상 모델을 검사 하 고 DB를 새 모델로 마이그레이션하는 데 필요한 코드를 만듭니다. 이름 등급은 임의 이며 마이그레이션 파일의 이름을 *지정한* 데 사용 됩니다. 마이그레이션 단계에서 의미 있는 이름을 사용 하는 것이 좋습니다.
+이 `add-migration` 명령은 마이그레이션 프레임 워크에 현재 MOVIE db 스키마를 사용 하 여 현재 동영상 모델을 검사 하 고 DB를 새 모델로 마이그레이션하는 데 필요한 코드를 만듭니다. 이름 등급은 임의 이며 마이그레이션 파일의 이름을 *지정한* 데 사용 됩니다. 마이그레이션 단계에서 의미 있는 이름을 사용 하는 것이 좋습니다.
 
-이 명령이 완료 되 면 Visual Studio는 새 `DbMigration` 파생 클래스를 정의 하는 클래스 파일을 열고 `Up` 메서드에서 새 열을 만드는 코드를 볼 수 있습니다.
+이 명령이 완료 되 면 Visual Studio가 새 파생 클래스를 정의 하는 클래스 파일을 열고 `DbMigration` `Up` 메서드에서 새 열을 만드는 코드를 볼 수 있습니다.
 
 [!code-csharp[Main](adding-a-new-field/samples/sample11.cs)]
 
-솔루션을 빌드한 다음 **패키지 관리자 콘솔** 창에 `update-database` 명령을 입력 합니다.
+솔루션을 빌드한 다음 `update-database` **패키지 관리자 콘솔** 창에 명령을 입력 합니다.
 
 다음 이미지는 **패키지 관리자 콘솔** 창에 출력을 보여 줍니다 (날짜 스탬프 앞에 나오는 *등급* 은 다름).
 
@@ -179,9 +179,9 @@ Code First 마이그레이션는 *마이그레이션* 폴더에 다른 클래스
 
 이제 프로젝트에서 마이그레이션을 사용 하 고 있으므로 새 필드를 추가 하거나 스키마를 업데이트할 때 데이터베이스를 삭제할 필요가 없습니다. 다음 섹션에서는 더 많은 스키마 변경을 수행 하 고 마이그레이션을 사용 하 여 데이터베이스를 업데이트 합니다.
 
-또한 편집, 세부 정보 및 삭제 보기 템플릿에 `Rating` 필드를 추가 해야 합니다.
+또한 `Rating` 필드를 편집, 세부 정보 및 삭제 보기 템플릿에 추가 해야 합니다.
 
-스키마가 모델과 일치 하므로 **패키지 관리자 콘솔** 창에서 "업데이트-데이터베이스" 명령을 다시 입력 하면 마이그레이션 코드가 실행 되지 않습니다. 그러나 "업데이트-데이터베이스"를 실행 하면 `Seed` 메서드가 다시 실행 되며 초기값 데이터를 변경한 경우 `Seed` 메서드가 데이터를 upsert 때문에 변경 내용이 손실 됩니다. Tom Dykstra의 인기 있는 [ASP.NET MVC/Entity Framework 자습서](../getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md)에서 `Seed` 방법에 대해 자세히 알아볼 수 있습니다.
+스키마가 모델과 일치 하므로 **패키지 관리자 콘솔** 창에서 "업데이트-데이터베이스" 명령을 다시 입력 하면 마이그레이션 코드가 실행 되지 않습니다. 그러나 "upsert"를 실행 하면 메서드가 다시 실행 되며 `Seed` 초기값 데이터를 변경한 경우 메서드에서 데이터를 변경 하면 변경 내용이 손실 됩니다 `Seed` . 이 메서드에 대 한 자세한 내용은 `Seed` Tom Dykstra의 인기 있는 [ASP.NET MVC/Entity Framework 자습서](../getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md)에서 확인할 수 있습니다.
 
 이 섹션에서는 모델 개체를 수정 하 고 데이터베이스를 변경 내용과 동기화 된 상태로 유지 하는 방법을 살펴보았습니다. 시나리오를 시험해 볼 수 있도록 새로 만든 데이터베이스를 샘플 데이터로 채우는 방법도 배웠습니다. 이는 Code First에 대 한 간략 한 소개입니다. 주제에 대 한 전체 자습서는 [ASP.NET MVC 응용 프로그램에 대 한 Entity Framework 데이터 모델 만들기](../getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md) 를 참조 하세요. 다음으로 모델 클래스에 더 다양 한 유효성 검사 논리를 추가 하 고 일부 비즈니스 규칙을 적용할 수 있도록 하는 방법을 살펴보겠습니다.
 

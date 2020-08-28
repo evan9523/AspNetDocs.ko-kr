@@ -8,12 +8,12 @@ ms.date: 07/30/2013
 ms.assetid: 64906a1d-f734-41cf-9615-ee95f8740996
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/advanced-entity-framework-scenarios-for-an-mvc-web-application
 msc.type: authoredcontent
-ms.openlocfilehash: f8f079f6d8ea663c6888456be422a2bae93a4b87
-ms.sourcegitcommit: c9d9210e0d16fbb3829b7688cfb832dc263c79cc
+ms.openlocfilehash: 85dd59016d904a9f654c438db977b5ae2c0187d2
+ms.sourcegitcommit: 4e6d586faadbe4d9ef27122f86335ec9385134af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "86163581"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89045054"
 ---
 # <a name="advanced-entity-framework-scenarios-for-an-mvc-web-application-10-of-10"></a>MVC 웹 응용 프로그램에 대 한 고급 Entity Framework 시나리오 (10/10)
 
@@ -191,7 +191,7 @@ Contoso 대학 관리자가 모든 과정에 대 한 크레딧 수를 변경 하
 
 이제의 *GenericRepository.cs* `return query.ToList();` 및 메서드의 문에 중단점을 설정 `return orderBy(query).ToList();` `Get` 합니다. 디버그 모드에서 프로젝트를 실행 하 고 과정 인덱스 페이지를 선택 합니다. 코드가 중단점에 도달 하면 변수를 검사 `query` 합니다. SQL Server로 전송 된 쿼리가 표시 됩니다. 간단한 `Select` 문입니다.
 
-[!code-json[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample14.json)]
+[!code-json[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample14.sql)]
 
 ![](advanced-entity-framework-scenarios-for-an-mvc-web-application/_static/image12.png)
 
@@ -219,7 +219,7 @@ Contoso 대학 관리자가 모든 과정에 대 한 크레딧 수를 변경 하
 
 이번에는 드롭다운 목록에 대 한 부서 쿼리의 첫 번째 중단점이 표시 됩니다. 이를 건너뛰고 다음에 `query` 코드가 중단점에 도달 했을 때 해당 변수가 어떻게 표시 되는지 확인 합니다 `Course` . 다음과 같은 내용이 표시 됩니다.
 
-[!code-json[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample17.json)]
+[!code-json[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample17.sql)]
 
 이제 쿼리는 `JOIN` `Department` 데이터와 함께 데이터를 로드 하는 쿼리 `Course` 이며 절이 포함 되어 있음을 알 수 있습니다 `WHERE` .
 

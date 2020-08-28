@@ -8,12 +8,12 @@ ms.date: 08/19/2008
 ms.assetid: a106374a-5e74-4fd0-9ac0-1a32280e5d0d
 msc.legacyurl: /mvc/overview/older-versions-1/overview/understanding-models-views-and-controllers-vb
 msc.type: authoredcontent
-ms.openlocfilehash: cc7988e0c9802e8cd376396eb5da15b5393d6088
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: e11487cbb863bae230ccb9dfdaf7172c65ec4d43
+ms.sourcegitcommit: ffd0f59ef9b7d221a5b2010c32aa61c89c14f406
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78485969"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042094"
 ---
 # <a name="understanding-models-views-and-controllers-vb"></a>모델, 보기 및 컨트롤러 이해(VB)
 
@@ -29,7 +29,7 @@ ms.locfileid: "78485969"
 
 ASP.NET MVC 웹 응용 프로그램을 만들기 위한 기본 Visual Studio 템플릿에는 ASP.NET MVC 응용 프로그램의 다양 한 부분을 이해 하는 데 사용할 수 있는 매우 간단한 샘플 응용 프로그램이 포함 되어 있습니다. 이 자습서에서는이 간단한 응용 프로그램을 활용 합니다.
 
-Visual Studio 2008을 시작 하 고 메뉴 옵션 파일, 새 프로젝트를 차례로 선택 하 여 MVC 템플릿을 사용 하 여 새 ASP.NET MVC 응용 프로그램을 만듭니다 (그림 1 참조). 새 프로젝트 대화 상자의 프로젝트 형식 (Visual Basic 또는 C#)에서 선호 하는 프로그래밍 언어를 선택 하 고 템플릿에서 **ASP.NET MVC 웹 응용 프로그램** 을 선택 합니다. 확인 단추를 클릭합니다.
+Visual Studio 2008을 시작 하 고 메뉴 옵션 파일, 새 프로젝트를 차례로 선택 하 여 MVC 템플릿을 사용 하 여 새 ASP.NET MVC 응용 프로그램을 만듭니다 (그림 1 참조). 새 프로젝트 대화 상자의 프로젝트 형식 (Visual Basic 또는 c #)에서 선호 하는 프로그래밍 언어를 선택 하 고 템플릿에서 **ASP.NET MVC 웹 응용 프로그램** 을 선택 합니다. 확인 단추를 클릭합니다.
 
 [![새 프로젝트 대화 상자](understanding-models-views-and-controllers-vb/_static/image1.jpg)](understanding-models-views-and-controllers-vb/_static/image1.png)
 
@@ -37,7 +37,7 @@ Visual Studio 2008을 시작 하 고 메뉴 옵션 파일, 새 프로젝트를 �
 
 새 ASP.NET MVC 응용 프로그램을 만들 때 **단위 테스트 프로젝트 만들기** 대화 상자가 나타납니다 (그림 2 참조). 이 대화 상자를 사용 하 여 ASP.NET MVC 응용 프로그램 테스트를 위한 솔루션에 별도의 프로젝트를 만들 수 있습니다. 옵션 **아니요, 단위 테스트 프로젝트를 만들지 않음** 을 선택 하 고 **확인** 단추를 클릭 합니다.
 
-[단위 테스트 만들기 대화 상자 ![](understanding-models-views-and-controllers-vb/_static/image2.jpg)](understanding-models-views-and-controllers-vb/_static/image3.png)
+[![단위 테스트 만들기 대화 상자](understanding-models-views-and-controllers-vb/_static/image2.jpg)](understanding-models-views-and-controllers-vb/_static/image3.png)
 
 **그림 02**: 단위 테스트 만들기 대화 상자 ([전체 크기 이미지를 보려면 클릭](understanding-models-views-and-controllers-vb/_static/image4.png))
 
@@ -45,7 +45,7 @@ Visual Studio 2008을 시작 하 고 메뉴 옵션 파일, 새 프로젝트를 �
 
 Controllers 폴더를 확장 하면 이름이 AccountController .vb이 고 이름이 HomeController 인 파일이 표시 됩니다. Views 폴더를 확장 하면 계정, 홈 및 공유 라는 세 개의 하위 폴더가 표시 됩니다. 홈 폴더를 확장 하면 이름이 .aspx 및 node.js 인 두 개의 추가 파일이 표시 됩니다 (그림 3 참조). 이러한 파일은 기본 ASP.NET MVC 템플릿에 포함 된 샘플 응용 프로그램을 구성 합니다.
 
-[솔루션 탐색기 창 ![](understanding-models-views-and-controllers-vb/_static/image3.jpg)](understanding-models-views-and-controllers-vb/_static/image5.png)
+[![솔루션 탐색기 창](understanding-models-views-and-controllers-vb/_static/image3.jpg)](understanding-models-views-and-controllers-vb/_static/image5.png)
 
 **그림 03**: 솔루션 탐색기 창 ([전체 크기 이미지를 보려면 클릭](understanding-models-views-and-controllers-vb/_static/image6.png))
 
@@ -59,13 +59,13 @@ ASP.NET 응용 프로그램을 처음 실행 하면 디버그 모드를 사용 �
 
 ASP.NET MVC 응용 프로그램을 실행 하면 Visual Studio가 웹 브라우저에서 응용 프로그램을 시작 합니다. 샘플 응용 프로그램은 인덱스 페이지와 정보 페이지로 구성 됩니다. 응용 프로그램이 처음 시작 될 때 인덱스 페이지가 나타납니다 (그림 5 참조). 응용 프로그램의 오른쪽 위에 있는 메뉴 링크를 클릭 하 여 정보 페이지로 이동할 수 있습니다.
 
-[인덱스 페이지 ![](understanding-models-views-and-controllers-vb/_static/image5.jpg)](understanding-models-views-and-controllers-vb/_static/image9.png)
+[![인덱스 페이지](understanding-models-views-and-controllers-vb/_static/image5.jpg)](understanding-models-views-and-controllers-vb/_static/image9.png)
 
 **그림 05**: 인덱스 페이지 ([전체 크기 이미지를 보려면 클릭](understanding-models-views-and-controllers-vb/_static/image10.png))
 
 브라우저의 주소 표시줄에서 Url을 확인 합니다. 예를 들어 정보 메뉴 링크를 클릭 하면 브라우저 주소 표시줄의 URL이 **/Home/About**로 변경 됩니다.
 
-브라우저 창을 닫고 Visual Studio로 돌아가면 Home/About 경로를 사용 하 여 파일을 찾을 수 없습니다. 파일이 존재 하지 않습니다. 어떻게 이것이 가능 한가요?
+브라우저 창을 닫고 Visual Studio로 돌아가면 Home/About 경로를 사용 하 여 파일을 찾을 수 없습니다. 파일이 존재 하지 않습니다. 가능한 방법은 무엇 인가요?
 
 ## <a name="a-url-does-not-equal-a-page"></a>URL이 페이지와 같지 않음
 
@@ -85,7 +85,7 @@ ASP.NET 라우팅은 경로 테이블을 사용 하 여 들어오는 요청을 �
 
 [!code-vb[Main](understanding-models-views-and-controllers-vb/samples/sample1.vb)]
 
-ASP.NET 응용 프로그램이 처음 시작 될 때 응용 프로그램\_Start () 메서드가 호출 됩니다. 목록 1에서이 메서드는 RegisterRoutes () 메서드를 호출 하 고 RegisterRoutes () 메서드는 기본 경로 테이블을 만듭니다.
+ASP.NET 응용 프로그램이 처음 시작 될 때 응용 프로그램 \_ Start () 메서드가 호출 됩니다. 목록 1에서이 메서드는 RegisterRoutes () 메서드를 호출 하 고 RegisterRoutes () 메서드는 기본 경로 테이블을 만듭니다.
 
 기본 경로 테이블은 하나의 경로로 구성 됩니다. 이 기본 경로는 들어오는 모든 요청을 세 개의 세그먼트로 나눕니다. URL 세그먼트는 슬래시 사이의 모든 항목입니다. 첫 번째 세그먼트는 컨트롤러 이름에 매핑되고 두 번째 세그먼트는 동작 이름에 매핑되고 최종 세그먼트는 action 이라는 액션에 전달 된 매개 변수에 매핑됩니다.
 
@@ -111,15 +111,15 @@ Controller = 직원
 
 작업 = 인덱스
 
-Id =
+Id =?
 
-마지막으로 URL (예: `http://localhost`)을 제공 하지 않고 ASP.NET MVC 응용 프로그램을 여는 경우 URL은 다음과 같이 구문 분석 됩니다.
+마지막으로, URL (예:)을 제공 하지 않고 ASP.NET MVC 응용 프로그램을 여는 경우 `http://localhost` url은 다음과 같이 구문 분석 됩니다.
 
 컨트롤러 = 홈
 
 작업 = 인덱스
 
-Id =
+Id =?
 
 요청은 HomeController 클래스에서 Index () 동작으로 라우팅됩니다.
 
@@ -127,7 +127,7 @@ Id =
 
 컨트롤러는 사용자가 MVC 응용 프로그램과 상호 작용 하는 방식을 제어 하는 일을 담당 합니다. 컨트롤러는 ASP.NET MVC 응용 프로그램에 대 한 흐름 제어 논리를 포함 합니다. 컨트롤러는 사용자가 브라우저 요청을 만들 때 사용자에 게 다시 보낼 응답을 결정 합니다.
 
-컨트롤러는 단지 클래스 (예: Visual Basic 또는 C# 클래스)입니다. 샘플 ASP.NET MVC 응용 프로그램에는 Controllers 폴더에 있는 HomeController 라는 컨트롤러가 포함 되어 있습니다. HomeController 파일의 내용은 목록 2에서 재현 됩니다.
+컨트롤러는 단지 클래스 (예: Visual Basic 또는 c # 클래스)입니다. 샘플 ASP.NET MVC 응용 프로그램에는 Controllers 폴더에 있는 HomeController 라는 컨트롤러가 포함 되어 있습니다. HomeController 파일의 내용은 목록 2에서 재현 됩니다.
 
 **목록 2-HomeController.cs**
 
@@ -159,7 +159,7 @@ HomeController () 작업은 다음 경로에 있는 뷰를 반환 합니다.
 
 목록 3의 첫 번째 줄을 무시 하면 대부분의 나머지 뷰가 표준 HTML로 구성 됩니다. 여기에서 원하는 HTML을 입력 하 여 보기의 내용을 수정할 수 있습니다.
 
-보기는 Active Server Pages 또는 ASP.NET Web Forms의 페이지와 매우 비슷합니다. 뷰에는 HTML 내용과 스크립트가 포함 될 수 있습니다. 스크립트를 즐겨 사용 하는 .NET 프로그래밍 언어 (예: C# 또는 Visual Basic .net)로 작성할 수 있습니다. 스크립트를 사용 하 여 데이터베이스 데이터와 같은 동적 콘텐츠를 표시 합니다.
+보기는 Active Server Pages 또는 ASP.NET Web Forms의 페이지와 매우 비슷합니다. 뷰에는 HTML 내용과 스크립트가 포함 될 수 있습니다. 스크립트를 선호 하는 .NET 프로그래밍 언어 (예: c # 또는 Visual Basic .NET)로 작성할 수 있습니다. 스크립트를 사용 하 여 데이터베이스 데이터와 같은 동적 콘텐츠를 표시 합니다.
 
 ## <a name="understanding-models"></a>모델 이해
 

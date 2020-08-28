@@ -8,26 +8,26 @@ ms.date: 01/17/2019
 ms.assetid: df001954-18bf-4550-b03d-43911a0ea186
 msc.legacyurl: /mvc/overview/getting-started/introduction/adding-search
 msc.type: authoredcontent
-ms.openlocfilehash: f6d6d32a648fed453be924790a1b55698c9cf209
-ms.sourcegitcommit: 0d583ed9253103f3e50b6d729276e667591cdd41
+ms.openlocfilehash: be4e4d13e574b0fcb77d2d0fb8c6f58041b1ece2
+ms.sourcegitcommit: 4e6d586faadbe4d9ef27122f86335ec9385134af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86211476"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89044923"
 ---
 # <a name="search"></a>검색
 
-[!INCLUDE [Tutorial Note](index.md)]
+[!INCLUDE [consider RP](~/includes/razor.md)]
 
 ## <a name="adding-a-search-method-and-search-view"></a>검색 방법 및 검색 보기 추가
 
 이 섹션에서는 `Index` 장르 또는 이름을 기준으로 영화를 검색할 수 있는 작업 메서드에 검색 기능을 추가 합니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 이 섹션의 스크린샷을 일치 시키려면 응용 프로그램을 실행 (F5) 하 고 다음 영화를 데이터베이스에 추가 해야 합니다.
 
-| 제목 | 출시 날짜 | Genre | 가격 |
+| 제목 | 릴리스 날짜: | Genre | 가격 |
 | ----- | ------------ | ----- | ----- |
 | Ghostbusters | 6/8/1984 | 코미디 | 6.99 |
 | Ghostbusters II | 6/16/1989 | 코미디 | 6.99 |
@@ -62,7 +62,7 @@ ms.locfileid: "86211476"
 
 `Index`이라는 매개 변수를 포함 하도록 메서드의 시그니처를 변경 하는 경우 `id` `id` 매개 변수는 `{id}` *App \_ Start\RouteConfig.cs* 파일에 설정 된 기본 경로에 대 한 자리 표시자와 일치 합니다.
 
-[!code-json[Main](adding-search/samples/sample4.json)]
+[!code-json[Main](adding-search/samples/sample4.txt)]
 
 원래 메서드는 다음과 같습니다 `Index` .
 

@@ -8,12 +8,12 @@ ms.date: 08/28/2012
 ms.assetid: 41eb99ca-e88f-4720-ae6d-49a958da8116
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc4/examining-the-edit-methods-and-edit-view
 msc.type: authoredcontent
-ms.openlocfilehash: 85ad9a5758d70b5fe4ed792efb80217d7b3e2132
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: 16ce02ba00e13b4cff2d6e86b2d9e0684aab096e
+ms.sourcegitcommit: 4e6d586faadbe4d9ef27122f86335ec9385134af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "86163055"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89044521"
 ---
 # <a name="examining-the-edit-methods-and-edit-view"></a>편집 메서드 및 편집 보기 검사
 
@@ -123,7 +123,7 @@ Decimal 필드에는 소수점이 아닌 쉼표가 필요할 수 있습니다. �
 
 `SearchIndex`이라는 매개 변수를 포함 하도록 메서드의 서명을 변경 하는 경우 `id` `id` 매개 변수는 `{id}` *global.asax* 파일에 설정 된 기본 경로에 대 한 자리 표시자와 일치 합니다.
 
-[!code-json[Main](examining-the-edit-methods-and-edit-view/samples/sample13.json)]
+[!code-json[Main](examining-the-edit-methods-and-edit-view/samples/sample13.txt)]
 
 원래 메서드는 다음과 같습니다 `SearchIndex` .
 

@@ -8,12 +8,12 @@ ms.date: 02/16/2008
 ms.assetid: c28ba88d-3a93-47f5-a306-049bd766714d
 msc.legacyurl: /mvc/overview/older-versions-1/views/asp-net-mvc-views-overview-vb
 msc.type: authoredcontent
-ms.openlocfilehash: f02728ed248f29b09d654e509977ed43889cbb83
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: a07d15cb14e9ef90b62c5a8702dee53f1a0a6032
+ms.sourcegitcommit: 4e6d586faadbe4d9ef27122f86335ec9385134af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78435275"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89044668"
 ---
 # <a name="aspnet-mvc-views-overview-vb"></a>ASP.NET MVC 보기 개요(VB)
 
@@ -79,17 +79,17 @@ Index () 작업에는 다음 코드 줄 하나가 포함 됩니다.
 
 목록 2에 있는 HTML 페이지의 본문에는 다음 스크립트가 포함 되어 있습니다.
 
-&lt;% Response (DateTime. Now)%&gt;
+&lt;% Response. Write (DateTime. Now)%&gt;
 
-스크립트 구분 기호 &lt;% 및%&gt;를 사용 하 여 스크립트의 시작과 끝을 표시 합니다. 이 스크립트는 Visual basic으로 작성 되었습니다. 브라우저에 콘텐츠를 렌더링 하는 Write () 메서드를 호출 하 여 현재 날짜 및 시간을 표시 합니다. 스크립트 구분 기호 &lt;% 및%&gt;은 (는) 하나 이상의 문을 실행 하는 데 사용할 수 있습니다.
+스크립트 구분 기호% 및%를 사용 하 여 &lt; &gt; 스크립트의 시작과 끝을 표시 합니다. 이 스크립트는 Visual basic으로 작성 되었습니다. 브라우저에 콘텐츠를 렌더링 하는 Write () 메서드를 호출 하 여 현재 날짜 및 시간을 표시 합니다. 스크립트 구분 기호 &lt; % 및%는 &gt; 하나 이상의 문을 실행 하는 데 사용할 수 있습니다.
 
-자주 Write ()를 호출 하므로 Microsoft는 Response () 메서드를 호출 하는 바로 가기를 제공 합니다. 목록 3의 뷰에서는 &lt;% = 및%&gt; 구분 기호를 사용 하 여 Response () 호출에 대 한 바로 가기로 사용 합니다.
+자주 Write ()를 호출 하므로 Microsoft는 Response () 메서드를 호출 하는 바로 가기를 제공 합니다. 목록 3의 뷰에서는 &lt; % = 및% 구분 기호를 &gt; 호출 하 여 Write () 호출을 위한 바로 가기로 사용 합니다.
 
 **목록 3-Views\Home\Index2.aspx**
 
 [!code-aspx[Main](asp-net-mvc-views-overview-vb/samples/sample3.aspx)]
 
-모든 .NET 언어를 사용 하 여 뷰에서 동적 콘텐츠를 생성할 수 있습니다. 일반적으로 Visual Basic .NET 또는 C# 를 사용 하 여 컨트롤러와 뷰를 작성 합니다.
+모든 .NET 언어를 사용 하 여 뷰에서 동적 콘텐츠를 생성할 수 있습니다. 일반적으로 Visual Basic .NET 또는 c #을 사용 하 여 컨트롤러 및 뷰를 작성 합니다.
 
 ## <a name="using-html-helpers-to-generate-view-content"></a>HTML 도우미를 사용 하 여 뷰 콘텐츠 생성
 
@@ -101,13 +101,13 @@ Index () 작업에는 다음 코드 줄 하나가 포함 됩니다.
 
 [!code-aspx[Main](asp-net-mvc-views-overview-vb/samples/sample4.aspx)]
 
-[새 프로젝트 대화 상자 ![](asp-net-mvc-views-overview-vb/_static/image1.jpg)](asp-net-mvc-views-overview-vb/_static/image1.png)
+[![새 프로젝트 대화 상자](asp-net-mvc-views-overview-vb/_static/image1.jpg)](asp-net-mvc-views-overview-vb/_static/image1.png)
 
 **그림 01**: 표준 로그인 양식 ([전체 크기 이미지를 보려면 클릭](asp-net-mvc-views-overview-vb/_static/image2.png))
 
 모든 HTML 도우미 메서드는 뷰의 Html 속성에서 호출 됩니다. 예를 들어, Html. TextBox () 메서드를 호출 하 여 텍스트 상자를 렌더링 합니다.
 
-Html. TextBox () 및 Html. Password () 도우미를 모두 호출할 때 스크립트 구분 기호 &lt;% = 및%&gt;를 사용 합니다. 이러한 도우미는 단순히 문자열을 반환 합니다. 브라우저에 문자열을 렌더링 하기 위해 Write ()를 호출 해야 합니다.
+&lt; &gt; Html. TextBox () 및 Html. Password () 도우미를 모두 호출할 때 스크립트 구분 기호% = 및%를 사용 합니다. 이러한 도우미는 단순히 문자열을 반환 합니다. 브라우저에 문자열을 렌더링 하기 위해 Write ()를 호출 해야 합니다.
 
 HTML 도우미 메서드 사용은 선택 사항입니다. 이러한 작업을 수행 하면 작성 해야 하는 HTML 및 스크립트의 양이 줄어들어 더 쉽게 사용할 수 있습니다. 목록 5의 뷰는 HTML 도우미를 사용 하지 않고 목록 4의 뷰와 정확히 동일한 폼을 렌더링 합니다.
 
@@ -133,9 +133,9 @@ Controller ViewData 속성은 이름/값 쌍의 컬렉션을 나타냅니다. �
 
 [!code-aspx[Main](asp-net-mvc-views-overview-vb/samples/sample7.aspx)]
 
-뷰에서는 메시지를 렌더링할 때 Html 도우미 메서드를 사용 합니다. Html. 인코드 () HTML 도우미는 &lt; &gt;와 같은 특수 문자를 웹 페이지에 표시 하기에 안전한 문자로 인코딩합니다. 사용자가 웹 사이트로 전송 하는 콘텐츠를 렌더링할 때마다 JavaScript 주입 공격을 방지 하기 위해 콘텐츠를 인코딩해야 합니다.
+뷰에서는 메시지를 렌더링할 때 Html 도우미 메서드를 사용 합니다. Html. 인코드 () HTML 도우미는 및와 같은 특수 문자 &lt; 를 &gt; 웹 페이지에 표시 하기에 안전한 문자로 인코딩합니다. 사용자가 웹 사이트로 전송 하는 콘텐츠를 렌더링할 때마다 JavaScript 주입 공격을 방지 하기 위해 콘텐츠를 인코딩해야 합니다.
 
-즉, 제품 컨트롤러에서 메시지를 직접 만들었기 때문에 메시지를 인코딩할 필요가 없습니다. 그러나 뷰 내의 뷰 데이터에서 검색 된 콘텐츠를 표시 하는 경우 항상 Html. 인코드 () 메서드를 호출 하는 것이 좋습니다.
+(제품 컨트롤러에서 메시지를 직접 만들었기 때문에 메시지를 인코딩할 필요가 없습니다. 그러나 뷰 내의 뷰 데이터에서 검색 된 콘텐츠를 표시 하는 경우 항상 Html. 인코드 () 메서드를 호출 하는 것이 좋습니다.
 
 목록 7에서는 보기 데이터를 활용 하 여 컨트롤러에서 뷰로 간단한 문자열 메시지를 전달 했습니다. 데이터 보기를 사용 하 여 컨트롤러에서 보기에 데이터베이스 레코드 컬렉션과 같은 다른 유형의 데이터를 전달할 수도 있습니다. 예를 들어 Products 데이터베이스 테이블의 내용을 뷰에 표시 하려면 데이터 보기에서 데이터베이스 레코드의 컬렉션을 전달 합니다.
 
