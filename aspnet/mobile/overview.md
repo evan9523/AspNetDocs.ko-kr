@@ -8,22 +8,24 @@ ms.date: 01/28/2011
 ms.assetid: 1febce65-cdd4-47da-bdb5-1e6022ccd20a
 msc.legacyurl: /mobile
 msc.type: content
-ms.openlocfilehash: 769484ee505599eef48ff4a106ddd4f7ec7d99af
-ms.sourcegitcommit: 0cf7d06071a8ff986e6c028ac9daf0c0e7490412
+ms.openlocfilehash: 41cf393f307808e457e0ab2529129ca8ecbc3b5d
+ms.sourcegitcommit: dfd3ce87ffc9e3a7076f8252abb5d5d6b991333b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85240735"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89449706"
 ---
 # <a name="mobile-apps--sites-with-aspnet"></a>ASP.NET를 사용 하 여 & 사이트 Mobile Apps
 
 ## <a name="develop-mobile-apps"></a>Mobile Apps 개발
 
-### <a name="cloud-connected-mobile-apps---create-a-web-service-with-azure-web-apps-and-webjobspart-1"></a>[클라우드 연결 Mobile Apps-Azure Web Apps 및 WebJobs를 사용 하 여 웹 서비스 만들기](https://msdn.microsoft.com/magazine/mt185572)(1 부)
+### <a name="cloud-connected-mobile-apps"></a>클라우드 연결 Mobile Apps
+
+[1 부-Azure Web Apps 및 WebJobs를 사용 하 여 웹 서비스 만들기](https://msdn.microsoft.com/magazine/mt185572)
 
 두 부분으로 구성 된 문서의 첫 번째 부분인 작성자는 데이터를 집계 하 고 처리 하 고 모바일 클라이언트에 제공 하는 클라우드 백 엔드를 만드는 것과 관련 된 문제 중 일부를 살펴보세요.
 
-### <a name="cloud-connected-mobile-apps---build-a-xamarin-app-with-authentication-and-offline-supportpart-2"></a>[클라우드 연결 Mobile Apps-인증 및 오프 라인 지원으로 Xamarin 앱 빌드](https://msdn.microsoft.com/magazine/mt422581.aspx)(2 부)
+[2 부-인증 및 오프 라인 지원으로 Xamarin 앱 빌드](https://msdn.microsoft.com/magazine/mt422581.aspx)
 
 시리즈의 두 번째 문서에서는 작성자가 Xamarin을 사용 하 여 여러 모바일 클라이언트 플랫폼을 대상으로 하는 방법을 설명 하 고, 인증을 구현 하 고 데이터의 동기화 된 클라이언트 쪽 캐시를 유지 하는 방법을 보여 줍니다.
 
