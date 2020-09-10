@@ -8,12 +8,12 @@ ms.date: 08/15/2012
 ms.assetid: c7e4e1ab-4932-4614-9f53-aaf7c706d498
 msc.legacyurl: /mvc/overview/views/using-page-inspector-in-aspnet-mvc
 msc.type: authoredcontent
-ms.openlocfilehash: 5da3e142c52a770f59222c21d9f9a53cbbdbf498
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: 42d5683ce75467a159c9d13edf302bd6bf24a11d
+ms.sourcegitcommit: 45754124123403520b9fa2e706a4d1292494159b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78432455"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643695"
 ---
 # <a name="using-page-inspector-in-aspnet-mvc"></a>ASP.NET MVC에서 페이지 검사기 사용
 
@@ -40,7 +40,7 @@ ms.locfileid: "78432455"
 
 <a id="_prerequisites"></a><a id="_1_prerequisites"></a>
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 - 웹 용 [Visual Studio 2012](https://www.microsoft.com/visualstudio/11) 또는 [Visual Studio Express 2012](https://www.microsoft.com/visualstudio/11/downloads#express-web)
 
@@ -53,7 +53,7 @@ ms.locfileid: "78432455"
 
 ## <a name="create-a-web-application"></a>웹 응용 프로그램 만들기
 
-먼저 페이지 검사기 사용할 웹 응용 프로그램을 만듭니다. Visual Studio에서 **파일** &gt; **새 프로젝트**를 선택 합니다. 왼쪽에서 **시각적 개체 C#** 를 확장 하 고 **웹**을 선택한 다음 **ASP.NET MVC4 웹 응용 프로그램**을 선택 합니다.
+먼저 페이지 검사기 사용할 웹 응용 프로그램을 만듭니다. Visual Studio에서 **파일** &gt; **새 프로젝트**를 선택합니다. 왼쪽에서 **Visual c #** 을 확장 하 고 **웹**을 선택한 다음 **ASP.NET MVC4 웹 응용 프로그램**을 선택 합니다.
 
 ![새 ASP.NET MVC 응용 프로그램](using-page-inspector-in-aspnet-mvc/_static/image2.png)
 
@@ -111,23 +111,23 @@ Visual Studio 2012에서 프로젝트의 뷰를 마우스 오른쪽 단추로 �
 
 이를 확인 하려면 **검사** 를 클릭 한 다음 페이지 검사기 창에서 페이지 아래쪽으로 스크롤합니다.
 
-마우스 포인터를 바닥글 영역으로 이동 하면 페이지 검사기 \_Layout 파일이 열리고 선택한 레이아웃 페이지의 섹션이 강조 표시 됩니다. 여기서 볼 수 있듯이 바닥글은 뷰 자체가 아니라 레이아웃 파일에 정의 됩니다.
+마우스 포인터를 바닥글 영역으로 이동 하면 페이지 검사기 \_ layout 파일이 열리고 선택한 레이아웃 페이지의 섹션이 강조 표시 됩니다. 여기에서 볼 수 있듯이 바닥글 영역은 뷰 자체가 아니라 레이아웃 파일에 정의 됩니다.
 
 ![바닥글](using-page-inspector-in-aspnet-mvc/_static/image16.png)
 
-이제 저작권 <a id="a"> </a>표시를 사용 하 여 줄 위로 마우스 포인터를 이동 합니다. \_레이아웃. cshtml 페이지에서 해당 줄이 강조 표시 됩니다.
+이제 저작권 표시를 사용 하 여 줄 위로 마우스 포인터를 이동 <a id="a"></a> 합니다. \_Layout. cshtml 페이지에서 해당 줄이 강조 표시 됩니다.
 
 ![바닥글 저작권 선이 강조 표시 됨](using-page-inspector-in-aspnet-mvc/_static/image18.png)
 
-\_Layout 파일에서 줄의 끝에 일부 텍스트를 추가 합니다.
+레이아웃 cshtml 파일의 줄 끝에 일부 텍스트를 추가 \_ 합니다.
 
-&lt;p&gt;&amp;복사 @DateTime.Now.Year-My ASP.NET MVC 응용 프로그램 암석 지.&lt;/p&gt;
+&lt;p &gt; &amp; copy; @DateTime.Now.Year -My ASP.NET MVC 응용 프로그램 바위! &lt; /p&gt;
 
 이제 Ctrl + Alt + Enter를 누르거나 업데이트 표시줄을 클릭 하 여 페이지 검사기 브라우저 창에 결과를 표시 합니다.
 
 ![내 ASP.NET 응용 프로그램 돌!](using-page-inspector-in-aspnet-mvc/_static/image20.png)
 
-Index는 footer에 정의 되어 있지만 \_페이지 검사기 레이아웃에 포함 된 것으로 표시 된 것으로 간주 될 수 있습니다.
+Index는 footer에 정의 되어 있지만 페이지 검사기 레이아웃에 포함 된 것으로 표시 된 것으로 간주 될 수 있습니다. \_
 
 <a id="_inspection_mode_and_1"></a><a id="_6_inspection_mode"></a>
 
@@ -143,7 +143,7 @@ Index는 footer에 정의 되어 있지만 \_페이지 검사기 레이아웃에
 
 ![HTML 창](using-page-inspector-in-aspnet-mvc/_static/image22.png)
 
-이전 처럼 페이지 검사기 임시 탭에서 \_Layout. cshtml 파일을 엽니다. \_Layout. cshtml 임시 탭을 클릭 하면 &lt;헤더&gt; 섹션에서 해당 태그가 강조 표시 됩니다.
+이전 처럼 페이지 검사기 \_ 임시 탭에서 layout. cshtml 파일을 엽니다. \_ layout. cshtml 임시 탭을 클릭 &lt; 하면 헤더 섹션에서 해당 태그가 강조 표시 됩니다. &gt;
 
 ![강조 표시 된 태그](using-page-inspector-in-aspnet-mvc/_static/image24.png)
 
@@ -172,7 +172,7 @@ Div. 콘텐츠-래퍼 섹션 내에서 한 번 클릭 한 다음 마우스 포�
 스타일 **창을 사용** 하면 스타일 시트 자체에 변경 내용을 커밋하기 전에 CSS 변경을 쉽게 테스트 하 고 미리 볼 수 있습니다.
 
 <a id="css_auto_sync"></a>
-## <a name="css-auto-sync"></a>CSS Auto Sync
+## <a name="css-auto-sync"></a>CSS 자동 동기화
 
 > [!NOTE]
 > 이 기능을 사용 하려면 1.3 버전의 페이지 검사기 필요 합니다.
@@ -187,7 +187,7 @@ CSS 자동 동기화 기능을 사용 하면 CSS 파일을 직접 편집 하 고
 
 ![](using-page-inspector-in-aspnet-mvc/_static/image32.png)
 
-이제 `background-color`의 값을 "red"로 변경 합니다. 변경 내용은 페이지 검사기 브라우저에 즉시 표시 됩니다.
+이제의 값을 `background-color` "red"로 변경 합니다. 변경 내용은 페이지 검사기 브라우저에 즉시 표시 됩니다.
 
 ![](using-page-inspector-in-aspnet-mvc/_static/image34.png)
 
@@ -196,7 +196,7 @@ CSS 자동 동기화 기능을 사용 하면 CSS 파일을 직접 편집 하 고
 
 Visual Studio 2012의 CSS 편집기에는 색을 쉽게 선택 하 고 삽입할 수 있는 색 선택이 있습니다. 색 선택기는 색의 표준 색상표를 포함 하 고, 표준 색 이름, 해시 코드, RGB, RGBA, HSL 및 HSLA 색을 지원 하며, 문서에서 가장 최근에 사용한 색의 목록을 유지 관리 합니다.
 
-이전 섹션에서는 `background-color` 속성의 값을 변경 했습니다. 색 선택기를 호출 하려면 속성 이름 뒤에 삽입 지점을 놓고 **#** 또는 **rgb (** 를 입력 합니다.
+이전 섹션에서는 속성의 값을 변경 했습니다 `background-color` . 색 선택기를 호출 하려면 속성 이름 뒤에 삽입 지점을 놓고 **#** 또는 **rgb (**.
 
 ![CSS 색 선택 막대입니다.](using-page-inspector-in-aspnet-mvc/_static/image36.png)
 
@@ -231,12 +231,12 @@ Visual Studio 2012의 CSS 편집기에는 색을 쉽게 선택 하 고 삽입할
 
 최신 웹 응용 프로그램에서는 페이지의 요소가 JavaScript를 사용 하 여 동적으로 생성 되는 경우가 많습니다. 이는 이러한 페이지 요소에 해당 하는 정적 태그 (HTML 또는 Razor)가 없음을 의미 합니다.
 
-1\.3 버전을 사용 하면 페이지에 동적으로 추가 된 항목을 해당 JavaScript 코드로 다시 매핑할 수 페이지 검사기. 이 기능을 설명 하기 위해 [SPA (단일 페이지 응용 프로그램) 템플릿을](../../../single-page-application/overview/introduction/knockoutjs-template.md)사용 합니다.
+1.3 버전을 사용 하면 페이지에 동적으로 추가 된 항목을 해당 JavaScript 코드로 다시 매핑할 수 페이지 검사기. 이 기능을 설명 하기 위해 [SPA (단일 페이지 응용 프로그램) 템플릿을](../../../single-page-application/overview/introduction/knockoutjs-template.md)사용 합니다.
 
 > [!NOTE]
 > SPA 템플릿에 [ASP.NET 및 Web Tools 2012.2](https://go.microsoft.com/fwlink/?LinkId=282650) 업데이트가 필요 합니다.
 
-Visual Studio에서 **파일** &gt; **새 프로젝트**를 선택 합니다. 왼쪽에서 **시각적 개체 C#** 를 확장 하 고 **웹**을 선택한 다음 **ASP.NET MVC4 웹 응용 프로그램**을 선택 합니다. **확인**을 클릭합니다.
+Visual Studio에서 **파일** &gt; **새 프로젝트**를 선택합니다. 왼쪽에서 **Visual c #** 을 확장 하 고 **웹**을 선택한 다음 **ASP.NET MVC4 웹 응용 프로그램**을 선택 합니다. **확인**을 클릭합니다.
 
 **새 ASP.NET MVC 4 프로젝트** 대화 상자에서 **단일 페이지 응용 프로그램**을 선택 합니다.
 
