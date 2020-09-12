@@ -9,10 +9,10 @@ ms.assetid: 3332d6e7-e2e1-4144-b805-e71d51e7e415
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/aspnet-ajax/understanding-asp-net-ajax-web-services
 msc.type: authoredcontent
 ms.openlocfilehash: eac3d53fd871d0cb5a2870488ce752c057cc5b1a
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.sourcegitcommit: 45754124123403520b9fa2e706a4d1292494159b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 09/12/2020
 ms.locfileid: "86162845"
 ---
 # <a name="understanding-aspnet-ajax-web-services"></a>ASP.NET AJAX 웹 서비스 이해
@@ -289,7 +289,7 @@ AutoCompleteExtender에는 서버 컨트롤에 있는 표준 ID 및 runat 속성
 
 ASP.NET AJAX는 요청 및 응답 메시지를 처리 하는 많은 사용자 지정 JavaScript 코드를 작성 하지 않고도 웹 서비스 호출에 대 한 뛰어난 지원을 제공 합니다. 이 문서에서는 AJAX를 사용 하 여 .NET 웹 서비스를 사용 하 여 JSON 메시지를 처리 하 고 ScriptManager 컨트롤을 사용 하 여 JavaScript 프록시를 정의 하는 방법을 살펴보았습니다. JavaScript 프록시를 사용 하 여 웹 서비스를 호출 하 고, 단순 및 복합 형식을 처리 하 고, 오류를 처리 하는 방법도 살펴보았습니다. 마지막으로, 페이지 메서드를 사용 하 여 웹 서비스 호출의 생성 및 작성 프로세스를 간소화 하는 방법과 AutoCompleteExtender 컨트롤이 입력 하는 최종 사용자에 게 도움을 제공 하는 방법을 살펴보았습니다. ASP.NET AJAX에서 사용할 수 있는 UpdatePanel은 단순성으로 인해 많은 AJAX 프로그래머 들에 게 선택할 수 있는 컨트롤이 될 수 있지만 JavaScript 프록시를 통해 웹 서비스를 호출 하는 방법을 알면 많은 응용 프로그램에서 유용할 수 있습니다.
 
-## <a name="bio"></a>약력
+## <a name="bio"></a>사용자 정보
 
 Dan Wahlin (Microsoft에서 가장 중요 한 ASP.NET 및 XML Web Services)는 인터페이스 기술 교육 ()의 .NET 개발 강사 및 아키텍처 컨설턴트입니다 [http://www.interfacett.com](http://www.interfacett.com) . Dan은 ASP.NET 개발자 용 XML 웹 사이트 ([www.XMLforASP.NET](http://www.XMLforASP.NET))가 INETA 스피커의 기관에 있으며 여러 회의를 말합니다. Dan 공동 작성 Wrox (전문가 Windows DNA), ASP.NET: 팁, 자습서 및 코드 (Sams teach yourself), ASP.NET 1.1 Insider Solutions, ASP.NET (전문 Wrox 2.0 AJAX), ASP.NET 2.0 MVP 해킹 및 제작한 XML for ASP.NET 개발자 (sams teach yourself). 코드, 문서 또는 책을 작성 하지 않을 때 Dan은 음악을 작성 하 고 기록 하 고 아내 및 어린이와 함께 golf 및 농구를 재생 하는 것을 활용할.
 
