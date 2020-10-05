@@ -10,10 +10,10 @@ ms.assetid: 50e6e62b-e72e-4a29-8293-4b67377bd21f
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/supporting-odata-query-options
 msc.type: authoredcontent
 ms.openlocfilehash: 96820fab7ac89885058962f44ded86cb0184ee97
-ms.sourcegitcommit: ce28244209db8615bc9bdd576a2e2c88174d318d
+ms.sourcegitcommit: 4ed0b65ae32d9f35e42ee6296b877747e063df4d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 10/05/2020
 ms.locfileid: "86188633"
 ---
 # <a name="supporting-odata-query-options-in-aspnet-web-api-2"></a>ASP.NET Web API 2에서 OData 쿼리 옵션 지원
@@ -81,12 +81,12 @@ $Top 옵션은 반환할 항목의 최대 수를 제공 하 고, $skip 옵션은
 
 $Filter 옵션을 사용 하면 클라이언트에서 부울 식을 적용 하 여 결과를 필터링 할 수 있습니다. 필터 식은 매우 강력 합니다. 여기에는 논리 및 산술 연산자, 문자열 함수 및 날짜 함수가 포함 됩니다.
 
-| 범주가 "장난감"과 같은 모든 제품을 반환 합니다. | `http://localhost/Products?$filter=Category`eq ' 장난감 ' |
+| 범주가 "장난감"과 같은 모든 제품을 반환 합니다. | `http://localhost/Products?$filter=Category` eq ' 장난감 ' |
 | --- | --- |
-| 가격이 10 보다 작은 모든 제품을 반환 합니다. | `http://localhost/Products?$filter=Price`lt 10 |
-| 논리 연산자: price >= 5 및 price <= 15 인 모든 제품을 반환 합니다. | `http://localhost/Products?$filter=Price`ge 5 및 Price le 15 |
+| 가격이 10 보다 작은 모든 제품을 반환 합니다. | `http://localhost/Products?$filter=Price` lt 10 |
+| 논리 연산자: price >= 5 및 price <= 15 인 모든 제품을 반환 합니다. | `http://localhost/Products?$filter=Price` ge 5 및 Price le 15 |
 | 문자열 함수: 이름에 "zz"가 있는 모든 제품을 반환 합니다. | `http://localhost/Products?$filter=substringof('zz',Name)` |
-| 날짜 함수: 2005 이후의 ReleaseDate를 사용 하는 모든 제품을 반환 합니다. | `http://localhost/Products?$filter=year(ReleaseDate)`gt 2005 |
+| 날짜 함수: 2005 이후의 ReleaseDate를 사용 하는 모든 제품을 반환 합니다. | `http://localhost/Products?$filter=year(ReleaseDate)` gt 2005 |
 
 **정렬**
 
