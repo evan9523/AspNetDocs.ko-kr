@@ -13,7 +13,7 @@ ms.openlocfilehash: 96820fab7ac89885058962f44ded86cb0184ee97
 ms.sourcegitcommit: 4ed0b65ae32d9f35e42ee6296b877747e063df4d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
+ms.lasthandoff: 10/06/2020
 ms.locfileid: "86188633"
 ---
 # <a name="supporting-odata-query-options-in-aspnet-web-api-2"></a>ASP.NET Web API 2에서 OData 쿼리 옵션 지원
@@ -42,7 +42,7 @@ OData 사양에서는 이러한 매개 변수 *쿼리 옵션*을 호출 합니�
 
 Web API는 다음과 같은 OData 쿼리 옵션을 지원 합니다.
 
-| 옵션 | 설명 |
+| 옵션 | Description |
 | --- | --- |
 | $expand | 관련 엔터티를 인라인으로 확장 합니다. |
 | $filter | 부울 조건에 따라 결과를 필터링 합니다. |
