@@ -5,12 +5,12 @@ description: 를 사용 하 여 ASP.NET에서 쿠키를 SameSite 하는 방법�
 ms.author: riande
 ms.date: 2/15/2019
 uid: samesite/system-web-samesite
-ms.openlocfilehash: 2a39663dcbfa97ae441edd9a9768172cafbaab03
-ms.sourcegitcommit: 09a34635ed0e74d6c2625f6a485c78f201c689ee
+ms.openlocfilehash: d50f157c6d92cb56cb6c59381af9139d1d3d1d3d
+ms.sourcegitcommit: a309ca7af61e59195beb745b501a1a9f06fcd493
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91763468"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92119365"
 ---
 # <a name="work-with-samesite-cookies-in-aspnet"></a>ASP.NET에서 SameSite 쿠키 사용
 
@@ -115,7 +115,7 @@ Microsoft는 동일한 사이트 쿠키 특성을 4.7.2 하는 .NET 버전을 �
 * 패치 값 이전에는 `None` 다음을 의미 합니다.
   * 특성을 전혀 내보내지 않습니다.
 * 패치 후:
-  * 값이 값은 `None` "값이 인 특성을 내보냅니다 `None` ."를 의미 합니다.
+  * 값은 `None` "값을 사용 하 여 특성을 내보냅니다 `None` ."를 의미 합니다.
   * `SameSite`값이 `(SameSiteMode)(-1)` 이면 특성을 내보내지 않습니다.
 
 폼 인증 및 세션 상태 쿠키의 기본 SameSite 값이에서로 변경 `None` 되었습니다 `Lax` .
@@ -163,7 +163,7 @@ Azure App Service .Net 4.7.2 앱에서 SameSite 동작을 구성 하는 방법�
 
 ## <a name="supporting-older-browsers"></a>이전 브라우저 지원
 
-2016 SameSite 표준에서는 알 수 없는 값을 값으로 처리 해야 합니다 `SameSite=Strict` . 2016 SameSite 표준을 지 원하는 이전 브라우저에서 액세스 된 앱은 값이 인 SameSite 속성을 가져올 때 손상 될 수 있습니다 `None` . 웹 앱은 이전 브라우저를 지원 하려는 경우 브라우저 검색을 구현 해야 합니다. 사용자 에이전트 값이 매우 휘발성 이며 자주 변경 되기 때문에 ASP.NET는 브라우저 검색을 구현 하지 않습니다.
+2016 SameSite 표준에서는 알 수 없는 값을 값으로 처리 해야 합니다 `SameSite=Strict` . 2016 SameSite 표준을 지 원하는 이전 브라우저에서 액세스 된 앱은 값이 인 SameSite 속성을 가져올 때 손상 될 수 있습니다 `None` . 웹 앱은 이전 브라우저를 지원 하려는 경우 브라우저 검색을 구현 해야 합니다. User-Agents 값이 매우 휘발성 이며 자주 변경 되기 때문에 ASP.NET는 브라우저 검색을 구현 하지 않습니다.
 
 문제를 해결 하는 Microsoft의 접근 방식은 브라우저가 `sameSite=None` 지원 하지 않는 것으로 알려진 경우 쿠키에서 특성을 제거 하는 브라우저 검색 구성 요소를 구현할 수 있도록 하는 것입니다. Google의 충고는 두 쿠키를 발급 하는 것으로, 하나는 새 특성을, 하나는 특성이 없는 쿠키를 사용 하는 것입니다. 하지만 Google의 조언을 제한적으로 고려 합니다. 일부 브라우저, 특히 모바일 브라우저는 한 사이트의 쿠키 수에 대 한 제한이 매우 적거나 도메인 이름이 보낼 수 있습니다. 여러 쿠키를 전송 하는 경우, 특히 인증 쿠키와 같은 큰 쿠키는 모바일 브라우저 제한에 신속 하 게 도달 하 여 진단 하 고 수정 하기 어려운 앱 오류를 일으킬 수 있습니다. 또한 두 번째 쿠키 방식을 사용 하도록 업데이트 되지 않은 타사 코드 및 구성 요소에 대 한 많은 에코 시스템이 있습니다.
 
@@ -301,7 +301,7 @@ Electron 버전에는 이전 버전의 Chromium이 포함되어 있습니다. �
 </configuration>
 ```
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
 * [ASP.NET 및 ASP.NET Core의 예정 된 SameSite 쿠키 변경 내용](https://devblogs.microsoft.com/aspnet/upcoming-samesite-cookie-changes-in-asp-net-and-asp-net-core/)
 * [SameSite 및 "SameSite = None; 테스트 및 디버깅에 대 한 팁 보안 "쿠키](https://www.chromium.org/updates/same-site/test-debug)

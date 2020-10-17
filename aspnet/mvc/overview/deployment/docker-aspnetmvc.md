@@ -7,16 +7,16 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 12/14/2018
 ms.assetid: c9f1d52c-b4bd-4b5d-b7f9-8f9ceaf778c4
-ms.openlocfilehash: 1c5e6af79c87123891ddd4d30c60e3a427910e9d
-ms.sourcegitcommit: 09a34635ed0e74d6c2625f6a485c78f201c689ee
+ms.openlocfilehash: d706c07fdb7fea3d271cb61fde3a245187ea9e84
+ms.sourcegitcommit: a309ca7af61e59195beb745b501a1a9f06fcd493
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91763483"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92119378"
 ---
 # <a name="migrating-aspnet-mvc-applications-to-windows-containers"></a>ASP.NET MVC 애플리케이션을 Windows 컨테이너로 마이그레이션
 
-Windows 컨테이너에서 기존 .NET Framework 기반 애플리케이션을 실행하려면 앱을 변경할 필요가 없습니다. Windows 컨테이너에서 앱을 실행하려면 앱을 포함하는 Docker 이미지를 만들고 컨테이너를 시작합니다. 이 항목에서는 기존 [ASP.NET MVC 애플리케이션](http://www.asp.net/mvc)을 가져오고 Windows 컨테이너에 배포하는 방법을 설명합니다.
+Windows 컨테이너에서 기존 .NET Framework 기반 애플리케이션을 실행하려면 앱을 변경할 필요가 없습니다. Windows 컨테이너에서 앱을 실행하려면 앱을 포함하는 Docker 이미지를 만들고 컨테이너를 시작합니다. 이 항목에서는 기존 [ASP.NET MVC 애플리케이션](https://dotnet.microsoft.com/apps/aspnet/mvc)을 가져오고 Windows 컨테이너에 배포하는 방법을 설명합니다.
 
 기존 ASP.NET MVC 앱으로 시작한 다음 Visual Studio를 사용하여 게시된 자산을 빌드합니다. Docker를 사용하여 앱을 포함하고 실행하는 이미지를 만듭니다. Windows 컨테이너에서 실행 중인 사이트로 이동하고 앱이 작동하는지 확인합니다.
 
@@ -33,7 +33,7 @@ Windows 컨테이너에서 기존 .NET Framework 기반 애플리케이션을 �
 
 [완료된 애플리케이션](https://github.com/dotnet/AspNetDocs/tree/master/aspnet/mvc/overview/deployment/docker-aspnetmvc/samples/MVCRandomAnswerGenerator)은 GitHub에 있습니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 개발 컴퓨터에는 다음 소프트웨어가 있어야 합니다.
 
@@ -93,7 +93,7 @@ Docker 빌드 명령을 실행하여 ASP.NET 앱을 실행하는 이미지를 �
 docker build -t mvcrandomanswers .
 ```
 
-이 명령은 Dockerfile의 지침을 사용 하 여 이미지를 mvcrandomanswers로 명명 (-t 태깅) 하는 새 이미지를 빌드합니다. 이 과정에 [Docker Hub](http://hub.docker.com)에서 기본 이미지를 끌어온 다음 해당 이미지에 앱이 추가될 수 있습니다.
+이 명령은 Dockerfile의 지침을 사용 하 여 이미지를 mvcrandomanswers로 명명 (-t 태깅) 하는 새 이미지를 빌드합니다. 이 과정에 [Docker Hub](https://hub.docker.com)에서 기본 이미지를 끌어온 다음 해당 이미지에 앱이 추가될 수 있습니다.
 
 명령이 완료되면 `docker images` 명령을 실행하여 새 이미지에 대한 정보를 확인할 수 있습니다.
 
