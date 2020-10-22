@@ -9,12 +9,12 @@ ms.custom: seoapril2019
 ms.assetid: e3d3e7ba-87f0-4032-bdd3-31f3c1aa9d9c
 msc.legacyurl: /web-api/overview/advanced/dependency-injection
 msc.type: authoredcontent
-ms.openlocfilehash: f9c212af92168ac02644625b9aa8ec1bef329cab
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: 3342d93340215d937cf7161ee1c4b32931d516a3
+ms.sourcegitcommit: c62ec20b453cee3249eb894ecd75013b57d078f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78504947"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92345263"
 ---
 # <a name="dependency-injection-in-aspnet-web-api-2"></a>ASP.NET Web API 2에서 종속성 주입
 
@@ -41,27 +41,27 @@ ms.locfileid: "78504947"
 
 [!code-csharp[Main](dependency-injection/samples/sample2.cs)]
 
-이제 `Product` 엔터티에 대 한 GET 요청을 지 원하는 Web API 컨트롤러를 정의 해 보겠습니다. (간단 하 게 게시 및 기타 메서드를 종료 합니다.) 첫 번째 시도는 다음과 같습니다.
+이제 엔터티에 대 한 GET 요청을 지 원하는 Web API 컨트롤러를 정의 해 보겠습니다 `Product` . (간단 하 게 게시 및 기타 메서드를 종료 합니다.) 첫 번째 시도는 다음과 같습니다.
 
 [!code-csharp[Main](dependency-injection/samples/sample3.cs)]
 
-컨트롤러 클래스는 `ProductRepository`에 따라 다르며 컨트롤러에서 `ProductRepository` 인스턴스를 만들도록 허용 합니다. 그러나 이러한 방식으로 종속성을 하드 코딩 하는 것은 여러 가지 이유로 잘못 된 개념입니다.
+컨트롤러 클래스는에 종속 `ProductRepository` 되며 컨트롤러에서 인스턴스를 만들도록 허용 `ProductRepository` 합니다. 그러나 이러한 방식으로 종속성을 하드 코딩 하는 것은 여러 가지 이유로 잘못 된 개념입니다.
 
-- `ProductRepository`을 다른 구현으로 대체 하려는 경우 컨트롤러 클래스도 수정 해야 합니다.
-- `ProductRepository`에 종속성이 있는 경우 컨트롤러 내에서이를 구성 해야 합니다. 여러 컨트롤러가 있는 규모가 많은 프로젝트의 경우, 구성 코드는 프로젝트 전체에 분산 됩니다.
+- 다른 구현으로 대체 하려는 경우에 `ProductRepository` 는 컨트롤러 클래스도 수정 해야 합니다.
+- 에 종속성이 있는 경우 `ProductRepository` 컨트롤러 내에서이를 구성 해야 합니다. 여러 컨트롤러가 있는 규모가 많은 프로젝트의 경우, 구성 코드는 프로젝트 전체에 분산 됩니다.
 - 컨트롤러는 데이터베이스를 쿼리하도록 하드 코딩 되기 때문에 단위 테스트는 어렵습니다. 단위 테스트의 경우 현재 디자인에서 사용할 수 없는 모의 또는 스텁 리포지토리를 사용 해야 합니다.
 
-리포지토리를 컨트롤러에 *삽입* 하 여 이러한 문제를 해결할 수 있습니다. 먼저 `ProductRepository` 클래스를 인터페이스로 리팩터링 합니다.
+리포지토리를 컨트롤러에 *삽입* 하 여 이러한 문제를 해결할 수 있습니다. 먼저 클래스를 인터페이스로 리팩터링 합니다 `ProductRepository` .
 
 [!code-csharp[Main](dependency-injection/samples/sample4.cs)]
 
-그런 다음 `IProductRepository`을 생성자 매개 변수로 제공 합니다.
+그런 다음을 `IProductRepository` 생성자 매개 변수로 제공 합니다.
 
 [!code-csharp[Main](dependency-injection/samples/sample5.cs)]
 
 이 예제에서는 [생성자 주입](http://www.martinfowler.com/articles/injection.html#FormsOfDependencyInjection)을 사용 합니다. Setter *주입*을 사용 하 여 setter 메서드 또는 속성을 통해 종속성을 설정할 수도 있습니다.
 
-하지만 이제 응용 프로그램에서 컨트롤러를 직접 만들지 않기 때문에 문제가 발생 합니다. 웹 API는 요청을 라우팅할 때 컨트롤러를 만들며 Web API는 `IProductRepository`에 대 한 어떠한 정보도 알지 못합니다. 웹 API 종속성 해결 프로그램이 제공 되는 위치입니다.
+하지만 이제 응용 프로그램에서 컨트롤러를 직접 만들지 않기 때문에 문제가 발생 합니다. 웹 API는 요청을 라우팅할 때 컨트롤러를 만들며 Web API는에 대해 알지 못합니다 `IProductRepository` . 웹 API 종속성 해결 프로그램이 제공 되는 위치입니다.
 
 ## <a name="the-web-api-dependency-resolver"></a>Web API 종속성 확인자
 
@@ -87,7 +87,7 @@ IoC 컨테이너는 종속성 관리를 담당 하는 소프트웨어 구성 요
 > [!NOTE]
 > "IoC"는 프레임 워크가 응용 프로그램 코드를 호출 하는 일반적인 패턴 인 "제어 반전"을 의미 합니다. IoC 컨테이너는 사용자에 대 한 개체를 생성 하 여 일반적인 제어 흐름을 "반전" 합니다.
 
-이 자습서에서는 Microsoft 패턴 &amp; 사례에서 [Unity](https://msdn.microsoft.com/library/ff647202.aspx) 를 사용 합니다. 기타 인기 있는 라이브러리에는 [성 Windsor](http://www.castleproject.org/), [Spring.Net](http://www.springframework.net/), [Autofac](https://code.google.com/p/autofac/), [Ninject](http://www.ninject.org/)및 [StructureMap](http://structuremap.github.io/documentation/)가 포함 됩니다. NuGet 패키지 관리자를 사용 하 여 Unity를 설치할 수 있습니다. Visual Studio의 **도구** 메뉴에서 **NuGet 패키지 관리자**를 선택한 다음 **패키지 관리자 콘솔**을 선택 합니다. 패키지 관리자 콘솔 창에서 다음 명령을 입력 합니다.
+이 자습서에서는 Microsoft 패턴 방법의 [Unity](https://msdn.microsoft.com/library/ff647202.aspx) 를 사용 &amp; 합니다. 기타 인기 있는 라이브러리에는 [성 Windsor](http://www.castleproject.org/), [Spring.Net](http://www.springframework.net/), [Autofac](https://code.google.com/p/autofac/), [Ninject](http://www.ninject.org/)및 [StructureMap](http://structuremap.github.io/documentation/)가 포함 됩니다. NuGet 패키지 관리자를 사용 하 여 Unity를 설치할 수 있습니다. Visual Studio의 **도구** 메뉴에서 **NuGet 패키지 관리자**를 선택한 다음 **패키지 관리자 콘솔**을 선택 합니다. 패키지 관리자 콘솔 창에서 다음 명령을 입력 합니다.
 
 [!code-console[Main](dependency-injection/samples/sample7.cmd)]
 
@@ -95,14 +95,11 @@ IoC 컨테이너는 종속성 관리를 담당 하는 소프트웨어 구성 요
 
 [!code-csharp[Main](dependency-injection/samples/sample8.cs)]
 
-> [!NOTE]
-> **GetService** 메서드가 형식을 확인할 수 없는 경우 **null**을 반환 해야 합니다. **Getservices** 메서드가 형식을 확인할 수 없는 경우 빈 컬렉션 개체를 반환 해야 합니다. 알 수 없는 형식에 대해 예외를 throw 하지 않습니다.
-
 ## <a name="configuring-the-dependency-resolver"></a>종속성 확인자 구성
 
 전역 **Httpconfiguration** 개체의 **DependencyResolver** 속성에서 종속성 해결 프로그램을 설정 합니다.
 
-다음 코드는 `IProductRepository` 인터페이스를 Unity에 등록 한 다음 `UnityResolver`를 만듭니다.
+다음 코드에서는 Unity를 `IProductRepository` 사용 하 여 인터페이스를 등록 한 다음를 만듭니다 `UnityResolver` .
 
 [!code-csharp[Main](dependency-injection/samples/sample9.cs)]
 
