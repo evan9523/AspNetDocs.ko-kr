@@ -8,12 +8,12 @@ ms.date: 08/08/2011
 ms.assetid: b3fb4480-0f41-495b-add6-163ca92dc8a3
 msc.legacyurl: /web-forms/overview
 msc.type: book
-ms.openlocfilehash: 4b38d6b54f53508f7b568207fe7f1a624a7af5f3
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: 86e587ff46835bbef5d4234bd247bae10c930dd2
+ms.sourcegitcommit: db13f9477981daabd57b99a410ec34e31e8d6aae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78519383"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94670234"
 ---
 # <a name="aspnet-web-forms-guidance"></a>ASP.NET Web Forms 지침
 
@@ -33,6 +33,7 @@ ms.locfileid: "78519383"
         - [ASP.NET 오류 처리](getting-started/getting-started-with-aspnet-45-web-forms/aspnet-error-handling.md)
     - [Visual Studio 2013에서 기본적인 Web Forms 페이지 만들기](getting-started/creating-a-basic-web-forms-page.md)
     - [Visual Studio 2013의 코드 편집 ASP.NET Web Forms](getting-started/code-editing-in-web-forms-pages.md)
+    - [방법: Web Forms 앱에서 이벤트 사용](how-to-consume-events.md)
     - [ASP.NET Web Forms에서 Visual Studio 2012용 페이지 검사기 사용](getting-started/using-page-inspector-in-a-visual-studio-11-beta-web-forms-project.md)
     - [Visual Studio 2012 실습](getting-started/hands-on-labs/index.md)
 
@@ -46,7 +47,7 @@ ms.locfileid: "78519383"
         - [데이터 검색 및 표시](presenting-and-managing-data/model-binding/retrieving-data.md)
         - [데이터 업데이트, 삭제 및 만들기](presenting-and-managing-data/model-binding/updating-deleting-and-creating-data.md)
         - [데이터 정렬, 페이징 및 필터링](presenting-and-managing-data/model-binding/sorting-paging-and-filtering-data.md)
-        - [JQuery UI Datepicker 통합](presenting-and-managing-data/model-binding/integrating-jquery-ui.md)
+        - [jQuery UI Datepicker 통합](presenting-and-managing-data/model-binding/integrating-jquery-ui.md)
         - [쿼리 문자열 값을 사용하여 데이터 필터링](presenting-and-managing-data/model-binding/using-query-string-values-to-retrieve-data.md)
         - [비즈니스 논리 레이어 추가](presenting-and-managing-data/model-binding/adding-business-logic-layer.md)
 - [보안, 인증 및 권한 부여](security/index.md)
@@ -111,11 +112,11 @@ ms.locfileid: "78519383"
         - [웹 배포용 TFS Build Server 구성](deployment/configuring-team-foundation-server-for-web-deployment/configuring-a-tfs-build-server-for-web-deployment.md)
         - [배포를 지원하는 빌드 정의 만들기](deployment/configuring-team-foundation-server-for-web-deployment/creating-a-build-definition-that-supports-deployment.md)
         - [특정 빌드 배포](deployment/configuring-team-foundation-server-for-web-deployment/deploying-a-specific-build.md)
-        - [Team 빌드 배포를 위한 권한 구성](deployment/configuring-team-foundation-server-for-web-deployment/configuring-permissions-for-team-build-deployment.md)
+        - [Team Build 배포를 위한 권한 구성](deployment/configuring-team-foundation-server-for-web-deployment/configuring-permissions-for-team-build-deployment.md)
     - [ASP.NET 4 - 엔터프라이즈 배포 시리즈 4 고급 토픽](deployment/advanced-enterprise-web-deployment/index.md)
 
         - [고급 엔터프라이즈 웹 배포](deployment/advanced-enterprise-web-deployment/advanced-enterprise-web-deployment.md)
-        - ["가상 시나리오" 배포 수행](deployment/advanced-enterprise-web-deployment/performing-a-what-if-deployment.md)
+        - [“가상 시나리오” 배포 수행](deployment/advanced-enterprise-web-deployment/performing-a-what-if-deployment.md)
         - [다중 환경을 위한 데이터베이스 배포 사용자 지정](deployment/advanced-enterprise-web-deployment/customizing-database-deployments-for-multiple-environments.md)
         - [테스트 환경에 데이터베이스 역할 멤버 자격 배포](deployment/advanced-enterprise-web-deployment/deploying-database-role-memberships-to-test-environments.md)
         - [엔터프라이즈 환경에 멤버 자격 데이터베이스 배포](deployment/advanced-enterprise-web-deployment/deploying-membership-databases-to-enterprise-environments.md)
@@ -131,7 +132,7 @@ ms.locfileid: "78519383"
     - [ASP.NET 4 - Tailspin Spyworks](older-versions-getting-started/tailspin-spyworks/index.md)
 
         - [1부: 파일-> 새 프로젝트](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-1.md)
-        - [2부: 데이터 액세스 레이어](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-2.md)
+        - [2부: 데이터 액세스 계층](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-2.md)
         - [3부: 레이아웃 및 범주 메뉴](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-3.md)
         - [4부: 제품 나열](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-4.md)
         - [5부: 비즈니스 논리](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-5.md)
@@ -151,7 +152,7 @@ ms.locfileid: "78519383"
     - [ASP.NET 4 - Entity Framework 4 및 Web Forms 계속](older-versions-getting-started/continuing-with-ef/index.md)
 
         - [Entity Framework 4.0 및 ObjectDataSource 컨트롤, 1부: 시작](older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started.md)
-        - [Entity Framework 4.0 및 the ObjectDataSource 컨트롤, 2부: 비즈니스 논리 레이어 및 단위 테스트 추가](older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-2-adding-a-business-logic-layer-and-unit-tests.md)
+        - [Entity Framework 4.0 및 ObjectDataSource 컨트롤, 2부: 비즈니스 논리 레이어 및 단위 테스트 추가](older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-2-adding-a-business-logic-layer-and-unit-tests.md)
         - [Entity Framework 4.0 및 ObjectDataSource 컨트롤, 3부: 정렬 및 필터링](older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-3-sorting-and-filtering.md)
         - [ASP.NET 4에서 Entity Framework 4.0으로 동시성 처리](older-versions-getting-started/continuing-with-ef/handling-concurrency-with-the-entity-framework-in-an-asp-net-web-application.md)
         - [ASP.NET 4에서 Entity Framework 4.0으로 성능 극대화](older-versions-getting-started/continuing-with-ef/maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application.md)
@@ -239,10 +240,10 @@ ms.locfileid: "78519383"
     - [시작](ajax-control-toolkit/getting-started/index.md)
 
         - [AJAX 컨트롤 도구 키트 시작(C#)](ajax-control-toolkit/getting-started/get-started-with-the-ajax-control-toolkit-cs.md)
-        - [Using AJAX 컨트롤 도구 키트 컨트롤 및 컨트롤 Extenders 사용(C#)](ajax-control-toolkit/getting-started/using-ajax-control-toolkit-controls-and-control-extenders-cs.md)
+        - [Using AJAX 컨트롤 도구 키트 컨트롤 및 컨트롤 Extender 사용(C#)](ajax-control-toolkit/getting-started/using-ajax-control-toolkit-controls-and-control-extenders-cs.md)
         - [사용자 지정 AJAX 컨트롤 도구 키트 컨트롤 Extender 만들기(C#)](ajax-control-toolkit/getting-started/creating-a-custom-ajax-control-toolkit-control-extender-cs.md)
         - [AJAX 컨트롤 도구 키트 시작(VB)](ajax-control-toolkit/getting-started/get-started-with-the-ajax-control-toolkit-vb.md)
-        - [Using AJAX 컨트롤 도구 키트 컨트롤 및 컨트롤 Extenders 사용(VB)](ajax-control-toolkit/getting-started/using-ajax-control-toolkit-controls-and-control-extenders-vb.md)
+        - [Using AJAX 컨트롤 도구 키트 컨트롤 및 컨트롤 Extender 사용(VB)](ajax-control-toolkit/getting-started/using-ajax-control-toolkit-controls-and-control-extenders-vb.md)
         - [사용자 지정 AJAX 컨트롤 도구 키트 컨트롤 Extender 만들기(VB)](ajax-control-toolkit/getting-started/creating-a-custom-ajax-control-toolkit-control-extender-vb.md)
     - [Accordion](ajax-control-toolkit/accordion/index.md)
 
@@ -294,8 +295,8 @@ ms.locfileid: "78519383"
         - [JavaScript에서 패널 축소 및 확장(VB)](ajax-control-toolkit/collapsiblepanel/collapsing-and-expanding-a-panel-from-javascript-vb.md)
     - [ColorPicker](ajax-control-toolkit/colorpicker/index.md)
 
-        - [ColorPicker Control Extender(C#)](ajax-control-toolkit/colorpicker/using-the-colorpicker-control-extender-cs.md)
-        - [ColorPicker Control Extender(VB)](ajax-control-toolkit/colorpicker/using-the-colorpicker-control-extender-vb.md)
+        - [ColorPicker 컨트롤 Extender(C#)](ajax-control-toolkit/colorpicker/using-the-colorpicker-control-extender-cs.md)
+        - [ColorPicker 컨트롤 Extender(VB)](ajax-control-toolkit/colorpicker/using-the-colorpicker-control-extender-vb.md)
     - [ComboBox](ajax-control-toolkit/combobox/index.md)
 
         - [ComboBox 컨트롤(C#)](ajax-control-toolkit/combobox/how-do-i-use-the-combobox-control-cs.md)
@@ -364,7 +365,7 @@ ms.locfileid: "78519383"
         - [여러 팝업 컨트롤 사용(VB)](ajax-control-toolkit/popup/using-multiple-popup-controls-vb.md)
         - [UpdatePanel을 사용하여 팝업 컨트롤의 포스트백 처리(VB)](ajax-control-toolkit/popup/handling-postbacks-from-a-popup-control-with-an-updatepanel-vb.md)
         - [UpdatePanel을 사용하지 않고 팝업 컨트롤에서 포스트백 처리(VB)](ajax-control-toolkit/popup/handling-postbacks-from-a-popup-control-without-an-updatepanel-vb.md)
-    - [등급](ajax-control-toolkit/rating/index.md)
+    - [평가](ajax-control-toolkit/rating/index.md)
 
         - [등급 컨트롤 만들기(C#)](ajax-control-toolkit/rating/creating-a-rating-control-cs.md)
         - [등급 컨트롤 만들기(VB)](ajax-control-toolkit/rating/creating-a-rating-control-vb.md)
@@ -526,7 +527,7 @@ ms.locfileid: "78519383"
         - [데이터 웹 컨트롤에 이진 데이터 표시(VB)](data-access/working-with-binary-files/displaying-binary-data-in-the-data-web-controls-vb.md)
         - [새 레코드를 추가할 때 파일 업로드 옵션 포함(VB)](data-access/working-with-binary-files/including-a-file-upload-option-when-adding-a-new-record-vb.md)
         - [기존 이진 데이터 업데이트 및 삭제(VB)](data-access/working-with-binary-files/updating-and-deleting-existing-binary-data-vb.md)
-    - [데이터 캐시](data-access/caching-data/index.md)
+    - [데이터 캐싱](data-access/caching-data/index.md)
 
         - [ObjectDataSource를 사용하여 데이터 캐싱(C#)](data-access/caching-data/caching-data-with-the-objectdatasource-cs.md)
         - [아키텍처에서 데이터 캐싱(C#)](data-access/caching-data/caching-data-in-the-architecture-cs.md)
@@ -552,23 +553,23 @@ ms.locfileid: "78519383"
         - [일괄 삽입(VB)](data-access/working-with-batched-data/batch-inserting-vb.md)
     - [고급 데이터 액세스 시나리오](data-access/advanced-data-access-scenarios/index.md)
 
-        - [형식화된 데이터 세트의 Tableadapter에 대한 새로운 저장 프로시저 만들기(C#)](data-access/advanced-data-access-scenarios/creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-cs.md)
-        - [형식화된 데이터 세트의 Tableadapter에 대한 기존 저장 프로시저 사용(C#)](data-access/advanced-data-access-scenarios/using-existing-stored-procedures-for-the-typed-dataset-s-tableadapters-cs.md)
+        - [형식화된 데이터 세트의 TableAdapter에 대한 새로운 저장 프로시저 만들기(C#)](data-access/advanced-data-access-scenarios/creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-cs.md)
+        - [형식화된 데이터 세트의 TableAdapter에 대한 기존 저장 프로시저 사용(C#)](data-access/advanced-data-access-scenarios/using-existing-stored-procedures-for-the-typed-dataset-s-tableadapters-cs.md)
         - [JOIN을 사용하도록 TableAdapter 업데이트(C#)](data-access/advanced-data-access-scenarios/updating-the-tableadapter-to-use-joins-cs.md)
         - [추가 DataTable 열 추가(C#)](data-access/advanced-data-access-scenarios/adding-additional-datatable-columns-cs.md)
         - [계산 열 작업(C#)](data-access/advanced-data-access-scenarios/working-with-computed-columns-cs.md)
         - [데이터 액세스 레이어의 연결 및 명령 수준 설정 구성(C#)](data-access/advanced-data-access-scenarios/configuring-the-data-access-layer-s-connection-and-command-level-settings-cs.md)
         - [연결 문자열 및 기타 구성 정보 보호(C#)](data-access/advanced-data-access-scenarios/protecting-connection-strings-and-other-configuration-information-cs.md)
-        - [저장 프로시저 디버깅(C#)](data-access/advanced-data-access-scenarios/debugging-stored-procedures-cs.md)
+        - [저장 프로시저 디버그(C#)](data-access/advanced-data-access-scenarios/debugging-stored-procedures-cs.md)
         - [관리 코드를 사용하여 저장 프로시저 및 사용자 정의 함수 만들기(C#)](data-access/advanced-data-access-scenarios/creating-stored-procedures-and-user-defined-functions-with-managed-code-cs.md)
-        - [형식화된 데이터 세트의 Tableadapter에 대한 새로운 저장 프로시저 만들기(VB)](data-access/advanced-data-access-scenarios/creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb.md)
-        - [형식화된 데이터 세트의 Tableadapter에 대한 기존 저장 프로시저 사용(VB)](data-access/advanced-data-access-scenarios/using-existing-stored-procedures-for-the-typed-dataset-s-tableadapters-vb.md)
+        - [형식화된 데이터 세트의 TableAdapter에 대한 새로운 저장 프로시저 만들기(VB)](data-access/advanced-data-access-scenarios/creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb.md)
+        - [형식화된 데이터 세트의 TableAdapter에 대한 기존 저장 프로시저 사용(VB)](data-access/advanced-data-access-scenarios/using-existing-stored-procedures-for-the-typed-dataset-s-tableadapters-vb.md)
         - [JOIN을 사용하도록 TableAdapter 업데이트(VB)](data-access/advanced-data-access-scenarios/updating-the-tableadapter-to-use-joins-vb.md)
         - [추가 DataTable 열 추가(VB)](data-access/advanced-data-access-scenarios/adding-additional-datatable-columns-vb.md)
         - [계산 열 작업(VB)](data-access/advanced-data-access-scenarios/working-with-computed-columns-vb.md)
         - [데이터 액세스 레이어의 연결 및 명령 수준 설정 구성(VB)](data-access/advanced-data-access-scenarios/configuring-the-data-access-layer-s-connection-and-command-level-settings-vb.md)
         - [연결 문자열 및 기타 구성 정보 보호(VB)](data-access/advanced-data-access-scenarios/protecting-connection-strings-and-other-configuration-information-vb.md)
-        - [저장 프로시저 디버깅(VB)](data-access/advanced-data-access-scenarios/debugging-stored-procedures-vb.md)
+        - [저장 프로시저 디버그(VB)](data-access/advanced-data-access-scenarios/debugging-stored-procedures-vb.md)
         - [관리 코드를 사용하여 저장 프로시저 및 사용자 정의 함수 만들기(VB)](data-access/advanced-data-access-scenarios/creating-stored-procedures-and-user-defined-functions-with-managed-code-vb.md)
 - [이전 버전 - 보안](older-versions-security/index.md)
 
@@ -617,6 +618,6 @@ ms.locfileid: "78519383"
     - [데이터 소스 제어](moving-to-aspnet-20/data-source-controls.md)
     - [데이터 바인딩 컨트롤](moving-to-aspnet-20/data-bound-controls.md)
     - [캐싱](moving-to-aspnet-20/caching.md)
-    - [멤버 자격](moving-to-aspnet-20/membership.md)
+    - [Membership](moving-to-aspnet-20/membership.md)
     - [구성 및 계측](moving-to-aspnet-20/configuration-and-instrumentation.md)
     - [프로필, 테마 및 웹 파트](moving-to-aspnet-20/profiles-themes-and-web-parts.md)
