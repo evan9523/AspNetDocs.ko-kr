@@ -40,6 +40,8 @@
               href: web-forms/overview/getting-started/creating-a-basic-web-forms-page.md
             - name: Visual Studio 2013의 코드 편집 ASP.NET Web Forms
               href: web-forms/overview/getting-started/code-editing-in-web-forms-pages.md
+            - name: '방법: 이벤트 사용'
+              href: web-forms/overview/how-to-consume-events.md
             - name: ASP.NET Web Forms에서 Visual Studio 2012용 페이지 검사기 사용
               href: web-forms/overview/getting-started/using-page-inspector-in-a-visual-studio-11-beta-web-forms-project.md
             - name: Visual Studio 2012 실습
