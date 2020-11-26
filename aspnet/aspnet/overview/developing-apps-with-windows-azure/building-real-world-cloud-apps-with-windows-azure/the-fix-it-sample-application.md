@@ -1,6 +1,6 @@
 ---
 uid: aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/the-fix-it-sample-application
-title: '부록: Fix It 샘플 응용 프로그램 (Azure를 사용 하 여 실제 클라우드 앱 빌드) | Microsoft Docs'
+title: '부록: Fix It 샘플 응용 프로그램 (Azure를 사용 하 여 클라우드 앱 Real-World 빌드) | Microsoft Docs'
 author: MikeWasson
 description: Azure e-learning을 사용 하 여 실제 클라우드 앱 빌드는 Scott Guthrie에서 개발한 프레젠테이션을 기반으로 합니다. 여기에는 다음을 수행할 수 있는 13 개의 패턴과 사례가 설명 되어 있습니다.
 ms.author: riande
@@ -8,14 +8,14 @@ ms.date: 06/12/2014
 ms.assetid: 1bc333c5-f096-4ea7-b170-779accc21c1a
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/the-fix-it-sample-application
 msc.type: authoredcontent
-ms.openlocfilehash: 549d1513279190ae5abe87c59a48e1caa1cfa5f7
-ms.sourcegitcommit: feb88edfb01b32f6fc9488f0f0ddb3c5b34e6ff0
+ms.openlocfilehash: 53ae9633277b38f1d2c8a8bd43eaf0014da54c45
+ms.sourcegitcommit: 4b78855427f1397df0a7be3559e04ec94a78c308
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88702935"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96151882"
 ---
-# <a name="appendix-the-fix-it-sample-application-building-real-world-cloud-apps-with-azure"></a>부록: Fix It 샘플 응용 프로그램 (Azure를 사용 하 여 실제 클라우드 앱 빌드)
+# <a name="appendix-the-fix-it-sample-application-building-real-world-cloud-apps-with-azure"></a>부록: Fix It 샘플 응용 프로그램 (Azure를 사용 하 여 클라우드 앱 Real-World 빌드)
 
 사람, [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
@@ -96,13 +96,13 @@ ASP.NET는 악의적인 사용자가 사용자 입력 텍스트 상자에 스크
 
 AutoFac는 인스턴스를 자동으로 삭제 `FixItTaskRepository` 하므로 명시적으로 삭제할 필요가 없습니다.
 
-또 다른 옵션은 `DbContext` 에서 멤버 변수를 제거 하 `FixItTaskRepository` 고 대신 `DbContext` 문 내에서 각 리포지토리 메서드 내에 지역 변수를 만드는 `using` 것입니다. 예를 들면 다음과 같습니다.
+또 다른 옵션은 `DbContext` 에서 멤버 변수를 제거 하 `FixItTaskRepository` 고 대신 `DbContext` 문 내에서 각 리포지토리 메서드 내에 지역 변수를 만드는 `using` 것입니다. 다음은 그 예입니다.
 
 [!code-csharp[Main](the-fix-it-sample-application/samples/sample2.cs)]
 
 ### <a name="register-singletons-as-such-with-di"></a>DI를 사용 하 여 단일 항목를 등록 합니다.
 
-클래스 및 클래스의 인스턴스는 하나만 `PhotoService` `Logger` 필요 하므로 이러한 클래스는 *DependenciesConfig.cs*의 [종속성 주입에 대 한 단일 인스턴스로 등록](https://code.google.com/p/autofac/wiki/InstanceScope) 되어야 합니다.
+클래스 및 클래스의 인스턴스는 하나만 `PhotoService` `Logger` 필요 하므로 이러한 클래스는 *DependenciesConfig.cs* 의 [종속성 주입에 대 한 단일 인스턴스로 등록](https://code.google.com/p/autofac/wiki/InstanceScope) 되어야 합니다.
 
 [!code-csharp[Main](the-fix-it-sample-application/samples/sample3.cs?highlight=1,3)]
 
@@ -200,7 +200,7 @@ Visual Studio에서 새 웹 프로젝트를 만들 때 JavaScript 파일의 묶�
 
 ### <a name="set-an-expiration-time-out-for-authentication-cookies"></a>인증 쿠키에 대 한 만료 시간 제한 설정
 
-기본적으로 인증 쿠키는 2 주 후에 만료 됩니다. 시간이 짧으면 더 안전 합니다. *StartupAuth.cs*에서이 설정을 변경할 수 있습니다.
+기본적으로 인증 쿠키는 2 주 후에 만료 됩니다. 시간이 짧으면 더 안전 합니다. *StartupAuth.cs* 에서이 설정을 변경할 수 있습니다.
 
 [!code-csharp[Main](the-fix-it-sample-application/samples/sample18.cs?highlight=4-5)]
 
@@ -215,13 +215,13 @@ Fix It 앱을 실행 하는 방법에는 두 가지가 있습니다.
 <a id="runbase"></a>
 ### <a name="run-the-base-application"></a>기본 응용 프로그램 실행
 
-1. [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)을 설치합니다.
+1. [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)을 설치 합니다.
 2. [Visual Studio 용 AZURE SDK for .net](https://azure.microsoft.com/downloads/)을 설치 합니다.
 3. [MSDN 코드 갤러리](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4)에서 .zip 파일을 다운로드 합니다.
 4. 파일 탐색기에서 .zip 파일을 마우스 오른쪽 단추로 클릭 하 고 속성을 클릭 한 다음 속성 창 차단 해제를 클릭 합니다.
 5. 파일의 압축을 풉니다.
 6. .Sln 파일을 두 번 클릭 하 여 Visual Studio를 시작 합니다.
-7. **도구** 메뉴에서 **NuGet 패키지 관리자**, **패키지 관리자 콘솔**을 차례로 클릭 합니다.
+7. **도구** 메뉴에서 **NuGet 패키지 관리자**, **패키지 관리자 콘솔** 을 차례로 클릭 합니다.
 8. 패키지 관리자 콘솔 (PMC)에서 복원을 클릭 합니다.
 9. Visual Studio를 끝냅니다.
 10. [Azure Storage 에뮬레이터](/azure/storage/common/storage-use-emulator)를 시작 합니다.
@@ -242,14 +242,14 @@ Fix It 앱을 실행 하는 방법에는 두 가지가 있습니다.
     Visual Studio 사용:
 
    1. F 5 **를 눌러 FixIt 프로젝트를 실행** 합니다.
-   2. **솔루션 탐색기**에서 MyFixItCloudService 프로젝트를 마우스 오른쪽 단추로 클릭 한 다음 **디버그**  >  **새 인스턴스 시작**을 클릭 합니다.
+   2. **솔루션 탐색기** 에서 MyFixItCloudService 프로젝트를 마우스 오른쪽 단추로 클릭 한 다음 **디버그**  >  **새 인스턴스 시작** 을 클릭 합니다.
 
     웹에 Visual Studio 2013 Express 사용:
 
-   3. 솔루션 탐색기에서 FixIt 솔루션을 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.
-   4. **여러 개의 시작 프로젝트**를 선택 합니다.
-   5. MyFixIt 및 MyFixItCloudService의 **작업** 드롭다운 목록에서 **시작**을 선택 합니다.
-   6. **확인**을 클릭합니다.
+   3. 솔루션 탐색기에서 FixIt 솔루션을 마우스 오른쪽 단추로 클릭 하 고 **속성** 을 선택 합니다.
+   4. **여러 개의 시작 프로젝트** 를 선택 합니다.
+   5. MyFixIt 및 MyFixItCloudService의 **작업** 드롭다운 목록에서 **시작** 을 선택 합니다.
+   6. **확인** 을 클릭합니다.
    7. **F5** 키를 눌러 두 프로젝트를 실행합니다.
 
       MyFixItCloudService 프로젝트를 실행 하면 Visual Studio에서 Azure 계산 에뮬레이터를 시작 합니다. 방화벽 구성에 따라 에뮬레이터를 방화벽을 통해 허용 해야 할 수도 있습니다.
@@ -279,7 +279,7 @@ Fix It 앱을 실행 하는 방법에는 두 가지가 있습니다.
     [!code-console[Main](the-fix-it-sample-application/samples/sample21.cmd)]
 
     이러한 자격 증명은 일정 기간 후에 만료 되므로 cmdlet을 다시 실행 해야 합니다 `Add-AzureAccount` . 이 e-learning을 작성 하는 동안 자격 증명의 만료 시간 제한은 12 시간입니다.
-5. 구독이 여러 개인 경우 Get-azuresubscription cmdlet을 사용 하 여 테스트 환경을 만들려는 구독을 지정 합니다.
+5. 여러 구독이 있는 경우 Select-AzureSubscription cmdlet을 사용 하 여 테스트 환경을 만들려는 구독을 지정 합니다.
 6. 및 cmdlet을 사용 하 여 동일한 Azure 구독에 대 한 관리 인증서를 가져옵니다 `Get-AzurePublishSettingsFile` `Import-AzurePublishSettingsFile` . 이 cmdlet 중 첫 번째 cmdlet은 인증서 파일을 다운로드 하 고, 두 번째 cmdlet은 파일을 가져오기 위해 해당 파일의 위치를 지정 합니다. > [!IMPORTANT]
    > 다운로드 한 파일은 Azure 서비스를 관리 하는 데 사용할 수 있는 인증서를 포함 하므로 안전한 위치에 보관 하거나 작업을 수행 하는 경우 삭제 합니다.
 
@@ -317,12 +317,12 @@ Fix It 앱을 실행 하는 방법에는 두 가지가 있습니다.
 
     [!code-console[Main](the-fix-it-sample-application/samples/sample27.cmd)]
 
-    `Detailed` `Full` `Parameters` `Examples` Get-help cmdlet의,, 및 매개 변수를 사용 하 여 반환 되는 도움말을 필터링 할 수 있습니다.
+    `Detailed` `Full` `Parameters` `Examples` Get-Help cmdlet의,, 및 매개 변수를 사용 하 여 반환 되는 도움말을 필터링 할 수 있습니다.
 
-    스크립트가 실패 하거나 오류를 생성 하는 경우 (예: "AzureWebsite: Call Get-azuresubscription and Get-azuresubscription first") Azure PowerShell의 구성을 완료 하지 않았을 수 있습니다.
+    스크립트가 실패 하거나 오류를 생성 하는 경우 (예: "AzureWebsite: Call Set-AzureSubscription 및 Select-AzureSubscription first") Azure PowerShell 구성을 완료 하지 않았을 수 있습니다.
 
     스크립트가 완료 되 면 Azure 관리 포털를 사용 하 여 생성 된 리소스를 볼 수 있습니다 .이에 대해서는 [모두 자동화](automate-everything.md) 단원을 참조 하세요.
-10. 새 Azure 환경에 FixIt 프로젝트를 배포 하려면 *AzureWebsite.ps1* 스크립트를 사용 합니다. 예를 들면 다음과 같습니다.
+10. 새 Azure 환경에 FixIt 프로젝트를 배포 하려면 *AzureWebsite.ps1* 스크립트를 사용 합니다. 다음은 그 예입니다.
 
     [!code-console[Main](the-fix-it-sample-application/samples/sample28.cmd)]
 
@@ -341,7 +341,7 @@ Fix It 앱을 실행 하는 방법에는 두 가지가 있습니다.
 
 ### <a name="internalerror-the-server-encountered-an-internal-error"></a>InternalError: 서버에서 내부 오류가 발생 했습니다.
 
-`New-AzureWebsite`Azurewebsites.net 도메인에서 이름이 고유 하지 않은 경우 cmdlet은 내부 오류를 반환 합니다. 오류를 해결 하려면 *New-AzureWebsiteEnv.ps1*의 name 매개 변수에 있는 이름에 대해 다른 값을 사용 합니다.
+`New-AzureWebsite`Azurewebsites.net 도메인에서 이름이 고유 하지 않은 경우 cmdlet은 내부 오류를 반환 합니다. 오류를 해결 하려면 *New-AzureWebsiteEnv.ps1* 의 name 매개 변수에 있는 이름에 대해 다른 값을 사용 합니다.
 
 [!code-console[Main](the-fix-it-sample-application/samples/sample30.cmd)]
 
@@ -370,13 +370,13 @@ Fix It 앱을 실행 하는 방법에는 두 가지가 있습니다.
 
 그런 다음 [앞](#deploybase)에서 설명한 대로 AZURE APP SERVICE에서 MVC 응용 프로그램을 웹 앱에 배포 합니다.
 
-다음으로 새 Azure 클라우드 서비스를 만듭니다. Fix It 앱에 포함 된 스크립트는 클라우드 서비스를 만들거나 배포 하지 않으므로이를 위해 Azure Portal를 사용 해야 합니다. 포털에서 **새로 만들기**  --  **계산** – **클라우드 서비스**  --  **빠른 생성**을 클릭 하 고 URL 및 데이터 센터 위치를 입력 합니다. 웹 앱을 배포한 동일한 데이터 센터를 사용 합니다.
+다음으로 새 Azure 클라우드 서비스를 만듭니다. Fix It 앱에 포함 된 스크립트는 클라우드 서비스를 만들거나 배포 하지 않으므로이를 위해 Azure Portal를 사용 해야 합니다. 포털에서 **새로 만들기**  --  **계산** – **클라우드 서비스**  --  **빠른 생성** 을 클릭 하 고 URL 및 데이터 센터 위치를 입력 합니다. 웹 앱을 배포한 동일한 데이터 센터를 사용 합니다.
 
 ![](the-fix-it-sample-application/_static/image1.png)
 
 클라우드 서비스를 배포 하려면 먼저 일부 구성 파일을 업데이트 해야 합니다.
 
-MyFixIt.WorkerRole\app.config의에서 `connectionStrings` 연결 문자열의 값을 `appdb` SQL Database에 대 한 실제 연결 문자열로 바꿉니다. 포털에서 연결 문자열을 가져올 수 있습니다. 포털에서 **SQL 데이터베이스**  -  **appdb**  -  **뷰 SQL Database ADO .net, ODBC, PHP 및 JDBC에 대 한 연결 문자열**을 클릭 합니다. ADO.NET 연결 문자열을 복사 하 고 값을 app.config 파일에 붙여넣습니다. "{Your \_ password \_ }"를 데이터베이스 암호로 바꿉니다. (스크립트를 사용 하 여 MVC 앱을 배포 했다고 가정 하 고 스크립트 매개 변수에서 데이터베이스 암호를 지정 `SqlDatabasePassword` 했습니다.)
+MyFixIt.WorkerRole\app.config의에서 `connectionStrings` 연결 문자열의 값을 `appdb` SQL Database에 대 한 실제 연결 문자열로 바꿉니다. 포털에서 연결 문자열을 가져올 수 있습니다. 포털에서 **SQL 데이터베이스**  -  **appdb**  -  **뷰 SQL Database ADO .net, ODBC, PHP 및 JDBC에 대 한 연결 문자열** 을 클릭 합니다. ADO.NET 연결 문자열을 복사 하 고 값을 app.config 파일에 붙여넣습니다. "{Your \_ password \_ }"를 데이터베이스 암호로 바꿉니다. (스크립트를 사용 하 여 MVC 앱을 배포 했다고 가정 하 고 스크립트 매개 변수에서 데이터베이스 암호를 지정 `SqlDatabasePassword` 했습니다.)
 
 결과는 다음과 같습니다.
 
@@ -392,7 +392,7 @@ MyFixItCloudService\ServiceConfiguration.Cloud.cscfg에서 Azure storage 계정�
 
 [!code-xml[Main](the-fix-it-sample-application/samples/sample34.xml?highlight=3)]
 
-이제 클라우드 서비스를 배포할 준비가 되었습니다. 솔루션 탐색기에서 MyFixItCloudService 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **게시**를 선택 합니다. 자세한 내용은 [이 자습서](https://code.msdn.microsoft.com/Windows-Azure-Multi-Tier-eadceb36)의 2 부에 있는 "[Azure에 응용 프로그램 배포](https://www.windowsazure.com/develop/net/tutorials/multi-tier-web-site/2-download-and-run/#deployAz)"를 참조 하세요.
+이제 클라우드 서비스를 배포할 준비가 되었습니다. 솔루션 탐색기에서 MyFixItCloudService 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **게시** 를 선택 합니다. 자세한 내용은 [이 자습서](https://code.msdn.microsoft.com/Windows-Azure-Multi-Tier-eadceb36)의 2 부에 있는 "[Azure에 응용 프로그램 배포](https://www.windowsazure.com/develop/net/tutorials/multi-tier-web-site/2-download-and-run/#deployAz)"를 참조 하세요.
 
 > [!div class="step-by-step"]
 > [이전](more-patterns-and-guidance.md)
